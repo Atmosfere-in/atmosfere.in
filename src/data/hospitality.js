@@ -56,8 +56,8 @@ export const services = {
       text: "Market, location and budget tested before you commit — Airbnb, hotel, villa or venue.",
       href: "/hospitality/services#concept-feasibility",
       image: {
-        src: unsplash("1770200574989-a4cca2c70c00"),
-        alt: "A hand-drawn perspective sketch of a planned interior layout",
+        src: unsplash("1633355303026-28d096d08c42"),
+        alt: "An architectural model of a resort with trees, lit against a dark background",
       },
     },
     {
@@ -65,8 +65,8 @@ export const services = {
       text: "Room mix, guest circulation and back-of-house planned to work on day one.",
       href: "/hospitality/services#space-planning",
       image: {
-        src: unsplash("1698846296220-e44d9d4b9100"),
-        alt: "A floor plan being drawn by hand with a ruler",
+        src: unsplash("1630587148265-761cbd139043"),
+        alt: "A grand hotel corridor lined with timber panelling and crystal chandeliers",
       },
     },
     {
@@ -83,8 +83,8 @@ export const services = {
       text: "Existing properties re-planned for a new market, a new guest or a better rate.",
       href: "/hospitality/services#repositioning",
       image: {
-        src: unsplash("1776763018821-8feeaeeee0a5"),
-        alt: "A refreshed hotel room with a reading chair, desk and warm lamplight",
+        src: unsplash("1578898887932-dce23a595ad4"),
+        alt: "A repositioned luxury suite with a canopy bed, chandelier and timber-beamed ceiling",
       },
     },
   ],
