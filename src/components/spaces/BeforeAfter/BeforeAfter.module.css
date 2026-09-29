@@ -1,0 +1,109 @@
+.frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-stone-100);
+  user-select: none;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.before {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+/* Muted treatment so the "before" reads as raw and unfinished. */
+.beforeImage {
+  filter: saturate(0.6) brightness(0.95);
+}
+
+.label {
+  position: absolute;
+  top: var(--space-4);
+  padding: 6px 12px;
+  background: rgb(247 244 239 / 0.9);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  pointer-events: none;
+}
+
+.labelBefore {
+  left: var(--space-4);
+}
+
+.labelAfter {
+  right: var(--space-4);
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 1px;
+  background: var(--color-ivory);
+  pointer-events: none;
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-size: 1rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px rgb(31 29 26 / 0.08);
+}
+
+/* Invisible native range input over the frame: drag, touch and keyboard. */
+.range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+
+.frame:has(.range:focus-visible) .knob {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .frame {
+    aspect-ratio: 4 / 3;
+  }
+
+  .label {
+    top: var(--space-3);
+  }
+
+  .labelBefore {
+    left: var(--space-3);
+  }
+
+  .labelAfter {
+    right: var(--space-3);
+  }
+
+  .knob {
+    width: 44px;
+    height: 44px;
+  }
+}

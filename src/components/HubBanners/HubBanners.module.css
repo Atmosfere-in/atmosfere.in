@@ -1,0 +1,242 @@
+/* Three equal-width (33.3%) full-height banners. On hover, a live banner
+   widens slightly like a lookbook accordion — the only interaction cue. */
+
+.banners {
+  display: flex;
+  gap: 2px;
+  height: calc(100svh - var(--header-height));
+  min-height: 560px;
+  background: var(--color-bg);
+}
+
+.banner {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
+  transition: flex-grow 0.9s var(--ease);
+  animation: reveal 1.2s var(--ease) both;
+  animation-delay: var(--delay);
+}
+
+/* ---------- Media ---------- */
+
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.image {
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 1.4s var(--ease), filter 0.9s var(--ease);
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(
+      to top,
+      rgb(20 18 16 / 0.72) 0%,
+      rgb(20 18 16 / 0.28) 34%,
+      rgb(20 18 16 / 0) 60%,
+      rgb(20 18 16 / 0.18) 100%
+    );
+  transition: background-color 0.9s var(--ease);
+}
+
+/* ---------- Text ---------- */
+
+.index {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--text-subhead);
+  font-style: italic;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--space-5) var(--space-5) var(--space-6);
+}
+
+.tagline {
+  margin-bottom: var(--space-2);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 3.6vw, 4rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.description {
+  max-width: 30ch;
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+
+.cta,
+.soon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 28px;
+  margin-top: var(--space-4);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.cta {
+  border-bottom: 1px solid rgb(247 244 239 / 0.5);
+  transition: border-color 0.4s var(--ease), gap 0.4s var(--ease);
+}
+
+.soon {
+  padding: 0 12px;
+  border: 1px solid rgb(247 244 239 / 0.45);
+  border-radius: 999px;
+  font-size: 0.625rem;
+}
+
+/* ---------- States ---------- */
+
+.disabled {
+  cursor: default;
+}
+
+.disabled .image {
+  filter: saturate(0.75);
+}
+
+@media (hover: hover) and (min-width: 769px) {
+  .banners:has(.link:hover) .banner {
+    flex-grow: 0.85;
+  }
+
+  .banners:has(.link:hover) .link:hover {
+    flex-grow: 1.3;
+  }
+
+  .link:hover .image {
+    transform: scale(1.06);
+  }
+
+  .link:hover .scrim {
+    background-color: rgb(20 18 16 / 0.08);
+  }
+
+  .link:hover .description {
+    opacity: 0.9;
+    transform: none;
+  }
+
+  .link:hover .cta {
+    gap: var(--space-3);
+    border-bottom-color: var(--color-ivory);
+  }
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--color-ivory);
+  outline-offset: -8px;
+}
+
+.link:focus-visible .description {
+  opacity: 0.9;
+  transform: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .content {
+    padding: var(--space-4) var(--space-4) var(--space-5);
+  }
+}
+
+/* ---------- Phone: stack the three banners ---------- */
+
+@media (max-width: 768px) {
+  .banners {
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .banner {
+    flex: none;
+    height: max(240px, calc((100svh - var(--header-height)) / 3));
+  }
+
+  .index {
+    top: var(--space-3);
+    left: var(--space-3);
+    font-size: var(--text-body);
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: var(--space-3);
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .tagline {
+    flex-basis: 100%;
+    font-size: 0.625rem;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .name {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .cta,
+  .soon {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+}

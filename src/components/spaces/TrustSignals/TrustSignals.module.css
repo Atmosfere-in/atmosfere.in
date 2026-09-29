@@ -1,0 +1,121 @@
+.section {
+  padding-top: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-4);
+}
+
+.stat + .stat {
+  border-left: var(--border);
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-charcoal);
+}
+
+.label {
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: var(--border);
+}
+
+.rowTitle {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-stone-400);
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-5);
+}
+
+/* Wordmark-style placeholders until real client and press logos arrive. */
+.client {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-stone-400);
+  transition: color 0.4s var(--ease);
+}
+
+.press {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-stone-400);
+  transition: color 0.4s var(--ease);
+}
+
+.client:hover,
+.press:hover {
+  color: var(--color-charcoal);
+}
+
+@media (max-width: 900px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat:nth-child(3) {
+    border-left: none;
+  }
+
+  .stat:nth-child(n + 3) {
+    border-top: var(--border);
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .names {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .stat {
+    padding: var(--space-4) var(--space-3);
+  }
+
+  .client {
+    font-size: 1.125rem;
+  }
+
+  .press {
+    font-size: 1.0625rem;
+  }
+}
