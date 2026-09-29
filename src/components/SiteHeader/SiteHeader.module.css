@@ -1,9 +1,56 @@
+/* Colours come from variables so the header can flip between the solid
+   ivory bar and a transparent bar over photography. HeaderNav reads them too. */
 .header {
-  position: relative;
+  --hdr-fg: var(--color-charcoal);
+  --hdr-muted: var(--color-stone-600);
+  --hdr-line: var(--color-border);
+  --hdr-chip: var(--color-stone-100);
+  --hdr-cta-bg: var(--color-charcoal);
+  --hdr-cta-fg: var(--color-ivory);
+
   z-index: 10;
   height: var(--header-height);
-  background: var(--color-bg);
-  border-bottom: var(--border);
+  color: var(--hdr-fg);
+  border-bottom: 1px solid var(--hdr-line);
+  transition:
+    background-color 0.5s var(--ease),
+    border-color 0.5s var(--ease),
+    color 0.5s var(--ease);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: rgb(247 244 239 / 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Transparent over a full-bleed hero, with a soft scrim for legibility. */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgb(20 18 16 / 0.38), rgb(20 18 16 / 0));
+  --hdr-fg: var(--color-ivory);
+  --hdr-muted: rgb(247 244 239 / 0.82);
+  --hdr-line: rgb(247 244 239 / 0.22);
+  --hdr-chip: rgb(247 244 239 / 0.16);
+  --hdr-cta-bg: var(--color-ivory);
+  --hdr-cta-fg: var(--color-charcoal);
+}
+
+.overlay[data-scrolled="true"] {
+  background: rgb(247 244 239 / 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  --hdr-fg: var(--color-charcoal);
+  --hdr-muted: var(--color-stone-600);
+  --hdr-line: var(--color-border);
+  --hdr-chip: var(--color-stone-100);
+  --hdr-cta-bg: var(--color-charcoal);
+  --hdr-cta-fg: var(--color-ivory);
 }
 
 .inner {
@@ -15,14 +62,6 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-3);
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-  background: rgb(247 244 239 / 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .brandGroup {
@@ -38,12 +77,12 @@
 
 .section {
   padding-left: var(--space-3);
-  border-left: var(--border);
+  border-left: 1px solid var(--hdr-line);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--hdr-muted);
   line-height: 28px;
   white-space: nowrap;
 }
@@ -67,11 +106,11 @@
   gap: var(--space-2);
   height: 32px;
   padding: 0 6px 0 14px;
-  border: var(--border);
+  border: 1px solid var(--hdr-line);
   border-radius: 999px;
   font-size: var(--text-caption);
   letter-spacing: 0.06em;
-  color: var(--color-muted);
+  color: var(--hdr-muted);
   cursor: default;
   user-select: none;
 }
@@ -79,11 +118,11 @@
 .pillSoon {
   padding: 3px 8px;
   border-radius: 999px;
-  background: var(--color-stone-100);
+  background: var(--hdr-chip);
   font-size: 0.625rem;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: var(--color-stone-600);
+  color: var(--hdr-muted);
 }
 
 .lang {
@@ -92,12 +131,12 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  border: var(--border);
+  border: 1px solid var(--hdr-line);
   border-radius: var(--radius);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.08em;
-  color: var(--color-muted);
+  color: var(--hdr-muted);
 }
 
 @media (max-width: 400px) {

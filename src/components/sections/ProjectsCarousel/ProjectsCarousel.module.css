@@ -1,0 +1,239 @@
+.section {
+  padding-top: 0;
+}
+
+/* Positioning context for the arrows, which float over the images. */
+.viewport {
+  position: relative;
+}
+
+/* Full-bleed track that starts aligned with the page container. */
+.track {
+  --inset: max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter)));
+  display: flex;
+  gap: 24px;
+  padding: 0 var(--inset);
+  scroll-padding-inline: var(--inset);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Balanced size: three full cards across a laptop screen, a fourth peeking. */
+.item {
+  flex: 0 0 clamp(260px, 27vw, 400px);
+  scroll-snap-align: start;
+}
+
+.card {
+  display: block;
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-stone-100);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 1.4s var(--ease);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.index {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-style: italic;
+  color: var(--color-ivory);
+  text-shadow: 0 1px 12px rgb(0 0 0 / 0.35);
+}
+
+.view {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgb(247 244 239 / 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+
+.card:hover .view,
+.card:focus-visible .view {
+  opacity: 1;
+  transform: none;
+}
+
+.meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-charcoal);
+}
+
+.details {
+  margin-top: 2px;
+  font-size: var(--text-small);
+  color: var(--color-muted);
+}
+
+.area {
+  padding-top: 6px;
+  font-size: var(--text-caption);
+  letter-spacing: 0.08em;
+  color: var(--color-stone-400);
+  white-space: nowrap;
+}
+
+/* ---------- Arrows: frosted glass, thin-line icon ---------- */
+
+.arrow {
+  position: absolute;
+  top: calc((100% - 80px) / 2);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  border-radius: 50%;
+  background: rgb(20 18 16 / 0.3);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  color: var(--color-ivory);
+  box-shadow: 0 8px 32px rgb(20 18 16 / 0.18);
+  transform: translateY(-50%);
+  transition:
+    opacity 0.5s var(--ease),
+    background-color 0.4s var(--ease),
+    color 0.4s var(--ease),
+    transform 0.5s var(--ease);
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+.arrow:disabled {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.prev {
+  left: max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter)));
+  margin-left: var(--space-4);
+}
+
+.next {
+  right: var(--space-5);
+}
+
+/* On devices with a mouse, arrows appear when the carousel is hovered. */
+@media (hover: hover) {
+  .arrow {
+    opacity: 0;
+  }
+
+  .viewport:hover .arrow,
+  .arrow:focus-visible {
+    opacity: 1;
+  }
+
+  .viewport:hover .prev {
+    transform: translate(4px, -50%);
+  }
+
+  .viewport:hover .next {
+    transform: translate(-4px, -50%);
+  }
+}
+
+/* ---------- Counter + progress rule ---------- */
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.counter {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  letter-spacing: 0.04em;
+  color: var(--color-stone-400);
+}
+
+.counter strong {
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.rule {
+  position: relative;
+  flex: 1;
+  height: 1px;
+  background: var(--color-stone-200);
+  overflow: hidden;
+}
+
+.ruleFill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-charcoal);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+@media (max-width: 768px) {
+  .item {
+    flex-basis: 78vw;
+  }
+
+  .track {
+    gap: var(--space-3);
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .footer {
+    margin-top: var(--space-4);
+  }
+}

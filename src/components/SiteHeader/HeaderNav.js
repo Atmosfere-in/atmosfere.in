@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./HeaderNav.module.css";
 
 export default function HeaderNav({ nav, cta, section }) {
@@ -87,7 +88,7 @@ export default function HeaderNav({ nav, cta, section }) {
             </Link>
           )}
           <Link href="/" className={styles.back} onClick={() => setOpen(false)}>
-            ← All of Atmosfere
+            <Arrow direction="left" size={14} /> All of Atmosfere
           </Link>
           <span className={styles.soon}>Shop Atmosfere Living · Coming soon</span>
         </div>

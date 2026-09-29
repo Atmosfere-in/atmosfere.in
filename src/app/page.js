@@ -7,7 +7,7 @@ import { verticals } from "@/data/verticals";
 export default function Home() {
   return (
     <>
-      <SiteHeader />
+      <SiteHeader overlay />
       <main>
         <h1 className="visually-hidden">
           Atmosfere — interior design, hospitality and living

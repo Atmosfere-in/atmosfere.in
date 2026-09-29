@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./HubBanners.module.css";
 
 function BannerContent({ vertical, live }) {
@@ -30,7 +31,7 @@ function BannerContent({ vertical, live }) {
 
         {live ? (
           <span className={styles.cta}>
-            Explore <span aria-hidden="true">→</span>
+            Explore <Arrow size={16} />
           </span>
         ) : (
           <span className={styles.soon}>Coming soon</span>

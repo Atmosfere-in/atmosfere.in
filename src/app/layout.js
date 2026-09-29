@@ -1,6 +1,7 @@
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 
+// Display: a high-contrast serif that echoes the logo's wordmark.
 const serif = Cormorant_Garamond({
   variable: "--font-serif",
   subsets: ["latin"],
@@ -8,7 +9,8 @@ const serif = Cormorant_Garamond({
   style: ["normal", "italic"],
 });
 
-const sans = Inter({
+// Body/UI: a geometric sans that echoes the logo's arched mark.
+const sans = Jost({
   variable: "--font-sans",
   subsets: ["latin"],
 });

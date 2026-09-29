@@ -1,17 +1,22 @@
 import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
+import HeaderFrame from "./HeaderFrame";
 import HeaderNav from "./HeaderNav";
 import styles from "./SiteHeader.module.css";
 
 // Shared shell for the hub and every vertical. The hub renders it bare;
 // verticals pass their section name, nav links and highlighted CTA.
-export default function SiteHeader({ section, nav, cta }) {
+// `overlay` floats it transparently over a full-bleed hero until scrolled.
+export default function SiteHeader({ section, nav, cta, overlay = false }) {
   return (
-    <header className={`${styles.header} ${section ? styles.sticky : ""}`}>
+    <HeaderFrame
+      overlay={overlay}
+      className={`${styles.header} ${overlay ? styles.overlay : styles.sticky}`}
+    >
       <div className={styles.inner}>
         <div className={styles.brandGroup}>
           <Link href="/" className={styles.brand} aria-label="Atmosfere home">
-            <Logo />
+            <Logo tone="inherit" />
           </Link>
           {section && (
             <Link href={section.href} className={styles.section}>
@@ -40,6 +45,6 @@ export default function SiteHeader({ section, nav, cta }) {
           )}
         </div>
       </div>
-    </header>
+    </HeaderFrame>
   );
 }

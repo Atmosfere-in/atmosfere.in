@@ -1,0 +1,175 @@
+.section {
+  padding: var(--space-4) 0;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.title {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-charcoal);
+}
+
+.hint {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-400);
+  text-align: right;
+}
+
+.project {
+  font-size: var(--text-small);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-muted);
+}
+
+/* Heading + frame fill the screen below the sticky header; the frame never
+   drops below 400px on short laptops or grows past 860px on tall ones. */
+.frame {
+  position: relative;
+  height: clamp(460px, calc(100svh - var(--header-height) - 136px), 860px);
+  overflow: hidden;
+  background: var(--color-stone-100);
+  user-select: none;
+}
+
+/* Images never take pointer events, so clicks and drags reach the frame. */
+.image {
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.before {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+
+/* Muted treatment so the "before" reads as raw and unfinished. */
+.beforeImage {
+  filter: saturate(0.6) brightness(0.95);
+}
+
+.label {
+  position: absolute;
+  top: var(--space-4);
+  padding: 6px 12px;
+  background: rgb(247 244 239 / 0.9);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+  pointer-events: none;
+}
+
+.labelBefore {
+  left: var(--space-4);
+}
+
+.labelAfter {
+  right: var(--space-4);
+}
+
+.handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 1px;
+  background: var(--color-ivory);
+  pointer-events: none;
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  font-size: 1rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px rgb(31 29 26 / 0.08);
+}
+
+/* Horizontal drags move the slider; vertical swipes still scroll the page. */
+.frame {
+  cursor: ew-resize;
+  touch-action: pan-y;
+}
+
+.dragging .knob {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.knob:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 480px;
+    padding: var(--space-4) 0;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .hint {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .frame {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .label {
+    top: var(--space-3);
+  }
+
+  .labelBefore {
+    left: var(--space-3);
+  }
+
+  .labelAfter {
+    right: var(--space-3);
+  }
+
+  .knob {
+    width: 44px;
+    height: 44px;
+  }
+}

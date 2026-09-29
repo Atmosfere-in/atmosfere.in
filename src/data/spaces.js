@@ -1,4 +1,5 @@
 import { unsplash } from "@/lib/images";
+import { planningTypes as allPlanningTypes } from "@/data/planningTypes";
 
 // Content for atmosfere.in/spaces. Project names, figures and quotes are
 // placeholders until the client supplies real portfolio content.
@@ -20,9 +21,12 @@ export const hero = {
   intro:
     "From the first sketch to the final styled shelf, one studio carries your home or workplace through design, execution and handover.",
   image: {
-    src: unsplash("1774199496664-a9690967be5a"),
-    alt: "A calm living room with a lounge chair, arc floor lamp and warm afternoon light",
+    src: unsplash("1757924461488-ef9ad0670978"),
+    alt: "A serene living room with deep sofas, soft rugs and floor-to-ceiling windows onto a garden",
+    position: "50% 55%",
   },
+  primary: { label: "Get a Quote", href: "/spaces/get-a-quote" },
+  secondary: { label: "View Projects", href: "/spaces/projects" },
 };
 
 export const about = {
@@ -33,130 +37,113 @@ export const about = {
     "We work across apartments, villas, offices and retail, with a single point of contact, a fixed scope and a finish that holds up long after the photographs.",
   ],
   image: {
-    src: unsplash("1768836180164-070b4c1a8f94"),
-    alt: "A sunlit dining corner with sculpted wooden chairs and a potted plant",
+    src: unsplash("1699869653495-fe26f4c70b3e"),
+    alt: "A calm japandi bedroom with a timber-slatted wall and soft linen bedding",
   },
+  link: { label: "About the studio", href: "/spaces/about" },
 };
 
-export const projects = [
-  {
-    slug: "the-linen-house",
-    name: "The Linen House",
-    type: "Residence",
-    location: "Gurugram",
-    area: "4,200 sq ft",
-    image: {
-      src: unsplash("1772797583328-f83bc3f94f80"),
-      alt: "A light living room with timber shelving and a linen sofa",
-    },
-  },
-  {
-    slug: "walnut-and-stone",
-    name: "Walnut & Stone",
-    type: "Apartment",
-    location: "Mumbai",
-    area: "2,600 sq ft",
-    image: {
-      src: unsplash("1581784878214-8d5596b98a01"),
-      alt: "Spherical glass pendants against a dark walnut wall",
-    },
-  },
-  {
-    slug: "casa-terra",
-    name: "Casa Terra",
-    type: "Villa",
-    location: "Goa",
-    area: "5,800 sq ft",
-    image: {
-      src: unsplash("1724582586580-8b52c02e99dd"),
-      alt: "A curved sofa and low table beside floor-to-ceiling glass doors",
-    },
-  },
-  {
-    slug: "the-quiet-room",
-    name: "The Quiet Room",
-    type: "Residence",
-    location: "Dehradun",
-    area: "3,100 sq ft",
-    image: {
-      src: unsplash("1617098900591-3f90928e8c54"),
-      alt: "A bedroom with a crystal chandelier and dark timber panelling",
-    },
-  },
-  {
-    slug: "atelier-dining",
-    name: "Atelier Dining",
-    type: "Commercial · F&B",
-    location: "New Delhi",
-    area: "1,900 sq ft",
-    image: {
-      src: unsplash("1540760029765-138c8f6d2eac"),
-      alt: "An oval glass dining table with armchairs against a fluted wall",
-    },
-  },
-];
-
-export const planningTypes = {
-  eyebrow: "Atmosfere Hospitality",
-  title: "Planning a hospitality project?",
-  intro:
-    "Hotels, villas and restaurants start with a different question — not how the property should look, but what it should become. Our Hospitality practice plans it before we build it.",
-  types: [
+export const projects = {
+  eyebrow: "Featured Projects",
+  title: "Selected work.",
+  intro: "Homes and workplaces we've designed and built, start to finish.",
+  items: [
     {
-      name: "Hotel / Resort",
+      href: "/spaces/projects/the-linen-house",
+      name: "The Linen House",
+      details: "Residence · Gurugram",
+      side: "4,200 sq ft",
       image: {
-        src: unsplash("1605346434674-a440ca4dc4c0"),
-        alt: "A crisp hotel bed beside a dark timber nightstand",
+        src: unsplash("1738168279272-c08d6dd22002"),
+        alt: "A modern living room with an arc floor lamp and warm oak floors",
       },
     },
     {
-      name: "Villa / Cottage",
+      href: "/spaces/projects/walnut-and-stone",
+      name: "Walnut & Stone",
+      details: "Apartment · Mumbai",
+      side: "2,600 sq ft",
       image: {
-        src: unsplash("1613977257365-aaae5a9817ff"),
-        alt: "A white modern villa with a swimming pool",
+        src: unsplash("1737898415581-7dea57a1905b"),
+        alt: "A walnut kitchen and dining space with paper pendant lights",
       },
     },
     {
-      name: "Restaurant / Café",
+      href: "/spaces/projects/the-arch-house",
+      name: "The Arch House",
+      details: "Residence · New Delhi",
+      side: "5,800 sq ft",
       image: {
-        src: unsplash("1631615535272-1106aa1b3854"),
-        alt: "A restaurant lit by clusters of amber pendant lights",
+        src: unsplash("1778731660244-b6e8f905107d"),
+        alt: "An arched doorway framing a crystal chandelier and a stair landing",
       },
     },
     {
-      name: "Banquet",
+      href: "/spaces/projects/the-quiet-study",
+      name: "The Quiet Study",
+      details: "Residence · Dehradun",
+      side: "3,100 sq ft",
       image: {
-        src: unsplash("1554009975-d74653b879f1"),
-        alt: "Rows of glowing pendant lamps in a tall hall",
+        src: unsplash("1737233030536-247c1379d82c"),
+        alt: "A study alcove with an arched niche, oak desk and wall lamp",
       },
     },
     {
-      name: "Airbnb",
+      href: "/spaces/projects/atelier-dining",
+      name: "Atelier Dining",
+      details: "Commercial · F&B · Gurugram",
+      side: "1,900 sq ft",
       image: {
-        src: unsplash("1599777560450-e462cffc5368"),
-        alt: "A stay with an infinity pool reflecting the evening sky",
+        src: unsplash("1753800558729-7929703f81de"),
+        alt: "Globe pendant lights over a dining table with sculptural branches",
       },
     },
   ],
 };
 
+// Cross-sell: each tile deep-links to the same type on the Hospitality page.
+export const planningTypes = {
+  eyebrow: "Atmosfere Hospitality",
+  title: "Planning a hospitality project?",
+  intro:
+    "Hotels, villas and restaurants start with a different question — not how the property should look, but what it should become. Our Hospitality practice plans it before we build it.",
+  action: { label: "Explore Hospitality", href: "/hospitality" },
+  compact: true,
+  types: allPlanningTypes.map((type) => ({
+    ...type,
+    href: `/hospitality#${type.slug}`,
+  })),
+};
+
+// Same room, same camera angle. Both are placeholders edited from one stock
+// photo — before: bare walls, no lamps, dated brown sofa, dry twigs, flat
+// yellowed light; after: styled, with fresh greenery. Replace both with the
+// client's real before/after shots when available.
 export const beforeAfter = {
   eyebrow: "Transformation",
-  title: "From bare shell to a home that feels finished.",
+  title: "From a plain room to a home that feels finished.",
   project: "The Linen House, Gurugram",
   before: {
-    src: unsplash("1757742690834-aa581b9f53b2"),
-    alt: "Before: an empty room with bare walls, timber floor and a large window",
+    src: "/images/spaces/linen-house-before.webp",
+    alt: "Before: the living room with bare walls, flat yellowed lighting and no styling",
+    asIs: true,
   },
   after: {
-    src: unsplash("1750639258774-9a714379a093"),
-    alt: "After: the same room styled with a cream sofa, sculpted table and framed art",
+    src: "/images/spaces/linen-house-after.webp",
+    alt: "After: a cream bouclé sofa, table lamps, framed abstract art and fresh greenery in a white vase",
   },
 };
 
 export const process = {
   eyebrow: "How We Work",
   title: "Four stages. One team. No hand-offs.",
+  intro:
+    "Every material is chosen in the studio, every detail is drawn before it's built, and the same team sees it through to handover.",
+  image: {
+    src: unsplash("1770970831074-6e88b6cc260b"),
+    alt: "A designer's table with fabric swatches, pencil sketches and a glass vase",
+    caption: "Sketches & swatches · Atmosfere studio",
+  },
   steps: [
     {
       name: "Consult",
@@ -179,6 +166,7 @@ export const process = {
       icon: "handover",
     },
   ],
+  link: { label: "See the full process", href: "/spaces/process" },
 };
 
 export const founder = {
@@ -198,8 +186,8 @@ export const split = [
     text: "Homes, apartments and villas — designed around the way you live.",
     href: "/spaces/projects?type=residential",
     image: {
-      src: unsplash("1762544968153-b9b47435fefd"),
-      alt: "A living room with tan leather chairs arranged around a fireplace",
+      src: unsplash("1769736436858-65a86b395ef7"),
+      alt: "A bright living room with sculptural lounge chairs and fresh greenery",
     },
   },
   {
@@ -213,68 +201,84 @@ export const split = [
   },
 ];
 
-export const caseStudies = [
-  {
-    slug: "the-spiral-residence",
-    tag: "Residence · Chandigarh",
-    title: "The Spiral Residence",
-    summary:
-      "Turning a dark, compartmentalised floor plan into one continuous, light-filled volume around a sculpted timber stair.",
-    image: {
-      src: unsplash("1758801304964-417e328be877"),
-      alt: "A sculpted timber spiral staircase in warm light",
+export const caseStudies = {
+  title: "The thinking behind the finish.",
+  items: [
+    {
+      href: "/spaces/projects/the-spiral-residence",
+      tag: "Residence · Chandigarh",
+      title: "The Spiral Residence",
+      summary:
+        "Turning a dark, compartmentalised floor plan into one continuous, light-filled volume around a sculpted timber stair.",
+      image: {
+        src: unsplash("1758801304964-417e328be877"),
+        alt: "A sculpted timber spiral staircase in warm light",
+      },
     },
-  },
-  {
-    slug: "marble-and-brass-office",
-    tag: "Workplace · Bengaluru",
-    title: "Marble & Brass Office",
-    summary:
-      "A founder's office that had to host board meetings and quiet focus — resolved with zoning, acoustics and a single marble plinth.",
-    image: {
-      src: unsplash("1778731525532-d2ab833c8463"),
-      alt: "A modern office with a marble desk and a plush chair",
+    {
+      href: "/spaces/projects/marble-and-brass-office",
+      tag: "Workplace · Bengaluru",
+      title: "Marble & Brass Office",
+      summary:
+        "A founder's office that had to host board meetings and quiet focus — resolved with zoning, acoustics and a single marble plinth.",
+      image: {
+        src: unsplash("1778731525532-d2ab833c8463"),
+        alt: "A modern office with a marble desk and a plush chair",
+      },
     },
-  },
-  {
-    slug: "the-timber-suite",
-    tag: "Residence · Pune",
-    title: "The Timber Suite",
-    summary:
-      "A primary suite reworked around storage, soft light and a headboard wall that hides everything you don't want to see.",
-    image: {
-      src: unsplash("1757344454333-cc666252e596"),
-      alt: "A bedroom with timber accents and soft indirect lighting",
+    {
+      href: "/spaces/projects/the-walnut-kitchen",
+      tag: "Residence · Pune",
+      title: "The Walnut Kitchen",
+      summary:
+        "A cramped kitchen opened into one walnut-lined room for cooking, dining and hosting — with storage that hides everything.",
+      image: {
+        src: unsplash("1737898378296-94dc316cd443"),
+        alt: "A walnut-panelled kitchen and dining room in soft daylight",
+      },
     },
-  },
-];
-
-export const caseStudyStages = [
-  "Brief",
-  "Challenge",
-  "Approach",
-  "Design Decisions",
-  "Execution",
-  "Outcome",
-];
+  ],
+};
 
 export const trust = {
+  image: {
+    src: unsplash("1702814160779-4a88cfb330c7"),
+  },
   stats: [
     { value: "120+", label: "Projects delivered" },
     { value: "8+", label: "Years in practice" },
     { value: "14", label: "Cities across India" },
     { value: "1", label: "Team, concept to keys" },
   ],
-  clients: ["Maison Verde", "Kaya Hotels", "Oakline", "Studio Nara", "The Loft Co.", "Aurum"],
-  // Fictional placeholders — replace with real press mentions only.
-  press: ["The Interior Review", "Habitat Journal", "Casa Quarterly", "Form & Room"],
+  // Placeholder testimonials — replace with real, attributable client quotes.
+  testimonials: [
+    {
+      quote:
+        "They drew it, built it and styled it — and the finished home looks exactly like the drawings we signed off.",
+      name: "Homeowner",
+      project: "Residence · Gurugram",
+    },
+    {
+      quote:
+        "One point of contact for eleven months. Weekly updates, no surprises on cost, and a handover date they actually met.",
+      name: "Founder, design-led startup",
+      project: "Workplace · Bengaluru",
+    },
+    {
+      quote:
+        "Our apartment finally feels calm. Every cupboard has a purpose and every lamp is exactly where it should be.",
+      name: "Homeowners",
+      project: "Apartment · Mumbai",
+    },
+  ],
 };
 
 export const closing = {
   title: "Ready to start a project?",
   text: "Tell us about your space. We'll call within 24 hours to talk scope, budget and timeline.",
   image: {
-    src: unsplash("1770816307528-67e404552dcf"),
-    alt: "An interior at night lit by low pendant lights",
+    src: unsplash("1774423864869-702b21c2490a"),
+    position: "50% 45%",
   },
+  cta: { label: "Get a Quote", href: "/spaces/get-a-quote" },
 };

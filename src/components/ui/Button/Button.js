@@ -1,7 +1,8 @@
 import Link from "next/link";
+import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./Button.module.css";
 
-// variant: "primary" (accent fill) | "outline" | "light" (for dark photography)
+// variant: "primary" (charcoal) | "outline" | "light" | "onImage" (ivory)
 export default function Button({
   href,
   variant = "primary",
@@ -17,11 +18,7 @@ export default function Button({
       {...rest}
     >
       <span>{children}</span>
-      {arrow && (
-        <span className={styles.arrow} aria-hidden="true">
-          →
-        </span>
-      )}
+      {arrow && <Arrow size={16} className={styles.arrow} />}
     </Link>
   );
 }
@@ -33,9 +30,7 @@ export function TextLink({ href, light = false, children }) {
       className={`${styles.textLink} ${light ? styles.textLinkLight : ""}`}
     >
       <span>{children}</span>
-      <span className={styles.arrow} aria-hidden="true">
-        →
-      </span>
+      <Arrow size={16} className={styles.arrow} />
     </Link>
   );
 }

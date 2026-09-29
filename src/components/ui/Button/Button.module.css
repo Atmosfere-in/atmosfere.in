@@ -19,12 +19,23 @@
 }
 
 .primary {
-  background: var(--color-accent);
+  background: var(--color-charcoal);
   color: var(--color-ivory);
 }
 
 .primary:hover {
-  background: var(--color-charcoal);
+  background: var(--color-accent);
+}
+
+/* On photography the charcoal button would disappear; use ivory instead. */
+.onImage {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+}
+
+.onImage:hover {
+  background: var(--color-accent);
+  color: var(--color-ivory);
 }
 
 .outline {

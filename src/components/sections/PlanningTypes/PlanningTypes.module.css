@@ -1,0 +1,114 @@
+.section {
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 3 / 4;
+  padding: var(--space-4) 20px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgb(20 18 16 / 0.8), rgb(20 18 16 / 0) 60%);
+  transition: background-color 0.6s var(--ease);
+}
+
+.image {
+  z-index: -2;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+
+.tile:hover .image {
+  transform: scale(1.06);
+}
+
+.tile:hover::after {
+  background-color: rgb(164 83 47 / 0.25);
+}
+
+.cell:target .tile {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.text {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  opacity: 0;
+  transition: max-height 0.6s var(--ease), opacity 0.6s var(--ease), margin 0.6s var(--ease);
+}
+
+.tile:hover .text,
+.tile:focus-visible .text {
+  max-height: 8em;
+  margin-top: var(--space-2);
+  opacity: 0.85;
+}
+
+/* Compact (Spaces cross-sell): tile height follows the screen so the heading
+   and all five tiles fit in one view. */
+@media (min-width: 1025px) {
+  .compact .tile {
+    aspect-ratio: auto;
+    height: clamp(220px, calc(100svh - var(--header-height) - 20vh - 190px), 460px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .grid .cell:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .grid .cell:last-child .tile {
+    aspect-ratio: 16 / 9;
+  }
+
+  .tile {
+    padding: var(--space-3);
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .text {
+    display: none;
+  }
+}

@@ -1,30 +1,31 @@
-import Hero from "@/components/spaces/Hero/Hero";
-import About from "@/components/spaces/About/About";
-import FeaturedProjects from "@/components/spaces/FeaturedProjects/FeaturedProjects";
-import PlanningTypes from "@/components/spaces/PlanningTypes/PlanningTypes";
-import BeforeAfter from "@/components/spaces/BeforeAfter/BeforeAfter";
-import Process from "@/components/spaces/Process/Process";
-import FounderNote from "@/components/spaces/FounderNote/FounderNote";
-import Split from "@/components/spaces/Split/Split";
-import CaseStudies from "@/components/spaces/CaseStudies/CaseStudies";
-import TrustSignals from "@/components/spaces/TrustSignals/TrustSignals";
-import ClosingCta from "@/components/spaces/ClosingCta/ClosingCta";
+import Hero from "@/components/sections/Hero/Hero";
+import About from "@/components/sections/About/About";
+import ProjectsCarousel from "@/components/sections/ProjectsCarousel/ProjectsCarousel";
+import PlanningTypes from "@/components/sections/PlanningTypes/PlanningTypes";
+import BeforeAfter from "@/components/sections/BeforeAfter/BeforeAfter";
+import Process from "@/components/sections/Process/Process";
+import FounderNote from "@/components/sections/FounderNote/FounderNote";
+import Split from "@/components/sections/Split/Split";
+import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
+import TrustSignals from "@/components/sections/TrustSignals/TrustSignals";
+import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
+import * as spaces from "@/data/spaces";
 
 // atmosfere.in/spaces — portfolio-led, built to generate turnkey project leads.
 export default function SpacesHome() {
   return (
     <main>
-      <Hero />
-      <About />
-      <FeaturedProjects />
-      <PlanningTypes />
-      <BeforeAfter />
-      <Process />
-      <FounderNote />
-      <Split />
-      <CaseStudies />
-      <TrustSignals />
-      <ClosingCta />
+      <Hero {...spaces.hero} />
+      <About {...spaces.about} />
+      <ProjectsCarousel {...spaces.projects} />
+      <PlanningTypes {...spaces.planningTypes} />
+      <BeforeAfter {...spaces.beforeAfter} />
+      <Process {...spaces.process} />
+      <FounderNote {...spaces.founder} />
+      <Split label="Residential and commercial work" panels={spaces.split} />
+      <CaseStudies {...spaces.caseStudies} />
+      <TrustSignals {...spaces.trust} />
+      <ClosingCta {...spaces.closing} />
     </main>
   );
 }

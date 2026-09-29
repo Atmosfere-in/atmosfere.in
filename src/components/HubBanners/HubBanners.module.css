@@ -1,12 +1,17 @@
 /* Three equal-width (33.3%) full-height banners. On hover, a live banner
    widens slightly like a lookbook accordion — the only interaction cue. */
 
+/* Full screen; the header floats transparently across the top. */
 .banners {
   display: flex;
-  gap: 2px;
-  height: calc(100svh - var(--header-height));
-  min-height: 560px;
-  background: var(--color-bg);
+  height: 100svh;
+  min-height: 600px;
+  background: var(--color-charcoal);
+}
+
+/* Hairline dividers instead of gaps, so the triptych reads as one frame. */
+.banner + .banner {
+  border-left: 1px solid rgb(247 244 239 / 0.28);
 }
 
 .banner {
@@ -55,8 +60,8 @@
 
 .index {
   position: absolute;
-  top: var(--space-4);
-  left: var(--space-4);
+  top: calc(var(--header-height) + var(--space-4));
+  left: var(--space-5);
   font-family: var(--font-display);
   font-size: var(--text-subhead);
   font-style: italic;
@@ -69,11 +74,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: var(--space-5) var(--space-5) var(--space-6);
+  padding: var(--space-5) var(--space-5) clamp(40px, 8vh, 72px);
 }
 
 .tagline {
-  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--space-3);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
@@ -81,9 +89,17 @@
   opacity: 0.9;
 }
 
+.tagline::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.8;
+}
+
 .name {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 3.6vw, 4rem);
+  font-size: clamp(2.75rem, 4.2vw, 4.75rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0.01em;
@@ -205,10 +221,24 @@
     height: max(240px, calc((100svh - var(--header-height)) / 3));
   }
 
+  /* The first banner also sits under the floating header. */
+  .banner:first-child {
+    height: calc(max(240px, calc((100svh - var(--header-height)) / 3)) + var(--header-height));
+  }
+
+  .banner + .banner {
+    border-left: none;
+    border-top: 1px solid rgb(247 244 239 / 0.28);
+  }
+
   .index {
     top: var(--space-3);
     left: var(--space-3);
     font-size: var(--text-body);
+  }
+
+  .banner:first-child .index {
+    top: calc(var(--header-height) + var(--space-3));
   }
 
   .content {

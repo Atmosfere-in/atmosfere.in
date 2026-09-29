@@ -13,7 +13,7 @@ export const metadata = {
 export default function SpacesLayout({ children }) {
   return (
     <>
-      <SiteHeader {...spacesNav} />
+      <SiteHeader {...spacesNav} overlay />
       {children}
     </>
   );
