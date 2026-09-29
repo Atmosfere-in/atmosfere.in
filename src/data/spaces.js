@@ -21,9 +21,9 @@ export const hero = {
   intro:
     "From the first sketch to the final styled shelf, one studio carries your home or workplace through design, execution and handover.",
   image: {
-    src: unsplash("1699239116624-85268dce7377"),
-    alt: "A refined living room with fluted wall panels, an arched doorway and a tan leather sofa",
-    position: "50% 64%",
+    src: unsplash("1760067537540-cc36c1700d7e"),
+    alt: "A warm, sunlit open kitchen and living space with floor-to-ceiling glass doors opening onto a tropical garden",
+    position: "50% 55%",
   },
   primary: { label: "Get a Quote", href: "/spaces/get-a-quote" },
   secondary: { label: "View Projects", href: "/spaces/projects" },

@@ -21,9 +21,11 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+  /* Shade only the bottom-left corner behind the copy; the rest of the
+     photograph keeps its full colour and brightness. */
   background:
-    linear-gradient(to top, rgb(20 18 16 / 0.7) 0%, rgb(20 18 16 / 0.15) 55%, rgb(20 18 16 / 0.1) 100%),
-    linear-gradient(to right, rgb(20 18 16 / 0.35) 0%, rgb(20 18 16 / 0) 60%);
+    linear-gradient(to top, rgb(20 18 16 / 0.62) 0%, rgb(20 18 16 / 0.18) 38%, rgb(20 18 16 / 0) 58%),
+    linear-gradient(to right, rgb(20 18 16 / 0.42) 0%, rgb(20 18 16 / 0.12) 38%, rgb(20 18 16 / 0) 58%);
 }
 
 .content {
