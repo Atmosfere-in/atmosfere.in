@@ -20,10 +20,6 @@ function BannerContent({ vertical, live }) {
       </div>
       <div className={styles.scrim} aria-hidden="true" />
 
-      <span className={styles.index} aria-hidden="true">
-        {vertical.index}
-      </span>
-
       <div className={styles.content}>
         <p className={styles.tagline}>{vertical.tagline}</p>
         <h2 className={styles.name}>{vertical.name}</h2>

@@ -9,10 +9,6 @@
   background: var(--color-charcoal);
 }
 
-/* Hairline dividers instead of gaps, so the triptych reads as one frame. */
-.banner + .banner {
-  border-left: 1px solid rgb(247 244 239 / 0.28);
-}
 
 .banner {
   position: relative;
@@ -57,17 +53,6 @@
 }
 
 /* ---------- Text ---------- */
-
-.index {
-  position: absolute;
-  top: calc(var(--header-height) + var(--space-4));
-  left: var(--space-5);
-  font-family: var(--font-display);
-  font-size: var(--text-subhead);
-  font-style: italic;
-  letter-spacing: 0.04em;
-  opacity: 0.85;
-}
 
 .content {
   position: absolute;
@@ -224,21 +209,6 @@
   /* The first banner also sits under the floating header. */
   .banner:first-child {
     height: calc(max(240px, calc((100svh - var(--header-height)) / 3)) + var(--header-height));
-  }
-
-  .banner + .banner {
-    border-left: none;
-    border-top: 1px solid rgb(247 244 239 / 0.28);
-  }
-
-  .index {
-    top: var(--space-3);
-    left: var(--space-3);
-    font-size: var(--text-body);
-  }
-
-  .banner:first-child .index {
-    top: calc(var(--header-height) + var(--space-3));
   }
 
   .content {

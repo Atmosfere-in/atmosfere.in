@@ -33,6 +33,8 @@
   left: 0;
   right: 0;
   background: linear-gradient(to bottom, rgb(20 18 16 / 0.38), rgb(20 18 16 / 0));
+  /* No rule under the header while it floats over photography. */
+  border-bottom-color: transparent;
   --hdr-fg: var(--color-ivory);
   --hdr-muted: rgb(247 244 239 / 0.82);
   --hdr-line: rgb(247 244 239 / 0.22);
@@ -45,6 +47,7 @@
   background: rgb(247 244 239 / 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: var(--color-border);
   --hdr-fg: var(--color-charcoal);
   --hdr-muted: var(--color-stone-600);
   --hdr-line: var(--color-border);

@@ -6,7 +6,6 @@ import { unsplash } from "@/lib/images";
 export const verticals = [
   {
     id: "spaces",
-    index: "01",
     name: "Spaces",
     tagline: "Design & Execute",
     description: "Turnkey interiors for homes and commercial spaces.",
@@ -19,7 +18,6 @@ export const verticals = [
   },
   {
     id: "hospitality",
-    index: "02",
     name: "Hospitality",
     tagline: "Plan & Advise",
     description: "Planning for hotels, resorts, villas and banquets.",
@@ -32,7 +30,6 @@ export const verticals = [
   },
   {
     id: "living",
-    index: "03",
     name: "Living",
     tagline: "Style & Shop",
     description: "Curated furniture and decor, styled corner by corner.",
