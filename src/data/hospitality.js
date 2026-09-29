@@ -83,7 +83,7 @@ export const services = {
       text: "Existing properties re-planned for a new market, a new guest or a better rate.",
       href: "/hospitality/services#repositioning",
       image: {
-        src: unsplash("1578898887932-dce23a595ad4"),
+        src: unsplash("1607712617949-8c993d290809"),
         alt: "A repositioned luxury suite with a canopy bed, chandelier and timber-beamed ceiling",
       },
     },
