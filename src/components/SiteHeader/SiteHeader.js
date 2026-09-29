@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
+import BrandLink from "./BrandLink";
 import HeaderFrame from "./HeaderFrame";
 import HeaderNav from "./HeaderNav";
 import styles from "./SiteHeader.module.css";
@@ -15,9 +16,9 @@ export default function SiteHeader({ section, nav, cta, overlay = false }) {
     >
       <div className={styles.inner}>
         <div className={styles.brandGroup}>
-          <Link href="/" className={styles.brand} aria-label="Atmosfere home">
+          <BrandLink className={styles.brand}>
             <Logo tone="inherit" />
-          </Link>
+          </BrandLink>
           {section && (
             <Link href={section.href} className={styles.section}>
               {section.label}
