@@ -37,8 +37,8 @@ export const about = {
     "We work across apartments, villas, offices and retail, with a single point of contact, a fixed scope and a finish that holds up long after the photographs.",
   ],
   image: {
-    src: unsplash("1699869653495-fe26f4c70b3e"),
-    alt: "A calm japandi bedroom with a timber-slatted wall and soft linen bedding",
+    src: unsplash("1782795799287-a3ca32de0d72"),
+    alt: "A warm timber-lined dining room with a round table and a framed mountain print",
   },
   link: { label: "About the studio", href: "/spaces/about" },
 };
@@ -175,8 +175,8 @@ export const founder = {
   name: "Founder & Principal Designer",
   role: "Atmosfere",
   image: {
-    src: unsplash("1772442198907-765685249ea4"),
-    alt: "A designer studying an architectural model at a desk",
+    src: unsplash("1772404245810-b8b0a05c731e"),
+    alt: "Portrait of the founder in a cream suit, seated on a sofa in a dark timber room",
   },
 };
 
@@ -277,8 +277,8 @@ export const closing = {
   title: "Ready to start a project?",
   text: "Tell us about your space. We'll call within 24 hours to talk scope, budget and timeline.",
   image: {
-    src: unsplash("1774423864869-702b21c2490a"),
-    position: "50% 45%",
+    src: unsplash("1760072513367-55182245e76c"),
+    position: "50% 55%",
   },
   cta: { label: "Get a Quote", href: "/spaces/get-a-quote" },
 };

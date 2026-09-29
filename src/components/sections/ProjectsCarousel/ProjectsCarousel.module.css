@@ -23,9 +23,11 @@
   display: none;
 }
 
-/* Balanced size: three full cards across a laptop screen, a fourth peeking. */
+/* Card width also follows the screen height, so on short laptop screens
+   the whole 4:5 image and its caption fit in view together
+   (width = available height × 0.8, minus heading + caption). */
 .item {
-  flex: 0 0 clamp(260px, 27vw, 400px);
+  flex: 0 0 clamp(240px, min(26vw, calc((100svh - var(--header-height) - 200px) * 0.8)), 380px);
   scroll-snap-align: start;
 }
 

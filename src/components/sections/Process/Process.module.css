@@ -1,111 +1,144 @@
+/* Dark, photograph-backed band: the image sets the mood, the timeline
+   carries the content. */
 .section {
-  background: var(--color-stone-100);
+  position: relative;
+  padding: clamp(64px, 12vh, 120px) 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
 }
 
-/* Tall portrait image that holds its place while the 2 × 2 stages scroll. */
-.grid {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  align-items: start;
-  gap: clamp(40px, 6vw, 96px);
-}
-
-.mediaCol {
-  position: sticky;
-  top: calc(var(--header-height) + var(--space-5));
-  aspect-ratio: 4 / 5;
-}
-
-.media {
+.section::after {
+  content: "";
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  z-index: -1;
+  background:
+    linear-gradient(to bottom, rgb(20 18 16 / 0.82), rgb(20 18 16 / 0.7) 45%, rgb(20 18 16 / 0.86));
 }
 
-.image {
+.bg {
+  z-index: -2;
   object-fit: cover;
+  transform: scale(1.04);
 }
 
-.caption {
-  position: absolute;
-  left: var(--space-4);
-  bottom: var(--space-4);
-  padding: 6px 12px;
-  background: rgb(247 244 239 / 0.9);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-charcoal);
-}
+/* ---------- Timeline ---------- */
 
-.steps {
+.timeline {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: var(--space-5);
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(24px, 3vw, 48px);
   list-style: none;
+  padding-top: var(--space-5);
+  margin-top: clamp(8px, 2vh, 24px);
+}
+
+/* The hairline the stages hang from. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgb(247 244 239 / 0.55), rgb(247 244 239 / 0.15));
 }
 
 .step {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
-  column-gap: var(--space-3);
-  padding: clamp(14px, 2.6vh, 28px) 0;
-  border-top: 1px solid var(--color-stone-400);
+  position: relative;
 }
 
-.name {
+.node {
+  position: absolute;
+  top: calc(-1 * var(--space-5) - 6px);
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--color-ivory);
+  border-radius: 50%;
+  background: var(--color-charcoal);
+}
+
+.node::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: #c9a57a;
+}
+
+.top {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
-  font-family: var(--font-display);
-  font-size: var(--text-h3);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--color-charcoal);
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .number {
-  font-size: 1.125rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 4vw, 3.75rem);
   font-style: italic;
-  color: var(--color-accent);
-}
-
-.text {
-  grid-column: 1 / -1;
-  margin-top: var(--space-2);
-  font-size: var(--text-small);
-  color: var(--color-muted);
+  line-height: 0.9;
+  color: #c9a57a;
 }
 
 .icon {
-  grid-column: 2;
-  grid-row: 1;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   fill: none;
-  stroke: var(--color-stone-600);
+  stroke: rgb(247 244 239 / 0.7);
   stroke-width: 1.25;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-5);
-  }
+.name {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgb(247 244 239 / 0.18);
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 400;
+  line-height: 1.1;
+}
 
-  .mediaCol {
-    position: relative;
-    top: auto;
-    aspect-ratio: 16 / 10;
+.text {
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: rgb(247 244 239 / 0.72);
+}
+
+@media (max-width: 900px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--space-6);
   }
 }
 
 @media (max-width: 560px) {
-  .steps {
+  .timeline {
     grid-template-columns: 1fr;
+    padding-top: 0;
+    padding-left: var(--space-5);
+    row-gap: var(--space-5);
+  }
+
+  /* Vertical line on phones. */
+  .timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 6px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(to bottom, rgb(247 244 239 / 0.55), rgb(247 244 239 / 0.15));
+  }
+
+  .node {
+    top: 8px;
+    left: calc(-1 * var(--space-5));
   }
 }

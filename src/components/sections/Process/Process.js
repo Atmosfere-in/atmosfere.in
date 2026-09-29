@@ -52,41 +52,40 @@ const icons = {
   ),
 };
 
+// A dark, photograph-backed band with the stages laid out as a timeline:
+// a hairline runs across, each stage hangs from a node on it.
 export default function Process({ eyebrow, title, intro, steps, image, link }) {
   return (
-    <section className={`section ${styles.section}`}>
-      <div className={`container ${styles.grid}`}>
-        <div className={styles.mediaCol}>
-          <div className={styles.media}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(max-width: 900px) 100vw, 40vw"
-              className={styles.image}
-            />
-            {image.caption && (
-              <span className={styles.caption}>{image.caption}</span>
-            )}
-          </div>
-        </div>
+    <section className={styles.section}>
+      <Image
+        src={image.src}
+        alt=""
+        fill
+        sizes="100vw"
+        className={styles.bg}
+      />
 
-        <div>
-          <SectionHeading
-            eyebrow={eyebrow}
-            title={title}
-            intro={intro}
-            action={link && <TextLink href={link.href}>{link.label}</TextLink>}
-          />
+      <div className={`container ${styles.inner}`}>
+        <SectionHeading
+          eyebrow={eyebrow}
+          title={title}
+          intro={intro}
+          light
+          action={
+            link && (
+              <TextLink href={link.href} light>
+                {link.label}
+              </TextLink>
+            )
+          }
+        />
 
-          <ol className={styles.steps}>
-            {steps.map((step, i) => (
-              <li key={step.name} className={`${styles.step} reveal`}>
-                <h3 className={styles.name}>
-                  <span className={styles.number}>0{i + 1}</span>
-                  {step.name}
-                </h3>
-                <p className={styles.text}>{step.text}</p>
+        <ol className={styles.timeline}>
+          {steps.map((step, i) => (
+            <li key={step.name} className={`${styles.step} reveal`}>
+              <span className={styles.node} aria-hidden="true" />
+              <div className={styles.top}>
+                <span className={styles.number}>0{i + 1}</span>
                 <svg
                   className={styles.icon}
                   viewBox="0 0 32 32"
@@ -95,10 +94,12 @@ export default function Process({ eyebrow, title, intro, steps, image, link }) {
                 >
                   {icons[step.icon]}
                 </svg>
-              </li>
-            ))}
-          </ol>
-        </div>
+              </div>
+              <h3 className={styles.name}>{step.name}</h3>
+              <p className={styles.text}>{step.text}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

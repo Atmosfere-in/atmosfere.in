@@ -56,8 +56,8 @@ export const services = {
       text: "Market, location and budget tested before you commit — Airbnb, hotel, villa or venue.",
       href: "/hospitality/services#concept-feasibility",
       image: {
-        src: unsplash("1730342754687-956c90fb0db9"),
-        alt: "Colour swatches and fabric samples fanned out on a planning table",
+        src: unsplash("1770200574989-a4cca2c70c00"),
+        alt: "A hand-drawn perspective sketch of a planned interior layout",
       },
     },
     {
@@ -65,8 +65,8 @@ export const services = {
       text: "Room mix, guest circulation and back-of-house planned to work on day one.",
       href: "/hospitality/services#space-planning",
       image: {
-        src: unsplash("1601993957728-1e56ab70c5a8"),
-        alt: "A minimalist stone staircase washed in warm daylight",
+        src: unsplash("1698846296220-e44d9d4b9100"),
+        alt: "A floor plan being drawn by hand with a ruler",
       },
     },
     {
@@ -74,8 +74,8 @@ export const services = {
       text: "Menus, kitchens and seating plans shaped around how guests actually eat and stay.",
       href: "/hospitality/services#fnb-advisory",
       image: {
-        src: unsplash("1551632436-cbf8dd35adfa"),
-        alt: "A restaurant dining room with timber tables, plants and copper pendant lights",
+        src: unsplash("1774989423979-6a7bf5add3f0"),
+        alt: "A warm restaurant lit by clusters of golden pendant lights",
       },
     },
     {
@@ -203,8 +203,8 @@ export const founder = {
   name: "Founder & Principal Consultant",
   role: "Atmosfere Hospitality",
   image: {
-    src: unsplash("1581065178047-8ee15951ede6"),
-    alt: "Portrait of a hospitality consultant in a black blazer",
+    src: unsplash("1762341124796-530c0085f7d8"),
+    alt: "Portrait of the principal consultant, seated, in a tailored black outfit",
   },
 };
 

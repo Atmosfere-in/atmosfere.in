@@ -1,11 +1,12 @@
-import { Cormorant_Garamond, Jost } from "next/font/google";
+import { Instrument_Serif, Jost } from "next/font/google";
 import "./globals.css";
 
-// Display: a high-contrast serif that echoes the logo's wordmark.
-const serif = Cormorant_Garamond({
+// Display: a tight, high-contrast editorial serif for headings, numerals
+// and quotes.
+const serif = Instrument_Serif({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: "400",
   style: ["normal", "italic"],
 });
 
