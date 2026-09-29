@@ -17,7 +17,7 @@ export default function Services({ eyebrow, title, intro, items, action }) {
           action={action && <TextLink href={action.href}>{action.label}</TextLink>}
         />
 
-        <ol className={styles.grid}>
+        <ol className={styles.grid} style={{ "--cols": items.length }}>
           {items.map((item, i) => (
             <li key={item.name} className="reveal">
               <Link href={item.href} className={styles.card}>

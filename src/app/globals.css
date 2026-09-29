@@ -86,6 +86,27 @@ html {
   font-synthesis: none;
 }
 
+/* Short laptop screens. Windows laptops (often at 125–150% display scaling)
+   leave the browser a short viewport, e.g. 1366×650 or 1280×620 CSS px,
+   where 16px type reads oversized next to the same site on a Mac. Scale the
+   rem-based type down a step there; phones, tablets and taller screens keep
+   the 16px base. */
+@media (min-width: 769px) and (max-height: 760px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-height: 660px) {
+  html {
+    font-size: 14px;
+  }
+
+  :root {
+    --header-height: 64px;
+  }
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);

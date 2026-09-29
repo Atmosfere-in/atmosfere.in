@@ -106,7 +106,7 @@ export const planningTypes = {
   eyebrow: "Atmosfere Hospitality",
   title: "Planning a hospitality project?",
   intro:
-    "Hotels, villas and restaurants start with a different question — not how the property should look, but what it should become. Our Hospitality practice plans it before we build it.",
+    "Hotels, resorts and villas start with a different question — not how the property should look, but what it should become. Our Hospitality practice plans it before we build it.",
   action: { label: "Explore Hospitality", href: "/hospitality" },
   compact: true,
   types: allPlanningTypes.map((type) => ({

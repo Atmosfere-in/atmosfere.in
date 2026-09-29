@@ -1,6 +1,6 @@
 import { unsplash } from "@/lib/images";
 
-// The five hospitality planning types. Shared by the Hospitality homepage
+// The four hospitality planning types. Shared by the Hospitality homepage
 // (anchored tiles) and the Spaces cross-sell, which deep-links into them.
 
 export const planningTypes = [
@@ -20,15 +20,6 @@ export const planningTypes = [
     image: {
       src: unsplash("1613977257365-aaae5a9817ff"),
       alt: "A white modern villa with a swimming pool",
-    },
-  },
-  {
-    slug: "restaurant-cafe",
-    name: "Restaurant / Café",
-    text: "Concept, kitchen-to-table flow and seating that turns tables without feeling rushed.",
-    image: {
-      src: unsplash("1631615535272-1106aa1b3854"),
-      alt: "A restaurant lit by clusters of amber pendant lights",
     },
   },
   {

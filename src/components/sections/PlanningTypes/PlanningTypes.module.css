@@ -3,9 +3,10 @@
   color: var(--color-ivory);
 }
 
+/* One column per planning type (--cols is set from the data). */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(var(--cols, 4), 1fr);
   gap: 16px;
 }
 
@@ -72,7 +73,7 @@
 }
 
 /* Compact (Spaces cross-sell): tile height follows the screen so the heading
-   and all five tiles fit in one view. */
+   and all tiles fit in one view. */
 @media (min-width: 1025px) {
   .compact .tile {
     aspect-ratio: auto;
@@ -82,22 +83,22 @@
 
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* With an odd count, the last tile spans the row instead of leaving a gap. */
+  .grid .cell:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .grid .cell:last-child:nth-child(odd) .tile {
+    aspect-ratio: 16 / 9;
   }
 }
 
 @media (max-width: 640px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-  }
-
-  .grid .cell:last-child {
-    grid-column: 1 / -1;
-  }
-
-  .grid .cell:last-child .tile {
-    aspect-ratio: 16 / 9;
   }
 
   .tile {

@@ -22,7 +22,7 @@ export const verticals = [
     index: "02",
     name: "Hospitality",
     tagline: "Plan & Advise",
-    description: "Planning for hotels, resorts, villas, cafés and banquets.",
+    description: "Planning for hotels, resorts, villas and banquets.",
     href: "/hospitality",
     image: {
       src: unsplash("1544984243-ec57ea16fe25"),

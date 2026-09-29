@@ -21,7 +21,7 @@ export const hero = {
   eyebrow: "Atmosfere Hospitality · Planning & Advisory",
   title: "What should this property become?",
   intro:
-    "Before anything is designed, we decide what a property should be — hotel, villa, café or venue — and plan it to perform.",
+    "Before anything is designed, we decide what a property should be — hotel, resort, villa or venue — and plan it to perform.",
   image: {
     src: unsplash("1770887422169-7146365d2146"),
     alt: "A grand stone archway opening onto a resort and the sea",
@@ -48,8 +48,8 @@ export const about = {
 
 export const services = {
   eyebrow: "Services",
-  title: "Four ways we shape a property.",
-  intro: "Engage us for one stage or all four — each one feeds the next.",
+  title: "Three ways we shape a property.",
+  intro: "Engage us for one stage or all three — each one feeds the next.",
   items: [
     {
       name: "Concept & Feasibility",
@@ -67,15 +67,6 @@ export const services = {
       image: {
         src: unsplash("1630587148265-761cbd139043"),
         alt: "A grand hotel corridor lined with timber panelling and crystal chandeliers",
-      },
-    },
-    {
-      name: "F&B / Hospitality Advisory",
-      text: "Menus, kitchens and seating plans shaped around how guests actually eat and stay.",
-      href: "/hospitality/services#fnb-advisory",
-      image: {
-        src: unsplash("1774989423979-6a7bf5add3f0"),
-        alt: "A warm restaurant lit by clusters of golden pendant lights",
       },
     },
     {
@@ -116,16 +107,6 @@ export const projects = {
       },
     },
     {
-      href: "/hospitality/case-studies/canopy-cafe",
-      name: "Canopy Café",
-      details: "Café & bar · Bengaluru",
-      side: "80 covers",
-      image: {
-        src: unsplash("1656533391146-dad89b5a8b40"),
-        alt: "A café with globe pendants, plants and leather seating",
-      },
-    },
-    {
       href: "/hospitality/case-studies/the-pink-house",
       name: "The Pink House",
       details: "Private villa stay · Udaipur",
@@ -152,7 +133,7 @@ export const projects = {
 export const planningTypes = {
   id: "planning-types",
   eyebrow: "Planning Types",
-  title: "Five kinds of property. Five different questions.",
+  title: "Four kinds of property. Four different questions.",
   intro:
     "An Airbnb, a resort and a banquet hall succeed for entirely different reasons. We plan each one on its own terms.",
   anchors: true,
@@ -222,7 +203,7 @@ export const split = [
   {
     eyebrow: "Hotels & venues",
     title: "Commercial",
-    text: "Hotels, resorts, restaurants and banquets — planned to perform from opening night.",
+    text: "Hotels, resorts and banquets — planned to perform from opening night.",
     href: "/hospitality#hotel-resort",
     image: {
       src: unsplash("1742844552193-2fd3425cd26d"),
@@ -257,14 +238,14 @@ export const caseStudies = {
       },
     },
     {
-      href: "/hospitality/case-studies/the-garden-table",
-      tag: "Restaurant · Mumbai",
-      title: "The Garden Table",
+      href: "/hospitality/case-studies/skylight-hall",
+      tag: "Banquet · Indore",
+      title: "Skylight Hall",
       summary:
-        "An all-day café re-planned around a planted dining room and an open kitchen, turning lunch into an evening destination.",
+        "A single-use wedding hall repositioned for weekday conferences and private events — same footprint, twice the bookings.",
       image: {
-        src: unsplash("1636405189493-181ecf851006"),
-        alt: "A restaurant built around a tree under woven pendant lights",
+        src: unsplash("1762765685329-97e0af04050c"),
+        alt: "An elegant banquet hall with long dining tables beneath skylights",
       },
     },
   ],
@@ -277,7 +258,7 @@ export const trust = {
   stats: [
     { value: "40+", label: "Properties advised" },
     { value: "6+", label: "Years in hospitality" },
-    { value: "5", label: "Planning types" },
+    { value: "4", label: "Planning types" },
     { value: "1", label: "Plan, carried to opening" },
   ],
   // Placeholder testimonials — replace with real, attributable client quotes.
@@ -296,9 +277,9 @@ export const trust = {
     },
     {
       quote:
-        "They rebuilt our seating plan around how guests actually use the room. Evenings went from quiet to fully booked.",
-      name: "Restaurateur",
-      project: "Restaurant · Mumbai",
+        "Our hall only earned on wedding weekends. Their re-plan made it work for conferences and private dinners too — it's booked most weekdays now.",
+      name: "Venue owner",
+      project: "Banquet · Indore",
     },
   ],
 };
@@ -317,7 +298,7 @@ export const footer = {
   theme: "light",
   section: { label: "Hospitality", href: "/hospitality" },
   tagline:
-    "Planning and advisory for hotels, resorts, villas, cafés and banquets — deciding what a property should become.",
+    "Planning and advisory for hotels, resorts, villas and banquets — deciding what a property should become.",
   cta: {
     title: "What should your property become?",
     text: "Book a 30-minute consultation, or message us with a quick question about your site, concept or budget.",

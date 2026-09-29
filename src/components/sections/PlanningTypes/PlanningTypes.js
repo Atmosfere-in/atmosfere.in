@@ -37,7 +37,7 @@ export default function PlanningTypes({
           }
         />
 
-        <ul className={styles.grid}>
+        <ul className={styles.grid} style={{ "--cols": types.length }}>
           {types.map((type) => (
             <li
               key={type.slug}
