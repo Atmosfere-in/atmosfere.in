@@ -1,0 +1,242 @@
+/* Two looks: "dark" (Spaces) and "light" (Hospitality). Colours come from
+   local variables so the markup is shared. */
+.footer {
+  --ft-bg: var(--color-charcoal);
+  --ft-fg: var(--color-ivory);
+  --ft-muted: rgb(247 244 239 / 0.62);
+  --ft-line: rgb(247 244 239 / 0.14);
+  --ft-accent: #c9a57a;
+
+  background: var(--ft-bg);
+  color: var(--ft-fg);
+}
+
+.light {
+  --ft-bg: var(--color-stone-100);
+  --ft-fg: var(--color-charcoal);
+  --ft-muted: var(--color-stone-600);
+  --ft-line: var(--color-stone-200);
+  --ft-accent: var(--color-accent);
+}
+
+/* ---------- Closing call to action ---------- */
+
+.cta {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: end;
+  gap: var(--space-6);
+  padding-top: clamp(56px, 10vh, 104px);
+  padding-bottom: clamp(40px, 7vh, 72px);
+  border-bottom: 1px solid var(--ft-line);
+}
+
+.ctaTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.ctaSide {
+  justify-self: end;
+  max-width: 440px;
+}
+
+.ctaText {
+  color: var(--ft-muted);
+}
+
+.ctaActions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--ft-line);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  transition: border-color 0.4s var(--ease);
+}
+
+.whatsapp:hover {
+  border-color: var(--ft-fg);
+}
+
+/* ---------- Link grid ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: var(--space-5);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.logoRow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.section {
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--ft-line);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--ft-muted);
+  line-height: 28px;
+}
+
+.tagline {
+  max-width: 34ch;
+  font-size: var(--text-small);
+  color: var(--ft-muted);
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--text-small);
+  color: var(--ft-muted);
+  transition: color 0.3s var(--ease);
+}
+
+.social:hover {
+  color: var(--ft-fg);
+}
+
+.colTitle {
+  margin-bottom: var(--space-3);
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--ft-accent);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--text-small);
+}
+
+.links a {
+  color: var(--ft-fg);
+  opacity: 0.86;
+  transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.links a:hover {
+  opacity: 1;
+  color: var(--ft-accent);
+}
+
+.plain {
+  color: var(--ft-muted);
+}
+
+/* ---------- Bottom bar ---------- */
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-5);
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-4);
+  border-top: 1px solid var(--ft-line);
+  font-size: var(--text-caption);
+  color: var(--ft-muted);
+}
+
+.cross {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.crossLabel {
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  font-size: 0.625rem;
+}
+
+.crossLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ft-fg);
+  transition: color 0.3s var(--ease);
+}
+
+.crossLink:hover {
+  color: var(--ft-accent);
+}
+
+.crossSoon {
+  cursor: default;
+}
+
+.legal {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.legal a:hover {
+  color: var(--ft-fg);
+}
+
+@media (max-width: 960px) {
+  .cta {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .ctaSide {
+    justify-self: start;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5) var(--space-4);
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

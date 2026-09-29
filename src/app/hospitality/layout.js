@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader/SiteHeader";
-import { hospitalityNav } from "@/data/hospitality";
+import SiteFooter from "@/components/SiteFooter/SiteFooter";
+import { hospitalityNav, footer } from "@/data/hospitality";
 
 export const metadata = {
   title: {
@@ -15,6 +16,7 @@ export default function HospitalityLayout({ children }) {
     <>
       <SiteHeader {...hospitalityNav} overlay />
       {children}
+      <SiteFooter {...footer} />
     </>
   );
 }

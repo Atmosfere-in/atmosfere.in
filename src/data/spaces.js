@@ -282,3 +282,40 @@ export const closing = {
   },
   cta: { label: "Get a Quote", href: "/spaces/get-a-quote" },
 };
+
+// Spaces footer: dark, with its own closing line and link columns.
+export const footer = {
+  theme: "dark",
+  section: { label: "Spaces", href: "/spaces" },
+  tagline:
+    "Turnkey interiors for homes and workplaces — designed, built and styled by one studio.",
+  cta: {
+    title: "Let's design a space that feels like yours.",
+    text: "Share a few details about your home or workplace. We'll call within 24 hours to talk scope, budget and timeline.",
+    primary: { label: "Get a Quote", href: "/spaces/get-a-quote" },
+  },
+  columns: [
+    {
+      title: "Explore",
+      links: [
+        { label: "Home", href: "/spaces" },
+        { label: "Projects", href: "/spaces/projects" },
+        { label: "Design Process", href: "/spaces/process" },
+        { label: "About the Studio", href: "/spaces/about" },
+      ],
+    },
+    {
+      title: "Services",
+      links: [
+        { label: "Residential Interiors", href: "/spaces/projects?type=residential" },
+        { label: "Commercial Interiors", href: "/spaces/projects?type=commercial" },
+        { label: "Turnkey Execution", href: "/spaces/process" },
+        { label: "Get a Quote", href: "/spaces/get-a-quote" },
+      ],
+    },
+  ],
+  crossLinks: [
+    { label: "Hospitality", href: "/hospitality" },
+    { label: "Living", href: null },
+  ],
+};

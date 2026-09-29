@@ -1,13 +1,12 @@
-import { Instrument_Serif, Jost } from "next/font/google";
+import { Marcellus, Jost } from "next/font/google";
 import "./globals.css";
 
-// Display: a tight, high-contrast editorial serif for headings, numerals
-// and quotes.
-const serif = Instrument_Serif({
+// Display: a simple, flared serif with an engraved, premium feel — the same
+// face atmosfere.in uses today, so the brand stays consistent.
+const serif = Marcellus({
   variable: "--font-serif",
   subsets: ["latin"],
   weight: "400",
-  style: ["normal", "italic"],
 });
 
 // Body/UI: a geometric sans that echoes the logo's arched mark.

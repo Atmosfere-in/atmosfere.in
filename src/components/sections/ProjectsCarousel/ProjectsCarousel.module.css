@@ -2,18 +2,20 @@
   padding-top: 0;
 }
 
-/* Positioning context for the arrows, which float over the images. */
+/* The carousel sits inside the page container, so on any screen width it
+   has the same margin left and right as the heading above it. The arrows
+   float over the images, inside that frame. */
 .viewport {
   position: relative;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
-/* Full-bleed track that starts aligned with the page container. */
 .track {
-  --inset: max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter)));
   display: flex;
   gap: 24px;
-  padding: 0 var(--inset);
-  scroll-padding-inline: var(--inset);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -23,11 +25,11 @@
   display: none;
 }
 
-/* Card width also follows the screen height, so on short laptop screens
-   the whole 4:5 image and its caption fit in view together
-   (width = available height × 0.8, minus heading + caption). */
+/* Card width: about three and a third cards across the container, capped by
+   screen height so on short laptops the whole 4:5 image and its caption fit
+   in view together (width = available height × 0.8). */
 .item {
-  flex: 0 0 clamp(240px, min(26vw, calc((100svh - var(--header-height) - 200px) * 0.8)), 380px);
+  flex: 0 0 clamp(240px, min(calc((min(100vw, var(--max-width)) - 2 * var(--gutter) - 72px) / 3.3), calc((100svh - var(--header-height) - 200px) * 0.8)), 400px);
   scroll-snap-align: start;
 }
 
@@ -156,12 +158,11 @@
 }
 
 .prev {
-  left: max(var(--gutter), calc((100% - var(--max-width)) / 2 + var(--gutter)));
-  margin-left: var(--space-4);
+  left: calc(var(--gutter) + var(--space-4));
 }
 
 .next {
-  right: var(--space-5);
+  right: calc(var(--gutter) + var(--space-4));
 }
 
 /* On devices with a mouse, arrows appear when the carousel is hovered. */

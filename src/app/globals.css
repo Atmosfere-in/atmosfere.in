@@ -80,6 +80,12 @@ html {
   }
 }
 
+/* The display face has no italic or bold cuts; never let the browser fake
+   them (slanted/smeared glyphs look cheap). */
+:root {
+  font-synthesis: none;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-text);

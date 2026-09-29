@@ -56,8 +56,8 @@ export const services = {
       text: "Market, location and budget tested before you commit — Airbnb, hotel, villa or venue.",
       href: "/hospitality/services#concept-feasibility",
       image: {
-        src: unsplash("1633355303026-28d096d08c42"),
-        alt: "An architectural model of a resort with trees, lit against a dark background",
+        src: unsplash("1771344163986-5219fb12005b"),
+        alt: "An architectural site model of a resort with landscaped grounds, displayed in a bright gallery",
       },
     },
     {
@@ -83,8 +83,8 @@ export const services = {
       text: "Existing properties re-planned for a new market, a new guest or a better rate.",
       href: "/hospitality/services#repositioning",
       image: {
-        src: unsplash("1607712617949-8c993d290809"),
-        alt: "A repositioned luxury suite with a canopy bed, chandelier and timber-beamed ceiling",
+        src: unsplash("1629140727571-9b5c6f6267b4"),
+        alt: "A repositioned modern hotel room with cove lighting, soft drapes and a tailored headboard wall",
       },
     },
   ],
@@ -310,4 +310,39 @@ export const closing = {
     src: unsplash("1520250497591-112f2f40a3f4"),
   },
   cta: BOOK,
+};
+
+// Hospitality footer: light stone, with its own closing line and columns.
+export const footer = {
+  theme: "light",
+  section: { label: "Hospitality", href: "/hospitality" },
+  tagline:
+    "Planning and advisory for hotels, resorts, villas, cafés and banquets — deciding what a property should become.",
+  cta: {
+    title: "What should your property become?",
+    text: "Book a 30-minute consultation, or message us with a quick question about your site, concept or budget.",
+    primary: BOOK,
+  },
+  columns: [
+    {
+      title: "Planning Types",
+      links: allPlanningTypes.map((type) => ({
+        label: type.name,
+        href: `/hospitality#${type.slug}`,
+      })),
+    },
+    {
+      title: "The Practice",
+      links: [
+        { label: "Services", href: "/hospitality/services" },
+        { label: "Case Studies", href: "/hospitality/case-studies" },
+        { label: "Insights", href: "/hospitality/insights" },
+        { label: "Book a Consultation", href: BOOK.href },
+      ],
+    },
+  ],
+  crossLinks: [
+    { label: "Spaces", href: "/spaces" },
+    { label: "Living", href: null },
+  ],
 };

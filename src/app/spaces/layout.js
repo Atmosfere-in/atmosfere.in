@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/SiteHeader/SiteHeader";
-import { spacesNav } from "@/data/spaces";
+import SiteFooter from "@/components/SiteFooter/SiteFooter";
+import { spacesNav, footer } from "@/data/spaces";
 
 export const metadata = {
   title: {
@@ -15,6 +16,7 @@ export default function SpacesLayout({ children }) {
     <>
       <SiteHeader {...spacesNav} overlay />
       {children}
+      <SiteFooter {...footer} />
     </>
   );
 }
