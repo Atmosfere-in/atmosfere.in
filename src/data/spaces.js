@@ -9,6 +9,7 @@ export const spacesNav = {
   nav: [
     { label: "Home", href: "/spaces" },
     { label: "Projects", href: "/spaces/projects" },
+    { label: "Case Studies", href: "/spaces/case-studies" },
     { label: "Design Process", href: "/spaces/process" },
     { label: "About", href: "/spaces/about" },
   ],
@@ -54,8 +55,8 @@ export const projects = {
       details: "Residence · Gurugram",
       side: "4,200 sq ft",
       image: {
-        src: unsplash("1738168279272-c08d6dd22002"),
-        alt: "A modern living room with an arc floor lamp and warm oak floors",
+        src: unsplash("1705326701287-346fc37a2c86"),
+        alt: "A calm living room with curved cream sofas and a sculptural coffee table",
       },
     },
     {
@@ -64,8 +65,8 @@ export const projects = {
       details: "Apartment · Mumbai",
       side: "2,600 sq ft",
       image: {
-        src: unsplash("1776935359460-6c789e972e6a"),
-        alt: "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights",
+        src: unsplash("1688647063090-36f36f692d95"),
+        alt: "A living room with a walnut and stone wall of lit shelving and soft grey sofas",
       },
     },
     {
@@ -74,8 +75,8 @@ export const projects = {
       details: "Residence · New Delhi",
       side: "5,800 sq ft",
       image: {
-        src: unsplash("1778731660244-b6e8f905107d"),
-        alt: "An arched doorway framing a crystal chandelier and a stair landing",
+        src: unsplash("1750420556288-d0e32a6f517b"),
+        alt: "A bedroom with an arched timber headboard wall and soft cove lighting",
       },
     },
     {
@@ -84,8 +85,8 @@ export const projects = {
       details: "Residence · Dehradun",
       side: "3,100 sq ft",
       image: {
-        src: unsplash("1737233030536-247c1379d82c"),
-        alt: "A study alcove with an arched niche, oak desk and wall lamp",
+        src: unsplash("1642541070065-3912f347e7c6"),
+        alt: "A quiet bedroom with a fluted wall, abstract art and a halo pendant",
       },
     },
     {
@@ -147,32 +148,32 @@ export const process = {
       name: "Consult",
       text: "We listen first — how you live, what you need, and what you want to spend.",
       image: {
-        src: unsplash("1781888696890-3c4fa53cf98e"),
-        alt: "A designer laying out stone, timber and fabric samples in a warm studio",
+        src: unsplash("1646987916641-1f3c8992daa2"),
+        alt: "A sculpted lounge with soft seating and a large abstract artwork",
       },
     },
     {
       name: "Design",
       text: "Layouts, 3D views, materials and a fixed quote, signed off before work begins.",
       image: {
-        src: unsplash("1781859240244-61e274c2bf39"),
-        alt: "A curated material palette of marble, stone and ceramics",
+        src: unsplash("1776362658611-2067c9ded1d1"),
+        alt: "A drawn-to-detail lounge with a fluted timber wall and framed art",
       },
     },
     {
       name: "Execute",
       text: "Our own site team builds it, with weekly updates and one point of contact.",
       image: {
-        src: unsplash("1631396326838-de37e5f8bcbc"),
-        alt: "A craftsman finishing a piece of joinery at the workbench",
+        src: unsplash("1757524826474-efe6b2758055"),
+        alt: "A stone-clad bathroom with a sculpted dark bathtub and a garden view",
       },
     },
     {
       name: "Handover",
       text: "Snag-checked, styled and handed over — ready to live in from day one.",
       image: {
-        src: unsplash("1593987314040-8e0ac84ae724"),
-        alt: "A finished luxury living room with a sculptural chandelier and soft neutral furnishings",
+        src: unsplash("1758448755952-42b404bc6f39"),
+        alt: "A finished living room with a crystal chandelier, curved sofa and warm lighting",
       },
     },
   ],
@@ -327,6 +328,7 @@ export const footer = {
       links: [
         { label: "Home", href: "/spaces" },
         { label: "Projects", href: "/spaces/projects" },
+        { label: "Case Studies", href: "/spaces/case-studies" },
         { label: "Design Process", href: "/spaces/process" },
         { label: "About the Studio", href: "/spaces/about" },
       ],

@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
+import { upload } from "@vercel/blob/client";
 import Arrow from "@/components/ui/Icon/Arrow";
 import { contact } from "@/data/contact";
 import styles from "./ConsultModal.module.css";
@@ -148,6 +149,12 @@ function EnquiryForm({ vertical, showType }) {
   const [photos, setPhotos] = useState([]);
   const [sent, setSent] = useState(null);
   const [values, setValues] = useState({});
+  // null | { done, total } while photos upload.
+  const [uploading, setUploading] = useState(null);
+  // Whether photo links made it into the message (false = attach by hand).
+  const [linked, setLinked] = useState(false);
+  // File → uploaded link, so a re-submit doesn't upload the same photo twice.
+  const uploaded = useRef(new Map());
 
   // Thumbnails use object URLs; release them when photos change or unmount.
   useEffect(() => () => photos.forEach((p) => URL.revokeObjectURL(p.url)), [photos]);
@@ -164,10 +171,48 @@ function EnquiryForm({ vertical, showType }) {
 
   const removePhoto = (index) => setPhotos((current) => current.filter((_, i) => i !== index));
 
-  const onSubmit = (e) => {
+  // Uploads each photo once (a re-submit reuses its link) and returns the
+  // links, or null if uploads aren't available.
+  const uploadPhotos = async () => {
+    let done = 0;
+    setUploading({ done, total: photos.length });
+    try {
+      return await Promise.all(
+        photos.map(async (photo) => {
+          let link = uploaded.current.get(photo.file);
+          if (!link) {
+            const safeName = photo.file.name.replace(/[^\w.-]+/g, "-").slice(-60);
+            const blob = await upload(`consultations/${safeName}`, photo.file, {
+              access: "public",
+              handleUploadUrl: "/api/consult-upload",
+            });
+            link = blob.url;
+            uploaded.current.set(photo.file, link);
+          }
+          done += 1;
+          setUploading({ done, total: photos.length });
+          return link;
+        }),
+      );
+    } catch {
+      return null;
+    } finally {
+      setUploading(null);
+    }
+  };
+
+  const onSubmit = async (e) => {
     e.preventDefault();
+    if (uploading) return;
     const data = new FormData(e.currentTarget);
     setValues(Object.fromEntries(data));
+
+    // Open the tab now, while we still have the click: browsers block
+    // windows opened after an await. It's pointed at WhatsApp once ready.
+    const win = window.open("", "_blank");
+    if (win) win.opener = null;
+
+    const links = photos.length ? await uploadPhotos() : [];
     const lines = [
       `New consultation request — ${vertical}`,
       "",
@@ -176,10 +221,15 @@ function EnquiryForm({ vertical, showType }) {
       `Area: ${data.get("area").trim()}`,
     ];
     if (showType) lines.push(`Project type: ${data.get("type")}`);
-    if (photos.length) lines.push(`Photos: ${photos.length} (attaching in this chat)`);
+    if (links?.length) {
+      lines.push("", `Photos (${links.length}):`, ...links);
+    } else if (photos.length) {
+      lines.push(`Photos: ${photos.length} (attaching in this chat)`);
+    }
 
     const href = `https://wa.me/${contact.consultWhatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
-    window.open(href, "_blank", "noopener");
+    if (win) win.location.href = href;
+    setLinked(Boolean(links?.length));
     setSent(href);
   };
 
@@ -194,7 +244,11 @@ function EnquiryForm({ vertical, showType }) {
         <h3 className={styles.sentTitle}>Your details are ready in WhatsApp.</h3>
         <p className={styles.sentText}>
           Tap send in WhatsApp to share them with our team
-          {photos.length > 0 && ", and attach the photos you picked in the same chat"}. We
+          {photos.length > 0 &&
+            (linked
+              ? " — links to your photos are already in the message"
+              : ", and attach the photos you picked in the same chat")}
+          . We
           usually reply within a few hours.
         </p>
         <div className={styles.sentActions}>
@@ -302,8 +356,8 @@ function EnquiryForm({ vertical, showType }) {
         )}
       </div>
 
-      <button type="submit" className={styles.submit}>
-        <span>Submit</span>
+      <button type="submit" className={styles.submit} disabled={Boolean(uploading)}>
+        <span>{uploading ? `Uploading photos ${uploading.done}/${uploading.total}…` : "Submit"}</span>
         <Arrow size={14} />
       </button>
       <p className={styles.note}>Submitting opens WhatsApp with your details filled in.</p>

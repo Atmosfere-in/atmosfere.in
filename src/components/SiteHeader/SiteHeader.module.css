@@ -113,7 +113,7 @@
 }
 
 /* With a full nav bar, the Living pill only shows on wide screens. */
-@media (max-width: 1320px) {
+@media (max-width: 1440px) {
   .livingPill.hideOnNav {
     display: none;
   }
@@ -136,6 +136,7 @@
   font-size: var(--text-caption);
   letter-spacing: 0.06em;
   color: var(--hdr-muted);
+  white-space: nowrap;
   cursor: default;
   user-select: none;
 }

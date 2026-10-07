@@ -117,9 +117,8 @@ export const aboutPage = {
     intro:
       "Atmosfere Spaces is a turnkey interior studio for homes and workplaces — one team from the first sketch to the final styled shelf.",
     image: {
-      src: unsplash("1781888696890-3c4fa53cf98e"),
-      alt: "A designer laying out stone, timber and fabric samples in a warm studio",
-      position: "50% 35%",
+      src: unsplash("1699239116624-85268dce7377"),
+      alt: "A finished living room with a fluted wall and soft neutral furnishings",
     },
   },
   story: {

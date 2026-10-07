@@ -212,18 +212,22 @@
 
 /* ---------- Next story ---------- */
 
+/* A framed card with breathing room above and below, so it doesn't butt
+   against the closing banner. */
 .next {
-  background: var(--color-charcoal);
+  padding: clamp(48px, 10vh, 96px) 0;
 }
 
 .nextLink {
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: clamp(320px, 56vh, 520px);
-  padding: clamp(32px, 6vh, 64px) 0;
+  min-height: clamp(300px, 52vh, 480px);
+  padding: clamp(28px, 5vh, 56px) clamp(24px, 4vw, 56px);
   overflow: hidden;
   isolation: isolate;
+  border-radius: 20px;
+  background: var(--color-charcoal);
   color: var(--color-ivory);
 }
 

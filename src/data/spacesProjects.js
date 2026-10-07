@@ -15,14 +15,14 @@ export const spacesProjects = [
     location: "Gurugram",
     size: "4,200 sq ft",
     timeline: "7 months",
-    image: img("1738168279272-c08d6dd22002", "A calm living room with an arc floor lamp, oak floors and linen upholstery"),
+    image: img("1705326701287-346fc37a2c86", "A calm living room with curved cream sofas and a sculptural coffee table"),
     lead: "A family home re-planned around light, linen and a single warm palette — so every room feels like part of the same quiet morning.",
     summary:
       "The owners wanted a home that felt restful without feeling bare. We opened the plan, edited the materials down to oak, lime plaster and natural linen, and drew every piece of joinery so storage disappears into the walls.",
     scope: ["Full interiors", "Space planning", "Custom joinery", "Lighting design", "Styling"],
     gallery: [
       img("1583847268964-b28dc8f51f92", "A bright living room with a cream sofa, soft throws and potted greenery"),
-      img("1705326701287-346fc37a2c86", "A curved cream sofa and sculptural coffee table in a neutral lounge"),
+      img("1738168279272-c08d6dd22002", "A living room with an arc floor lamp, oak floors and linen upholstery"),
       img("1784653548747-dfe7370326b3", "A serene bathroom with a round mirror, fluted vanity and plants"),
     ],
     stages: [
@@ -51,13 +51,13 @@ export const spacesProjects = [
     location: "Mumbai",
     size: "2,600 sq ft",
     timeline: "5 months",
-    image: img("1776935359460-6c789e972e6a", "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights"),
+    image: img("1688647063090-36f36f692d95", "A living room with a walnut and stone wall of lit shelving and soft grey sofas"),
     lead: "A sea-facing apartment built from two honest materials — dark walnut and honed stone — and detailed so the city fades away inside.",
     summary:
       "For a couple who cook and host, we centred the home on a stone island kitchen that opens to the living room, then carried walnut and stone through every room for a quiet, continuous feel.",
     scope: ["Full interiors", "Kitchen design", "Custom joinery", "Material curation"],
     gallery: [
-      img("1759150712537-0e32b6c6a373", "An open kitchen and dining space with a sculptural ring pendant"),
+      img("1776935359460-6c789e972e6a", "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights"),
       img("1632583824020-937ae9564495", "A dark kitchen with a ribbon light, timber panelling and bar seating"),
       img("1631889993959-41b4e9c6e3c5", "A dark-tiled bathroom with a freestanding tub and timber vanity"),
     ],
@@ -87,14 +87,14 @@ export const spacesProjects = [
     location: "New Delhi",
     size: "5,800 sq ft",
     timeline: "11 months",
-    image: img("1778731660244-b6e8f905107d", "An arched doorway framing a crystal chandelier and a stair landing"),
+    image: img("1750420556288-d0e32a6f517b", "A bedroom with an arched timber headboard wall and soft cove lighting"),
     lead: "A classical bungalow given a new rhythm of arches — framing views, softening long corridors and tying three floors into one composed home.",
     summary:
       "The house had grand proportions but no sense of arrival. We introduced a family of arches, a restored stair and a layered lighting plan so each room unfolds into the next.",
     scope: ["Full interiors", "Architectural detailing", "Lighting design", "Furniture & art"],
     gallery: [
       img("1634389312178-50613e56acda", "A dining room with tall arched windows, a round table and patterned chairs"),
-      img("1596255955697-49fa5328def9", "A living room with arched windows and soft neutral seating"),
+      img("1778731660244-b6e8f905107d", "An arched doorway framing a crystal chandelier and a stair landing"),
       img("1505693416388-ac5ce068fe85", "A classic bedroom with a tufted headboard and bedside lamps"),
     ],
     stages: [
@@ -123,14 +123,14 @@ export const spacesProjects = [
     location: "Dehradun",
     size: "3,100 sq ft",
     timeline: "6 months",
-    image: img("1737233030536-247c1379d82c", "A study alcove with an arched niche, oak desk and wall lamp"),
+    image: img("1642541070065-3912f347e7c6", "A quiet bedroom with a fluted wall, abstract art and a halo pendant"),
     lead: "A hillside home for a writer and an architect, with two studies, deep window seats and rooms tuned for long, focused days.",
     summary:
       "The owners both work from home. We planned two separate, acoustically quiet studies, then shaped the rest of the house around views of the valley and the changing light.",
     scope: ["Space planning", "Acoustic design", "Custom joinery", "Lighting design"],
     gallery: [
       img("1613685303404-19f881533316", "A light-filled home study with a desk, shelving and armchairs"),
-      img("1688646953306-5ec93eab8c06", "A soft neutral room with an arched alcove and lounge seating"),
+      img("1737233030536-247c1379d82c", "A study alcove with an arched niche, oak desk and wall lamp"),
       img("1578683010236-d716f9a3f461", "A bedroom with timber floors and a wall of glass to the outdoors"),
     ],
     stages: [

@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/Hero/Hero";
 import About from "@/components/sections/About/About";
 import ProjectsCarousel from "@/components/sections/ProjectsCarousel/ProjectsCarousel";
-import HospitalityTeaser from "@/components/sections/HospitalityTeaser/HospitalityTeaser";
+import PlanningTypes from "@/components/sections/PlanningTypes/PlanningTypes";
 import BeforeAfter from "@/components/sections/BeforeAfter/BeforeAfter";
 import Process from "@/components/sections/Process/Process";
 import Founders from "@/components/sections/Founders/Founders";
@@ -18,7 +18,7 @@ export default function SpacesHome() {
       <Hero {...spaces.hero} />
       <About {...spaces.about} />
       <ProjectsCarousel {...spaces.projects} />
-      <HospitalityTeaser {...spaces.planningTypes} />
+      <PlanningTypes {...spaces.planningTypes} />
       <BeforeAfter {...spaces.beforeAfter} />
       <Process {...spaces.process} />
       <Founders {...spaces.founders} />

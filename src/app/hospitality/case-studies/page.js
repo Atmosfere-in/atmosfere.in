@@ -1,5 +1,5 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
-import WorkIndex from "@/components/pages/WorkIndex/WorkIndex";
+import CaseStudyList from "@/components/pages/CaseStudyList/CaseStudyList";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { hospitalityCases, hospitalityCaseFilters } from "@/data/hospitalityCases";
 import { closing } from "@/data/hospitality";
@@ -32,7 +32,7 @@ export default async function HospitalityCaseStudies({ searchParams }) {
           alt: "An aerial view of a resort with a lagoon pool and the sea beyond",
         }}
       />
-      <WorkIndex
+      <CaseStudyList
         filters={hospitalityCaseFilters.map((f) => ({
           label: f.label,
           href: f.value ? `/hospitality/case-studies?type=${f.value}` : "/hospitality/case-studies",
@@ -42,8 +42,10 @@ export default async function HospitalityCaseStudies({ searchParams }) {
         items={items.map((c) => ({
           href: `/hospitality/case-studies/${c.slug}`,
           name: c.name,
-          details: `${c.category} · ${c.location}`,
-          side: c.size,
+          tag: `${c.category} · ${c.location} · ${c.size}`,
+          lead: c.lead,
+          challenge: c.stages.find((s) => s.title === "Challenge")?.text,
+          results: c.results,
           image: c.image,
         }))}
       />

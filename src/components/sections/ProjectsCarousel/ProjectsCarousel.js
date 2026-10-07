@@ -46,11 +46,7 @@ export default function ProjectsCarousel({ eyebrow, title, items }) {
       <div className={styles.viewport}>
         <ul ref={trackRef} className={styles.track} onScroll={onScroll}>
           {items.map((item, i) => (
-            <li
-              key={item.href}
-              className={`${styles.item} reveal`}
-              style={{ "--reveal-delay": `${Math.min(i, 3) * 90}ms` }}
-            >
+            <li key={item.href} className={styles.item}>
               <Link href={item.href} className={styles.card}>
                 <div className={styles.media}>
                   <Image

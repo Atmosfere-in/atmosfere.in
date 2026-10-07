@@ -5,19 +5,10 @@
   gap: var(--space-7);
 }
 
-/* Rounded photograph with a hairline bronze frame offset behind it. */
+/* Rounded photograph with a soft shadow. */
 .media {
   position: relative;
   aspect-ratio: 4 / 3;
-  margin: 0 var(--space-4) var(--space-4) 0;
-}
-
-.media::before {
-  content: "";
-  position: absolute;
-  inset: var(--space-4) calc(-1 * var(--space-4)) calc(-1 * var(--space-4)) var(--space-4);
-  border: 1px solid rgb(140 106 67 / 0.45);
-  border-radius: 20px;
 }
 
 .frame {

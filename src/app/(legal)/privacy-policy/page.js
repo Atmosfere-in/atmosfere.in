@@ -19,7 +19,10 @@ export default function PrivacyPolicy() {
       <p>We only collect the information you choose to share with us:</p>
       <ul>
         <li>Your name, phone number and project details when you fill in a consultation or quote form.</li>
-        <li>Photographs you choose to share with us about your space.</li>
+        <li>
+          Photographs you choose to share with us about your space. Photos added to the enquiry form are stored
+          securely with our hosting provider and shared with our team as unlisted, hard-to-guess links.
+        </li>
         <li>The details you enter when you book a meeting through our Calendly scheduler.</li>
       </ul>
 

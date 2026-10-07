@@ -1,120 +1,134 @@
-/* Warm sand rather than a dark band; tiles keep ivory text on photos. */
+/* Warm sand rather than a dark band. */
 .section {
   background: var(--color-accent-soft);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  max-width: 22ch;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--color-charcoal);
+}
+
+.intro {
+  max-width: 52ch;
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+  line-height: 1.7;
+  color: var(--color-stone-600);
 }
 
 /* One column per planning type (--cols is set from the data). */
 .grid {
   display: grid;
-  grid-template-columns: repeat(var(--cols, 4), 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: clamp(16px, 1.8vw, 28px);
+  margin-top: clamp(32px, 6vh, 56px);
+  list-style: none;
 }
 
-.tile {
+.card {
+  display: block;
+}
+
+.media {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  aspect-ratio: 3 / 4;
-  padding: var(--space-4) 20px;
+  aspect-ratio: 4 / 4.6;
   overflow: hidden;
-  isolation: isolate;
   border-radius: 16px;
-  color: var(--color-ivory);
-}
-
-.tile::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(to top, rgb(20 18 16 / 0.8), rgb(20 18 16 / 0) 60%);
-  transition: background-color 0.6s var(--ease);
+  background: var(--color-stone-200);
 }
 
 .image {
-  z-index: -2;
   object-fit: cover;
-  transition: transform 1.2s var(--ease);
+  transition: transform 1.4s var(--ease);
 }
 
-.tile:hover .image {
-  transform: scale(1.06);
+.card:hover .image {
+  transform: scale(1.05);
 }
 
-.tile:hover::after {
-  background-color: rgb(140 106 67 / 0.22);
-}
-
-.cell:target .tile {
+.cell:target .media {
   outline: 1px solid var(--color-accent);
   outline-offset: 4px;
 }
 
-@media (max-width: 640px) {
-  .tile {
-    border-radius: 12px;
-  }
+.caption {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--space-3);
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  color: var(--color-accent);
 }
 
 .name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: 4px;
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  line-height: 1.15;
+  font-size: clamp(1.3rem, 1.6vw, 1.6rem);
+  line-height: 1.2;
+  color: var(--color-charcoal);
+}
+
+.arrow {
+  flex: none;
+  color: var(--color-stone-600);
+  transition: transform 0.5s var(--ease), color 0.5s var(--ease);
+}
+
+.card:hover .arrow {
+  color: var(--color-charcoal);
+  transform: translateX(4px);
 }
 
 .text {
-  max-height: 0;
-  margin-top: 0;
-  overflow: hidden;
-  font-size: var(--text-small);
-  line-height: 1.5;
-  opacity: 0;
-  transition: max-height 0.6s var(--ease), opacity 0.6s var(--ease), margin 0.6s var(--ease);
-}
-
-.tile:hover .text,
-.tile:focus-visible .text {
-  max-height: 8em;
   margin-top: var(--space-2);
-  opacity: 0.85;
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: var(--color-stone-600);
 }
 
-/* Compact (Spaces cross-sell): tile height follows the screen so the heading
-   and all tiles fit in one view. */
-@media (min-width: 1025px) {
-  .compact .tile {
-    aspect-ratio: auto;
-    height: clamp(220px, calc(100svh - var(--header-height) - 20vh - 190px), 460px);
-  }
+.action {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(28px, 5vh, 48px);
 }
 
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* With an odd count, the last tile spans the row instead of leaving a gap. */
-  .grid .cell:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-  }
-
-  .grid .cell:last-child:nth-child(odd) .tile {
-    aspect-ratio: 16 / 9;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-5);
   }
 }
 
 @media (max-width: 640px) {
   .grid {
-    gap: 12px;
+    gap: var(--space-4) 12px;
   }
 
-  .tile {
-    padding: var(--space-3);
+  .media {
+    border-radius: 12px;
   }
 
   .name {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .text {

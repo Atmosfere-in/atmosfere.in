@@ -105,17 +105,19 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
 
       {next && (
         <section className={styles.next}>
-          <Link href={next.href} className={styles.nextLink}>
-            <Image src={next.image.src} alt="" fill quality={85} sizes="100vw" className={styles.nextImage} />
-            <span className={styles.nextShade} aria-hidden="true" />
-            <span className={`container ${styles.nextContent}`}>
-              <span className={styles.nextLabel}>{nextLabel}</span>
-              <span className={styles.nextName}>
-                {next.name} <Arrow size={28} className={styles.nextArrow} />
+          <div className="container">
+            <Link href={next.href} className={styles.nextLink}>
+              <Image src={next.image.src} alt="" fill quality={85} sizes="100vw" className={styles.nextImage} />
+              <span className={styles.nextShade} aria-hidden="true" />
+              <span className={styles.nextContent}>
+                <span className={styles.nextLabel}>{nextLabel}</span>
+                <span className={styles.nextName}>
+                  {next.name} <Arrow size={28} className={styles.nextArrow} />
+                </span>
+                <span className={styles.nextDetails}>{next.details}</span>
               </span>
-              <span className={styles.nextDetails}>{next.details}</span>
-            </span>
-          </Link>
+            </Link>
+          </div>
         </section>
       )}
     </>

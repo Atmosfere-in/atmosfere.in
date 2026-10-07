@@ -25,11 +25,12 @@
   display: none;
 }
 
-/* Card width: about three and a third cards across the container, capped by
-   screen height so on short laptops the whole 4:5 image and its caption fit
-   in view together (width = available height × 0.8). */
+/* Large cards: about two and a third across the container, so the next one
+   peeks in and the row clearly reads as a carousel. Capped by screen height
+   so the image and caption fit together on short laptops
+   (width = available height ÷ 0.85). */
 .item {
-  flex: 0 0 clamp(240px, min(calc((min(100vw, var(--max-width)) - 2 * var(--gutter) - 72px) / 3.3), calc((100svh - var(--header-height) - 200px) * 0.8)), 400px);
+  flex: 0 0 clamp(280px, min(calc((min(100vw, var(--max-width)) - 2 * var(--gutter) - 48px) / 2.35), calc((100svh - var(--header-height) - 190px) / 0.85)), 680px);
   scroll-snap-align: start;
 }
 
@@ -39,8 +40,9 @@
 
 .media {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3.4;
   overflow: hidden;
+  border-radius: 16px;
   background: var(--color-stone-100);
 }
 
@@ -225,7 +227,12 @@
 
 @media (max-width: 768px) {
   .item {
-    flex-basis: 78vw;
+    flex-basis: 80vw;
+  }
+
+  .media {
+    aspect-ratio: 4 / 4.4;
+    border-radius: 12px;
   }
 
   .track {
