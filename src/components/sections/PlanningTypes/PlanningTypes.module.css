@@ -1,6 +1,6 @@
+/* Warm sand rather than a dark band; tiles keep ivory text on photos. */
 .section {
-  background: var(--color-charcoal);
-  color: var(--color-ivory);
+  background: var(--color-accent-soft);
 }
 
 /* One column per planning type (--cols is set from the data). */
@@ -19,6 +19,8 @@
   padding: var(--space-4) 20px;
   overflow: hidden;
   isolation: isolate;
+  border-radius: 16px;
+  color: var(--color-ivory);
 }
 
 .tile::after {
@@ -41,12 +43,18 @@
 }
 
 .tile:hover::after {
-  background-color: rgb(164 83 47 / 0.25);
+  background-color: rgb(140 106 67 / 0.22);
 }
 
 .cell:target .tile {
   outline: 1px solid var(--color-accent);
   outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .tile {
+    border-radius: 12px;
+  }
 }
 
 .name {

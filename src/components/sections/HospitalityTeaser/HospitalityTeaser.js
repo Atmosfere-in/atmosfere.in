@@ -12,7 +12,15 @@ export default function HospitalityTeaser({ eyebrow, title, intro, image, types,
   return (
     <section className={`section ${styles.section}`}>
       <div className={`container ${styles.grid}`}>
-        <div className={`${styles.media} reveal-image`}>
+        {/* Two rounded panels meeting in the middle, with curved notches at
+            the top and bottom centre (shape supplied by the client). */}
+        <svg width="0" height="0" className={styles.defs} aria-hidden="true" focusable="false">
+          <clipPath id="teaser-shape" clipPathUnits="objectBoundingBox">
+            <path d="M0 .03Q0 0 .03 0H.4A.1 .12 0 0 1 .5 .12V.91A.09 .09 0 0 1 .41 1H.03Q0 1 0 .97Z" />
+            <path d="M.5 .12A.1 .12 0 0 1 .6 0H.97Q1 0 1 .03V.97Q1 1 .97 1H.59A.09 .09 0 0 1 .5 .91Z" />
+          </clipPath>
+        </svg>
+        <div className={`${styles.media} reveal`}>
           <Image
             src={image.src}
             alt={image.alt}

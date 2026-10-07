@@ -22,7 +22,6 @@ export default function ConsultModal({
 }) {
   const dialogRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const [tab, setTab] = useState("form");
   const id = useId();
 
   // Open from any matching link (header CTA, hero, footer, mobile menu…).
@@ -34,7 +33,6 @@ export default function ConsultModal({
       const url = new URL(link.href, window.location.href);
       if (url.origin !== window.location.origin || !triggers.includes(url.pathname)) return;
       e.preventDefault();
-      setTab("form");
       setOpen(true);
     };
     document.addEventListener("click", onClick, true);
@@ -83,53 +81,66 @@ export default function ConsultModal({
             {title}
           </h2>
 
-          <div className={styles.tabs} role="tablist" aria-label="How would you like to book?">
-            {[
-              ["form", "Form"],
-              ["calendly", "Calendly"],
-            ].map(([key, label]) => (
-              <button
-                key={key}
-                type="button"
-                role="tab"
-                id={`${id}-tab-${key}`}
-                aria-selected={tab === key}
-                aria-controls={`${id}-panel-${key}`}
-                className={styles.tab}
-                onClick={() => setTab(key)}
-              >
-                {label}
-              </button>
-            ))}
-            <span
-              className={styles.indicator}
-              style={{ transform: tab === "calendly" ? "translateX(100%)" : "none" }}
-              aria-hidden="true"
-            />
-          </div>
-
-          <div
-            role="tabpanel"
-            id={`${id}-panel-form`}
-            aria-labelledby={`${id}-tab-form`}
-            hidden={tab !== "form"}
-            className={styles.panel}
-          >
-            {open && <EnquiryForm vertical={vertical} showType={showType} />}
-          </div>
-
-          <div
-            role="tabpanel"
-            id={`${id}-panel-calendly`}
-            aria-labelledby={`${id}-tab-calendly`}
-            hidden={tab !== "calendly"}
-            className={styles.panel}
-          >
-            {open && tab === "calendly" && <Calendly />}
-          </div>
+          {open && <ConsultTabs vertical={vertical} showType={showType} />}
         </div>
       </div>
     </dialog>
+  );
+}
+
+// The Form | Calendly tabs and their panels. Used inside the popup and on the
+// standalone /spaces/get-a-quote and /hospitality/book-a-consultation pages.
+export function ConsultTabs({ vertical, showType = false }) {
+  const [tab, setTab] = useState("form");
+  const id = useId();
+
+  return (
+    <>
+      <div className={styles.tabs} role="tablist" aria-label="How would you like to book?">
+        {[
+          ["form", "Form"],
+          ["calendly", "Calendly"],
+        ].map(([key, label]) => (
+          <button
+            key={key}
+            type="button"
+            role="tab"
+            id={`${id}-tab-${key}`}
+            aria-selected={tab === key}
+            aria-controls={`${id}-panel-${key}`}
+            className={styles.tab}
+            onClick={() => setTab(key)}
+          >
+            {label}
+          </button>
+        ))}
+        <span
+          className={styles.indicator}
+          style={{ transform: tab === "calendly" ? "translateX(100%)" : "none" }}
+          aria-hidden="true"
+        />
+      </div>
+
+      <div
+        role="tabpanel"
+        id={`${id}-panel-form`}
+        aria-labelledby={`${id}-tab-form`}
+        hidden={tab !== "form"}
+        className={styles.panel}
+      >
+        <EnquiryForm vertical={vertical} showType={showType} />
+      </div>
+
+      <div
+        role="tabpanel"
+        id={`${id}-panel-calendly`}
+        aria-labelledby={`${id}-tab-calendly`}
+        hidden={tab !== "calendly"}
+        className={styles.panel}
+      >
+        {tab === "calendly" && <Calendly />}
+      </div>
+    </>
   );
 }
 

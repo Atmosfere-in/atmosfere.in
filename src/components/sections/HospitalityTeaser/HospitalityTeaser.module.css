@@ -18,8 +18,11 @@
   aspect-ratio: 4 / 4.6;
   max-height: calc(100svh - var(--header-height) - 64px);
   width: 100%;
-  overflow: hidden;
-  border-radius: 999px 999px 18px 18px;
+  clip-path: url(#teaser-shape);
+}
+
+.defs {
+  position: absolute;
 }
 
 .image {
@@ -118,7 +121,6 @@
   .media {
     aspect-ratio: 4 / 3.6;
     max-height: none;
-    border-radius: 999px 999px 14px 14px;
   }
 }
 

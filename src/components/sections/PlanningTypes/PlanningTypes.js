@@ -27,10 +27,9 @@ export default function PlanningTypes({
           eyebrow={eyebrow}
           title={title}
           intro={intro}
-          light
           action={
             action && (
-              <TextLink href={action.href} light>
+              <TextLink href={action.href}>
                 {action.label}
               </TextLink>
             )

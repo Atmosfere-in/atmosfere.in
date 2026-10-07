@@ -1,0 +1,126 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: start;
+}
+
+.title {
+  max-width: 16ch;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--color-charcoal);
+}
+
+.intro {
+  max-width: 46ch;
+  margin-top: var(--space-3);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.steps {
+  margin-top: var(--space-5);
+  list-style: none;
+  border-top: 1px solid var(--color-stone-200);
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-stone-200);
+}
+
+.number {
+  font-family: var(--font-display);
+  color: var(--color-accent);
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+}
+
+.stepText {
+  margin-top: 4px;
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.contact dt {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-600);
+}
+
+.contact dd {
+  margin-top: 4px;
+  font-size: var(--text-small);
+  color: var(--color-charcoal);
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* The booking card: the popup's content, set on a white sheet. */
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 640px;
+  padding: clamp(24px, 3.5vw, 48px);
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: 0 40px 80px -48px rgb(31 29 26 / 0.35);
+}
+
+.cardTitle {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.2vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-charcoal);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    order: -1;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .card {
+    padding: var(--space-4) var(--space-3);
+    border-radius: 14px;
+  }
+}

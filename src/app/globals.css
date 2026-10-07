@@ -202,11 +202,14 @@ ul {
   transition-delay: var(--reveal-delay, 0ms);
 }
 
-.js-reveal .reveal.is-revealed,
-.js-reveal .reveal-image.is-revealed {
-  clip-path: inset(0);
+.js-reveal .reveal[data-revealed] {
   opacity: 1;
   transform: none;
+}
+
+.js-reveal .reveal-image[data-revealed] {
+  clip-path: inset(0);
+  opacity: 1;
 }
 
 .visually-hidden {
