@@ -10,7 +10,6 @@ export const hospitalityNav = {
     { label: "Home", href: "/hospitality" },
     { label: "Planning Types", href: "/hospitality#planning-types" },
     { label: "Case Studies", href: "/hospitality/case-studies" },
-    { label: "Insights", href: "/hospitality/insights" },
   ],
   cta: { label: "Book a Consultation", href: "/hospitality/book-a-consultation" },
 };
@@ -153,32 +152,32 @@ export const process = {
       name: "Understand",
       text: "The site, the market, the budget and what success looks like for you.",
       image: {
-        src: unsplash("1603901622056-0a5bee231395"),
-        alt: "A site plan laid out with drafting tools and a measuring tape",
+        src: unsplash("1624066969616-69b0b0301d4d"),
+        alt: "A white architectural model of a building in its landscaped site",
       },
     },
     {
       name: "Plan",
       text: "Concept, room mix, and a layout that makes the numbers work.",
       image: {
-        src: unsplash("1503387762-592deb58ef4e"),
-        alt: "A planner drafting a floor plan by hand with a scale ruler",
+        src: unsplash("1753787320279-e501f1a6ae16"),
+        alt: "A detailed architectural drawing of a grand hall",
       },
     },
     {
       name: "Advise",
       text: "Clear recommendations on design, operators, phasing and spend.",
       image: {
-        src: unsplash("1753162657289-6569cd1da479"),
-        alt: "Two consultants reviewing design drawings together",
+        src: unsplash("1781888688940-5730c3fd5baf"),
+        alt: "Architectural drawings and a laptop on a marble desk",
       },
     },
     {
       name: "Execute",
       text: "Delivered with Atmosfere Spaces — the plan built exactly as advised.",
       image: {
-        src: unsplash("1759038085950-1234ca8f5fed"),
-        alt: "A finished hotel reception with warm timber walls and lounge seating",
+        src: unsplash("1677129667171-92abd8740fa3"),
+        alt: "A finished hotel lobby with a mirrored ceiling and golden lighting",
       },
     },
   ],
@@ -195,29 +194,6 @@ export const founder = {
     alt: "Portrait of the principal consultant, seated, in a tailored black outfit",
   },
 };
-
-export const split = [
-  {
-    eyebrow: "Private estates",
-    title: "Residential",
-    text: "Villas, cottages and private estates — planned as homes that can also host.",
-    href: "/hospitality#villa-cottage",
-    image: {
-      src: unsplash("1582610116397-edb318620f90"),
-      alt: "A garden villa with a long green pool and a white pavilion",
-    },
-  },
-  {
-    eyebrow: "Hotels & venues",
-    title: "Commercial",
-    text: "Hotels, resorts and banquets — planned to perform from opening night.",
-    href: "/hospitality#hotel-resort",
-    image: {
-      src: unsplash("1742844552193-2fd3425cd26d"),
-      alt: "A grand hotel lobby filled with sunlight",
-    },
-  },
-];
 
 export const caseStudies = {
   title: "How the right question changed the property.",
@@ -324,7 +300,6 @@ export const footer = {
       links: [
         { label: "Services", href: "/hospitality/services" },
         { label: "Case Studies", href: "/hospitality/case-studies" },
-        { label: "Insights", href: "/hospitality/insights" },
         { label: "Book a Consultation", href: BOOK.href },
       ],
     },

@@ -64,8 +64,8 @@ export const projects = {
       details: "Apartment · Mumbai",
       side: "2,600 sq ft",
       image: {
-        src: unsplash("1737898415581-7dea57a1905b"),
-        alt: "A walnut kitchen and dining space with paper pendant lights",
+        src: unsplash("1776935359460-6c789e972e6a"),
+        alt: "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights",
       },
     },
     {
@@ -144,32 +144,32 @@ export const process = {
       name: "Consult",
       text: "We listen first — how you live, what you need, and what you want to spend.",
       image: {
-        src: unsplash("1616587656879-8a8a7cce9d6c"),
-        alt: "Designers and a client reviewing material samples around a large table",
+        src: unsplash("1770970831074-6e88b6cc260b"),
+        alt: "Fabric swatches, sketches and a glass vase laid out on a studio table",
       },
     },
     {
       name: "Design",
       text: "Layouts, 3D views, materials and a fixed quote, signed off before work begins.",
       image: {
-        src: unsplash("1599420186917-468a49a78a63"),
-        alt: "Hand sketches, drawings and drafting tools spread across a desk",
+        src: unsplash("1770200574989-a4cca2c70c00"),
+        alt: "A hand-drawn perspective of an interior layout",
       },
     },
     {
       name: "Execute",
       text: "Our own site team builds it, with weekly updates and one point of contact.",
       image: {
-        src: unsplash("1590880795696-20c7dfadacde"),
-        alt: "A sunlit joinery workshop with timber, benches and hand tools",
+        src: unsplash("1731168273756-e02cae42265b"),
+        alt: "A craftsman measuring and cutting tile on site",
       },
     },
     {
       name: "Handover",
       text: "Snag-checked, styled and handed over — ready to live in from day one.",
       image: {
-        src: unsplash("1757924461488-ef9ad0670978"),
-        alt: "A finished, styled living room with deep sofas and garden views",
+        src: unsplash("1699239116624-85268dce7377"),
+        alt: "A finished, styled living room with a fluted wall and soft neutral furnishings",
       },
     },
   ],

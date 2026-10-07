@@ -6,8 +6,37 @@ import { usePathname } from "next/navigation";
 import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./HeaderNav.module.css";
 
-export default function HeaderNav({ nav, cta, section }) {
+function useIsActive(section) {
   const pathname = usePathname();
+  return (href) =>
+    href === section?.href ? pathname === href : pathname.startsWith(href);
+}
+
+// Desktop links, centred in the header bar.
+export function HeaderLinks({ nav, section }) {
+  const isActive = useIsActive(section);
+  return (
+    <nav className={styles.desktop} aria-label={`${section?.label} navigation`}>
+      <ul className={styles.links}>
+        {nav.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              className={styles.link}
+              aria-current={isActive(item.href) ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
+// The highlighted CTA plus the burger menu used on tablets and phones.
+export default function HeaderNav({ nav, cta, section }) {
+  const isActive = useIsActive(section);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -21,31 +50,14 @@ export default function HeaderNav({ nav, cta, section }) {
     };
   }, [open]);
 
-  const isActive = (href) =>
-    href === section?.href ? pathname === href : pathname.startsWith(href);
-
   return (
     <>
-      <nav className={styles.desktop} aria-label={`${section?.label} navigation`}>
-        <ul className={styles.links}>
-          {nav.map((item) => (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={styles.link}
-                aria-current={isActive(item.href) ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        {cta && (
-          <Link href={cta.href} className={styles.cta}>
-            {cta.label}
-          </Link>
-        )}
-      </nav>
+      {cta && (
+        <Link href={cta.href} className={`${styles.cta} ${styles.desktopCta}`}>
+          <span>{cta.label}</span>
+          <Arrow size={14} className={styles.ctaArrow} />
+        </Link>
+      )}
 
       <button
         type="button"
@@ -84,7 +96,8 @@ export default function HeaderNav({ nav, cta, section }) {
               className={styles.cta}
               onClick={() => setOpen(false)}
             >
-              {cta.label}
+              <span>{cta.label}</span>
+              <Arrow size={14} className={styles.ctaArrow} />
             </Link>
           )}
           <Link href="/" className={styles.back} onClick={() => setOpen(false)}>

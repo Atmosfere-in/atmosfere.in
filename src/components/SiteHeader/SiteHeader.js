@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "@/components/Logo/Logo";
 import BrandLink from "./BrandLink";
 import HeaderFrame from "./HeaderFrame";
-import HeaderNav from "./HeaderNav";
+import HeaderNav, { HeaderLinks } from "./HeaderNav";
 import styles from "./SiteHeader.module.css";
 
 // Shared shell for the hub and every vertical. The hub renders it bare;
@@ -14,7 +14,7 @@ export default function SiteHeader({ section, nav, cta, overlay = false }) {
       overlay={overlay}
       className={`${styles.header} ${overlay ? styles.overlay : styles.sticky}`}
     >
-      <div className={styles.inner}>
+      <div className={`${styles.inner} ${nav ? styles.withNav : ""}`}>
         <div className={styles.brandGroup}>
           <BrandLink className={styles.brand}>
             <Logo tone="inherit" />
@@ -26,9 +26,9 @@ export default function SiteHeader({ section, nav, cta, overlay = false }) {
           )}
         </div>
 
-        <div className={styles.actions}>
-          {nav && <HeaderNav nav={nav} cta={cta} section={section} />}
+        {nav && <HeaderLinks nav={nav} section={section} />}
 
+        <div className={styles.actions}>
           {/* Atmosfere Living isn't live yet — shown, but not a link. */}
           <span
             className={`${styles.livingPill} ${nav ? styles.hideOnNav : ""}`}
@@ -38,6 +38,8 @@ export default function SiteHeader({ section, nav, cta, overlay = false }) {
             <span className={styles.pillLabel}>Shop Atmosfere Living</span>
             <span className={styles.pillSoon}>Soon</span>
           </span>
+
+          {nav && <HeaderNav nav={nav} cta={cta} section={section} />}
 
           {!nav && (
             <span className={styles.lang} aria-label="Language: English">

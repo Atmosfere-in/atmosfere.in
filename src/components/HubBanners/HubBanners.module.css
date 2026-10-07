@@ -59,27 +59,20 @@
   left: 0;
   right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: var(--space-5) var(--space-5) clamp(40px, 8vh, 72px);
+  text-align: center;
 }
 
 .tagline {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   margin-bottom: var(--space-3);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   opacity: 0.9;
-}
-
-.tagline::before {
-  content: "";
-  width: 28px;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.8;
 }
 
 .name {
@@ -92,12 +85,18 @@
 
 .description {
   max-width: 30ch;
-  margin-top: var(--space-3);
+  max-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
   font-size: var(--text-small);
   line-height: 1.55;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  transition:
+    opacity 0.6s var(--ease),
+    transform 0.6s var(--ease),
+    max-height 0.7s var(--ease),
+    margin 0.7s var(--ease);
 }
 
 .cta,
@@ -153,6 +152,8 @@
   }
 
   .link:hover .description {
+    max-height: 6em;
+    margin-top: var(--space-3);
     opacity: 0.9;
     transform: none;
   }
@@ -169,6 +170,8 @@
 }
 
 .link:focus-visible .description {
+  max-height: 6em;
+  margin-top: var(--space-3);
   opacity: 0.9;
   transform: none;
 }
@@ -212,16 +215,11 @@
   }
 
   .content {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    column-gap: var(--space-3);
     padding: var(--space-4) var(--space-3);
   }
 
   .tagline {
-    flex-basis: 100%;
+    margin-bottom: var(--space-2);
     font-size: 0.625rem;
     letter-spacing: var(--tracking-wide);
   }
@@ -236,7 +234,6 @@
 
   .cta,
   .soon {
-    margin-top: 0;
-    margin-bottom: 4px;
+    margin-top: var(--space-3);
   }
 }

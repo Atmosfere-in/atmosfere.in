@@ -1,0 +1,494 @@
+/* ---------- Dialog shell ---------- */
+
+.dialog {
+  width: min(1040px, calc(100vw - 48px));
+  max-width: none;
+  max-height: calc(100svh - 48px);
+  margin: auto;
+  padding: 0;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--color-ivory);
+  color: var(--color-text);
+  box-shadow: 0 40px 100px -30px rgb(20 18 16 / 0.55);
+}
+
+.dialog[open] {
+  animation: dialog-in 0.6s var(--ease) both;
+}
+
+.dialog::backdrop {
+  background: rgb(20 18 16 / 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  height: min(720px, calc(100svh - 48px));
+}
+
+/* ---------- Photograph ---------- */
+
+.visual {
+  position: relative;
+  overflow: hidden;
+  color: var(--color-ivory);
+}
+
+.visualImage {
+  object-fit: cover;
+}
+
+.visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(20 18 16 / 0.7), rgb(20 18 16 / 0) 55%);
+}
+
+.visualText {
+  position: absolute;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  z-index: 1;
+}
+
+.visualEyebrow {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.visualQuote {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  line-height: 1.15;
+}
+
+/* ---------- Content ---------- */
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 40px clamp(24px, 3.5vw, 48px) 32px;
+}
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  transition: background-color 0.3s var(--ease);
+}
+
+.close:hover {
+  background: var(--color-stone-100);
+}
+
+.close span,
+.close span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 1px;
+  background: var(--color-charcoal);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close span::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.title {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--color-charcoal);
+}
+
+/* Form | Calendly, with one underline that slides between them. */
+.tabs {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tab {
+  padding: 12px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-400);
+  transition: color 0.3s var(--ease);
+}
+
+.tab:hover,
+.tab[aria-selected="true"] {
+  color: var(--color-charcoal);
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 50%;
+  height: 2px;
+  background: var(--color-charcoal);
+  transition: transform 0.5s var(--ease);
+}
+
+.panel {
+  flex: 1;
+  padding-top: var(--space-4);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+/* ---------- Form ---------- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  border: none;
+}
+
+.label {
+  padding: 0;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-600);
+}
+
+.field input[type="text"],
+.field input[type="tel"] {
+  width: 100%;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid var(--color-stone-200);
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--color-charcoal);
+  transition: border-color 0.3s var(--ease);
+}
+
+.field input::placeholder {
+  color: var(--color-stone-400);
+  font-size: 0.875rem;
+}
+
+.field input[type="text"]:focus,
+.field input[type="tel"]:focus {
+  outline: none;
+  border-bottom-color: var(--color-charcoal);
+}
+
+.segment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.option {
+  position: relative;
+  cursor: pointer;
+}
+
+.option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.option span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border: 1px solid var(--color-stone-200);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--color-stone-600);
+  transition:
+    background-color 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.option input:checked + span {
+  background: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.option input:focus-visible + span {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 18px 16px;
+  border: 1px dashed var(--color-stone-400);
+  border-radius: 14px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-stone-600);
+  cursor: pointer;
+  transition:
+    background-color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.drop:hover,
+.drop:focus-within {
+  background: var(--color-stone-100);
+  border-color: var(--color-charcoal);
+}
+
+.drop strong {
+  font-weight: 500;
+  color: var(--color-charcoal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.drop small {
+  font-size: 0.75rem;
+  color: var(--color-stone-400);
+}
+
+.thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.thumb {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumb button {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: rgb(20 18 16 / 0.7);
+}
+
+.thumb button span,
+.thumb button span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 1px;
+  background: var(--color-ivory);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.thumb button span::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 50px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  transition: background-color 0.4s var(--ease);
+}
+
+.form .submit {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.submit:hover {
+  background: var(--color-accent);
+}
+
+.note {
+  margin-top: -8px;
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--color-stone-400);
+}
+
+/* ---------- Sent / Calendly fallback ---------- */
+
+.sent,
+.calendlyFallback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: var(--space-3);
+}
+
+.sentMark,
+.calIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-accent);
+}
+
+.sentTitle {
+  margin-top: var(--space-4);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-charcoal);
+}
+
+.sentText {
+  max-width: 42ch;
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--color-muted);
+}
+
+.sentActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.textButton {
+  font-size: var(--text-small);
+  color: var(--color-charcoal);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--color-stone-400);
+}
+
+.calendly {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  border: none;
+}
+
+/* ---------- Tablets & phones ---------- */
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .dialog {
+    width: 100vw;
+    max-height: 100svh;
+    height: 100svh;
+    border-radius: 0;
+  }
+
+  .shell {
+    height: 100svh;
+  }
+
+  .main {
+    padding: 28px 16px 24px;
+  }
+
+  .close {
+    top: 14px;
+    right: 14px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

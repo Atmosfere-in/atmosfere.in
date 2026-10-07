@@ -5,7 +5,6 @@ import ProjectsCarousel from "@/components/sections/ProjectsCarousel/ProjectsCar
 import PlanningTypes from "@/components/sections/PlanningTypes/PlanningTypes";
 import Process from "@/components/sections/Process/Process";
 import FounderNote from "@/components/sections/FounderNote/FounderNote";
-import Split from "@/components/sections/Split/Split";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
 import TrustSignals from "@/components/sections/TrustSignals/TrustSignals";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
@@ -24,7 +23,6 @@ export default function HospitalityHome() {
         <Process {...hospitality.process} />
       </div>
       <FounderNote {...hospitality.founder} />
-      <Split label="Private estates and commercial hospitality" panels={hospitality.split} />
       <CaseStudies {...hospitality.caseStudies} />
       <TrustSignals {...hospitality.trust} />
       <ClosingCta {...hospitality.closing} />

@@ -1,90 +1,151 @@
 .section {
   background: var(--color-stone-100);
-  padding-top: clamp(40px, 8vh, 96px);
-  padding-bottom: clamp(40px, 8vh, 96px);
+  padding-top: clamp(48px, 9vh, 104px);
+  padding-bottom: clamp(48px, 9vh, 104px);
 }
 
-/* Copy and stage list on the left, the active stage's photograph right. */
-.grid {
-  display: grid;
-  grid-template-columns: 5fr 7fr;
-  align-items: center;
-  gap: clamp(40px, 6vw, 112px);
+/* Heading left, intro and link right, sharing a baseline. */
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5);
+  margin-bottom: clamp(24px, 4.5vh, 48px);
 }
 
 .title {
+  max-width: 18ch;
   margin-top: var(--space-3);
   font-family: var(--font-display);
-  font-size: clamp(1.85rem, 2.8vw, 2.6rem);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--color-charcoal);
 }
 
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  max-width: 40ch;
+}
+
 .intro {
-  max-width: 46ch;
-  margin-top: var(--space-2);
   font-size: var(--text-small);
   color: var(--color-muted);
 }
 
-/* ---------- Stage list ---------- */
+/* ---------- Photo panels ---------- */
 
-.steps {
-  margin-top: clamp(16px, 3vh, 36px);
-  list-style: none;
-  border-top: 1px solid var(--color-stone-200);
-}
-
-.step {
-  position: relative;
-  border-bottom: 1px solid var(--color-stone-200);
-}
-
-.stepButton {
+.panels {
   display: flex;
-  align-items: baseline;
-  gap: var(--space-4);
-  width: 100%;
-  padding: clamp(10px, 1.8vh, 20px) 0;
+  gap: clamp(8px, 0.9vw, 16px);
+  height: clamp(400px, 66vh, 680px);
+}
+
+.panel {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 18px;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  transition: flex-grow 0.9s var(--ease);
+}
+
+.active {
+  flex-grow: 2.7;
+}
+
+.image {
+  z-index: -2;
+  object-fit: cover;
+  transform: scale(1.06);
+  filter: saturate(0.85) brightness(0.9);
+  transition:
+    transform 1.6s var(--ease),
+    filter 0.9s var(--ease);
+}
+
+.active .image {
+  transform: none;
+  filter: none;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to top,
+    rgb(20 18 16 / 0.78) 0%,
+    rgb(20 18 16 / 0.3) 38%,
+    rgb(20 18 16 / 0.05) 65%,
+    rgb(20 18 16 / 0.25) 100%
+  );
+}
+
+.trigger {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(18px, 2vw, 32px);
+  color: inherit;
   text-align: left;
-  cursor: pointer;
+}
+
+.trigger:focus-visible {
+  outline: 1px solid var(--color-ivory);
+  outline-offset: -8px;
+  border-radius: 18px;
 }
 
 .number {
-  min-width: 2ch;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(247 244 239 / 0.45);
+  border-radius: 999px;
   font-family: var(--font-display);
-  font-size: 1rem;
-  color: var(--color-stone-400);
-  transition: color 0.4s var(--ease);
-}
-
-.name {
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 1.9vw, 1.85rem);
-  line-height: 1.1;
-  color: var(--color-stone-400);
-  transition: color 0.4s var(--ease), transform 0.5s var(--ease);
-}
-
-.stepButton:hover .name,
-.active .name {
-  color: var(--color-charcoal);
-}
-
-.active .name {
-  transform: translateX(6px);
+  font-size: 0.9375rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition:
+    background-color 0.5s var(--ease),
+    color 0.5s var(--ease),
+    border-color 0.5s var(--ease);
 }
 
 .active .number {
-  color: var(--color-accent);
+  background: var(--color-ivory);
+  border-color: var(--color-ivory);
+  color: var(--color-charcoal);
 }
 
-/* The active stage's description opens beneath its name. */
+.body {
+  display: block;
+}
+
+.name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.9vw, 2.1rem);
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* The description opens under the name of the active stage. */
 .detail {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.5s var(--ease);
+  transition: grid-template-rows 0.7s var(--ease);
 }
 
 .active .detail {
@@ -92,25 +153,30 @@
 }
 
 .text {
+  display: block;
   overflow: hidden;
-  max-width: 44ch;
-  padding-left: calc(2ch + var(--space-4));
+  max-width: 38ch;
   font-size: var(--text-small);
-  color: var(--color-muted);
+  line-height: 1.6;
+  color: rgb(247 244 239 / 0.86);
+  opacity: 0;
+  transition: opacity 0.5s var(--ease);
 }
 
 .active .text {
-  padding-bottom: clamp(10px, 1.8vh, 20px);
+  padding-top: var(--space-2);
+  opacity: 1;
+  transition-delay: 0.25s;
 }
 
-/* Thin timer under the active stage while it auto-advances. */
+/* Thin timer along the bottom of the active panel while it auto-advances. */
 .progress {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
+  left: clamp(18px, 2vw, 32px);
+  right: clamp(18px, 2vw, 32px);
+  bottom: 14px;
   height: 1px;
-  background: var(--color-charcoal);
+  background: rgb(247 244 239 / 0.85);
   transform: scaleX(0);
   transform-origin: left;
 }
@@ -125,82 +191,44 @@
   }
 }
 
-.link {
-  margin-top: clamp(16px, 3vh, 32px);
-}
-
-/* ---------- Photograph ---------- */
-
-.media {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  max-height: calc(100svh - var(--header-height) - 96px);
-  width: 100%;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 30px 70px -30px rgb(31 29 26 / 0.4);
-}
-
-.frame {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transform: scale(1.04);
-  transition: opacity 0.9s var(--ease), transform 1.6s var(--ease);
-}
-
-.frameActive {
-  opacity: 1;
-  transform: none;
-}
-
-.image {
-  object-fit: cover;
-}
-
-.caption {
-  position: absolute;
-  left: var(--space-4);
-  bottom: var(--space-4);
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgb(247 244 239 / 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-charcoal);
-}
-
-.inlineMedia {
-  display: none;
-}
-
-/* ---------- Phones & small tablets: every stage open, each with its photo ---------- */
+/* ---------- Tablets & phones: one card per stage ---------- */
 
 @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
   }
 
-  .media,
-  .progress {
-    display: none;
+  .panels {
+    flex-direction: column;
+    height: auto;
+    gap: var(--space-3);
   }
 
-  .stepButton {
-    cursor: default;
+  .panel,
+  .active {
+    flex: none;
+    aspect-ratio: 4 / 3.4;
+    border-radius: 14px;
+  }
+
+  .image,
+  .active .image {
+    transform: none;
+    filter: none;
+  }
+
+  .number,
+  .active .number {
+    width: 34px;
+    height: 34px;
+    background: var(--color-ivory);
+    color: var(--color-charcoal);
   }
 
   .name {
-    color: var(--color-charcoal);
-    transform: none !important;
-  }
-
-  .number {
-    color: var(--color-accent);
+    font-size: 1.75rem;
   }
 
   .detail {
@@ -208,15 +236,11 @@
   }
 
   .text {
-    padding-bottom: var(--space-3);
+    padding-top: var(--space-2);
+    opacity: 1;
   }
 
-  .inlineMedia {
-    display: block;
-    position: relative;
-    aspect-ratio: 16 / 10;
-    margin-bottom: var(--space-4);
-    overflow: hidden;
-    border-radius: 14px;
+  .progress {
+    display: none;
   }
 }

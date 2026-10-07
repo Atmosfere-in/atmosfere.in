@@ -1,5 +1,7 @@
 import SiteHeader from "@/components/SiteHeader/SiteHeader";
 import SiteFooter from "@/components/SiteFooter/SiteFooter";
+import ConsultModal from "@/components/ConsultModal/ConsultModal";
+import { unsplash } from "@/lib/images";
 import { spacesNav, footer } from "@/data/spaces";
 
 export const metadata = {
@@ -17,6 +19,12 @@ export default function SpacesLayout({ children }) {
       <SiteHeader {...spacesNav} overlay />
       {children}
       <SiteFooter {...footer} />
+      <ConsultModal
+        triggers={["/spaces/get-a-quote"]}
+        vertical="Atmosfere Spaces"
+        image={unsplash("1760072513367-55182245e76c")}
+        showType
+      />
     </>
   );
 }
