@@ -190,24 +190,32 @@ ul {
   opacity: 0.7;
 }
 
-/* Scroll-linked fade-up; content stays fully visible where unsupported. */
-@supports (animation-timeline: view()) {
-  .reveal {
-    animation: reveal-up linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 35%;
-  }
+/* Scroll reveals (see RevealObserver): text fades up, photographs unveil
+   upwards. Only applied once the observer is running, so nothing is ever
+   hidden without JavaScript. --reveal-delay staggers items in a row. */
+.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 1s var(--ease),
+    transform 1.2s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
 }
 
-@keyframes reveal-up {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.js-reveal .reveal-image {
+  clip-path: inset(14% 0 0 0);
+  opacity: 0;
+  transition:
+    clip-path 1.4s var(--ease),
+    opacity 0.9s var(--ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js-reveal .reveal.is-revealed,
+.js-reveal .reveal-image.is-revealed {
+  clip-path: inset(0);
+  opacity: 1;
+  transform: none;
 }
 
 .visually-hidden {

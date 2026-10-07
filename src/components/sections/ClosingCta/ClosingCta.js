@@ -15,7 +15,7 @@ export default function ClosingCta({ title, text, image, cta, quote = false }) {
         style={image.position ? { objectPosition: image.position } : undefined}
       />
       <div className={`container ${styles.inner}`}>
-        <div className={styles.text}>
+        <div className={`${styles.text} reveal`}>
           <h2 className={`${styles.title} ${quote ? styles.quote : ""}`}>
             {quote ? `“${title}”` : title}
           </h2>

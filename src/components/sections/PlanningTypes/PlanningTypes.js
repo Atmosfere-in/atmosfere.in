@@ -38,11 +38,12 @@ export default function PlanningTypes({
         />
 
         <ul className={styles.grid} style={{ "--cols": types.length }}>
-          {types.map((type) => (
+          {types.map((type, i) => (
             <li
               key={type.slug}
               id={anchors ? type.slug : undefined}
               className={`${styles.cell} reveal`}
+              style={{ "--reveal-delay": `${i * 90}ms` }}
             >
               <Link href={type.href} className={styles.tile}>
                 <Image

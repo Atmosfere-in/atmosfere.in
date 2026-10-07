@@ -1,0 +1,135 @@
+.section {
+  padding-top: clamp(56px, 11vh, 120px);
+  padding-bottom: clamp(56px, 11vh, 120px);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  max-width: 20ch;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--color-charcoal);
+}
+
+/* Two letters side by side; the second sits lower, like a magazine spread. */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: clamp(40px, 7vw, 128px);
+  max-width: 1240px;
+  margin: clamp(32px, 6vh, 64px) auto 0;
+}
+
+.founder:nth-child(2) {
+  margin-top: clamp(48px, 9vh, 112px);
+}
+
+.founder {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  align-items: end;
+  gap: clamp(20px, 2.4vw, 40px);
+}
+
+/* Portrait: soft shadow, slow zoom on hover. */
+.portrait {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -36px rgb(31 29 26 / 0.45);
+}
+
+.image {
+  object-fit: cover;
+  filter: saturate(0.8) contrast(1.02);
+  transition: transform 1.6s var(--ease);
+}
+
+.founder:hover .image {
+  transform: scale(1.04);
+}
+
+.note {
+  padding-bottom: var(--space-2);
+}
+
+.mark {
+  display: block;
+  height: 0.5em;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.quote {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.35vw, 1.4rem);
+  line-height: 1.45;
+  color: var(--color-charcoal);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-stone-200);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-charcoal);
+}
+
+.role {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ---------- Laptops: portrait above the note ---------- */
+
+@media (max-width: 1280px) {
+  .founder {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .portrait {
+    aspect-ratio: 4 / 3.4;
+  }
+}
+
+/* ---------- Phones: stacked ---------- */
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .founder:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .portrait {
+    aspect-ratio: 4 / 4.4;
+  }
+}

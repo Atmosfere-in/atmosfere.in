@@ -55,23 +55,6 @@
   margin-top: var(--space-4);
 }
 
-.whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--ft-line);
-  font-size: var(--text-caption);
-  font-weight: 500;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  transition: border-color 0.4s var(--ease);
-}
-
-.whatsapp:hover {
-  border-color: var(--ft-fg);
-}
-
 /* ---------- Link grid ---------- */
 
 .grid {

@@ -16,8 +16,8 @@ export default function TrustSignals({ stats, image, testimonials }) {
         />
         <div className="container">
           <dl className={styles.stats}>
-            {stats.map((stat) => (
-              <div key={stat.label} className={`${styles.stat} reveal`}>
+            {stats.map((stat, i) => (
+              <div key={stat.label} className={`${styles.stat} reveal`} style={{ "--reveal-delay": `${i * 90}ms` }}>
                 <dt className={styles.label}>{stat.label}</dt>
                 <dd className={styles.value}>{stat.value}</dd>
               </div>
@@ -29,8 +29,8 @@ export default function TrustSignals({ stats, image, testimonials }) {
       <div className={`container ${styles.testimonials}`}>
         <span className="eyebrow">In our clients&apos; words</span>
         <ul className={styles.quotes}>
-          {testimonials.map((t) => (
-            <li key={t.name} className={`${styles.card} reveal`}>
+          {testimonials.map((t, i) => (
+            <li key={t.name} className={`${styles.card} reveal`} style={{ "--reveal-delay": `${i * 90}ms` }}>
               <span className={styles.mark} aria-hidden="true">
                 “
               </span>

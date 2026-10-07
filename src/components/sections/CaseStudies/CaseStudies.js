@@ -26,8 +26,8 @@ export default function CaseStudies({ eyebrow = "Case Studies", title, items }) 
         />
 
         <ul className={styles.grid}>
-          {items.map((study) => (
-            <li key={study.href} className="reveal">
+          {items.map((study, i) => (
+            <li key={study.href} className="reveal" style={{ "--reveal-delay": `${i * 90}ms` }}>
               <Link href={study.href} className={styles.card}>
                 <div className={styles.media}>
                   <Image

@@ -1,0 +1,164 @@
+.section {
+  background: var(--color-stone-100);
+  padding-top: clamp(56px, 11vh, 120px);
+  padding-bottom: clamp(56px, 11vh, 120px);
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  max-width: 22ch;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--color-charcoal);
+}
+
+.intro {
+  max-width: 52ch;
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+  color: var(--color-muted);
+}
+
+/* ---------- Colonnade ---------- */
+
+.stages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(20px, 2.6vw, 48px);
+  margin-top: clamp(36px, 7vh, 72px);
+  list-style: none;
+}
+
+/* Alternate columns step down for a gentle rhythm. */
+.stage:nth-child(even) {
+  margin-top: clamp(32px, 6vh, 72px);
+}
+
+.arch {
+  position: relative;
+  aspect-ratio: 3 / 4.2;
+  overflow: hidden;
+  border-radius: 999px 999px 6px 6px;
+  isolation: isolate;
+}
+
+/* Hairline arch inside the photo, like a door frame. */
+.arch::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgb(247 244 239 / 0.55);
+  border-radius: 999px 999px 2px 2px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s var(--ease), inset 0.8s var(--ease);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 1.6s var(--ease);
+}
+
+.stage:hover .image {
+  transform: scale(1.05);
+}
+
+.stage:hover .arch::after {
+  inset: 14px;
+  opacity: 1;
+}
+
+.body {
+  padding-top: var(--space-4);
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  color: var(--color-accent);
+}
+
+.number::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-stone-200);
+}
+
+.name {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.7vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-charcoal);
+}
+
+.text {
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(32px, 6vh, 64px);
+}
+
+/* ---------- Tablets: two by two ---------- */
+
+@media (max-width: 1024px) {
+  .stages {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-6);
+  }
+
+  .arch {
+    aspect-ratio: 4 / 4.4;
+  }
+}
+
+/* ---------- Phones: a swipeable row of arches ---------- */
+
+@media (max-width: 640px) {
+  .stages {
+    display: flex;
+    gap: var(--space-3);
+    margin-right: calc(var(--gutter) * -1);
+    padding-right: var(--gutter);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .stages::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stage {
+    flex: 0 0 74%;
+    scroll-snap-align: start;
+  }
+
+  .stage:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .arch {
+    aspect-ratio: 3 / 4;
+  }
+}

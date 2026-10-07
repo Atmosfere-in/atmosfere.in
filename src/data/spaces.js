@@ -144,47 +144,64 @@ export const process = {
       name: "Consult",
       text: "We listen first — how you live, what you need, and what you want to spend.",
       image: {
-        src: unsplash("1770970831074-6e88b6cc260b"),
-        alt: "Fabric swatches, sketches and a glass vase laid out on a studio table",
+        src: unsplash("1781888696890-3c4fa53cf98e"),
+        alt: "A designer laying out stone, timber and fabric samples in a warm studio",
       },
     },
     {
       name: "Design",
       text: "Layouts, 3D views, materials and a fixed quote, signed off before work begins.",
       image: {
-        src: unsplash("1770200574989-a4cca2c70c00"),
-        alt: "A hand-drawn perspective of an interior layout",
+        src: unsplash("1781859240244-61e274c2bf39"),
+        alt: "A curated material palette of marble, stone and ceramics",
       },
     },
     {
       name: "Execute",
       text: "Our own site team builds it, with weekly updates and one point of contact.",
       image: {
-        src: unsplash("1731168273756-e02cae42265b"),
-        alt: "A craftsman measuring and cutting tile on site",
+        src: unsplash("1631396326838-de37e5f8bcbc"),
+        alt: "A craftsman finishing a piece of joinery at the workbench",
       },
     },
     {
       name: "Handover",
       text: "Snag-checked, styled and handed over — ready to live in from day one.",
       image: {
-        src: unsplash("1699239116624-85268dce7377"),
-        alt: "A finished, styled living room with a fluted wall and soft neutral furnishings",
+        src: unsplash("1593987314040-8e0ac84ae724"),
+        alt: "A finished luxury living room with a sculptural chandelier and soft neutral furnishings",
       },
     },
   ],
   link: { label: "See the full process", href: "/spaces/process" },
 };
 
-export const founder = {
-  quote:
-    "A beautiful room isn't the goal. A room that still feels right ten years from now — that's the work.",
-  name: "Founder & Principal Designer",
-  role: "Atmosfere",
-  image: {
-    src: unsplash("1772404245810-b8b0a05c731e"),
-    alt: "Portrait of the founder in a cream suit, seated on a sofa in a dark timber room",
-  },
+// Placeholder names and portraits until the founders supply their own.
+export const founders = {
+  eyebrow: "Founders' Note",
+  title: "Two founders. One promise to every home.",
+  people: [
+    {
+      name: "Co-founder",
+      role: "Principal Designer",
+      quote:
+        "A beautiful room isn't the goal. A room that still feels right ten years from now — that's the work.",
+      image: {
+        src: unsplash("1772404245810-b8b0a05c731e"),
+        alt: "Portrait of the co-founder in a cream suit, seated in a dark timber room",
+      },
+    },
+    {
+      name: "Co-founder",
+      role: "Strategy & Hospitality",
+      quote:
+        "We only promise what we can build — and then we build exactly that, on the date and the budget we agreed.",
+      image: {
+        src: unsplash("1762341124796-530c0085f7d8"),
+        alt: "Portrait of the co-founder, seated, in a tailored black outfit",
+      },
+    },
+  ],
 };
 
 export const split = [

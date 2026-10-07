@@ -45,41 +45,6 @@ export const about = {
   link: { label: "About the practice", href: "/hospitality#process" },
 };
 
-export const services = {
-  eyebrow: "Services",
-  title: "Three ways we shape a property.",
-  intro: "Engage us for one stage or all three — each one feeds the next.",
-  items: [
-    {
-      name: "Concept & Feasibility",
-      text: "Market, location and budget tested before you commit — Airbnb, hotel, villa or venue.",
-      href: "/hospitality/services#concept-feasibility",
-      image: {
-        src: unsplash("1771344163986-5219fb12005b"),
-        alt: "An architectural site model of a resort with landscaped grounds, displayed in a bright gallery",
-      },
-    },
-    {
-      name: "Space Planning & Layout",
-      text: "Room mix, guest circulation and back-of-house planned to work on day one.",
-      href: "/hospitality/services#space-planning",
-      image: {
-        src: unsplash("1630587148265-761cbd139043"),
-        alt: "A grand hotel corridor lined with timber panelling and crystal chandeliers",
-      },
-    },
-    {
-      name: "Renovation & Repositioning",
-      text: "Existing properties re-planned for a new market, a new guest or a better rate.",
-      href: "/hospitality/services#repositioning",
-      image: {
-        src: unsplash("1629140727571-9b5c6f6267b4"),
-        alt: "A repositioned modern hotel room with cove lighting, soft drapes and a tailored headboard wall",
-      },
-    },
-  ],
-};
-
 export const projects = {
   eyebrow: "Projects",
   title: "Properties we've helped become.",
@@ -152,47 +117,64 @@ export const process = {
       name: "Understand",
       text: "The site, the market, the budget and what success looks like for you.",
       image: {
-        src: unsplash("1624066969616-69b0b0301d4d"),
-        alt: "A white architectural model of a building in its landscaped site",
+        src: unsplash("1562790351-d273a961e0e9"),
+        alt: "An aerial view of a resort with a winding pool among palms",
       },
     },
     {
       name: "Plan",
       text: "Concept, room mix, and a layout that makes the numbers work.",
       image: {
-        src: unsplash("1753787320279-e501f1a6ae16"),
-        alt: "A detailed architectural drawing of a grand hall",
+        src: unsplash("1731336478850-6bce7235e320"),
+        alt: "A hotel suite with a sculpted timber headboard wall and soft lighting",
       },
     },
     {
       name: "Advise",
       text: "Clear recommendations on design, operators, phasing and spend.",
       image: {
-        src: unsplash("1781888688940-5730c3fd5baf"),
-        alt: "Architectural drawings and a laptop on a marble desk",
+        src: unsplash("1660557989695-14fac79c086d"),
+        alt: "A dark marble hotel reception desk lit by warm pendant lights",
       },
     },
     {
       name: "Execute",
       text: "Delivered with Atmosfere Spaces — the plan built exactly as advised.",
       image: {
-        src: unsplash("1677129667171-92abd8740fa3"),
-        alt: "A finished hotel lobby with a mirrored ceiling and golden lighting",
+        src: unsplash("1742844552193-2fd3425cd26d"),
+        alt: "A grand, sunlit hotel lobby with marble floors and tall windows",
       },
     },
   ],
   link: { label: "Book a consultation", href: BOOK.href },
 };
 
-export const founder = {
-  quote:
-    "The most expensive mistake in hospitality is building the wrong thing beautifully. We make sure the question is right before the answer is drawn.",
-  name: "Founder & Principal Consultant",
-  role: "Atmosfere Hospitality",
-  image: {
-    src: unsplash("1762341124796-530c0085f7d8"),
-    alt: "Portrait of the principal consultant, seated, in a tailored black outfit",
-  },
+// Placeholder names and portraits until the founders supply their own.
+export const founders = {
+  eyebrow: "Founders' Note",
+  title: "Two founders. One question before every plan.",
+  people: [
+    {
+      name: "Co-founder",
+      role: "Principal Designer",
+      quote:
+        "The most expensive mistake in hospitality is building the wrong thing beautifully. We make sure the question is right before the answer is drawn.",
+      image: {
+        src: unsplash("1772404245810-b8b0a05c731e"),
+        alt: "Portrait of the co-founder in a cream suit, seated in a dark timber room",
+      },
+    },
+    {
+      name: "Co-founder",
+      role: "Strategy & Hospitality",
+      quote:
+        "Every property has a guest it's meant for. Our work is to find that guest before the first wall goes up.",
+      image: {
+        src: unsplash("1762341124796-530c0085f7d8"),
+        alt: "Portrait of the co-founder, seated, in a tailored black outfit",
+      },
+    },
+  ],
 };
 
 export const caseStudies = {
@@ -284,7 +266,7 @@ export const footer = {
     "Planning and advisory for hotels, resorts, villas and banquets — deciding what a property should become.",
   cta: {
     title: "What should your property become?",
-    text: "Book a 30-minute consultation, or message us with a quick question about your site, concept or budget.",
+    text: "Book a 30-minute consultation to talk through your site, concept and budget.",
     primary: BOOK,
   },
   columns: [
@@ -298,7 +280,6 @@ export const footer = {
     {
       title: "The Practice",
       links: [
-        { label: "Services", href: "/hospitality/services" },
         { label: "Case Studies", href: "/hospitality/case-studies" },
         { label: "Book a Consultation", href: BOOK.href },
       ],

@@ -29,14 +29,6 @@ export default function SiteFooter({
             <Button href={cta.primary.href} variant={dark ? "onImage" : "primary"} arrow>
               {cta.primary.label}
             </Button>
-            <a
-              href={contact.whatsappHref}
-              className={styles.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Chat on WhatsApp <Arrow direction="up-right" size={14} />
-            </a>
           </div>
         </div>
       </div>

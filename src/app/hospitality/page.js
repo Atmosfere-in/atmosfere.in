@@ -1,10 +1,9 @@
 import Hero from "@/components/sections/Hero/Hero";
 import About from "@/components/sections/About/About";
-import Services from "@/components/sections/Services/Services";
 import ProjectsCarousel from "@/components/sections/ProjectsCarousel/ProjectsCarousel";
 import PlanningTypes from "@/components/sections/PlanningTypes/PlanningTypes";
-import Process from "@/components/sections/Process/Process";
-import FounderNote from "@/components/sections/FounderNote/FounderNote";
+import ProcessArches from "@/components/sections/ProcessArches/ProcessArches";
+import Founders from "@/components/sections/Founders/Founders";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
 import TrustSignals from "@/components/sections/TrustSignals/TrustSignals";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
@@ -16,13 +15,12 @@ export default function HospitalityHome() {
     <main>
       <Hero {...hospitality.hero} />
       <About {...hospitality.about} />
-      <Services {...hospitality.services} />
       <ProjectsCarousel {...hospitality.projects} />
       <PlanningTypes {...hospitality.planningTypes} />
       <div id="process">
-        <Process {...hospitality.process} />
+        <ProcessArches {...hospitality.process} />
       </div>
-      <FounderNote {...hospitality.founder} />
+      <Founders {...hospitality.founders} />
       <CaseStudies {...hospitality.caseStudies} />
       <TrustSignals {...hospitality.trust} />
       <ClosingCta {...hospitality.closing} />

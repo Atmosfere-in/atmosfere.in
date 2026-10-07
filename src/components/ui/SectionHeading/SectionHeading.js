@@ -17,6 +17,7 @@ export default function SectionHeading({
     styles[align],
     styles[layout],
     light ? styles.light : "",
+    "reveal",
   ].join(" ");
 
   if (layout === "split") {

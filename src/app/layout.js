@@ -1,4 +1,5 @@
 import { Marcellus, Jost } from "next/font/google";
+import RevealObserver from "@/components/RevealObserver/RevealObserver";
 import "./globals.css";
 
 // Display: a simple, flared serif with an engraved, premium feel — the same
@@ -24,7 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <RevealObserver />
+      </body>
     </html>
   );
 }

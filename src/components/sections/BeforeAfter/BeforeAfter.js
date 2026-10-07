@@ -64,7 +64,7 @@ export default function BeforeAfter({
   return (
     <section className={styles.section}>
       <div className={`container ${styles.inner}`}>
-        <div className={styles.heading}>
+        <div className={`${styles.heading} reveal`}>
           <div>
             <span className="eyebrow">{eyebrow}</span>
             <h2 className={styles.title}>{title}</h2>
@@ -76,7 +76,7 @@ export default function BeforeAfter({
         </div>
 
         <div
-          className={`${styles.frame} ${dragging ? styles.dragging : ""}`}
+          className={`${styles.frame} ${dragging ? styles.dragging : ""} reveal-image`}
           style={{ "--pos": `${position}%` }}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}

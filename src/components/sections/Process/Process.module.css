@@ -40,6 +40,7 @@
 
 .panels {
   display: flex;
+  list-style: none;
   gap: clamp(8px, 0.9vw, 16px);
   height: clamp(400px, 66vh, 680px);
 }

@@ -34,6 +34,9 @@
   left: 0;
   right: 0;
   background: linear-gradient(to bottom, rgb(20 18 16 / 0.38), rgb(20 18 16 / 0));
+  /* Keep the scrim inside the bar: repeated into the 1px border it drew a
+     dark line under the header. */
+  background-repeat: no-repeat;
   /* No rule under the header while it floats over photography. */
   border-bottom-color: transparent;
   --hdr-fg: var(--color-ivory);
@@ -69,15 +72,18 @@
   gap: var(--space-3);
 }
 
-/* Verticals: brand left, links centred on the page, actions right. */
-.withNav {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: var(--space-5);
-}
+/* Verticals on desktop: brand left, links centred on the page, actions
+   right. Below 1100px the links move into the menu and the bar stays flex. */
+@media (min-width: 1101px) {
+  .withNav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: var(--space-5);
+  }
 
-.withNav .actions {
-  justify-self: end;
+  .withNav .actions {
+    justify-self: end;
+  }
 }
 
 .brandGroup {
