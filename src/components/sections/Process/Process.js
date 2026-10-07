@@ -12,7 +12,7 @@ const AUTO_ADVANCE_MS = 5500;
 // own until the visitor hovers, focuses or taps one. On phones every stage
 // is shown as its own card.
 // steps: [{ name, text, image: { src, alt } }]
-export default function Process({ eyebrow, title, intro, steps, link }) {
+export default function Process({ eyebrow, title, steps, link }) {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -35,7 +35,6 @@ export default function Process({ eyebrow, title, intro, steps, link }) {
             <h2 className={styles.title}>{title}</h2>
           </div>
           <div className={styles.aside}>
-            {intro && <p className={styles.intro}>{intro}</p>}
             {link && <TextLink href={link.href}>{link.label}</TextLink>}
           </div>
         </div>

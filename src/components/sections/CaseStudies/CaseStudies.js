@@ -22,7 +22,6 @@ export default function CaseStudies({ eyebrow = "Case Studies", title, items }) 
           eyebrow={eyebrow}
           title={title}
           layout="split"
-          intro={`Every case study follows the same six stages: ${CASE_STUDY_STAGES.join(" · ")}.`}
         />
 
         <ul className={styles.grid}>

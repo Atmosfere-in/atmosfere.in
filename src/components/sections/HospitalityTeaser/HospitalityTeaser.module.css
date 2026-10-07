@@ -1,0 +1,129 @@
+/* Warm sand background: sets the cross-sell apart from the ivory sections
+   around it without the weight of a dark band. */
+.section {
+  background: var(--color-accent-soft);
+  padding-top: clamp(48px, 9vh, 104px);
+  padding-bottom: clamp(48px, 9vh, 104px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 112px);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  max-height: calc(100svh - var(--header-height) - 64px);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 999px 999px 18px 18px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.title {
+  max-width: 18ch;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--color-charcoal);
+}
+
+.intro {
+  max-width: 50ch;
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+  color: var(--color-stone-600);
+}
+
+/* ---------- Index of planning types ---------- */
+
+.types {
+  margin-top: clamp(20px, 4vh, 40px);
+  border-top: 1px solid rgb(31 29 26 / 0.14);
+}
+
+.types li {
+  border-bottom: 1px solid rgb(31 29 26 / 0.14);
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: clamp(12px, 2vh, 20px) 0;
+  color: var(--color-charcoal);
+}
+
+.number {
+  min-width: 2ch;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  color: var(--color-accent);
+}
+
+.typeBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.typeName {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
+  line-height: 1.15;
+  transition: transform 0.5s var(--ease);
+}
+
+.typeText {
+  margin-top: 2px;
+  font-size: 0.8125rem;
+  color: var(--color-stone-600);
+}
+
+.arrow {
+  flex: none;
+  color: var(--color-stone-600);
+  transition: transform 0.5s var(--ease), color 0.5s var(--ease);
+}
+
+.type:hover .typeName {
+  transform: translateX(6px);
+}
+
+.type:hover .arrow {
+  color: var(--color-charcoal);
+  transform: translateX(4px);
+}
+
+.action {
+  margin-top: clamp(20px, 4vh, 40px);
+}
+
+/* ---------- Tablets & phones ---------- */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    aspect-ratio: 4 / 3.6;
+    max-height: none;
+    border-radius: 999px 999px 14px 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .typeText {
+    display: none;
+  }
+}

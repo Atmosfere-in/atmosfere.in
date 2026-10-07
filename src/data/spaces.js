@@ -108,7 +108,10 @@ export const planningTypes = {
   intro:
     "Hotels, resorts and villas start with a different question — not how the property should look, but what it should become. Our Hospitality practice plans it before we build it.",
   action: { label: "Explore Hospitality", href: "/hospitality" },
-  compact: true,
+  image: {
+    src: unsplash("1520250497591-112f2f40a3f4"),
+    alt: "A resort pool lined with palms and thatched pavilions",
+  },
   types: allPlanningTypes.map((type) => ({
     ...type,
     href: `/hospitality#${type.slug}`,

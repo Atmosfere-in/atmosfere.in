@@ -10,7 +10,7 @@ import styles from "./ProjectsCarousel.module.css";
 // items: [{ href, name, details, side, image }]
 // Frosted-glass arrows float over the images; a slim progress rule and a
 // counter sit underneath.
-export default function ProjectsCarousel({ eyebrow, title, intro, items }) {
+export default function ProjectsCarousel({ eyebrow, title, items }) {
   const trackRef = useRef(null);
   const [progress, setProgress] = useState(0);
   const [current, setCurrent] = useState(1);
@@ -40,7 +40,7 @@ export default function ProjectsCarousel({ eyebrow, title, intro, items }) {
   return (
     <section className={`section ${styles.section}`}>
       <div className="container">
-        <SectionHeading eyebrow={eyebrow} title={title} intro={intro} layout="split" />
+        <SectionHeading eyebrow={eyebrow} title={title} layout="split" />
       </div>
 
       <div className={styles.viewport}>
