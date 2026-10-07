@@ -8,7 +8,7 @@ export const contact = {
   city: "Noida, Uttar Pradesh",
   // Consultation requests from the booking popup are sent to this WhatsApp
   // number (country code + number, no "+" or spaces).
-  consultWhatsapp: "916396464369",
+  consultWhatsapp: "918510988703",
   // The studio's "Design Consultation" (30 min) Calendly page, the same one
   // embedded on the old atmosfere.in booking page.
   calendlyUrl: "https://calendly.com/mohakgoel74/consultation",
