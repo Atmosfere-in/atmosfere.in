@@ -42,9 +42,11 @@
   --space-6: 64px;
   --space-7: 96px;
 
-  /* Layout */
-  --max-width: 1440px;
-  --gutter: 32px;
+  /* Layout: side margins are a share of the screen width (≈5%), so the
+     page has the same proportions on a 1280px Windows laptop, a 1440px
+     MacBook and a 1920px monitor. */
+  --max-width: 1760px;
+  --gutter: clamp(20px, 5vw, 96px);
   --header-height: 72px;
 
   /* Shape & motion */
@@ -86,20 +88,22 @@ html {
   font-synthesis: none;
 }
 
-/* Short laptop screens. Windows laptops (often at 125–150% display scaling)
-   leave the browser a short viewport, e.g. 1366×650 or 1280×620 CSS px,
-   where 16px type reads oversized next to the same site on a Mac. Scale the
-   rem-based type down a step there; phones, tablets and taller screens keep
-   the 16px base. */
-@media (min-width: 769px) and (max-height: 760px) {
+/* Laptops & desktops: the rem base grows smoothly with screen width
+   (≈14.6px at 1280, 15.2px at 1440, 16.9px at 1920), so type keeps the same
+   proportion to the layout on every screen instead of looking oversized on
+   smaller Windows laptops and undersized on large monitors.
+   Phones and tablets keep the plain 16px base. */
+@media (min-width: 769px) {
   html {
-    font-size: 15px;
+    font-size: clamp(14px, calc(10px + 0.36vw), 17px);
   }
 }
 
+/* Very short viewports (Windows laptops at 125–150% display scaling leave
+   ~600–650px of height): cap the base and slim the header. */
 @media (min-width: 769px) and (max-height: 660px) {
   html {
-    font-size: 14px;
+    font-size: min(14px, calc(10px + 0.36vw));
   }
 
   :root {

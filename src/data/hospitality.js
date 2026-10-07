@@ -148,31 +148,38 @@ export const process = {
   title: "Advisory-led, from question to opening.",
   intro:
     "Our sequence starts with understanding, not drawing — so every design decision traces back to a business decision.",
-  image: {
-    src: unsplash("1742844552700-3926862c5311"),
-    alt: "An elegant hotel interior opening onto a garden view",
-    caption: "Planning before design",
-  },
   steps: [
     {
       name: "Understand",
       text: "The site, the market, the budget and what success looks like for you.",
-      icon: "understand",
+      image: {
+        src: unsplash("1603901622056-0a5bee231395"),
+        alt: "A site plan laid out with drafting tools and a measuring tape",
+      },
     },
     {
       name: "Plan",
-      text: "Concept, room or seating mix, and a layout that makes the numbers work.",
-      icon: "plan",
+      text: "Concept, room mix, and a layout that makes the numbers work.",
+      image: {
+        src: unsplash("1503387762-592deb58ef4e"),
+        alt: "A planner drafting a floor plan by hand with a scale ruler",
+      },
     },
     {
       name: "Advise",
       text: "Clear recommendations on design, operators, phasing and spend.",
-      icon: "advise",
+      image: {
+        src: unsplash("1753162657289-6569cd1da479"),
+        alt: "Two consultants reviewing design drawings together",
+      },
     },
     {
       name: "Execute",
       text: "Delivered with Atmosfere Spaces — the plan built exactly as advised.",
-      icon: "execute",
+      image: {
+        src: unsplash("1759038085950-1234ca8f5fed"),
+        alt: "A finished hotel reception with warm timber walls and lounge seating",
+      },
     },
   ],
   link: { label: "Book a consultation", href: BOOK.href },

@@ -1,144 +1,222 @@
-/* Dark, photograph-backed band: the image sets the mood, the timeline
-   carries the content. */
 .section {
-  position: relative;
-  padding: clamp(64px, 12vh, 120px) 0;
-  overflow: hidden;
-  isolation: isolate;
-  color: var(--color-ivory);
-  background: var(--color-charcoal);
+  background: var(--color-stone-100);
+  padding-top: clamp(40px, 8vh, 96px);
+  padding-bottom: clamp(40px, 8vh, 96px);
 }
 
-.section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(to bottom, rgb(20 18 16 / 0.82), rgb(20 18 16 / 0.7) 45%, rgb(20 18 16 / 0.86));
-}
-
-.bg {
-  z-index: -2;
-  object-fit: cover;
-  transform: scale(1.04);
-}
-
-/* ---------- Timeline ---------- */
-
-.timeline {
-  position: relative;
+/* Copy and stage list on the left, the active stage's photograph right. */
+.grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(24px, 3vw, 48px);
-  list-style: none;
-  padding-top: var(--space-5);
-  margin-top: clamp(8px, 2vh, 24px);
+  grid-template-columns: 5fr 7fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 112px);
 }
 
-/* The hairline the stages hang from. */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(to right, rgb(247 244 239 / 0.55), rgb(247 244 239 / 0.15));
+.title {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-charcoal);
+}
+
+.intro {
+  max-width: 46ch;
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  color: var(--color-muted);
+}
+
+/* ---------- Stage list ---------- */
+
+.steps {
+  margin-top: clamp(16px, 3vh, 36px);
+  list-style: none;
+  border-top: 1px solid var(--color-stone-200);
 }
 
 .step {
   position: relative;
+  border-bottom: 1px solid var(--color-stone-200);
 }
 
-.node {
-  position: absolute;
-  top: calc(-1 * var(--space-5) - 6px);
-  left: 0;
-  width: 13px;
-  height: 13px;
-  border: 1px solid var(--color-ivory);
-  border-radius: 50%;
-  background: var(--color-charcoal);
-}
-
-.node::after {
-  content: "";
-  position: absolute;
-  inset: 3px;
-  border-radius: 50%;
-  background: #c9a57a;
-}
-
-.top {
+.stepButton {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  width: 100%;
+  padding: clamp(10px, 1.8vh, 20px) 0;
+  text-align: left;
+  cursor: pointer;
 }
 
 .number {
+  min-width: 2ch;
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 4vw, 3.75rem);
-  font-style: italic;
-  line-height: 0.9;
-  color: #c9a57a;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  fill: none;
-  stroke: rgb(247 244 239 / 0.7);
-  stroke-width: 1.25;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  font-size: 1rem;
+  color: var(--color-stone-400);
+  transition: color 0.4s var(--ease);
 }
 
 .name {
-  margin-top: var(--space-4);
-  padding-top: var(--space-3);
-  border-top: 1px solid rgb(247 244 239 / 0.18);
   font-family: var(--font-display);
-  font-size: var(--text-h3);
-  font-weight: 400;
+  font-size: clamp(1.35rem, 1.9vw, 1.85rem);
   line-height: 1.1;
+  color: var(--color-stone-400);
+  transition: color 0.4s var(--ease), transform 0.5s var(--ease);
+}
+
+.stepButton:hover .name,
+.active .name {
+  color: var(--color-charcoal);
+}
+
+.active .name {
+  transform: translateX(6px);
+}
+
+.active .number {
+  color: var(--color-accent);
+}
+
+/* The active stage's description opens beneath its name. */
+.detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s var(--ease);
+}
+
+.active .detail {
+  grid-template-rows: 1fr;
 }
 
 .text {
-  margin-top: var(--space-2);
+  overflow: hidden;
+  max-width: 44ch;
+  padding-left: calc(2ch + var(--space-4));
   font-size: var(--text-small);
-  line-height: 1.6;
-  color: rgb(247 244 239 / 0.72);
+  color: var(--color-muted);
 }
+
+.active .text {
+  padding-bottom: clamp(10px, 1.8vh, 20px);
+}
+
+/* Thin timer under the active stage while it auto-advances. */
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--color-charcoal);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.running {
+  animation: progress var(--duration) linear forwards;
+}
+
+@keyframes progress {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.link {
+  margin-top: clamp(16px, 3vh, 32px);
+}
+
+/* ---------- Photograph ---------- */
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  max-height: calc(100svh - var(--header-height) - 96px);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px -30px rgb(31 29 26 / 0.4);
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.9s var(--ease), transform 1.6s var(--ease);
+}
+
+.frameActive {
+  opacity: 1;
+  transform: none;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  left: var(--space-4);
+  bottom: var(--space-4);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgb(247 244 239 / 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+}
+
+.inlineMedia {
+  display: none;
+}
+
+/* ---------- Phones & small tablets: every stage open, each with its photo ---------- */
 
 @media (max-width: 900px) {
-  .timeline {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: var(--space-6);
-  }
-}
-
-@media (max-width: 560px) {
-  .timeline {
+  .grid {
     grid-template-columns: 1fr;
-    padding-top: 0;
-    padding-left: var(--space-5);
-    row-gap: var(--space-5);
   }
 
-  /* Vertical line on phones. */
-  .timeline::before {
-    top: 0;
-    bottom: 0;
-    left: 6px;
-    right: auto;
-    width: 1px;
-    height: auto;
-    background: linear-gradient(to bottom, rgb(247 244 239 / 0.55), rgb(247 244 239 / 0.15));
+  .media,
+  .progress {
+    display: none;
   }
 
-  .node {
-    top: 8px;
-    left: calc(-1 * var(--space-5));
+  .stepButton {
+    cursor: default;
+  }
+
+  .name {
+    color: var(--color-charcoal);
+    transform: none !important;
+  }
+
+  .number {
+    color: var(--color-accent);
+  }
+
+  .detail {
+    grid-template-rows: 1fr;
+  }
+
+  .text {
+    padding-bottom: var(--space-3);
+  }
+
+  .inlineMedia {
+    display: block;
+    position: relative;
+    aspect-ratio: 16 / 10;
+    margin-bottom: var(--space-4);
+    overflow: hidden;
+    border-radius: 14px;
   }
 }

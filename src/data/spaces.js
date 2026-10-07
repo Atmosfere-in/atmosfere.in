@@ -139,31 +139,38 @@ export const process = {
   title: "Four stages. One team. No hand-offs.",
   intro:
     "Every material is chosen in the studio, every detail is drawn before it's built, and the same team sees it through to handover.",
-  image: {
-    src: unsplash("1770970831074-6e88b6cc260b"),
-    alt: "A designer's table with fabric swatches, pencil sketches and a glass vase",
-    caption: "Sketches & swatches · Atmosfere studio",
-  },
   steps: [
     {
       name: "Consult",
       text: "We listen first — how you live, what you need, and what you want to spend.",
-      icon: "consult",
+      image: {
+        src: unsplash("1616587656879-8a8a7cce9d6c"),
+        alt: "Designers and a client reviewing material samples around a large table",
+      },
     },
     {
       name: "Design",
       text: "Layouts, 3D views, materials and a fixed quote, signed off before work begins.",
-      icon: "design",
+      image: {
+        src: unsplash("1599420186917-468a49a78a63"),
+        alt: "Hand sketches, drawings and drafting tools spread across a desk",
+      },
     },
     {
       name: "Execute",
       text: "Our own site team builds it, with weekly updates and one point of contact.",
-      icon: "execute",
+      image: {
+        src: unsplash("1590880795696-20c7dfadacde"),
+        alt: "A sunlit joinery workshop with timber, benches and hand tools",
+      },
     },
     {
       name: "Handover",
       text: "Snag-checked, styled and handed over — ready to live in from day one.",
-      icon: "handover",
+      image: {
+        src: unsplash("1757924461488-ef9ad0670978"),
+        alt: "A finished, styled living room with deep sofas and garden views",
+      },
     },
   ],
   link: { label: "See the full process", href: "/spaces/process" },
@@ -186,8 +193,8 @@ export const split = [
     text: "Homes, apartments and villas — designed around the way you live.",
     href: "/spaces/projects?type=residential",
     image: {
-      src: unsplash("1769736436858-65a86b395ef7"),
-      alt: "A bright living room with sculptural lounge chairs and fresh greenery",
+      src: unsplash("1582610116397-edb318620f90"),
+      alt: "A garden villa with a long green pool and a white pavilion",
     },
   },
   {
@@ -195,8 +202,8 @@ export const split = [
     text: "Offices, retail and F&B — spaces that work as hard as your brand.",
     href: "/spaces/projects?type=commercial",
     image: {
-      src: unsplash("1758448511255-ac2a24a135d7"),
-      alt: "A contemporary lounge with sculptural ring lighting and city views",
+      src: unsplash("1742844552193-2fd3425cd26d"),
+      alt: "A grand, sunlit lobby with marble floors and tall windows",
     },
   },
 ];
