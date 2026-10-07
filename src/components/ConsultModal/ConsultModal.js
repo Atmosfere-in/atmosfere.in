@@ -302,7 +302,7 @@ function EnquiryForm({ vertical, showType }) {
 
 function Calendly() {
   if (contact.calendlyUrl) {
-    const src = `${contact.calendlyUrl}?hide_gdpr_banner=1&background_color=f7f4ef&text_color=2b2825&primary_color=8c6a43`;
+    const src = `${contact.calendlyUrl}?hide_gdpr_banner=1&hide_event_type_details=1&background_color=f7f4ef&text_color=2b2825&primary_color=8c6a43`;
     return <iframe src={src} title="Book a time on Calendly" className={styles.calendly} />;
   }
 

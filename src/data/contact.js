@@ -9,9 +9,9 @@ export const contact = {
   // Consultation requests from the booking popup are sent to this WhatsApp
   // number (country code + number, no "+" or spaces).
   consultWhatsapp: "916396464369",
-  // The studio's Calendly scheduling link, e.g. "https://calendly.com/<name>/30min".
-  // Leave empty until it's set up: the Calendly tab then shows a fallback.
-  calendlyUrl: "",
+  // The studio's "Design Consultation" (30 min) Calendly page, the same one
+  // embedded on the old atmosfere.in booking page.
+  calendlyUrl: "https://calendly.com/mohakgoel74/consultation",
   instagram: {
     handle: "@atmosfere.in",
     href: "https://www.instagram.com/atmosfere.in",
