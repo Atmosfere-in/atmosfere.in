@@ -175,3 +175,18 @@ export function DetailGallery({ details }) {
     </section>
   );
 }
+
+// A full-width photograph with one line set over it — a pause between
+// chapters. feature: { image, line, caption }
+export function Feature({ feature }) {
+  return (
+    <section className={styles.feature}>
+      <Image src={feature.image.src} alt={feature.image.alt} fill quality={90} sizes="100vw" className={styles.featureImage} />
+      <span className={styles.featureShade} aria-hidden="true" />
+      <div className={`container ${styles.featureContent} reveal`}>
+        <p className={styles.featureLine}>{feature.line}</p>
+        {feature.caption && <span className={styles.featureCaption}>{feature.caption}</span>}
+      </div>
+    </section>
+  );
+}

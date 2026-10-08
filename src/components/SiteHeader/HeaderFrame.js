@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 // Long-read pages where the header steps out of the way while reading:
-// it slides up when scrolling down and returns when scrolling up.
+// it shows over the hero photograph and slides away once past it.
 const AUTO_HIDE = [/\/case-studies(\/|$)/, /^\/spaces\/projects\/[^/]+$/];
 
 // Wraps the header so it can sit transparently over full-bleed photography
@@ -17,16 +17,16 @@ export default function HeaderFrame({ overlay, className, children }) {
 
   useEffect(() => {
     if (!overlay && !autoHide) return;
-    let lastY = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(y > 40);
       if (autoHide) {
-        // Ignore tiny movements; always show near the top of the page.
-        if (y < 120) setHidden(false);
-        else if (Math.abs(y - lastY) > 6) setHidden(y > lastY);
+        // Visible only while the page's hero photograph is in view; it
+        // returns as the hero scrolls back in, not on any upward scroll.
+        const hero = document.querySelector("main > section");
+        const heroBottom = hero ? hero.offsetTop + hero.offsetHeight : 120;
+        setHidden(y > heroBottom - 80);
       }
-      lastY = y;
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

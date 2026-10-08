@@ -16,7 +16,7 @@
 }
 
 .summary {
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
   line-height: 1.75;
   color: var(--color-muted);
 }
@@ -75,93 +75,203 @@
   object-fit: cover;
 }
 
-/* ---------- Six stages ---------- */
+/* ---------- The story: stacking stage cards ---------- */
 
 .stages {
   background: var(--color-stone-100);
 }
 
-.stagesGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
-  gap: clamp(32px, 6vw, 112px);
-  align-items: start;
-}
-
 .stagesHead {
-  position: sticky;
-  top: calc(var(--header-height) + var(--space-5));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .stagesTitle {
-  max-width: 16ch;
+  max-width: 20ch;
   margin-top: var(--space-3);
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 1.12;
   color: var(--color-charcoal);
 }
 
 .stageList {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 4vh, 40px);
+  margin-top: clamp(32px, 6vh, 64px);
   list-style: none;
-  border-top: 1px solid var(--color-stone-200);
 }
 
+/* Each card sticks a little lower than the last, so they pile up like
+   pages while the visitor scrolls through the story. */
 .stage {
-  display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  gap: var(--space-3);
-  padding: clamp(20px, 3.4vh, 32px) 0;
-  border-bottom: 1px solid var(--color-stone-200);
+  position: sticky;
+  top: calc(clamp(16px, 4vh, 40px) + var(--i) * 14px);
 }
 
-.stageNumber {
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+  gap: clamp(24px, 4vw, 72px);
+  min-height: clamp(280px, 44vh, 400px);
+  padding: clamp(28px, 4vw, 56px);
+  border-radius: 24px;
+  background: var(--color-white);
+  box-shadow:
+    0 1px 0 rgb(31 29 26 / 0.04),
+    0 40px 80px -48px rgb(31 29 26 / 0.35);
+}
+
+.withImage {
+  grid-template-columns: minmax(0, 3.4fr) minmax(0, 4.6fr) minmax(0, 4fr);
+  /* One row that fills the card, so the photo runs its full height. */
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.stage:nth-child(even) .card {
+  background: #fbf7f1;
+}
+
+/* The outcome closes the story on a dark card. */
+.stage:last-child .card {
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.cardHead {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Large outlined numeral. */
+.bigNumber {
   font-family: var(--font-display);
-  font-size: 1rem;
-  color: var(--color-accent);
+  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-accent);
+}
+
+.stageCount {
+  margin-top: var(--space-4);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-600);
 }
 
 .stageTitle {
+  margin-top: var(--space-2);
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 1.7vw, 1.6rem);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   color: var(--color-charcoal);
 }
 
+.cardBody {
+  align-self: center;
+}
+
 .stageText {
-  max-width: 58ch;
-  margin-top: var(--space-2);
-  font-size: 0.9375rem;
+  max-width: 52ch;
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
   line-height: 1.7;
-  color: var(--color-muted);
+  color: var(--color-ink);
 }
 
 .stagePoints {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-top: var(--space-3);
+  gap: 10px;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-stone-200);
   list-style: none;
-  font-size: var(--text-small);
+  font-size: 0.9375rem;
   line-height: 1.55;
-  color: var(--color-ink);
+  color: var(--color-stone-600);
 }
 
 .stagePoints li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 22px;
 }
 
 .stagePoints li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.65em;
-  width: 8px;
+  top: 0.7em;
+  width: 10px;
   height: 1px;
   background: var(--color-accent);
+}
+
+.cardMedia {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.stage:last-child .stageCount,
+.stage:last-child .stagePoints {
+  color: rgb(247 244 239 / 0.7);
+}
+
+.stage:last-child .stageTitle,
+.stage:last-child .stageText {
+  color: var(--color-ivory);
+}
+
+.stage:last-child .stagePoints {
+  border-top-color: rgb(247 244 239 / 0.18);
+}
+
+/* ---------- Laptops: image moves under the text ---------- */
+
+@media (max-width: 1180px) {
+  .withImage {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+    grid-template-rows: auto;
+  }
+
+  .withImage .cardMedia {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 7;
+    min-height: 0;
+  }
+}
+
+/* ---------- Tablets & phones: plain stacked cards ---------- */
+
+@media (max-width: 760px) {
+  .stage {
+    position: static;
+  }
+
+  .card,
+  .withImage {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    min-height: 0;
+    padding: var(--space-5) var(--space-4);
+    border-radius: 18px;
+  }
+
+  .withImage .cardMedia {
+    aspect-ratio: 4 / 3;
+  }
+
+  .stageCount {
+    margin-top: var(--space-3);
+  }
 }
 
 /* ---------- Client quote & results ---------- */
@@ -313,13 +423,8 @@
 /* ---------- Tablets & phones ---------- */
 
 @media (max-width: 900px) {
-  .overviewGrid,
-  .stagesGrid {
+  .overviewGrid {
     grid-template-columns: 1fr;
-  }
-
-  .stagesHead {
-    position: static;
   }
 
   .wide {
@@ -337,7 +442,4 @@
     border-radius: 12px;
   }
 
-  .stage {
-    grid-template-columns: 2.5rem 1fr;
-  }
 }

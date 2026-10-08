@@ -135,6 +135,7 @@ export const spacesProjects = [
       {
         title: "Brief",
         text: "Six people, three generations, one house. We spent two weeks living with the family's routines — mornings, meals, festivals — before drawing a single line.",
+        image: img("1596255955697-49fa5328def9", "A living room with tall arched windows and soft neutral seating"),
         points: ["Measured survey of all three floors", "Interviews with every member of the family", "A shared list of rooms to keep, change and remove"],
       },
       {
@@ -145,11 +146,13 @@ export const spacesProjects = [
       {
         title: "Approach",
         text: "We drew one arch profile and applied it to every threshold, aligning openings on axis so that each room frames a view of the next.",
+        image: img("1688646953306-5ec93eab8c06", "A soft neutral room seen through an arched alcove"),
         points: ["14 new arched openings; 9 doorways closed or moved", "Corridor re-planned as a lit picture gallery", "Upper-floor ceilings raised by removing old false ceilings"],
       },
       {
         title: "Design Decisions",
         text: "Lime-washed walls, honed marble and smoked oak, with brass kept for what the hand touches. The stair's crystal chandelier was restored as the home's centrepiece.",
+        image: img("1745301558339-44eb3217d5da", "A pale living room with a carved arch feature wall and marble floor"),
         points: ["Three-layer lighting: cove, wall wash and lamps on scenes", "Furniture in quiet tones so the arches lead", "Art placed on the axis of every arch"],
       },
       {
@@ -160,8 +163,14 @@ export const spacesProjects = [
       {
         title: "Outcome",
         text: "A home with a clear sense of arrival and flow, a gallery where there was once a corridor, and a stair hall the family now uses for every gathering.",
+        image: img("1696413542101-2479dd479982", "A finished lounge with arched niches, soft seating and warm lamps"),
       },
     ],
+    feature: {
+      image: img("1780245997131-1af7a8de9538", "A curving stair rising beside a tall arched window"),
+      line: "One arch, drawn once, repeated fourteen times.",
+      caption: "The restored stair hall",
+    },
     phases: [
       { phase: "Survey & brief", when: "Weeks 1–2", text: "Measured survey, family interviews and a written brief." },
       { phase: "Design & approvals", when: "Weeks 3–10", text: "Plans, 3D views, materials and a fixed quote signed off." },
@@ -170,7 +179,7 @@ export const spacesProjects = [
       { phase: "Styling & handover", when: "Weeks 41–46", text: "Art, lighting scenes and a room-by-room walkthrough." },
     ],
     details: [
-      { ...img("1780245997131-1af7a8de9538", "A curving stair beside a tall arched window"), caption: "The restored stair, now lit from an arched window on the landing." },
+      { ...img("1761509844502-a2543f6f1df2", "A carved timber arched doorway in a panelled hall"), caption: "Smoked-oak doors, each set into the same arch profile." },
       { ...img("1554703752-4a82234d396e", "A sweeping marble staircase with a carved balustrade"), caption: "Honed Botticino treads and a hand-carved balustrade." },
       { ...img("1505693416388-ac5ce068fe85", "A classic bedroom with a tufted headboard and bedside lamps"), caption: "The grandparents' suite: quiet, warm and on the ground floor." },
     ],

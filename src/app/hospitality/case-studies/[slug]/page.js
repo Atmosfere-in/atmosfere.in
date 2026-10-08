@@ -31,6 +31,7 @@ export default async function HospitalityCaseStudy({ params }) {
           { label: "Hospitality", href: "/hospitality" },
           { label: "Case Studies", href: "/hospitality/case-studies" },
         ]}
+        eyebrow={`${study.category} · ${study.location}`}
         title={study.name}
         image={study.image}
         meta={[

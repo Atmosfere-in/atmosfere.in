@@ -10,7 +10,7 @@
 .body {
   max-width: 56ch;
   margin-top: var(--space-3);
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
   line-height: 1.75;
   color: var(--color-muted);
 }
@@ -105,7 +105,7 @@
 }
 
 .constraints span {
-  font-size: var(--text-small);
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--color-muted);
 }
@@ -282,7 +282,7 @@
 
 .phaseText {
   margin-top: var(--space-2);
-  font-size: var(--text-small);
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--color-muted);
 }
@@ -307,7 +307,7 @@
 
 .caption {
   margin-top: var(--space-3);
-  font-size: var(--text-small);
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--color-muted);
 }
@@ -346,4 +346,48 @@
   .detailMedia {
     border-radius: 12px;
   }
+}
+
+/* ---------- Full-bleed feature ---------- */
+
+.feature {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(420px, 78vh, 760px);
+  padding: clamp(40px, 8vh, 88px) 0;
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--color-ivory);
+  background: var(--color-charcoal);
+}
+
+.featureImage {
+  z-index: -2;
+  object-fit: cover;
+}
+
+.featureShade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgb(20 18 16 / 0.7), rgb(20 18 16 / 0.1) 55%);
+}
+
+.featureLine {
+  max-width: 20ch;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.2vw, 4rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.featureCaption {
+  display: block;
+  margin-top: var(--space-4);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0.8;
 }

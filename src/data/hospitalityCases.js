@@ -158,6 +158,7 @@ export const hospitalityCases = [
       {
         title: "Brief",
         text: "Three generations, one haveli and one question: how do we keep the house and make it earn its keep?",
+        image: img("1720070143795-52e5f5ed7eaf", "An ornate heritage facade in warm sandstone"),
         points: ["Building survey and heritage assessment", "Family workshops to agree what must not change", "Review of the investor's 40-room proposal"],
       },
       {
@@ -173,6 +174,7 @@ export const hospitalityCases = [
       {
         title: "Design Decisions",
         text: "Eighteen keys in the existing rooms, both courtyards restored, a rooftop dining terrace and a courtyard pool where the old water tank stood.",
+        image: img("1608198399988-341f712c3711", "A heritage hotel room with arched windows and jewel-toned textiles"),
         points: ["Small rooms combined into suites; no new floors added", "Arrival lounge and luggage service from the lane", "Owner's quarters kept private with their own stair"],
       },
       {
@@ -183,8 +185,14 @@ export const hospitalityCases = [
       {
         title: "Outcome",
         text: "Opened at a rate well above the city's boutique average, with strong occupancy from the first season — and the family still living upstairs.",
+        image: img("1723108034000-e7fd897e3be0", "A sunlit haveli courtyard with carved balconies"),
       },
     ],
+    feature: {
+      image: img("1712661198955-b37aae39a714", "Deep red arched galleries lit warmly at night"),
+      line: "The courtyards were never wasted space. They were the hotel.",
+      caption: "The first-floor gallery at dusk",
+    },
     phases: [
       { phase: "Feasibility", when: "Months 1–3", text: "Survey, market study and three options modelled." },
       { phase: "Concept & approvals", when: "Months 4–7", text: "Room mix, design brief and heritage permissions." },
@@ -193,7 +201,7 @@ export const hospitalityCases = [
       { phase: "Pre-opening", when: "Months 21–22", text: "Team trained, soft opening, first guests." },
     ],
     details: [
-      { ...img("1712661198955-b37aae39a714", "Deep red arched galleries lit warmly at night"), caption: "The first-floor gallery at dusk, lit by hidden linear lights." },
+      { ...img("1657349226767-66c983d7df39", "A heritage hotel room with a carved bed and warm lamps"), caption: "A heritage suite: restored ceilings, block-printed linen." },
       { ...img("1711707246899-cf0d1a5d0472", "A stone-edged pool beside a sandstone palace wall"), caption: "The old water tank, revived as the courtyard pool." },
       { ...img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting"), caption: "The second courtyard: breakfast in the mornings, music after dark." },
     ],

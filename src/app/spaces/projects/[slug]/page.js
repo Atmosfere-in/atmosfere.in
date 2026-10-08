@@ -31,6 +31,7 @@ export default async function SpacesProject({ params }) {
           { label: "Spaces", href: "/spaces" },
           { label: "Projects", href: "/spaces/projects" },
         ]}
+        eyebrow={`${project.category} · ${project.location}`}
         title={project.name}
         image={project.image}
         meta={[
