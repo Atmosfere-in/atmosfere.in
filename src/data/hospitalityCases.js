@@ -77,6 +77,7 @@ export const hospitalityCases = [
     ],
   },
   {
+    // Flagship case study: full long-form content for client demos.
     slug: "olive-court",
     name: "Olive Court",
     planningType: "hotel-resort",
@@ -85,22 +86,116 @@ export const hospitalityCases = [
     size: "18 keys",
     engagement: "Concept → opening",
     image: img("1570133435807-5feefeb2d196", "A tiled courtyard with a pool, palms and carved arches"),
-    lead: "A family haveli turned into an 18-key heritage hotel — restoring the courtyards rather than filling them with rooms.",
+    lead: "A family haveli turned into an 18-key heritage hotel — by restoring its two courtyards instead of filling them with rooms.",
     summary:
-      "The family wanted to keep the haveli and make it pay for itself. We planned a small heritage hotel that protects its two courtyards and lets the architecture be the experience.",
-    scope: ["Feasibility", "Heritage-sensitive planning", "Room mix", "F&B concept", "Design brief"],
-    gallery: [
-      img("1720070143795-52e5f5ed7eaf", "An ornate heritage palace facade in warm stone"),
-      img("1723108034000-e7fd897e3be0", "A yellow-walled courtyard with carved balconies"),
-      img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting"),
+      "Investors had proposed 40 rooms built over the courtyards. Our feasibility study showed that a smaller hotel, which protected the architecture guests would travel for, would earn more — and keep the family's home intact.",
+    scope: ["Market feasibility", "Option testing", "Heritage-sensitive planning", "Room mix", "F&B concept", "Design brief", "Opening support"],
+    glance: [
+      { label: "Client", value: "Owner family, third generation" },
+      { label: "Property", value: "1890s haveli, two courtyards" },
+      { label: "Location", value: "Old City, Jaipur" },
+      { label: "Keys", value: "18, in the original rooms" },
+      { label: "Engagement", value: "22 months, concept to opening" },
+      { label: "Operation", value: "Owner-run, boutique sales partner" },
     ],
+    gallery: [
+      img("1682414181845-a725f154a14a", "A painted haveli courtyard ringed by arched galleries"),
+      img("1601504410148-0c269aafd95c", "An arched corridor framed by bougainvillea"),
+      img("1695347597952-f8626d36ffb0", "A carved haveli door with brass rings and studs"),
+    ],
+    context: {
+      title: "Keep the haveli. Make it pay for itself.",
+      body: [
+        "The haveli had been in the family for five generations. Half of it stood empty, the upkeep was rising every year, and three generations disagreed on what to do with it.",
+        "An investor group had offered to fund a 40-room hotel — by building new floors over both courtyards. The family came to us with one question: was there a way to keep the house and still make it work as a business?",
+      ],
+      constraints: [
+        { title: "A protected structure", text: "Heritage rules limited new construction and required traditional lime and stone." },
+        { title: "Narrow old-city lanes", text: "No vehicle access to the door, so arrival and luggage needed a plan of their own." },
+        { title: "Rooms of every size", text: "Original rooms ranged from 140 to 620 sq ft, with no two alike." },
+        { title: "A family still at home", text: "The owners wanted to keep living on the top floor after opening." },
+      ],
+    },
+    tables: [
+      {
+        eyebrow: "What we tested",
+        title: "Three ways to turn the haveli into a hotel.",
+        intro: "We modelled each option against the old city's boutique market — rates, occupancy and what guests say they travel for.",
+        columns: ["Option", "Keys", "Expected rate", "Occupancy", "What it meant"],
+        rows: [
+          ["Build over the courtyards", "40", "Mid-market", "Moderate", "Highest cost, loses the courtyards guests travel for"],
+          ["Guesthouse in existing rooms", "24", "Budget", "High", "Low investment, but rooms too uneven for the rate"],
+          ["Heritage hotel, courtyards restored", "18", "Premium", "High", "Fewer keys, highest earnings per key and per year"],
+        ],
+        highlight: 2,
+        note: "Indicative figures from the feasibility study, shown as ranges for confidentiality.",
+      },
+      {
+        eyebrow: "The room mix",
+        title: "Eighteen keys, each with its own character.",
+        columns: ["Category", "Keys", "Size", "Where"],
+        rows: [
+          ["Courtyard rooms", "8", "300–340 sq ft", "Ground floor, opening onto the first courtyard"],
+          ["Heritage suites", "6", "450–520 sq ft", "First floor, with original painted ceilings"],
+          ["Terrace suites", "3", "540–620 sq ft", "Second floor, with private terraces"],
+          ["The Zenana suite", "1", "680 sq ft", "The old women's quarters, overlooking both courtyards"],
+        ],
+      },
+    ],
+    concept: {
+      title: "Let the haveli be the hotel.",
+      text: "Rather than decorating over the building, we planned around what was already there: two courtyards as the hotel's living rooms, a rooftop for dining at sunset, and the old water tank revived as a courtyard pool. New additions are honest and reversible; everything original is restored by hand.",
+      image: img("1573363059771-8b2b53b492ff", "A formal palace courtyard garden with a long central pool"),
+      palette: [
+        { name: "Pink lime plaster", note: "Traditional araish finish, restored by hand", color: "#e2b9a5" },
+        { name: "Kota stone", note: "Floors and courtyard paving, honed", color: "#9aa395" },
+        { name: "Carved sandstone", note: "Jharokhas and brackets, repaired locally", color: "#d4b48c" },
+        { name: "Indigo block print", note: "Bed linen and drapery from Bagru printers", color: "#3e4f6b" },
+        { name: "Hammered brass", note: "Door rings, lamps and bath fittings", color: "#b08a4f" },
+      ],
+    },
     stages: [
-      { title: "Brief", text: "A family-owned haveli in the old city, partly empty and costly to maintain, with three generations wanting to keep it." },
-      { title: "Challenge", text: "Investors had proposed 40 rooms by building over the courtyards — destroying the very thing guests would come for." },
-      { title: "Approach", text: "We modelled a smaller, higher-rate hotel and showed it out-earned the 40-room plan once the heritage premium was priced in." },
-      { title: "Design Decisions", text: "18 keys in the existing rooms, both courtyards restored, a rooftop dining terrace and a courtyard pool where the old tank stood." },
-      { title: "Execution", text: "Conservation-grade restoration with local craftspeople; Atmosfere Spaces handled interiors and services integration." },
-      { title: "Outcome", text: "Opened at a rate 60% above the city's boutique average, with the family still living on the top floor." },
+      {
+        title: "Brief",
+        text: "Three generations, one haveli and one question: how do we keep the house and make it earn its keep?",
+        points: ["Building survey and heritage assessment", "Family workshops to agree what must not change", "Review of the investor's 40-room proposal"],
+      },
+      {
+        title: "Challenge",
+        text: "A protected building in narrow lanes, rooms of every size, and an offer on the table that would have meant losing the courtyards.",
+        points: ["No vehicle access to the front door", "Original rooms from 140 to 620 sq ft", "The family staying on the top floor"],
+      },
+      {
+        title: "Approach",
+        text: "We benchmarked the old city's boutique hotels and modelled three options side by side, so the family could compare them on numbers, not opinions.",
+        points: ["Rate and occupancy study across 14 comparable properties", "Three options modelled over ten years", "Guest research: what people travel to Jaipur for"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Eighteen keys in the existing rooms, both courtyards restored, a rooftop dining terrace and a courtyard pool where the old water tank stood.",
+        points: ["Small rooms combined into suites; no new floors added", "Arrival lounge and luggage service from the lane", "Owner's quarters kept private with their own stair"],
+      },
+      {
+        title: "Execution",
+        text: "Restoration by local lime and stone craftspeople; Atmosfere Spaces delivered the interiors, services and furnishings to the brief we wrote.",
+        points: ["Painted ceilings restored by a conservation team", "Services hidden in old drains and niches", "Staff hired and trained 8 weeks before opening"],
+      },
+      {
+        title: "Outcome",
+        text: "Opened at a rate well above the city's boutique average, with strong occupancy from the first season — and the family still living upstairs.",
+      },
+    ],
+    phases: [
+      { phase: "Feasibility", when: "Months 1–3", text: "Survey, market study and three options modelled." },
+      { phase: "Concept & approvals", when: "Months 4–7", text: "Room mix, design brief and heritage permissions." },
+      { phase: "Restoration", when: "Months 8–17", text: "Lime, stone and painted ceilings restored by hand." },
+      { phase: "Interiors & services", when: "Months 15–20", text: "Rooms fitted out, pool revived, kitchens installed." },
+      { phase: "Pre-opening", when: "Months 21–22", text: "Team trained, soft opening, first guests." },
+    ],
+    details: [
+      { ...img("1712661198955-b37aae39a714", "Deep red arched galleries lit warmly at night"), caption: "The first-floor gallery at dusk, lit by hidden linear lights." },
+      { ...img("1711707246899-cf0d1a5d0472", "A stone-edged pool beside a sandstone palace wall"), caption: "The old water tank, revived as the courtyard pool." },
+      { ...img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting"), caption: "The second courtyard: breakfast in the mornings, music after dark." },
     ],
     quote: {
       text: "Everyone else wanted to fill the courtyards with rooms. They showed us the courtyards were the hotel.",
@@ -109,7 +204,7 @@ export const hospitalityCases = [
     results: [
       { value: "18", label: "Keys in the original rooms" },
       { value: "+60%", label: "Rate vs city boutique average" },
-      { value: "2", label: "Courtyards restored" },
+      { value: "2", label: "Courtyards restored, not built over" },
     ],
   },
   {

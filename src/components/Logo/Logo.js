@@ -5,7 +5,7 @@ import styles from "./Logo.module.css";
 // the lowercase wordmark. Both are paths, so it renders crisply at any size
 // and inherits colour from `currentColor`.
 const MARK_WIDTH = 382;
-const GAP = 96;
+const GAP = 150;
 const WORDMARK_SCALE = 4.3; // wordmark cap height ≈ 72% of the mark
 const WORDMARK_X = MARK_WIDTH + GAP - 4.3 * WORDMARK_SCALE;
 const WIDTH = Math.round(MARK_WIDTH + GAP + 598.5 * WORDMARK_SCALE);

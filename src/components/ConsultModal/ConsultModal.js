@@ -219,6 +219,7 @@ function EnquiryForm({ vertical, showType }) {
       `Name: ${data.get("name").trim()}`,
       `Number: ${data.get("phone").trim()}`,
       `Area: ${data.get("area").trim()}`,
+      `Location: ${data.get("location").trim()}`,
     ];
     if (showType) lines.push(`Project type: ${data.get("type")}`);
     if (links?.length) {
@@ -287,16 +288,29 @@ function EnquiryForm({ vertical, showType }) {
         </label>
       </div>
 
-      <label className={styles.field}>
-        <span className={styles.label}>Area</span>
-        <input
-          name="area"
-          type="text"
-          defaultValue={values.area}
-          required
-          placeholder="Size and location, e.g. 2,400 sq ft · Sector 150, Noida"
-        />
-      </label>
+      <div className={styles.row}>
+        <label className={styles.field}>
+          <span className={styles.label}>Area (in sq ft / sq yard / sq m)</span>
+          <input
+            name="area"
+            type="text"
+            defaultValue={values.area}
+            required
+            placeholder="e.g. 2,400 sq ft"
+          />
+        </label>
+        <label className={styles.field}>
+          <span className={styles.label}>Location</span>
+          <input
+            name="location"
+            type="text"
+            defaultValue={values.location}
+            required
+            autoComplete="address-level2"
+            placeholder="e.g. Sector 150, Noida"
+          />
+        </label>
+      </div>
 
       {showType && (
         <fieldset className={styles.field}>
@@ -313,7 +327,7 @@ function EnquiryForm({ vertical, showType }) {
       )}
 
       <div className={styles.field}>
-        <span className={styles.label}>Upload images</span>
+        <span className={styles.label}>Upload site images</span>
         <label
           className={styles.drop}
           onDragOver={(e) => e.preventDefault()}

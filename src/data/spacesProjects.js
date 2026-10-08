@@ -80,6 +80,7 @@ export const spacesProjects = [
     ],
   },
   {
+    // Flagship case study: full long-form content for client demos.
     slug: "the-arch-house",
     name: "The Arch House",
     type: "residential",
@@ -88,22 +89,90 @@ export const spacesProjects = [
     size: "5,800 sq ft",
     timeline: "11 months",
     image: img("1750420556288-d0e32a6f517b", "A bedroom with an arched timber headboard wall and soft cove lighting"),
-    lead: "A classical bungalow given a new rhythm of arches — framing views, softening long corridors and tying three floors into one composed home.",
+    lead: "A 1980s bungalow given a single, repeated arch — framing views, softening long corridors and tying three floors into one composed family home.",
     summary:
-      "The house had grand proportions but no sense of arrival. We introduced a family of arches, a restored stair and a layered lighting plan so each room unfolds into the next.",
-    scope: ["Full interiors", "Architectural detailing", "Lighting design", "Furniture & art"],
+      "Three generations shared a house with grand proportions and no sense of arrival. We drew one arch profile, repeated it at every threshold, restored the stair as the home's centrepiece and layered light so each room unfolds into the next.",
+    scope: ["Full interiors", "Architectural detailing", "Custom joinery", "Lighting design", "Furniture & art", "Turnkey execution"],
+    glance: [
+      { label: "Client", value: "Family of six, three generations" },
+      { label: "Location", value: "South Delhi" },
+      { label: "Built-up area", value: "5,800 sq ft over 3 floors" },
+      { label: "Design", value: "10 weeks" },
+      { label: "Build", value: "9 months, phased" },
+      { label: "Team", value: "Design lead, 2 designers, PM, 14 on site" },
+    ],
     gallery: [
       img("1634389312178-50613e56acda", "A dining room with tall arched windows, a round table and patterned chairs"),
       img("1778731660244-b6e8f905107d", "An arched doorway framing a crystal chandelier and a stair landing"),
-      img("1505693416388-ac5ce068fe85", "A classic bedroom with a tufted headboard and bedside lamps"),
+      img("1770107830461-f61bdc31f1e5", "A long hallway framed by a sequence of plastered arches"),
     ],
+    context: {
+      title: "A house of good bones and no rhythm.",
+      body: [
+        "The family had lived in the bungalow for thirty years. Each generation had added a room, a door or a false ceiling, until the house felt like a sequence of unrelated spaces joined by long, dark corridors.",
+        "They asked for a home that felt timeless rather than trendy — formal enough to host 40 guests at Diwali, warm enough for grandchildren to run through every day, and calm enough for the grandparents' morning prayers.",
+      ],
+      constraints: [
+        { title: "Mismatched openings", text: "Twenty-three doorways of nine different widths and heights across three floors." },
+        { title: "Long, dark corridors", text: "A 38-foot ground-floor passage with no daylight and no reason to pause." },
+        { title: "Low upper ceilings", text: "The second floor sat 30 cm lower than the ground floor, making it feel cramped." },
+        { title: "A family in residence", text: "The grandparents could not move out, so work had to be phased floor by floor." },
+      ],
+    },
+    concept: {
+      title: "One arch, repeated — and a palette that lets it lead.",
+      text: "Every threshold was redrawn to a single proportion: a semicircular arch, 1.2 m wide, 2.6 m to the crown. Repeated through the house, it lines openings up on axis, frames views from room to room and turns the old corridor into a gallery. Materials stay quiet so the architecture can speak.",
+      image: img("1777284860318-a5130ef99be2", "A warm arched timber doorway set into a plastered wall"),
+      palette: [
+        { name: "Lime-wash plaster", note: "Hand-troweled walls with soft movement", color: "#e8e0d2" },
+        { name: "Honed Botticino", note: "Floors and stair treads, matte finish", color: "#ddd2bf" },
+        { name: "Smoked oak", note: "Doors, joinery and the stair handrail", color: "#6a4e38" },
+        { name: "Aged brass", note: "Handles, lamps and arch trims only", color: "#a8824e" },
+        { name: "Ivory linen", note: "Upholstery and full-height drapery", color: "#efe8db" },
+      ],
+    },
     stages: [
-      { title: "Brief", text: "A multi-generational family wanted their 1980s bungalow to feel timeless — formal enough to entertain, warm enough to live in every day." },
-      { title: "Challenge", text: "Long, featureless corridors and mismatched openings on every floor made the house feel like a series of disconnected rooms." },
-      { title: "Approach", text: "We drew a single arch profile and repeated it at every threshold, so openings line up across the house and frame views from room to room." },
-      { title: "Design Decisions", text: "Lime-washed walls, honed marble floors, and a crystal chandelier restored as the stair's centrepiece; furniture in quiet tones so the architecture leads." },
-      { title: "Execution", text: "Arches were formed in-situ by our masons, then plastered by hand; the house stayed partly occupied with phased handovers floor by floor." },
-      { title: "Outcome", text: "A home with a clear sense of arrival and flow, and a stair hall that has become the family's favourite room for gatherings." },
+      {
+        title: "Brief",
+        text: "Six people, three generations, one house. We spent two weeks living with the family's routines — mornings, meals, festivals — before drawing a single line.",
+        points: ["Measured survey of all three floors", "Interviews with every member of the family", "A shared list of rooms to keep, change and remove"],
+      },
+      {
+        title: "Challenge",
+        text: "Openings of nine different sizes, a windowless corridor and a lower upper floor made the house feel disjointed and dark despite its size.",
+        points: ["23 doorways, no two alike", "No daylight in the central passage", "Phased works with grandparents in residence"],
+      },
+      {
+        title: "Approach",
+        text: "We drew one arch profile and applied it to every threshold, aligning openings on axis so that each room frames a view of the next.",
+        points: ["14 new arched openings; 9 doorways closed or moved", "Corridor re-planned as a lit picture gallery", "Upper-floor ceilings raised by removing old false ceilings"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Lime-washed walls, honed marble and smoked oak, with brass kept for what the hand touches. The stair's crystal chandelier was restored as the home's centrepiece.",
+        points: ["Three-layer lighting: cove, wall wash and lamps on scenes", "Furniture in quiet tones so the arches lead", "Art placed on the axis of every arch"],
+      },
+      {
+        title: "Execution",
+        text: "Arches were formed in-situ by our masons and plastered by hand. The house stayed lived-in, with each floor handed over before the next began.",
+        points: ["Full-scale arch mock-up approved on site in week 11", "Dust-sealed zones and night-time noisy works", "Weekly walkthroughs with the family"],
+      },
+      {
+        title: "Outcome",
+        text: "A home with a clear sense of arrival and flow, a gallery where there was once a corridor, and a stair hall the family now uses for every gathering.",
+      },
+    ],
+    phases: [
+      { phase: "Survey & brief", when: "Weeks 1–2", text: "Measured survey, family interviews and a written brief." },
+      { phase: "Design & approvals", when: "Weeks 3–10", text: "Plans, 3D views, materials and a fixed quote signed off." },
+      { phase: "Ground floor", when: "Weeks 11–22", text: "Arches, marble, services and the stair restoration." },
+      { phase: "Upper floors", when: "Weeks 23–40", text: "Ceilings raised, joinery installed, finishes completed." },
+      { phase: "Styling & handover", when: "Weeks 41–46", text: "Art, lighting scenes and a room-by-room walkthrough." },
+    ],
+    details: [
+      { ...img("1780245997131-1af7a8de9538", "A curving stair beside a tall arched window"), caption: "The restored stair, now lit from an arched window on the landing." },
+      { ...img("1554703752-4a82234d396e", "A sweeping marble staircase with a carved balustrade"), caption: "Honed Botticino treads and a hand-carved balustrade." },
+      { ...img("1505693416388-ac5ce068fe85", "A classic bedroom with a tufted headboard and bedside lamps"), caption: "The grandparents' suite: quiet, warm and on the ground floor." },
     ],
     quote: {
       text: "Every door now frames something beautiful. Guests walk in and stop at the stair — exactly what we hoped for.",
@@ -112,7 +181,7 @@ export const spacesProjects = [
     results: [
       { value: "14", label: "New arched openings" },
       { value: "3", label: "Floors, handed over in phases" },
-      { value: "11", label: "Months on site" },
+      { value: "0", label: "Weeks the family moved out" },
     ],
   },
   {

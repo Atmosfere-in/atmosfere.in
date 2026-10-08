@@ -1,12 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Arrow from "@/components/ui/Icon/Arrow";
+import { Glance, Context, Concept, DataTable, Timeline, DetailGallery } from "./StoryDeep";
 import styles from "./StoryDetail.module.css";
 
 // Body of a project / case-study page, after its PageHero:
 // overview → gallery → the six stages → client quote → results → next.
-// story: { lead, summary, scope[], gallery[{src,alt}], stages[{title,text}],
+// story: { lead, summary, scope[], gallery[{src,alt}], stages[{title,text,points?}],
 //          quote?{text,name}, results?[{value,label}] }
+// Flagship stories can add: glance, context, concept, tables[], phases,
+// details (see StoryDeep.js); each block appears only when present.
 // next: { href, name, details, image } — the following story in the list.
 export default function StoryDetail({ story, next, nextLabel = "Next project" }) {
   const [first, ...rest] = story.gallery;
@@ -32,6 +35,8 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
         </div>
       </section>
 
+      {story.glance && <Glance items={story.glance} />}
+
       {first && (
         <section className={styles.gallery} aria-label="Gallery">
           <div className="container">
@@ -55,6 +60,12 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
         </section>
       )}
 
+      {story.context && <Context context={story.context} />}
+      {story.concept && <Concept concept={story.concept} />}
+      {story.tables?.map((table) => (
+        <DataTable key={table.title} table={table} />
+      ))}
+
       <section className={`section ${styles.stages}`}>
         <div className={`container ${styles.stagesGrid}`}>
           <div className={styles.stagesHead}>
@@ -68,12 +79,22 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
                 <div>
                   <h3 className={styles.stageTitle}>{stage.title}</h3>
                   <p className={styles.stageText}>{stage.text}</p>
+                  {stage.points && (
+                    <ul className={styles.stagePoints}>
+                      {stage.points.map((p) => (
+                        <li key={p}>{p}</li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </li>
             ))}
           </ol>
         </div>
       </section>
+
+      {story.phases && <Timeline timeline={story.phases} />}
+      {story.details && <DetailGallery details={story.details} />}
 
       {(story.quote || story.results) && (
         <section className={`section ${styles.voice}`}>

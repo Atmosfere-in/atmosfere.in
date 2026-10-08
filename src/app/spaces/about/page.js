@@ -8,7 +8,7 @@ import { aboutPage } from "@/data/spacesPages";
 import { founders, trust, closing } from "@/data/spaces";
 
 export const metadata = {
-  title: "About the Studio",
+  title: "About Us",
   description:
     "Atmosfere Spaces is a turnkey interior design studio: the people who design your space are the people who build it.",
 };

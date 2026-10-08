@@ -41,7 +41,7 @@ export const about = {
     src: unsplash("1782795799287-a3ca32de0d72"),
     alt: "A warm timber-lined dining room with a round table and a framed mountain print",
   },
-  link: { label: "About the studio", href: "/spaces/about" },
+  link: { label: "More about us", href: "/spaces/about" },
 };
 
 export const projects = {
@@ -183,7 +183,7 @@ export const process = {
 // Placeholder names and portraits until the founders supply their own.
 export const founders = {
   eyebrow: "Founders' Note",
-  title: "Two founders. One promise to every home.",
+  title: "Two founders. One promise to every space.",
   people: [
     {
       name: "Co-founder",
@@ -330,7 +330,7 @@ export const footer = {
         { label: "Projects", href: "/spaces/projects" },
         { label: "Case Studies", href: "/spaces/case-studies" },
         { label: "Design Process", href: "/spaces/process" },
-        { label: "About the Studio", href: "/spaces/about" },
+        { label: "About Us", href: "/spaces/about" },
       ],
     },
     {

@@ -1,0 +1,349 @@
+.title {
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-charcoal);
+}
+
+.body {
+  max-width: 56ch;
+  margin-top: var(--space-3);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-muted);
+}
+
+.smallTitle {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-charcoal);
+}
+
+.image {
+  object-fit: cover;
+}
+
+/* ---------- At a glance ---------- */
+
+.glance {
+  padding-bottom: clamp(40px, 8vh, 80px);
+}
+
+.glanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  border-top: 1px solid var(--color-stone-200);
+  border-bottom: 1px solid var(--color-stone-200);
+}
+
+.glanceItem {
+  padding: var(--space-4) var(--space-3) var(--space-4) 0;
+}
+
+.glanceItem + .glanceItem {
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--color-stone-200);
+}
+
+.glanceItem dt {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-600);
+}
+
+.glanceItem dd {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--color-charcoal);
+}
+
+/* ---------- Brief & constraints ---------- */
+
+.contextGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: start;
+}
+
+.constraints {
+  padding: clamp(24px, 3vw, 40px);
+  border-radius: 18px;
+  background: var(--color-stone-100);
+}
+
+.constraints ul {
+  margin-top: var(--space-3);
+  list-style: none;
+}
+
+.constraints li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-stone-200);
+}
+
+.constraints li:last-child {
+  border-bottom: none;
+}
+
+.constraints strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+}
+
+.constraints span {
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+/* ---------- Concept & palette ---------- */
+
+.concept {
+  background: var(--color-accent-soft);
+}
+
+.conceptGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: center;
+}
+
+.conceptMedia {
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  overflow: hidden;
+  border-radius: 999px 999px 18px 18px;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-4) var(--space-3);
+  margin-top: var(--space-5);
+  list-style: none;
+}
+
+.palette li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.swatch {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 1px rgb(31 29 26 / 0.08);
+}
+
+.materialName {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-charcoal);
+}
+
+.materialNote {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--color-stone-600);
+}
+
+/* ---------- Table ---------- */
+
+.tableHead {
+  max-width: 720px;
+}
+
+.tableWrap {
+  margin-top: clamp(24px, 5vh, 48px);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.table th,
+.table td {
+  padding: 18px 20px 18px 0;
+  border-bottom: 1px solid var(--color-stone-200);
+  text-align: left;
+  vertical-align: top;
+}
+
+.table thead th {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-600);
+}
+
+.table tbody th {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+}
+
+.table td {
+  color: var(--color-muted);
+}
+
+/* The option we recommended. */
+.highlight th,
+.highlight td {
+  color: var(--color-charcoal);
+  background: var(--color-accent-soft);
+}
+
+.highlight th:first-child {
+  padding-left: 16px;
+  border-radius: 12px 0 0 12px;
+}
+
+.highlight td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.tableNote {
+  margin-top: var(--space-3);
+  font-size: 0.75rem;
+  color: var(--color-stone-600);
+}
+
+/* ---------- Timeline ---------- */
+
+.timelineSection {
+  background: var(--color-stone-100);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  row-gap: var(--space-5);
+  margin-top: clamp(32px, 6vh, 56px);
+  list-style: none;
+}
+
+/* Phases share one continuous line; the gap lives inside each phase. */
+.phase {
+  position: relative;
+  padding: var(--space-5) var(--space-4) 0 0;
+  border-top: 1px solid var(--color-stone-400);
+}
+
+.dot {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-stone-100);
+}
+
+.when {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.phaseTitle {
+  margin-top: var(--space-2);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-charcoal);
+}
+
+.phaseText {
+  margin-top: var(--space-2);
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+/* ---------- Detail gallery ---------- */
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 32px);
+  margin-top: clamp(32px, 6vh, 56px);
+  list-style: none;
+}
+
+.detailMedia {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--color-stone-100);
+}
+
+.caption {
+  margin-top: var(--space-3);
+  font-size: var(--text-small);
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+/* ---------- Tablets & phones ---------- */
+
+@media (max-width: 900px) {
+  .contextGrid,
+  .conceptGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .conceptMedia {
+    aspect-ratio: 4 / 3.6;
+  }
+
+  .details {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .glanceItem + .glanceItem {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .glanceItem {
+    border-bottom: 1px solid var(--color-stone-200);
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .detailMedia {
+    border-radius: 12px;
+  }
+}
