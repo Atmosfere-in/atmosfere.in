@@ -9,30 +9,75 @@ const img = (id, alt) => ({ src: unsplash(id), alt });
 
 export const hospitalityCases = [
   {
+    // Flagship case study in the "editorial" layout (EditorialStory).
     slug: "the-dusk-pool-retreat",
+    layout: "editorial",
     name: "The Dusk Pool Retreat",
     planningType: "hotel-resort",
     category: "Resort",
     location: "Konkan coast",
     size: "24 keys",
     engagement: "Feasibility → opening",
-    image: img("1759805583291-704d7af07682", "Lounge chairs and umbrellas beside a resort pool at dusk"),
+    image: img("1762254923872-5bdc4210eb90", "An infinity pool meeting the sea at sunset"),
     lead: "A plot zoned for eight villas, re-planned as a 24-key retreat whose pool terrace now draws guests who aren't even staying.",
     summary:
-      "The owners came to us with villa drawings already done. Our feasibility study showed a small resort would earn far more on the same land — and that the pool terrace, not the rooms, should be the property's reason to visit.",
+      "The owners came to us with villa drawings already done. Our feasibility study showed that a small resort would earn far more on the same land — and that the pool terrace, not the rooms, should be the reason people come. Today the retreat is full most weekends, and a quarter of its revenue walks in at sunset.",
     scope: ["Market feasibility", "Concept & positioning", "Master planning", "Room mix", "Design brief"],
+    chapters: [
+      {
+        title: "Eight villas, or something better?",
+        image: img("1561501900-3701fa6a0864", "A coastal resort on the cliffs above the sea at sunset"),
+      },
+      {
+        title: "Plan around the sunset.",
+        image: img("1643068730310-e8cff093b7ab", "A resort pool framed by palms under a pink evening sky"),
+      },
+      {
+        title: "A terrace the town comes to.",
+        image: img("1779249430124-b5bf40d4f9c9", "A lantern-lit resort terrace and pool at night"),
+      },
+    ],
     gallery: [
       img("1551882547-ff40c63fe5fa", "A resort pool among palms at dusk"),
       img("1596178067639-5c6e68aea6dc", "A villa pool terrace with loungers and tropical planting"),
       img("1543489822-c49534f3271f", "A cliff-top infinity pool overlooking the sea"),
     ],
+    mosaic: [
+      img("1571268493589-ec822cf5206c", "The pool terrace in the last light of the evening"),
+      img("1774280954999-9758f11f3d41", "A timber-lined guest room opening onto tropical planting"),
+      img("1786996969696-27eb56028ae5", "Shaded terrace dining under a woven pendant"),
+    ],
     stages: [
-      { title: "Brief", text: "Owners of a two-acre coastal plot wanted to build eight private villas for sale or rental, with drawings already prepared." },
-      { title: "Challenge", text: "The villa plan left most of the sea frontage to private gardens, and comparable villas nearby were struggling to fill weekdays." },
-      { title: "Approach", text: "We studied demand from Mumbai and Pune weekenders, then modelled three concepts: villas, a 16-key boutique hotel and a 24-key retreat." },
-      { title: "Design Decisions", text: "A 24-key retreat stepping down the slope, with one shared pool terrace on the best sea view and a dusk-to-dinner bar open to day guests." },
-      { title: "Execution", text: "We wrote the design brief and room-mix schedule, then delivered the build with Atmosfere Spaces in 20 months." },
-      { title: "Outcome", text: "Weekend occupancy above 85% in the first season, and the terrace bar now earns a quarter of revenue from non-resident guests." },
+      {
+        title: "Brief",
+        text: "Owners of a two-acre coastal plot planned eight private villas for sale or rent — the drawings were already done.",
+        points: ["Two acres on a sea-facing slope", "Villa plans ready to submit", "A goal: steady year-round income"],
+      },
+      {
+        title: "Challenge",
+        text: "The villa plan gave most of the sea frontage to private gardens, and similar villas nearby were struggling to fill weekdays.",
+        points: ["Best views locked inside private plots", "Weak weekday demand for villas", "Monsoon months with no guests at all"],
+      },
+      {
+        title: "Approach",
+        text: "We studied weekend demand from Mumbai and Pune and modelled three concepts — villas, a 16-key boutique hotel and a 24-key retreat.",
+        points: ["Demand mapped across 18 nearby properties", "Three concepts modelled over ten years", "Guest research on what brings people back"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Twenty-four keys stepping down the slope, with one shared pool terrace on the best view and a dusk-to-dinner bar open to day guests.",
+        points: ["Every room with a sea view", "The terrace placed for the sunset, not the noon sun", "A bar and kitchen that work for non-residents"],
+      },
+      {
+        title: "Execution",
+        text: "We wrote the design brief and room-mix schedule, then delivered the build with Atmosfere Spaces in twenty months.",
+        points: ["Design brief signed off in month four", "Built in two monsoon-safe phases", "Pre-opening team trained on site"],
+      },
+      {
+        title: "Outcome",
+        text: "Weekend occupancy above 85% in the first season, and the terrace bar now earns a quarter of revenue from guests who aren't staying.",
+        points: ["Three times the keys on the same land", "Full most weekends from year one", "A sunset terrace locals plan evenings around"],
+      },
     ],
     quote: {
       text: "We came in wanting eight villas. They showed us why a 24-key retreat would earn more — and they were right.",
@@ -199,13 +244,6 @@ export const hospitalityCases = [
       line: "The courtyards were never wasted space. They were the hotel.",
       caption: "The first-floor gallery at dusk",
     },
-    phases: [
-      { phase: "Feasibility", when: "Months 1–3", text: "Survey, market study and three options modelled." },
-      { phase: "Concept & approvals", when: "Months 4–7", text: "Room mix, design brief and heritage permissions." },
-      { phase: "Restoration", when: "Months 8–17", text: "Lime, stone and painted ceilings restored by hand." },
-      { phase: "Interiors & services", when: "Months 15–20", text: "Rooms fitted out, pool revived, kitchens installed." },
-      { phase: "Pre-opening", when: "Months 21–22", text: "Team trained, soft opening, first guests." },
-    ],
     voiceImage: img("1641443493806-f0a9957d7ec9", "A pink sandstone facade with domed balconies in the old city"),
     quote: {
       text: "Everyone else wanted to fill the courtyards with rooms. They showed us the courtyards were the hotel.",

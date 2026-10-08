@@ -211,99 +211,6 @@
   color: var(--color-stone-600);
 }
 
-/* ---------- Timeline: Gantt-style rows ---------- */
-
-.timelineSection {
-  background: var(--color-stone-100);
-}
-
-.timelineHead {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: var(--space-4);
-}
-
-.timelineTotal {
-  font-size: var(--text-small);
-  color: var(--color-stone-600);
-}
-
-.timelineTotal strong {
-  margin-right: 6px;
-  font-family: var(--font-display);
-  font-size: 2.25rem;
-  font-weight: 400;
-  color: var(--color-charcoal);
-}
-
-.gantt {
-  margin-top: clamp(28px, 5vh, 48px);
-  list-style: none;
-  border-top: 1px solid var(--color-stone-200);
-}
-
-.ganttRow {
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
-  align-items: center;
-  gap: clamp(20px, 4vw, 64px);
-  padding: clamp(16px, 2.6vh, 24px) 0;
-  border-bottom: 1px solid var(--color-stone-200);
-}
-
-.when {
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-accent);
-}
-
-.phaseTitle {
-  margin-top: 4px;
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 400;
-  line-height: 1.2;
-  color: var(--color-charcoal);
-}
-
-.phaseText {
-  margin-top: 4px;
-  font-size: 0.9375rem;
-  line-height: 1.55;
-  color: var(--color-muted);
-}
-
-/* A faint rail with the phase drawn on it. */
-.ganttTrack {
-  position: relative;
-  height: 14px;
-  border-radius: 999px;
-  background: rgb(31 29 26 / 0.06);
-}
-
-.ganttBar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  min-width: 14px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #a8824e, #8c6a43);
-}
-
-.ganttScale {
-  display: flex;
-  justify-content: space-between;
-  margin-top: var(--space-3);
-  margin-left: calc((100% - clamp(20px, 4vw, 64px)) * 4 / 11 + clamp(20px, 4vw, 64px));
-  font-size: 0.6875rem;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-stone-600);
-}
-
 /* ---------- Detail gallery ---------- */
 
 .details {
@@ -343,15 +250,6 @@
     grid-template-columns: 1fr;
   }
 
-  .ganttRow {
-    grid-template-columns: 1fr;
-    gap: var(--space-3);
-  }
-
-  .ganttScale {
-    margin-left: 0;
-  }
-
   .conceptMedia {
     aspect-ratio: 4 / 3.6;
   }
@@ -364,11 +262,6 @@
 @media (max-width: 560px) {
   .constraints {
     grid-template-columns: 1fr;
-  }
-
-  .timelineHead {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .details {

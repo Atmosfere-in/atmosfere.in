@@ -176,13 +176,6 @@ export const spacesProjects = [
       line: "One arch, drawn once, repeated fourteen times.",
       caption: "The restored stair hall",
     },
-    phases: [
-      { phase: "Survey & brief", when: "Weeks 1–2", text: "Measured survey, family interviews and a written brief." },
-      { phase: "Design & approvals", when: "Weeks 3–10", text: "Plans, 3D views, materials and a fixed quote signed off." },
-      { phase: "Ground floor", when: "Weeks 11–22", text: "Arches, marble, services and the stair restoration." },
-      { phase: "Upper floors", when: "Weeks 23–40", text: "Ceilings raised, joinery installed, finishes completed." },
-      { phase: "Styling & handover", when: "Weeks 41–46", text: "Art, lighting scenes and a room-by-room walkthrough." },
-    ],
     voiceImage: img("1758448755952-42b404bc6f39", "A finished living room with a crystal chandelier and warm lighting"),
     quote: {
       text: "Every door now frames something beautiful. Guests walk in and stop at the stair — exactly what we hoped for.",
@@ -267,39 +260,84 @@ export const spacesProjects = [
     ],
   },
   {
+    // Flagship case study in the "editorial" layout (EditorialStory).
     slug: "the-spiral-residence",
+    layout: "editorial",
     name: "The Spiral Residence",
     type: "residential",
     category: "Residence",
     location: "Chandigarh",
     size: "4,800 sq ft",
     timeline: "10 months",
-    image: img("1758801304964-417e328be877", "A sculpted timber spiral staircase in warm light"),
+    image: img("1635898832375-4381bf11da7e", "Looking up a warm timber spiral staircase"),
     lead: "Turning a dark, compartmentalised floor plan into one continuous, light-filled volume around a sculpted timber stair.",
     summary:
-      "We replaced a boxed-in staircase with an open timber spiral under a new skylight, letting daylight fall through three levels and connecting the family's living spaces vertically.",
+      "For thirty years a concrete stair core sat at the centre of this family home, blocking light and splitting three floors into three separate flats. We took it out, opened the roof above it, and set a single sculpted timber spiral in its place — now the brightest, most loved room in the house.",
     scope: ["Structural re-planning", "Staircase design", "Full interiors", "Skylight"],
+    chapters: [
+      {
+        title: "A house split in three.",
+        image: img("1760067537524-a0c0703d9721", "A double-height living room with warm timber walls and soft lighting"),
+      },
+      {
+        title: "One stair, under the sky.",
+        image: img("1589772424745-2c50f74e113b", "A timber spiral stair seen from above, curling down into light"),
+      },
+      {
+        title: "Built at full scale, twice.",
+        image: img("1762512346961-5730d7511a10", "A sculpted timber spiral stair with a glass balustrade"),
+      },
+    ],
     gallery: [
       img("1778640331184-dc4c3e2608e1", "A double-height living room with tall glass doors opening to a garden"),
       img("1526573059328-179b147e1b42", "A sweeping spiral staircase against a dark wall"),
       img("1617126481205-cdf29da03b41", "A timber spiral stair rising through a warm, panelled hall"),
     ],
+    mosaic: [
+      img("1778640331184-dc4c3e2608e1", "The double-height living room, now open to the stair and the garden"),
+      img("1572558651886-d44748e0e3dd", "The timber spiral seen from the top landing"),
+      img("1617126481205-cdf29da03b41", "Steam-bent oak treads rising through the hall"),
+    ],
     stages: [
-      { title: "Brief", text: "A three-level family home where the floors felt like separate flats. The owners wanted to see and hear each other across the house." },
-      { title: "Challenge", text: "An enclosed concrete stair blocked light at the centre of the plan, and the roof above it had no openings at all." },
-      { title: "Approach", text: "With a structural engineer, we removed the stair core, cut a skylight above, and designed a free-standing timber spiral as the home's new centre." },
-      { title: "Design Decisions", text: "Steam-bent oak treads on a steel spine, a plaster-white well to bounce daylight down, and living spaces re-oriented to face the stair." },
-      { title: "Execution", text: "The stair was prototyped at full scale in our workshop, then assembled on site in nine days; structural works ran under a separate safety plan." },
-      { title: "Outcome", text: "Daylight now reaches the ground floor at noon, and the stair has become the sculptural heart of the home." },
+      {
+        title: "Brief",
+        text: "A three-level family home where every floor felt like its own flat. The owners wanted to see and hear each other across the house again.",
+        points: ["Three generations under one roof", "A wish for light at the centre of the plan", "No loss of bedrooms"],
+      },
+      {
+        title: "Challenge",
+        text: "An enclosed concrete stair blocked daylight at the heart of the plan, and the roof above it had no openings at all.",
+        points: ["Load-bearing stair core", "No natural light below the top floor", "A family living in during works"],
+      },
+      {
+        title: "Approach",
+        text: "With a structural engineer, we removed the stair core, cut a skylight above it, and designed a free-standing timber spiral as the home's new centre.",
+        points: ["New steel frame to carry the floors", "A 2.4 m skylight above the stairwell", "Living spaces re-oriented to face the stair"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Steam-bent oak treads on a single steel spine, a plaster-white well to bounce daylight down, and nothing else competing for attention.",
+        points: ["Oak treads with a hand-rubbed oil finish", "A glass balustrade so the curve reads clearly", "Warm 2700K light hidden under every tread"],
+      },
+      {
+        title: "Execution",
+        text: "The stair was prototyped at full scale in our workshop, taken apart, and reassembled on site in nine days under a separate safety plan.",
+        points: ["Full-size mock-up approved in the workshop", "Nine days from delivery to the last tread", "Structural works phased floor by floor"],
+      },
+      {
+        title: "Outcome",
+        text: "Daylight now reaches the ground floor at noon, and the stair has become the sculptural heart of the home — and the place everyone meets.",
+        points: ["Light on all three levels", "One connected family home", "Handed over in ten months"],
+      },
     ],
     quote: {
-      text: "The house used to feel like three apartments. Now we call to each other up the stair and the whole home lights up at noon.",
+      text: "The house used to feel like three apartments. Now we call to each other up the stair, and the whole home lights up at noon.",
       name: "Homeowners, The Spiral Residence",
     },
     results: [
       { value: "3", label: "Levels connected by light" },
       { value: "9", label: "Days to install the stair" },
-      { value: "10", label: "Months on site" },
+      { value: "10", label: "Months, brief to handover" },
     ],
   },
   {

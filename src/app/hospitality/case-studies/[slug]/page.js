@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import PageHero from "@/components/pages/PageHero/PageHero";
 import StoryDetail from "@/components/pages/StoryDetail/StoryDetail";
+import EditorialStory from "@/components/pages/EditorialStory/EditorialStory";
 import { hospitalityCases, getHospitalityCase } from "@/data/hospitalityCases";
 
 export function generateStaticParams() {
@@ -21,6 +22,38 @@ export default async function HospitalityCaseStudy({ params }) {
 
   const index = hospitalityCases.indexOf(study);
   const next = hospitalityCases[(index + 1) % hospitalityCases.length];
+
+  const crumbs = [
+    { label: "Hospitality", href: "/hospitality" },
+    { label: "Case Studies", href: "/hospitality/case-studies" },
+  ];
+  const nextStory = {
+    href: `/hospitality/case-studies/${next.slug}`,
+    name: next.name,
+    details: `${next.category} · ${next.location}`,
+    image: next.image,
+  };
+
+  // Flagship stories can use the magazine-style editorial layout.
+  if (study.layout === "editorial") {
+    return (
+      <main>
+        <EditorialStory
+          story={study}
+          eyebrow={`${study.category} · ${study.location}`}
+          crumbs={crumbs}
+          meta={[
+            { label: "Property", value: study.category },
+            { label: "Location", value: study.location },
+            { label: "Scale", value: study.size },
+            { label: "Engagement", value: study.engagement },
+          ]}
+          next={nextStory}
+          nextLabel="Next case study"
+        />
+      </main>
+    );
+  }
 
   return (
     <main>

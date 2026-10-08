@@ -113,60 +113,6 @@ export function DataTable({ table }) {
   );
 }
 
-// Project timeline as a Gantt-style chart: each phase is a row whose bar
-// spans its weeks or months on a shared scale.
-// timeline: [{ phase, when: "Weeks 3–10" | "Months 1–3", text }]
-export function Timeline({ timeline }) {
-  const phases = timeline.map((t) => {
-    const [, from, to] = t.when.match(/(\d+)\D+(\d+)/) ?? [null, 1, 1];
-    return { ...t, from: Number(from), to: Number(to) };
-  });
-  const total = Math.max(...phases.map((p) => p.to));
-  const unit = timeline[0].when.split(" ")[0].replace(/s$/, "");
-
-  return (
-    <section className={`section ${styles.timelineSection}`}>
-      <div className="container">
-        <div className={`${styles.timelineHead} reveal`}>
-          <div>
-            <span className="eyebrow">Timeline</span>
-            <h2 className={styles.title}>How the {unit.toLowerCase()}s unfolded.</h2>
-          </div>
-          <p className={styles.timelineTotal}>
-            <strong>{total}</strong> {unit.toLowerCase()}s, brief to handover
-          </p>
-        </div>
-
-        <ol className={styles.gantt}>
-          {phases.map((p, i) => (
-            <li key={p.phase} className={`${styles.ganttRow} reveal`} style={{ "--reveal-delay": `${i * 80}ms` }}>
-              <div className={styles.ganttLabel}>
-                <span className={styles.when}>{p.when}</span>
-                <h3 className={styles.phaseTitle}>{p.phase}</h3>
-                <p className={styles.phaseText}>{p.text}</p>
-              </div>
-              <div className={styles.ganttTrack} aria-hidden="true">
-                <span
-                  className={styles.ganttBar}
-                  style={{
-                    left: `${((p.from - 1) / total) * 100}%`,
-                    width: `${((p.to - p.from + 1) / total) * 100}%`,
-                  }}
-                />
-              </div>
-            </li>
-          ))}
-        </ol>
-        <div className={styles.ganttScale} aria-hidden="true">
-          <span>{unit} 1</span>
-          <span>{unit} {Math.round(total / 2)}</span>
-          <span>{unit} {total}</span>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 // Captioned details: a closing gallery with a line on each photograph.
 // details: [{ src, alt, caption }]
 export function DetailGallery({ details }) {

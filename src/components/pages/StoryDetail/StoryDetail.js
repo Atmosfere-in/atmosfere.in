@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Arrow from "@/components/ui/Icon/Arrow";
-import { Context, Concept, DataTable, Timeline, DetailGallery, Feature } from "./StoryDeep";
+import { Context, Concept, DataTable, DetailGallery, Feature } from "./StoryDeep";
 import StageCarousel from "./StageCarousel";
 import styles from "./StoryDetail.module.css";
 
@@ -9,7 +9,7 @@ import styles from "./StoryDetail.module.css";
 // overview → gallery → the six stages → client voice → next.
 // story: { lead, summary, scope[], gallery[{src,alt}], stages[{title,text,points?,image?}],
 //          quote?{text,name}, results?[{value,label}], voiceImage? }
-// Flagship stories can add: glance, context, concept, tables[], feature, phases,
+// Flagship stories can add: glance, context, concept, tables[], feature,
 // details (see StoryDeep.js); each block appears only when present.
 // next: { href, name, details, image } — the following story in the list.
 export default function StoryDetail({ story, next, nextLabel = "Next project" }) {
@@ -82,7 +82,6 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
 
       <StageCarousel stages={story.stages} />
 
-      {story.phases && <Timeline timeline={story.phases} />}
       {story.details && <DetailGallery details={story.details} />}
 
       {(story.quote || story.results) && (
