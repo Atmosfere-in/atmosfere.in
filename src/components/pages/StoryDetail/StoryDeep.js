@@ -4,24 +4,6 @@ import styles from "./StoryDeep.module.css";
 // Optional long-form blocks for flagship case studies. Each renders only
 // when its data is present, so shorter stories keep the simple layout.
 
-// Key facts at a glance. items: [{ label, value }]
-export function Glance({ items }) {
-  return (
-    <section className={styles.glance} aria-label="At a glance">
-      <div className="container">
-        <dl className={`${styles.glanceGrid} reveal`}>
-          {items.map((item) => (
-            <div key={item.label} className={styles.glanceItem}>
-              <dt>{item.label}</dt>
-              <dd>{item.value}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </section>
-  );
-}
-
 // The brief in full, beside the constraints the design had to answer.
 // context: { title, body[], constraints[{ title, text }] }
 export function Context({ context }) {

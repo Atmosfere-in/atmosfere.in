@@ -1,18 +1,26 @@
-/* ---------- Overview ---------- */
+/* ---------- Overview: one lead line, then summary beside the facts ---------- */
 
-.overviewGrid {
-  display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: clamp(32px, 6vw, 112px);
-  align-items: end;
+.overviewLead {
+  max-width: 980px;
 }
 
 .lead {
   margin-top: var(--space-3);
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.3vw, 2.25rem);
-  line-height: 1.3;
+  font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+  line-height: 1.25;
+  text-wrap: pretty;
   color: var(--color-charcoal);
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: start;
+  margin-top: clamp(28px, 5vh, 56px);
+  padding-top: clamp(24px, 4vh, 40px);
+  border-top: 1px solid var(--color-stone-200);
 }
 
 .summary {
@@ -21,26 +29,49 @@
   color: var(--color-muted);
 }
 
-.scope {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: var(--space-4);
-  list-style: none;
+/* Key facts as a quiet two-column list. */
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-5);
 }
 
-.scope li {
-  padding: 7px 14px;
-  border: 1px solid var(--color-stone-200);
-  border-radius: 999px;
-  font-size: 0.75rem;
+.fact {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-stone-200);
+}
+
+.fact:last-child {
+  grid-column: 1 / -1;
+  border-bottom: none;
+}
+
+.fact dt {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
   color: var(--color-stone-600);
 }
 
-/* ---------- Gallery ---------- */
+.fact dd {
+  margin-top: 4px;
+  font-size: 0.9875rem;
+  line-height: 1.5;
+  color: var(--color-charcoal);
+}
+
+/* ---------- Gallery: wide, pair, wide, pair ---------- */
 
 .gallery {
   padding-bottom: clamp(48px, 10vh, 96px);
+}
+
+.galleryInner,
+.galleryRow {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.6vw, 24px);
 }
 
 .wide,
@@ -51,246 +82,52 @@
   background: var(--color-stone-100);
 }
 
+/* Sized so each photograph fits on screen in one view. */
 .wide {
-  aspect-ratio: 16 / 8;
+  width: 100%;
+  height: min(calc((min(100vw, var(--max-width)) - 2 * var(--gutter)) * 0.5), calc(100svh - 120px));
 }
 
 .pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(12px, 1.6vw, 24px);
-  margin-top: clamp(12px, 1.6vw, 24px);
 }
 
 .half {
-  aspect-ratio: 4 / 3.4;
+  height: min(calc((min(100vw, var(--max-width)) - 2 * var(--gutter)) * 0.4), calc(100svh - 120px));
 }
 
 .pair .half:only-child {
   grid-column: 1 / -1;
-  aspect-ratio: 16 / 8;
 }
 
 .image {
   object-fit: cover;
 }
 
-/* ---------- The story: stacking stage cards ---------- */
-
-.stages {
-  background: var(--color-stone-100);
-}
-
-.stagesHead {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.stagesTitle {
-  max-width: 20ch;
-  margin-top: var(--space-3);
-  font-family: var(--font-display);
-  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
-  font-weight: 400;
-  line-height: 1.12;
-  color: var(--color-charcoal);
-}
-
-.stageList {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(20px, 4vh, 40px);
-  margin-top: clamp(32px, 6vh, 64px);
-  list-style: none;
-}
-
-/* Each card sticks a little lower than the last, so they pile up like
-   pages while the visitor scrolls through the story. */
-.stage {
-  position: sticky;
-  top: calc(clamp(16px, 4vh, 40px) + var(--i) * 14px);
-}
-
-.card {
-  display: grid;
-  grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
-  gap: clamp(24px, 4vw, 72px);
-  min-height: clamp(280px, 44vh, 400px);
-  padding: clamp(28px, 4vw, 56px);
-  border-radius: 24px;
-  background: var(--color-white);
-  box-shadow:
-    0 1px 0 rgb(31 29 26 / 0.04),
-    0 40px 80px -48px rgb(31 29 26 / 0.35);
-}
-
-.withImage {
-  grid-template-columns: minmax(0, 3.4fr) minmax(0, 4.6fr) minmax(0, 4fr);
-  /* One row that fills the card, so the photo runs its full height. */
-  grid-template-rows: minmax(0, 1fr);
-}
-
-.stage:nth-child(even) .card {
-  background: #fbf7f1;
-}
-
-/* The outcome closes the story on a dark card. */
-.stage:last-child .card {
-  background: var(--color-charcoal);
-  color: var(--color-ivory);
-}
-
-.cardHead {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Large outlined numeral. */
-.bigNumber {
-  font-family: var(--font-display);
-  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
-  line-height: 0.9;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--color-accent);
-}
-
-.stageCount {
-  margin-top: var(--space-4);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: var(--color-stone-600);
-}
-
-.stageTitle {
-  margin-top: var(--space-2);
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
-  font-weight: 400;
-  line-height: 1.1;
-  color: var(--color-charcoal);
-}
-
-.cardBody {
-  align-self: center;
-}
-
-.stageText {
-  max-width: 52ch;
-  font-size: clamp(1rem, 1.15vw, 1.15rem);
-  line-height: 1.7;
-  color: var(--color-ink);
-}
-
-.stagePoints {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: var(--space-4);
-  padding-top: var(--space-4);
-  border-top: 1px solid var(--color-stone-200);
-  list-style: none;
-  font-size: 0.9375rem;
-  line-height: 1.55;
-  color: var(--color-stone-600);
-}
-
-.stagePoints li {
-  position: relative;
-  padding-left: 22px;
-}
-
-.stagePoints li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.7em;
-  width: 10px;
-  height: 1px;
-  background: var(--color-accent);
-}
-
-.cardMedia {
-  position: relative;
-  min-height: 220px;
-  overflow: hidden;
-  border-radius: 16px;
-}
-
-.stage:last-child .stageCount,
-.stage:last-child .stagePoints {
-  color: rgb(247 244 239 / 0.7);
-}
-
-.stage:last-child .stageTitle,
-.stage:last-child .stageText {
-  color: var(--color-ivory);
-}
-
-.stage:last-child .stagePoints {
-  border-top-color: rgb(247 244 239 / 0.18);
-}
-
-/* ---------- Laptops: image moves under the text ---------- */
-
-@media (max-width: 1180px) {
-  .withImage {
-    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
-    grid-template-rows: auto;
-  }
-
-  .withImage .cardMedia {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 7;
-    min-height: 0;
-  }
-}
-
-/* ---------- Tablets & phones: plain stacked cards ---------- */
-
-@media (max-width: 760px) {
-  .stage {
-    position: static;
-  }
-
-  .card,
-  .withImage {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-    min-height: 0;
-    padding: var(--space-5) var(--space-4);
-    border-radius: 18px;
-  }
-
-  .withImage .cardMedia {
-    aspect-ratio: 4 / 3;
-  }
-
-  .stageCount {
-    margin-top: var(--space-3);
-  }
-}
-
-/* ---------- Client quote & results ---------- */
+/* ---------- Client voice: quote beside the results ---------- */
 
 .voice {
   background: var(--color-accent-soft);
 }
 
+.voiceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: center;
+}
+
 .quote {
-  max-width: 40ch;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 640px;
 }
 
 .mark {
   display: block;
-  height: 0.55em;
+  height: 0.5em;
   font-family: var(--font-display);
-  font-size: 5rem;
+  font-size: 6rem;
   line-height: 1;
   color: var(--color-accent);
 }
@@ -298,12 +135,15 @@
 .quote blockquote {
   margin-top: var(--space-4);
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
-  line-height: 1.35;
+  font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+  line-height: 1.25;
   color: var(--color-charcoal);
 }
 
 .quote figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-top: var(--space-4);
   font-size: 0.6875rem;
   font-weight: 500;
@@ -312,37 +152,56 @@
   color: var(--color-stone-600);
 }
 
-.results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--space-4);
-  max-width: 960px;
-  margin: clamp(40px, 7vh, 72px) auto 0;
-  padding-top: clamp(28px, 5vh, 48px);
-  border-top: 1px solid rgb(31 29 26 / 0.12);
-  text-align: center;
+.quote figcaption::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: var(--color-accent);
 }
 
-.quote + .results {
-  margin-top: clamp(40px, 7vh, 72px);
+/* Results stacked on a white card. */
+.results {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 3vw, 40px);
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: 0 30px 60px -44px rgb(31 29 26 / 0.35);
+}
+
+.resultsTitle {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
 .result {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-stone-200);
+}
+
+.result:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .resultValue {
+  flex: none;
+  min-width: 3.2ch;
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 3.6vw, 3.25rem);
+  font-size: clamp(2.25rem, 3.4vw, 3.25rem);
   line-height: 1;
   color: var(--color-charcoal);
 }
 
 .resultLabel {
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
+  font-size: 0.875rem;
+  line-height: 1.45;
   color: var(--color-stone-600);
 }
 
@@ -423,12 +282,19 @@
 /* ---------- Tablets & phones ---------- */
 
 @media (max-width: 900px) {
-  .overviewGrid {
+  .overviewGrid,
+  .voiceGrid {
     grid-template-columns: 1fr;
   }
 
   .wide {
+    height: auto;
     aspect-ratio: 4 / 3;
+  }
+
+  .half {
+    height: auto;
+    aspect-ratio: 4 / 4.4;
   }
 }
 
@@ -437,9 +303,16 @@
     grid-template-columns: 1fr;
   }
 
+  .facts {
+    grid-template-columns: 1fr;
+  }
+
+  .half {
+    aspect-ratio: 4 / 3.4;
+  }
+
   .wide,
   .half {
     border-radius: 12px;
   }
-
 }

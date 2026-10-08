@@ -1,0 +1,236 @@
+.section {
+  background: var(--color-stone-100);
+}
+
+.head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.title {
+  max-width: 22ch;
+  margin-top: var(--space-3);
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 2.8vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.12;
+  color: var(--color-charcoal);
+}
+
+.controls {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--color-stone-400);
+  border-radius: 999px;
+  color: var(--color-charcoal);
+  transition:
+    background-color 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    opacity 0.3s var(--ease);
+}
+
+.arrow:hover:not(:disabled) {
+  background: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* Track sits inside the page container, like the project carousels. */
+.viewport {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: clamp(28px, 5vh, 48px) auto 0;
+  padding: 0 var(--gutter);
+}
+
+.track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* About three cards across the container. */
+.item {
+  display: flex;
+  flex: 0 0 clamp(270px, calc((min(100vw, var(--max-width)) - 2 * var(--gutter) - 48px) / 3.15), 440px);
+  scroll-snap-align: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--color-white);
+  box-shadow: 0 30px 60px -44px rgb(31 29 26 / 0.4);
+}
+
+.media {
+  position: relative;
+  aspect-ratio: 4 / 2.9;
+  overflow: hidden;
+  background: var(--color-accent-soft);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 1.4s var(--ease);
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+/* Stages without a photograph show their numeral, outlined. */
+.numeral {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 8vw, 7.5rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-accent);
+}
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgb(247 244 239 / 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-charcoal);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: clamp(20px, 2vw, 28px);
+}
+
+.stageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.9vw, 1.85rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--color-charcoal);
+}
+
+.text {
+  margin-top: var(--space-2);
+  font-size: 0.9875rem;
+  line-height: 1.65;
+  color: var(--color-ink);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: var(--space-4);
+  list-style: none;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-stone-600);
+}
+
+.points li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 10px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+/* The outcome closes the row on a dark card. */
+.last {
+  background: var(--color-charcoal);
+}
+
+.last .stageTitle,
+.last .text {
+  color: var(--color-ivory);
+}
+
+.last .points {
+  color: rgb(247 244 239 / 0.7);
+}
+
+.footer {
+  margin-top: var(--space-5);
+}
+
+.rule {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: var(--color-stone-200);
+  overflow: hidden;
+}
+
+.ruleFill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-charcoal);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+@media (max-width: 768px) {
+  .head {
+    align-items: flex-start;
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .item {
+    flex-basis: 82vw;
+  }
+
+  .track {
+    gap: var(--space-3);
+  }
+}

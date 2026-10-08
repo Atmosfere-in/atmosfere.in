@@ -54,6 +54,11 @@
   gap: clamp(32px, 5vw, 96px);
 }
 
+/* Even rows mirror the layout, so every photo keeps the same size. */
+.row:nth-child(even) {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+}
+
 .row:nth-child(even) .media {
   order: 2;
 }
@@ -177,7 +182,8 @@
 }
 
 @media (max-width: 900px) {
-  .row {
+  .row,
+  .row:nth-child(even) {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }

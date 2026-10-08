@@ -1,8 +1,6 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
 import CaseStudyList from "@/components/pages/CaseStudyList/CaseStudyList";
-import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { spacesProjects } from "@/data/spacesProjects";
-import { closing } from "@/data/spaces";
 import { unsplash } from "@/lib/images";
 
 export const metadata = {
@@ -39,7 +37,6 @@ export default function SpacesCaseStudies() {
           image: p.gallery[0] ?? p.image,
         }))}
       />
-      <ClosingCta {...closing} />
     </main>
   );
 }

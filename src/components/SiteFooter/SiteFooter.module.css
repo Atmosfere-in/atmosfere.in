@@ -86,7 +86,9 @@
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   color: var(--ft-muted);
-  line-height: 28px;
+  line-height: 14px;
+  /* Line up with the lowercase letters of the wordmark (same as the header). */
+  transform: translateY(6.5px);
 }
 
 .tagline {
@@ -221,5 +223,12 @@
   .bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* The logo is 24px tall on small phones, so the label drops a little less. */
+@media (max-width: 480px) {
+  .section {
+    transform: translateY(5.5px);
   }
 }

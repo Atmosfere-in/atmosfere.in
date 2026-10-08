@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
 import PageHero from "@/components/pages/PageHero/PageHero";
 import StoryDetail from "@/components/pages/StoryDetail/StoryDetail";
-import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { hospitalityCases, getHospitalityCase } from "@/data/hospitalityCases";
-import { closing } from "@/data/hospitality";
 
 export function generateStaticParams() {
   return hospitalityCases.map((c) => ({ slug: c.slug }));
@@ -51,7 +49,6 @@ export default async function HospitalityCaseStudy({ params }) {
           image: next.image,
         }}
       />
-      <ClosingCta {...closing} />
     </main>
   );
 }

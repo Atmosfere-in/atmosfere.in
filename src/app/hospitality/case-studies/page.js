@@ -1,8 +1,6 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
 import CaseStudyList from "@/components/pages/CaseStudyList/CaseStudyList";
-import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { hospitalityCases, hospitalityCaseFilters } from "@/data/hospitalityCases";
-import { closing } from "@/data/hospitality";
 import { unsplash } from "@/lib/images";
 
 export const metadata = {
@@ -49,7 +47,6 @@ export default async function HospitalityCaseStudies({ searchParams }) {
           image: c.image,
         }))}
       />
-      <ClosingCta {...closing} />
     </main>
   );
 }

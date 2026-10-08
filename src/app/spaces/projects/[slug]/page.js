@@ -1,9 +1,7 @@
 import { notFound } from "next/navigation";
 import PageHero from "@/components/pages/PageHero/PageHero";
 import StoryDetail from "@/components/pages/StoryDetail/StoryDetail";
-import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { spacesProjects, getSpacesProject } from "@/data/spacesProjects";
-import { closing } from "@/data/spaces";
 
 export function generateStaticParams() {
   return spacesProjects.map((p) => ({ slug: p.slug }));
@@ -50,7 +48,6 @@ export default async function SpacesProject({ params }) {
           image: next.image,
         }}
       />
-      <ClosingCta {...closing} />
     </main>
   );
 }

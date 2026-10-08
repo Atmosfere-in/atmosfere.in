@@ -105,6 +105,9 @@ export const spacesProjects = [
       img("1634389312178-50613e56acda", "A dining room with tall arched windows, a round table and patterned chairs"),
       img("1778731660244-b6e8f905107d", "An arched doorway framing a crystal chandelier and a stair landing"),
       img("1770107830461-f61bdc31f1e5", "A long hallway framed by a sequence of plastered arches"),
+      img("1554703752-4a82234d396e", "A sweeping marble staircase with a carved balustrade"),
+      img("1505693416388-ac5ce068fe85", "The grandparents' suite with a tufted headboard and bedside lamps"),
+      img("1761509844502-a2543f6f1df2", "A smoked-oak door set into an arched opening"),
     ],
     context: {
       title: "A house of good bones and no rhythm.",
@@ -177,11 +180,6 @@ export const spacesProjects = [
       { phase: "Ground floor", when: "Weeks 11–22", text: "Arches, marble, services and the stair restoration." },
       { phase: "Upper floors", when: "Weeks 23–40", text: "Ceilings raised, joinery installed, finishes completed." },
       { phase: "Styling & handover", when: "Weeks 41–46", text: "Art, lighting scenes and a room-by-room walkthrough." },
-    ],
-    details: [
-      { ...img("1761509844502-a2543f6f1df2", "A carved timber arched doorway in a panelled hall"), caption: "Smoked-oak doors, each set into the same arch profile." },
-      { ...img("1554703752-4a82234d396e", "A sweeping marble staircase with a carved balustrade"), caption: "Honed Botticino treads and a hand-carved balustrade." },
-      { ...img("1505693416388-ac5ce068fe85", "A classic bedroom with a tufted headboard and bedside lamps"), caption: "The grandparents' suite: quiet, warm and on the ground floor." },
     ],
     quote: {
       text: "Every door now frames something beautiful. Guests walk in and stop at the stair — exactly what we hoped for.",

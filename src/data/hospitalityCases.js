@@ -102,6 +102,9 @@ export const hospitalityCases = [
       img("1682414181845-a725f154a14a", "A painted haveli courtyard ringed by arched galleries"),
       img("1601504410148-0c269aafd95c", "An arched corridor framed by bougainvillea"),
       img("1695347597952-f8626d36ffb0", "A carved haveli door with brass rings and studs"),
+      img("1711707246899-cf0d1a5d0472", "The old water tank revived as a stone-edged courtyard pool"),
+      img("1657349226767-66c983d7df39", "A heritage suite with a carved bed and warm lamps"),
+      img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting"),
     ],
     context: {
       title: "Keep the haveli. Make it pay for itself.",
@@ -199,11 +202,6 @@ export const hospitalityCases = [
       { phase: "Restoration", when: "Months 8–17", text: "Lime, stone and painted ceilings restored by hand." },
       { phase: "Interiors & services", when: "Months 15–20", text: "Rooms fitted out, pool revived, kitchens installed." },
       { phase: "Pre-opening", when: "Months 21–22", text: "Team trained, soft opening, first guests." },
-    ],
-    details: [
-      { ...img("1657349226767-66c983d7df39", "A heritage hotel room with a carved bed and warm lamps"), caption: "A heritage suite: restored ceilings, block-printed linen." },
-      { ...img("1711707246899-cf0d1a5d0472", "A stone-edged pool beside a sandstone palace wall"), caption: "The old water tank, revived as the courtyard pool." },
-      { ...img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting"), caption: "The second courtyard: breakfast in the mornings, music after dark." },
     ],
     quote: {
       text: "Everyone else wanted to fill the courtyards with rooms. They showed us the courtyards were the hotel.",

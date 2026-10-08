@@ -1,61 +1,76 @@
 import Image from "next/image";
 import Link from "next/link";
 import Arrow from "@/components/ui/Icon/Arrow";
-import { Glance, Context, Concept, DataTable, Timeline, DetailGallery, Feature } from "./StoryDeep";
+import { Context, Concept, DataTable, Timeline, DetailGallery, Feature } from "./StoryDeep";
+import StageCarousel from "./StageCarousel";
 import styles from "./StoryDetail.module.css";
 
 // Body of a project / case-study page, after its PageHero:
-// overview → gallery → the six stages → client quote → results → next.
-// story: { lead, summary, scope[], gallery[{src,alt}], stages[{title,text,points?}],
+// overview → gallery → the six stages → client voice → next.
+// story: { lead, summary, scope[], gallery[{src,alt}], stages[{title,text,points?,image?}],
 //          quote?{text,name}, results?[{value,label}] }
 // Flagship stories can add: glance, context, concept, tables[], feature, phases,
 // details (see StoryDeep.js); each block appears only when present.
 // next: { href, name, details, image } — the following story in the list.
 export default function StoryDetail({ story, next, nextLabel = "Next project" }) {
-  const [first, ...rest] = story.gallery;
+  // Gallery rhythm: one wide photograph, then a pair, repeating.
+  const rows = [];
+  for (let i = 0; i < story.gallery.length; i += 3) {
+    rows.push({ wide: story.gallery[i], pair: story.gallery.slice(i + 1, i + 3) });
+  }
+
+  const facts = [
+    ...(story.glance ?? []),
+    ...(story.scope ? [{ label: "Scope", value: story.scope.join(" · ") }] : []),
+  ];
 
   return (
     <>
       <section className={`section ${styles.overview}`}>
-        <div className={`container ${styles.overviewGrid}`}>
-          <div className="reveal">
+        <div className="container">
+          <div className={`${styles.overviewLead} reveal`}>
             <span className="eyebrow">Overview</span>
             <p className={styles.lead}>{story.lead}</p>
           </div>
-          <div className={`${styles.overviewSide} reveal`} style={{ "--reveal-delay": "120ms" }}>
-            <p className={styles.summary}>{story.summary}</p>
-            {story.scope && (
-              <ul className={styles.scope} aria-label="Scope">
-                {story.scope.map((item) => (
-                  <li key={item}>{item}</li>
+          <div className={styles.overviewGrid}>
+            <p className={`${styles.summary} reveal`}>{story.summary}</p>
+            {facts.length > 0 && (
+              <dl className={`${styles.facts} reveal`} style={{ "--reveal-delay": "120ms" }}>
+                {facts.map((f) => (
+                  <div key={f.label} className={styles.fact}>
+                    <dt>{f.label}</dt>
+                    <dd>{f.value}</dd>
+                  </div>
                 ))}
-              </ul>
+              </dl>
             )}
           </div>
         </div>
       </section>
 
-      {story.glance && <Glance items={story.glance} />}
-
-      {first && (
+      {rows.length > 0 && (
         <section className={styles.gallery} aria-label="Gallery">
-          <div className="container">
-            <div className={`${styles.wide} reveal-image`}>
-              <Image src={first.src} alt={first.alt} fill quality={90} sizes="100vw" className={styles.image} />
-            </div>
-            {rest.length > 0 && (
-              <div className={styles.pair}>
-                {rest.map((img, i) => (
-                  <div
-                    key={img.src}
-                    className={`${styles.half} reveal-image`}
-                    style={{ "--reveal-delay": `${i * 120}ms` }}
-                  >
-                    <Image src={img.src} alt={img.alt} fill quality={90} sizes="(max-width: 768px) 100vw, 50vw" className={styles.image} />
+          <div className={`container ${styles.galleryInner}`}>
+            {rows.map((row) => (
+              <div key={row.wide.src} className={styles.galleryRow}>
+                <div className={`${styles.wide} reveal-image`}>
+                  <Image src={row.wide.src} alt={row.wide.alt} fill quality={90} sizes="100vw" className={styles.image} />
+                </div>
+                {row.pair.length > 0 && (
+                  <div className={styles.pair}>
+                    {row.pair.map((img, i) => (
+                      <div
+                        key={img.src}
+                        className={`${styles.half} reveal-image`}
+                        style={{ "--reveal-delay": `${i * 120}ms` }}
+                      >
+                        <Image src={img.src} alt={img.alt} fill quality={90} sizes="(max-width: 768px) 100vw, 50vw" className={styles.image} />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
-            )}
+            ))}
           </div>
         </section>
       )}
@@ -67,61 +82,14 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
       ))}
       {story.feature && <Feature feature={story.feature} />}
 
-      {/* The six stages as cards that stack while scrolling. */}
-      <section className={`section ${styles.stages}`}>
-        <div className="container">
-          <div className={`${styles.stagesHead} reveal`}>
-            <span className="eyebrow">The Story</span>
-            <h2 className={styles.stagesTitle}>From the first brief to the final walkthrough.</h2>
-          </div>
-          <ol className={styles.stageList}>
-            {story.stages.map((stage, i) => (
-              <li key={stage.title} className={styles.stage} style={{ "--i": i }}>
-                <article className={`${styles.card} ${stage.image ? styles.withImage : ""}`}>
-                  <div className={styles.cardHead}>
-                    <span className={styles.bigNumber} aria-hidden="true">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className={styles.stageCount}>
-                      Stage {String(i + 1).padStart(2, "0")} / {String(story.stages.length).padStart(2, "0")}
-                    </span>
-                    <h3 className={styles.stageTitle}>{stage.title}</h3>
-                  </div>
-                  <div className={styles.cardBody}>
-                    <p className={styles.stageText}>{stage.text}</p>
-                    {stage.points && (
-                      <ul className={styles.stagePoints}>
-                        {stage.points.map((p) => (
-                          <li key={p}>{p}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                  {stage.image && (
-                    <div className={styles.cardMedia}>
-                      <Image
-                        src={stage.image.src}
-                        alt={stage.image.alt}
-                        fill
-                        quality={85}
-                        sizes="(max-width: 900px) 100vw, 30vw"
-                        className={styles.image}
-                      />
-                    </div>
-                  )}
-                </article>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
+      <StageCarousel stages={story.stages} />
 
       {story.phases && <Timeline timeline={story.phases} />}
       {story.details && <DetailGallery details={story.details} />}
 
       {(story.quote || story.results) && (
         <section className={`section ${styles.voice}`}>
-          <div className="container">
+          <div className={`container ${styles.voiceGrid}`}>
             {story.quote && (
               <figure className={`${styles.quote} reveal`}>
                 <span className={styles.mark} aria-hidden="true">
@@ -134,9 +102,10 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
               </figure>
             )}
             {story.results && (
-              <dl className={styles.results}>
-                {story.results.map((r, i) => (
-                  <div key={r.label} className={`${styles.result} reveal`} style={{ "--reveal-delay": `${i * 100}ms` }}>
+              <dl className={`${styles.results} reveal`} style={{ "--reveal-delay": "120ms" }}>
+                <span className={styles.resultsTitle}>The results</span>
+                {story.results.map((r) => (
+                  <div key={r.label} className={styles.result}>
                     <dd className={styles.resultValue}>{r.value}</dd>
                     <dt className={styles.resultLabel}>{r.label}</dt>
                   </div>
