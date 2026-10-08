@@ -183,20 +183,6 @@
   background: var(--color-accent);
 }
 
-/* The outcome closes the row on a dark card. */
-.last {
-  background: var(--color-charcoal);
-}
-
-.last .stageTitle,
-.last .text {
-  color: var(--color-ivory);
-}
-
-.last .points {
-  color: rgb(247 244 239 / 0.7);
-}
-
 .footer {
   margin-top: var(--space-5);
 }

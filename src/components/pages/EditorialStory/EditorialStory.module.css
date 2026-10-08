@@ -230,29 +230,46 @@
   background: var(--color-accent);
 }
 
-/* ---------- Pull quote ---------- */
+/* ---------- Client voice: photograph beside quote and results ---------- */
 
-.pull {
+.voice {
   background: var(--color-accent-soft);
 }
 
-.pullInner {
-  max-width: 1000px;
-  text-align: center;
+.voiceGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(32px, 6vw, 112px);
+  align-items: center;
 }
 
-.pullInner blockquote {
-  padding: clamp(24px, 5vh, 48px) 0;
-  border-top: 1px solid rgb(31 29 26 / 0.2);
-  border-bottom: 1px solid rgb(31 29 26 / 0.2);
+.voiceMedia {
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  max-height: calc(100svh - 96px);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.mark {
+  display: block;
+  height: 0.5em;
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3.6vw, 3.25rem);
-  line-height: 1.2;
-  text-wrap: balance;
+  font-size: 5.5rem;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.quote {
+  margin-top: var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.25rem);
+  line-height: 1.3;
   color: var(--color-charcoal);
 }
 
-.pullInner figcaption {
+.quoteName {
   margin-top: var(--space-4);
   font-size: 0.6875rem;
   font-weight: 500;
@@ -261,24 +278,19 @@
   color: var(--color-stone-600);
 }
 
-/* ---------- Results band ---------- */
-
 .results {
-  padding: clamp(48px, 9vh, 96px) 0;
-  background: var(--color-charcoal);
-  color: var(--color-ivory);
-}
-
-.resultsInner {
   display: flex;
+  margin-top: clamp(32px, 6vh, 56px);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgb(31 29 26 / 0.18);
 }
 
 .result {
   display: flex;
   flex: 1 1 0;
   flex-direction: column;
-  gap: var(--space-2);
-  padding: 0 var(--space-4);
+  gap: 6px;
+  padding: 0 var(--space-3);
 }
 
 .result:first-child {
@@ -286,21 +298,20 @@
 }
 
 .result + .result {
-  border-left: 1px solid rgb(247 244 239 / 0.2);
+  border-left: 1px solid rgb(31 29 26 / 0.18);
 }
 
 .resultValue {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2.25rem, 3.6vw, 3.25rem);
   line-height: 1;
-  color: #d8b98f;
+  color: var(--color-charcoal);
 }
 
 .resultLabel {
-  max-width: 22ch;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.45;
-  opacity: 0.8;
+  color: var(--color-stone-600);
 }
 
 /* ---------- Mosaic gallery ---------- */
@@ -412,18 +423,13 @@
     gap: var(--space-5);
   }
 
-  .resultsInner {
-    flex-direction: column;
+  .voiceGrid {
+    grid-template-columns: 1fr;
   }
 
-  .result,
-  .result:first-child {
-    padding: var(--space-4) 0;
-  }
-
-  .result + .result {
-    border-left: none;
-    border-top: 1px solid rgb(247 244 239 / 0.2);
+  .voiceMedia {
+    aspect-ratio: 4 / 3.4;
+    max-height: none;
   }
 
   .mosaic {
@@ -446,6 +452,20 @@
 /* ---------- Phones ---------- */
 
 @media (max-width: 560px) {
+  .results {
+    flex-direction: column;
+  }
+
+  .result,
+  .result:first-child {
+    padding: var(--space-3) 0;
+  }
+
+  .result + .result {
+    border-left: none;
+    border-top: 1px solid rgb(31 29 26 / 0.18);
+  }
+
   .heroMeta {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-3) var(--space-4);

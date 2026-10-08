@@ -79,6 +79,7 @@ export const hospitalityCases = [
         points: ["Three times the keys on the same land", "Full most weekends from year one", "A sunset terrace locals plan evenings around"],
       },
     ],
+    voiceImage: img("1551882547-ff40c63fe5fa", "The pool terrace among palms at dusk"),
     quote: {
       text: "We came in wanting eight villas. They showed us why a 24-key retreat would earn more — and they were right.",
       name: "Owner, The Dusk Pool Retreat",

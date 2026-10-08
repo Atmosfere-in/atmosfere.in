@@ -49,7 +49,7 @@ export default function StageCarousel({ stages }) {
         <ol ref={trackRef} className={styles.track} onScroll={onScroll}>
           {stages.map((stage, i) => (
             <li key={stage.title} className={styles.item}>
-              <article className={`${styles.card} ${i === stages.length - 1 ? styles.last : ""}`}>
+              <article className={styles.card}>
                 <div className={styles.media}>
                   {stage.image ? (
                     <Image src={stage.image.src} alt={stage.image.alt} fill quality={85} sizes="(max-width: 768px) 80vw, 30vw" className={styles.image} />

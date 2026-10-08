@@ -7,8 +7,8 @@ const NUMERALS = ["I", "II", "III", "IV"];
 
 // The "editorial" case-study layout — a magazine long-read, deliberately
 // different from StoryDetail: split hero, drop-cap introduction, three
-// photographed chapters (two stages each), a typographic pull quote, a
-// dark results band and a mosaic gallery.
+// photographed chapters (two stages each), the client's words and results
+// beside a photograph, and a mosaic gallery.
 // story: { name, lead, summary, stages[6], chapters[{ title, image }],
 //          mosaic[3], quote, results, image }
 // meta: [{ label, value }] · crumbs: [{ label, href }]
@@ -87,27 +87,44 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
         </section>
       ))}
 
-      {story.quote && (
-        <section className={`section ${styles.pull}`}>
-          <figure className={`container ${styles.pullInner} reveal`}>
-            <blockquote>
-              <p>“{story.quote.text}”</p>
-            </blockquote>
-            <figcaption>{story.quote.name}</figcaption>
-          </figure>
-        </section>
-      )}
-
-      {story.results && (
-        <section className={styles.results}>
-          <dl className={`container ${styles.resultsInner}`}>
-            {story.results.map((r, i) => (
-              <div key={r.label} className={`${styles.result} reveal`} style={{ "--reveal-delay": `${i * 100}ms` }}>
-                <dd className={styles.resultValue}>{r.value}</dd>
-                <dt className={styles.resultLabel}>{r.label}</dt>
-              </div>
-            ))}
-          </dl>
+      {/* The client in their own words, beside a photograph, with the results. */}
+      {(story.quote || story.results) && (
+        <section className={`section ${styles.voice}`}>
+          <div className={`container ${styles.voiceGrid}`}>
+            <div className={`${styles.voiceMedia} reveal-image`}>
+              <Image
+                src={(story.voiceImage ?? story.chapters[story.chapters.length - 1].image).src}
+                alt={(story.voiceImage ?? story.chapters[story.chapters.length - 1].image).alt}
+                fill
+                quality={90}
+                sizes="(max-width: 900px) 100vw, 45vw"
+                className={styles.image}
+              />
+            </div>
+            <div className={`${styles.voiceText} reveal`}>
+              {story.quote && (
+                <figure>
+                  <span className={styles.mark} aria-hidden="true">
+                    “
+                  </span>
+                  <blockquote className={styles.quote}>
+                    <p>{story.quote.text}</p>
+                  </blockquote>
+                  <figcaption className={styles.quoteName}>{story.quote.name}</figcaption>
+                </figure>
+              )}
+              {story.results && (
+                <dl className={styles.results}>
+                  {story.results.map((r) => (
+                    <div key={r.label} className={styles.result}>
+                      <dd className={styles.resultValue}>{r.value}</dd>
+                      <dt className={styles.resultLabel}>{r.label}</dt>
+                    </div>
+                  ))}
+                </dl>
+              )}
+            </div>
+          </div>
         </section>
       )}
 

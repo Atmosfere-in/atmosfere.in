@@ -184,7 +184,7 @@ export const spacesProjects = [
     results: [
       { value: "14", label: "New arched openings" },
       { value: "3", label: "Floors, handed over in phases" },
-      { value: "0", label: "Weeks the family moved out" },
+      { value: "11", label: "Months, concept to keys" },
     ],
   },
   {
@@ -269,7 +269,7 @@ export const spacesProjects = [
     location: "Chandigarh",
     size: "4,800 sq ft",
     timeline: "10 months",
-    image: img("1635898832375-4381bf11da7e", "Looking up a warm timber spiral staircase"),
+    image: img("1719941069639-e6735f177812", "A sculpted white spiral stair washed in warm hidden light"),
     lead: "Turning a dark, compartmentalised floor plan into one continuous, light-filled volume around a sculpted timber stair.",
     summary:
       "For thirty years a concrete stair core sat at the centre of this family home, blocking light and splitting three floors into three separate flats. We took it out, opened the roof above it, and set a single sculpted timber spiral in its place — now the brightest, most loved room in the house.",
@@ -277,15 +277,15 @@ export const spacesProjects = [
     chapters: [
       {
         title: "A house split in three.",
-        image: img("1760067537524-a0c0703d9721", "A double-height living room with warm timber walls and soft lighting"),
+        image: img("1695319117132-a946ec83785e", "Concrete stairs and planting caught between light and shadow"),
       },
       {
         title: "One stair, under the sky.",
-        image: img("1589772424745-2c50f74e113b", "A timber spiral stair seen from above, curling down into light"),
+        image: img("1711963224442-f6eb1329e8c6", "A brick-walled stairwell open to the sky, with planting below"),
       },
       {
         title: "Built at full scale, twice.",
-        image: img("1762512346961-5730d7511a10", "A sculpted timber spiral stair with a glass balustrade"),
+        image: img("1590880795696-20c7dfadacde", "A sunlit joinery workshop with timber, benches and hand tools"),
       },
     ],
     gallery: [
@@ -330,6 +330,7 @@ export const spacesProjects = [
         points: ["Light on all three levels", "One connected family home", "Handed over in ten months"],
       },
     ],
+    voiceImage: img("1754825653375-775b946849f7", "Timber stair landings rising under a glazed roof"),
     quote: {
       text: "The house used to feel like three apartments. Now we call to each other up the stair, and the whole home lights up at noon.",
       name: "Homeowners, The Spiral Residence",
