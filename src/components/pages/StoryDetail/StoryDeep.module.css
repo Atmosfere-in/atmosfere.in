@@ -144,65 +144,133 @@
   color: var(--color-stone-600);
 }
 
-/* ---------- Table ---------- */
+/* ---------- Comparison cards ---------- */
 
 .tableHead {
   max-width: 720px;
 }
 
-.tableWrap {
-  margin-top: clamp(24px, 5vh, 48px);
-  overflow-x: auto;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(var(--cards, 3), minmax(0, 1fr));
+  gap: clamp(12px, 1.6vw, 24px);
+  margin-top: clamp(28px, 5vh, 48px);
+  list-style: none;
 }
 
-.table {
-  width: 100%;
-  min-width: 620px;
-  border-collapse: collapse;
-  font-size: 0.9375rem;
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px, 2.6vw, 36px);
+  border: 1px solid var(--color-stone-200);
+  border-radius: 20px;
+  background: var(--color-white);
 }
 
-.table th,
-.table td {
-  padding: 18px 20px 18px 0;
-  border-bottom: 1px solid var(--color-stone-200);
-  text-align: left;
-  vertical-align: top;
+/* The recommended option. */
+.cardHighlight {
+  border-color: var(--color-charcoal);
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  box-shadow: 0 30px 60px -36px rgb(31 29 26 / 0.5);
 }
 
-.table thead th {
-  font-size: 0.6875rem;
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  font-size: 0.625rem;
   font-weight: 500;
   letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
+  color: var(--color-ivory);
+}
+
+.cardNumber {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 4.6vw, 4.25rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-accent);
+}
+
+.cardNumber small {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-stone-600);
+  -webkit-text-stroke: 0;
+}
+
+.cardHighlight .cardNumber {
+  -webkit-text-stroke-color: #d8b98f;
+}
+
+.cardHighlight .cardNumber small {
+  color: rgb(247 244 239 / 0.6);
+}
+
+.cardTitle {
+  margin-top: var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 1.6vw, 1.55rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.cardFacts {
+  margin-top: var(--space-3);
+}
+
+.cardFacts div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-stone-200);
+  font-size: 0.875rem;
+}
+
+.cardFacts dt {
   color: var(--color-stone-600);
 }
 
-.table tbody th {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 400;
+.cardFacts dd {
+  text-align: right;
   color: var(--color-charcoal);
 }
 
-.table td {
+.cardHighlight .cardFacts div {
+  border-bottom-color: rgb(247 244 239 / 0.18);
+}
+
+.cardHighlight .cardFacts dt {
+  color: rgb(247 244 239 / 0.6);
+}
+
+.cardHighlight .cardFacts dd {
+  color: var(--color-ivory);
+}
+
+.cardNote {
+  margin-top: auto;
+  padding-top: var(--space-4);
+  font-size: 0.9375rem;
+  line-height: 1.6;
   color: var(--color-muted);
 }
 
-/* The option we recommended. */
-.highlight th,
-.highlight td {
-  color: var(--color-charcoal);
-  background: var(--color-accent-soft);
-}
-
-.highlight th:first-child {
-  padding-left: 16px;
-  border-radius: 12px 0 0 12px;
-}
-
-.highlight td:last-child {
-  border-radius: 0 12px 12px 0;
+.cardHighlight .cardNote {
+  color: rgb(247 244 239 / 0.85);
 }
 
 .tableNote {
@@ -239,7 +307,8 @@
 /* ---------- Tablets & phones ---------- */
 
 @media (max-width: 1024px) {
-  .constraints {
+  .constraints,
+  .cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -260,7 +329,8 @@
 }
 
 @media (max-width: 560px) {
-  .constraints {
+  .constraints,
+  .cards {
     grid-template-columns: 1fr;
   }
 

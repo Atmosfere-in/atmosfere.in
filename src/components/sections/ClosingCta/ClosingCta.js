@@ -1,8 +1,9 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button/Button";
 import styles from "./ClosingCta.module.css";
 
-export default function ClosingCta({ title, text, image, cta, quote = false }) {
+// A photograph-led finale above the footer. The call to action lives in the
+// header and footer, so the banner itself is pure atmosphere.
+export default function ClosingCta({ title, text, image, quote = false }) {
   return (
     <section className={styles.closing}>
       <Image
@@ -21,9 +22,6 @@ export default function ClosingCta({ title, text, image, cta, quote = false }) {
           </h2>
           {text && <p className={styles.body}>{text}</p>}
         </div>
-        <Button href={cta.href} variant="onImage" arrow className={styles.button}>
-          {cta.label}
-        </Button>
       </div>
     </section>
   );

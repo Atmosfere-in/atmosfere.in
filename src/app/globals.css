@@ -10,7 +10,8 @@
   --color-ink: #2b2825;
   /* Muted bronze: small marks, numbers, hovers. Buttons are charcoal. */
   --color-accent: #8c6a43;
-  --color-accent-soft: #efe4d4;
+  /* Soft greige for alternate sections (replaces a yellowish sand). */
+  --color-accent-soft: #e7e3dc;
   --color-white: #ffffff;
 
   --color-bg: var(--color-ivory);

@@ -1,7 +1,8 @@
-/* A tall, photograph-led finale: copy sits bottom-left, the button
-   bottom-right, both resting on the same baseline area. */
+/* A tall, photograph-led finale with its copy bottom-left, set apart from
+   the footer by a band of page background. */
 .closing {
   position: relative;
+  margin-bottom: clamp(48px, 9vh, 96px);
   display: flex;
   align-items: flex-end;
   min-height: clamp(420px, 72vh, 720px);
@@ -54,12 +55,6 @@
   opacity: 0.85;
 }
 
-/* Lifted slightly off the bottom edge of the copy. */
-.button {
-  flex-shrink: 0;
-  margin-bottom: var(--space-2);
-}
-
 @media (max-width: 768px) {
   .closing {
     min-height: 480px;
@@ -70,7 +65,4 @@
     align-items: flex-start;
   }
 
-  .button {
-    margin-bottom: 0;
-  }
 }

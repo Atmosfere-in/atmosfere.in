@@ -68,9 +68,15 @@ export function Concept({ concept }) {
   );
 }
 
-// A small comparison or schedule table (options tested, room mix…).
-// table: { eyebrow, title, intro?, columns[], rows[[...]], highlight? (row index), note? }
+// A comparison or schedule (options tested, room mix…) shown as a row of
+// cards rather than a table: the first column titles each card, a "Keys"
+// column becomes its large numeral, the last column is its note and the
+// rest are label/value rows. `highlight` marks the recommended card.
+// table: { eyebrow, title, intro?, columns[], rows[[...]], highlight?, note? }
 export function DataTable({ table }) {
+  const keyCol = table.columns.findIndex((c) => c.toLowerCase() === "keys");
+  const last = table.columns.length - 1;
+
   return (
     <section className="section">
       <div className="container">
@@ -79,34 +85,35 @@ export function DataTable({ table }) {
           <h2 className={styles.title}>{table.title}</h2>
           {table.intro && <p className={styles.body}>{table.intro}</p>}
         </div>
-        <div className={`${styles.tableWrap} reveal`}>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                {table.columns.map((c) => (
-                  <th key={c} scope="col">
-                    {c}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {table.rows.map((row, i) => (
-                <tr key={row[0]} className={i === table.highlight ? styles.highlight : undefined}>
-                  {row.map((cell, j) =>
-                    j === 0 ? (
-                      <th key={j} scope="row">
-                        {cell}
-                      </th>
-                    ) : (
-                      <td key={j}>{cell}</td>
-                    ),
-                  )}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <ul className={styles.cards} style={{ "--cards": table.rows.length }}>
+          {table.rows.map((row, i) => (
+            <li
+              key={row[0]}
+              className={`${styles.card} ${i === table.highlight ? styles.cardHighlight : ""} reveal`}
+              style={{ "--reveal-delay": `${i * 90}ms` }}
+            >
+              {i === table.highlight && <span className={styles.badge}>Our recommendation</span>}
+              {keyCol > 0 && (
+                <span className={styles.cardNumber}>
+                  {row[keyCol]}
+                  <small>{table.columns[keyCol].toLowerCase()}</small>
+                </span>
+              )}
+              <h3 className={styles.cardTitle}>{row[0]}</h3>
+              <dl className={styles.cardFacts}>
+                {row.map((cell, j) =>
+                  j === 0 || j === keyCol || j === last ? null : (
+                    <div key={table.columns[j]}>
+                      <dt>{table.columns[j]}</dt>
+                      <dd>{cell}</dd>
+                    </div>
+                  ),
+                )}
+              </dl>
+              <p className={styles.cardNote}>{row[last]}</p>
+            </li>
+          ))}
+        </ul>
         {table.note && <p className={styles.tableNote}>{table.note}</p>}
       </div>
     </section>
