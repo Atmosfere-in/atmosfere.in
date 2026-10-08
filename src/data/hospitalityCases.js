@@ -167,11 +167,13 @@ export const hospitalityCases = [
       {
         title: "Challenge",
         text: "A protected building in narrow lanes, rooms of every size, and an offer on the table that would have meant losing the courtyards.",
+        image: img("1721572322100-014f13725864", "A narrow arched passage with carved stone screens in the old city"),
         points: ["No vehicle access to the front door", "Original rooms from 140 to 620 sq ft", "The family staying on the top floor"],
       },
       {
         title: "Approach",
         text: "We benchmarked the old city's boutique hotels and modelled three options side by side, so the family could compare them on numbers, not opinions.",
+        image: img("1545126178-862cdb469409", "Jaipur's Hawa Mahal lit at dusk"),
         points: ["Rate and occupancy study across 14 comparable properties", "Three options modelled over ten years", "Guest research: what people travel to Jaipur for"],
       },
       {
@@ -183,6 +185,7 @@ export const hospitalityCases = [
       {
         title: "Execution",
         text: "Restoration by local lime and stone craftspeople; Atmosfere Spaces delivered the interiors, services and furnishings to the brief we wrote.",
+        image: img("1721508490084-1b1de5b230d4", "A craftsman's hands carving a stone panel"),
         points: ["Painted ceilings restored by a conservation team", "Services hidden in old drains and niches", "Staff hired and trained 8 weeks before opening"],
       },
       {
@@ -203,6 +206,7 @@ export const hospitalityCases = [
       { phase: "Interiors & services", when: "Months 15–20", text: "Rooms fitted out, pool revived, kitchens installed." },
       { phase: "Pre-opening", when: "Months 21–22", text: "Team trained, soft opening, first guests." },
     ],
+    voiceImage: img("1641443493806-f0a9957d7ec9", "A pink sandstone facade with domed balconies in the old city"),
     quote: {
       text: "Everyone else wanted to fill the courtyards with rooms. They showed us the courtyards were the hotel.",
       name: "Owner family, Olive Court",

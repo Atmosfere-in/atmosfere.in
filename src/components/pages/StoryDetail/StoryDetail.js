@@ -8,7 +8,7 @@ import styles from "./StoryDetail.module.css";
 // Body of a project / case-study page, after its PageHero:
 // overview → gallery → the six stages → client voice → next.
 // story: { lead, summary, scope[], gallery[{src,alt}], stages[{title,text,points?,image?}],
-//          quote?{text,name}, results?[{value,label}] }
+//          quote?{text,name}, results?[{value,label}], voiceImage? }
 // Flagship stories can add: glance, context, concept, tables[], feature, phases,
 // details (see StoryDeep.js); each block appears only when present.
 // next: { href, name, details, image } — the following story in the list.
@@ -27,24 +27,22 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
   return (
     <>
       <section className={`section ${styles.overview}`}>
-        <div className="container">
-          <div className={`${styles.overviewLead} reveal`}>
+        <div className={`container ${styles.overviewGrid} ${facts.length ? "" : styles.single}`}>
+          <div className="reveal">
             <span className="eyebrow">Overview</span>
             <p className={styles.lead}>{story.lead}</p>
+            <p className={styles.summary}>{story.summary}</p>
           </div>
-          <div className={styles.overviewGrid}>
-            <p className={`${styles.summary} reveal`}>{story.summary}</p>
-            {facts.length > 0 && (
-              <dl className={`${styles.facts} reveal`} style={{ "--reveal-delay": "120ms" }}>
-                {facts.map((f) => (
-                  <div key={f.label} className={styles.fact}>
-                    <dt>{f.label}</dt>
-                    <dd>{f.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            )}
-          </div>
+          {facts.length > 0 && (
+            <dl className={`${styles.facts} reveal`} style={{ "--reveal-delay": "120ms" }}>
+              {facts.map((f) => (
+                <div key={f.label} className={styles.fact}>
+                  <dt>{f.label}</dt>
+                  <dd>{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )}
         </div>
       </section>
 
@@ -88,8 +86,17 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
       {story.details && <DetailGallery details={story.details} />}
 
       {(story.quote || story.results) && (
-        <section className={`section ${styles.voice}`}>
-          <div className={`container ${styles.voiceGrid}`}>
+        <section className={styles.voice}>
+          <Image
+            src={(story.voiceImage ?? story.image).src}
+            alt=""
+            fill
+            quality={85}
+            sizes="100vw"
+            className={styles.voiceImage}
+          />
+          <span className={styles.voiceShade} aria-hidden="true" />
+          <div className={`container ${styles.voiceInner}`}>
             {story.quote && (
               <figure className={`${styles.quote} reveal`}>
                 <span className={styles.mark} aria-hidden="true">
@@ -103,7 +110,6 @@ export default function StoryDetail({ story, next, nextLabel = "Next project" })
             )}
             {story.results && (
               <dl className={`${styles.results} reveal`} style={{ "--reveal-delay": "120ms" }}>
-                <span className={styles.resultsTitle}>The results</span>
                 {story.results.map((r) => (
                   <div key={r.label} className={styles.result}>
                     <dd className={styles.resultValue}>{r.value}</dd>

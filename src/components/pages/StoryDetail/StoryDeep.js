@@ -4,32 +4,37 @@ import styles from "./StoryDeep.module.css";
 // Optional long-form blocks for flagship case studies. Each renders only
 // when its data is present, so shorter stories keep the simple layout.
 
-// The brief in full, beside the constraints the design had to answer.
+// The brief in full (heading beside the story), then the constraints the
+// design had to answer as a row of numbered cards.
 // context: { title, body[], constraints[{ title, text }] }
 export function Context({ context }) {
   return (
     <section className="section">
-      <div className={`container ${styles.contextGrid}`}>
-        <div className="reveal">
-          <span className="eyebrow">The Brief</span>
-          <h2 className={styles.title}>{context.title}</h2>
-          {context.body.map((p) => (
-            <p key={p.slice(0, 32)} className={styles.body}>
-              {p}
-            </p>
-          ))}
-        </div>
-        <div className={`${styles.constraints} reveal`} style={{ "--reveal-delay": "120ms" }}>
-          <h3 className={styles.smallTitle}>What we had to solve</h3>
-          <ul>
-            {context.constraints.map((c) => (
-              <li key={c.title}>
-                <strong>{c.title}</strong>
-                <span>{c.text}</span>
-              </li>
+      <div className="container">
+        <div className={`${styles.contextGrid} reveal`}>
+          <div>
+            <span className="eyebrow">The Brief</span>
+            <h2 className={styles.title}>{context.title}</h2>
+          </div>
+          <div>
+            {context.body.map((p) => (
+              <p key={p.slice(0, 32)} className={styles.body}>
+                {p}
+              </p>
             ))}
-          </ul>
+          </div>
         </div>
+
+        <h3 className={styles.constraintsTitle}>What we had to solve</h3>
+        <ol className={styles.constraints}>
+          {context.constraints.map((c, i) => (
+            <li key={c.title} className="reveal" style={{ "--reveal-delay": `${i * 90}ms` }}>
+              <span className={styles.constraintNumber}>{String(i + 1).padStart(2, "0")}</span>
+              <strong>{c.title}</strong>
+              <span>{c.text}</span>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );
@@ -108,26 +113,55 @@ export function DataTable({ table }) {
   );
 }
 
-// Project timeline as a horizontal sequence of phases.
-// timeline: [{ phase, when, text }]
+// Project timeline as a Gantt-style chart: each phase is a row whose bar
+// spans its weeks or months on a shared scale.
+// timeline: [{ phase, when: "Weeks 3–10" | "Months 1–3", text }]
 export function Timeline({ timeline }) {
+  const phases = timeline.map((t) => {
+    const [, from, to] = t.when.match(/(\d+)\D+(\d+)/) ?? [null, 1, 1];
+    return { ...t, from: Number(from), to: Number(to) };
+  });
+  const total = Math.max(...phases.map((p) => p.to));
+  const unit = timeline[0].when.split(" ")[0].replace(/s$/, "");
+
   return (
     <section className={`section ${styles.timelineSection}`}>
       <div className="container">
-        <div className={`${styles.tableHead} reveal`}>
-          <span className="eyebrow">Timeline</span>
-          <h2 className={styles.title}>How the months unfolded.</h2>
+        <div className={`${styles.timelineHead} reveal`}>
+          <div>
+            <span className="eyebrow">Timeline</span>
+            <h2 className={styles.title}>How the {unit.toLowerCase()}s unfolded.</h2>
+          </div>
+          <p className={styles.timelineTotal}>
+            <strong>{total}</strong> {unit.toLowerCase()}s, brief to handover
+          </p>
         </div>
-        <ol className={styles.timeline}>
-          {timeline.map((t, i) => (
-            <li key={t.phase} className={`${styles.phase} reveal`} style={{ "--reveal-delay": `${i * 90}ms` }}>
-              <span className={styles.dot} aria-hidden="true" />
-              <span className={styles.when}>{t.when}</span>
-              <h3 className={styles.phaseTitle}>{t.phase}</h3>
-              <p className={styles.phaseText}>{t.text}</p>
+
+        <ol className={styles.gantt}>
+          {phases.map((p, i) => (
+            <li key={p.phase} className={`${styles.ganttRow} reveal`} style={{ "--reveal-delay": `${i * 80}ms` }}>
+              <div className={styles.ganttLabel}>
+                <span className={styles.when}>{p.when}</span>
+                <h3 className={styles.phaseTitle}>{p.phase}</h3>
+                <p className={styles.phaseText}>{p.text}</p>
+              </div>
+              <div className={styles.ganttTrack} aria-hidden="true">
+                <span
+                  className={styles.ganttBar}
+                  style={{
+                    left: `${((p.from - 1) / total) * 100}%`,
+                    width: `${((p.to - p.from + 1) / total) * 100}%`,
+                  }}
+                />
+              </div>
             </li>
           ))}
         </ol>
+        <div className={styles.ganttScale} aria-hidden="true">
+          <span>{unit} 1</span>
+          <span>{unit} {Math.round(total / 2)}</span>
+          <span>{unit} {total}</span>
+        </div>
       </div>
     </section>
   );

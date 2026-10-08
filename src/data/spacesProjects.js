@@ -144,6 +144,7 @@ export const spacesProjects = [
       {
         title: "Challenge",
         text: "Openings of nine different sizes, a windowless corridor and a lower upper floor made the house feel disjointed and dark despite its size.",
+        image: img("1789986186710-6a87e6422102", "A long, dim corridor of arches and pendant lights"),
         points: ["23 doorways, no two alike", "No daylight in the central passage", "Phased works with grandparents in residence"],
       },
       {
@@ -161,6 +162,7 @@ export const spacesProjects = [
       {
         title: "Execution",
         text: "Arches were formed in-situ by our masons and plastered by hand. The house stayed lived-in, with each floor handed over before the next began.",
+        image: img("1784400340288-a429a0c1f4d8", "A warmly lit sequence of plastered arches and a polished floor"),
         points: ["Full-scale arch mock-up approved on site in week 11", "Dust-sealed zones and night-time noisy works", "Weekly walkthroughs with the family"],
       },
       {
@@ -181,6 +183,7 @@ export const spacesProjects = [
       { phase: "Upper floors", when: "Weeks 23–40", text: "Ceilings raised, joinery installed, finishes completed." },
       { phase: "Styling & handover", when: "Weeks 41–46", text: "Art, lighting scenes and a room-by-room walkthrough." },
     ],
+    voiceImage: img("1758448755952-42b404bc6f39", "A finished living room with a crystal chandelier and warm lighting"),
     quote: {
       text: "Every door now frames something beautiful. Guests walk in and stop at the stair — exactly what we hoped for.",
       name: "Homeowners, The Arch House",
