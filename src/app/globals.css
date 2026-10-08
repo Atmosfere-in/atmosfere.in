@@ -10,8 +10,8 @@
   --color-ink: #2b2825;
   /* Muted bronze: small marks, numbers, hovers. Buttons are charcoal. */
   --color-accent: #8c6a43;
-  /* Soft greige for alternate sections (replaces a yellowish sand). */
-  --color-accent-soft: #e7e3dc;
+  /* Alternate sections: clean white against the ivory page. */
+  --color-accent-soft: #ffffff;
   --color-white: #ffffff;
 
   --color-bg: var(--color-ivory);
