@@ -598,13 +598,33 @@
   max-width: 560px;
 }
 
+/* Phones and small tablets: there isn't room for the copy over the
+   photograph without hiding it, so the photograph runs full width at the
+   top and the copy follows on the dark panel beneath it. */
 @media (max-width: 900px) {
   .heroFull {
-    min-height: min(100svh, 760px);
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .heroFull .heroMedia {
+    position: relative;
+    inset: auto;
+    order: -1;
+    height: 62svh;
+    min-height: 340px;
   }
 
   .heroFull .heroMedia::after {
-    background:
-      linear-gradient(to top, rgb(20 18 16 / 0.85) 0%, rgb(20 18 16 / 0.55) 45%, rgb(20 18 16 / 0.15) 100%);
+    background: linear-gradient(to top, rgb(20 18 16 / 0.45) 0%, rgb(20 18 16 / 0) 40%);
+  }
+
+  .heroFull .heroPanel {
+    padding: var(--space-5) var(--gutter) var(--space-6);
+  }
+
+  .heroFull .heroText {
+    max-width: none;
   }
 }
