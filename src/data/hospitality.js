@@ -54,6 +54,16 @@ export const projects = {
   intro: "Hospitality engagements from first feasibility to opening day.",
   items: [
     {
+      href: "/hospitality/case-studies/the-punarnava-spa-and-resort",
+      name: "The Punarnava Spa & Resort",
+      details: "Wellness resort · Dehradun",
+      side: "90,000 sq ft",
+      image: {
+        src: "/images/hospitality/punarnava/hero.jpg",
+        alt: "The lobby of the new building, with a chandelier over a marble floor and a sculpture at its centre",
+      },
+    },
+    {
       href: "/hospitality/case-studies/the-cabana-resort",
       name: "The Cabana Resort",
       details: "Resort · Goa",
@@ -184,6 +194,17 @@ export const caseStudies = {
   title: "How the right question changed the property.",
   items: [
     {
+      href: "/hospitality/case-studies/the-punarnava-spa-and-resort",
+      tag: "Wellness resort · Dehradun",
+      title: "The Punarnava Spa & Resort",
+      summary:
+        "A new 90,000 sq ft building planned around the five natural elements, so luxury, Ayurveda and everyday operations share one calm design language.",
+      image: {
+        src: "/images/hospitality/punarnava/concept.jpg",
+        alt: "The reception desk, with a brass mandala on a stone wall and glass pendants above",
+      },
+    },
+    {
       href: "/hospitality/case-studies/the-dusk-pool-retreat",
       tag: "Resort · Konkan coast",
       title: "The Dusk Pool Retreat",
@@ -203,17 +224,6 @@ export const caseStudies = {
       image: {
         src: unsplash("1761757821641-3b347c034042"),
         alt: "A boutique hotel bedroom with a metal bed frame and framed artwork",
-      },
-    },
-    {
-      href: "/hospitality/case-studies/skylight-hall",
-      tag: "Banquet · Indore",
-      title: "Skylight Hall",
-      summary:
-        "A single-use wedding hall repositioned for weekday conferences and private events — same footprint, twice the bookings.",
-      image: {
-        src: unsplash("1762765685329-97e0af04050c"),
-        alt: "An elegant banquet hall with long dining tables beneath skylights",
       },
     },
   ],

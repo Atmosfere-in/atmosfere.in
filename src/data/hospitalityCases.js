@@ -7,7 +7,87 @@ import { unsplash } from "@/lib/images";
 
 const img = (id, alt) => ({ src: unsplash(id), alt });
 
+// Local photographs (real projects) live under /public/images; run
+// `npm run images` after adding any so their resized variants exist.
+const photo = (file, alt) => ({ src: `/images/hospitality/${file}`, alt });
+
 export const hospitalityCases = [
+  {
+    // Real engagement. Copy from atmosfere.in's portfolio page; renders by
+    // the studio.
+    slug: "the-punarnava-spa-and-resort",
+    name: "The Punarnava Spa & Resort",
+    planningType: "hotel-resort",
+    category: "Wellness resort",
+    location: "Dehradun",
+    size: "90,000 sq ft approx.",
+    engagement: "Space planning & design intent",
+    image: photo("punarnava/hero.jpg", "The lobby of the new building: a chandelier over a marble floor, a sculpture at its centre and lounges to either side"),
+    lead: "A new building for a wellness resort, planned around the five natural elements so luxury, Ayurveda and everyday operations share one calm design language.",
+    summary:
+      "The new building at Punarnava Spa & Resort is envisioned as a modern yet serene extension of the resort, designed to align with the core philosophies of Ayurveda and Vedic living. Our work covered space planning and design intent for a wide range of spaces, catering to both guest and staff experiences, so that the building strengthens Punarnava's reputation as a haven of luxury and wellness.",
+    scope: ["Space planning", "Design intent", "Guest experience", "Back-of-house planning", "Material & lighting direction"],
+    chapters: [
+      { title: "A resort that needed room to grow.", image: photo("punarnava/chapter-1.jpg", "The lobby seen from the entrance, with the sculpture on its black marble plinth and seating to each side") },
+      { title: "Five elements, one plan.", image: photo("punarnava/chapter-2.jpg", "A curtained lounge opening onto the hills, with blue armchairs and a round table") },
+      { title: "Guest side, staff side.", image: photo("punarnava/chapter-3.jpg", "The lobby looking out through the entrance to palms and the hills beyond") },
+    ],
+    mosaic: [
+      photo("punarnava/mosaic-1.jpg", "The lounge under glass pendants, looking through to the meeting room"),
+      photo("punarnava/mosaic-2.jpg", "A seating group against the lit timber-and-brass slatted wall"),
+      photo("punarnava/mosaic-3.jpg", "The lounge with its blue armchairs and the corridor to the offices"),
+    ],
+    concept: {
+      title: "Let the five elements plan the building.",
+      text: "Water, air, fire, earth and space each shape a part of the plan: daylight and cross-ventilation in the lounges, stone and timber underfoot and overhead, warm light at the reception and the spa, and generous open floor at the heart of the lobby. Ayurvedic and Vedic principles set the sequence of spaces; modern materials and detailing make them feel serene rather than ceremonial.",
+      image: photo("punarnava/concept.jpg", "The reception desk, with a brass mandala on a stone wall, glass pendants and three clocks above"),
+      palette: [
+        { name: "Herringbone timber", note: "Ceilings and the lobby's framing beams", color: "#8a5a35" },
+        { name: "White marble", note: "Floors, with black marble inlay at the centre", color: "#efe9df" },
+        { name: "Grey stone mosaic", note: "The reception wall behind the brass mandala", color: "#a7a39c" },
+        { name: "Brushed brass", note: "Mandala, slats, pendants and signage", color: "#b99a5e" },
+        { name: "Sky-blue bouclé", note: "Armchairs that lift the neutral lounges", color: "#79b4d8" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Punarnava, an established wellness resort in Dehradun, asked us to plan a new building of roughly 90,000 sq ft as a modern, serene extension of the resort.",
+        points: ["A new building beside the existing resort", "Guest spaces and staff spaces in one brief", "Ayurveda and Vedic living as the starting point"],
+      },
+      {
+        title: "Challenge",
+        text: "The building had to feel luxurious and calm at once, carry the resort's wellness philosophy into every room, and still work hard for the staff who run it.",
+        points: ["Luxury and wellness without contradiction", "Many space types under one roof", "Operations planned, not left to chance"],
+      },
+      {
+        title: "Approach",
+        text: "We took the five natural elements — water, air, fire, earth and space — as the organising idea, and planned the building as a sequence of spaces that each express one of them.",
+        points: ["Five elements as the planning framework", "Guest journey mapped from arrival to treatment", "Staff flows planned alongside guest flows"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A lobby open at its centre, lounges that borrow the hills through tall curtained openings, a reception set against stone and brass, and quiet corridors to the offices and back of house.",
+        points: ["Herringbone timber ceilings and marble floors throughout", "A single sculpture as the lobby's focal point", "Blue bouclé seating against a neutral ground"],
+      },
+      {
+        title: "Execution",
+        text: "Our scope was space planning and design intent: layouts, material direction and lighting intent for each space, handed to the resort's team as the basis for detailed design.",
+        points: ["Layouts for every guest and staff space", "Material and lighting direction per space", "Design inspirations for the resort to build on"],
+      },
+      {
+        title: "Outcome",
+        text: "A plan that blends the philosophies of Ayurveda and Vedic living with modern design sensibilities, and a building set to enhance Punarnava's reputation as a haven of luxury and wellness.",
+        points: ["One design language from lobby to back of house", "Wellness philosophy built into the plan", "A clear brief for detailed design"],
+      },
+    ],
+    voiceImage: photo("punarnava/voice.jpg", "The lobby from the corner, with the chandelier, the sculpture and tall glazed doors"),
+    results: [
+      { value: "90,000", label: "sq ft, approx., in the new building" },
+      { value: "5", label: "Natural elements shaping the plan" },
+      { value: "1", label: "Design language, guest side to staff side" },
+    ],
+  },
   {
     slug: "the-dusk-pool-retreat",
     name: "The Dusk Pool Retreat",
