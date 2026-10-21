@@ -123,6 +123,11 @@ export const hospitalityCases = [
       { title: "Design for couples, not everyone.", image: img("1584132967334-10e028bd69f7", "Sun loungers and umbrellas on a quiet beach") },
       { title: "Open through the monsoons.", image: img("1527206363095-ca2f054128b0", "A thatched beach umbrella and loungers on white sand") },
     ],
+    mosaic: [
+      img("1643068730310-e8cff093b7ab", "The pool at dusk under a pink evening sky"),
+      img("1551882547-ff40c63fe5fa", "Cabanas among the palms as the lights come on"),
+      img("1571268493589-ec822cf5206c", "The pool deck in the last light of the evening"),
+    ],
     concept: {
       title: "Make the pool the destination.",
       text: "A beach hotel competes with every other beach hotel. A pool with eight private cabanas, an adults-only end and a restaurant facing the water gives couples a reason to choose this one. The rooms were enlarged by combining pairs, so the building's footprint never changed; only what it offered did.",
@@ -316,6 +321,11 @@ export const hospitalityCases = [
       { title: "Twelve rooms, all facing the valley.", image: img("1573052905904-34ad8c27f0cc", "A hotel room with an arched window and warm lighting") },
       { title: "One winter to deliver.", image: img("1759264244741-7175af0b7e75", "A quiet hotel room corner with a writing desk") },
     ],
+    mosaic: [
+      img("1578683010236-d716f9a3f461", "A valley-facing room with timber floors and a wall of glass"),
+      img("1737233030536-247c1379d82c", "A writing alcove with an oak desk and wall lamp"),
+      img("1642541070065-3912f347e7c6", "A quiet bedroom with a fluted wall and a halo pendant"),
+    ],
     concept: {
       title: "Turn every room toward the valley.",
       text: "Instead of refreshing eighteen rooms, we kept the twelve that could face the view and gave the rest to the guest: a library lounge with a fire, a breakfast room and proper storage. The hotel stopped selling beds and started selling evenings, which is what the guests who paid more had wanted all along.",
@@ -368,6 +378,11 @@ export const hospitalityCases = [
       { title: "Five equal suites, one private wing.", image: img("1776763255431-633c91b6b4b6", "A sunlit courtyard with a plunge pool and planting") },
       { title: "Rented whole, still a home.", image: img("1723108034000-e7fd897e3be0", "A sunlit haveli courtyard with carved balconies") },
     ],
+    mosaic: [
+      img("1641443493806-f0a9957d7ec9", "The pink facade with its domed balconies"),
+      img("1655323193437-c68a5b3281f3", "The courtyard fountain surrounded by arches and planting"),
+      img("1720070143795-52e5f5ed7eaf", "Carved sandstone detail on the entrance front"),
+    ],
     concept: {
       title: "A home first, a hotel second.",
       text: "Guests book the whole house, so it has to feel like one: five suites of equal standing around the pool courtyard, a kitchen that cooks for the table rather than a menu, and the owners' wing behind one lockable door. Nothing in the house says hotel, which is exactly why it earns a hotel's rate.",
@@ -415,6 +430,11 @@ export const hospitalityCases = [
       { title: "How many villas can a ridge hold?", image: img("1718821585734-e22a8fc425a2", "A backwater resort with cottages reflected in calm water") },
       { title: "Six positions, six horizons.", image: img("1692736933760-8a8a9b8c1b6f", "A private villa pool framed by tropical planting") },
       { title: "Earning from phase one.", image: img("1543489822-c49534f3271f", "A cliff-top infinity pool overlooking the sea") },
+    ],
+    mosaic: [
+      img("1561501900-3701fa6a0864", "The villas stepping along the ridge above the sea at sunset"),
+      img("1596178067639-5c6e68aea6dc", "A private pool terrace with loungers and tropical planting"),
+      img("1779249430124-b5bf40d4f9c9", "The arrival pavilion lantern-lit at night"),
     ],
     concept: {
       title: "Give each villa the whole horizon.",
@@ -464,6 +484,11 @@ export const hospitalityCases = [
       { title: "Weddings only, weekdays empty.", image: img("1779308936221-89739e035a53", "A wedding reception with floral arches and set tables") },
       { title: "A hall that changes shape.", image: img("1762765684665-6b6855bb6fe6", "A long hall with skylights and rows of tables") },
       { title: "Twice the bookings.", image: img("1783314863884-be035ed5ed5c", "A warm-lit banquet room set for dinner") },
+    ],
+    mosaic: [
+      img("1744776411221-702f2848b0b2", "The hall set for a private dinner, lights low"),
+      img("1774989423979-6a7bf5add3f0", "The pre-function lounge with banquettes and flowers"),
+      img("1752004028694-72610be3604e", "A daylit conference setting with long tables"),
     ],
     concept: {
       title: "One hall, three rooms, any occasion.",

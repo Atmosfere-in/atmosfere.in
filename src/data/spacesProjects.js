@@ -30,6 +30,11 @@ export const spacesProjects = [
       { title: "One light-filled spine.", image: img("1738168279272-c08d6dd22002", "A living room with an arc floor lamp, oak floors and linen upholstery") },
       { title: "Everything in its place.", image: img("1784653548747-dfe7370326b3", "A serene bathroom with a round mirror, fluted vanity and plants") },
     ],
+    mosaic: [
+      img("1688646953306-5ec93eab8c06", "The lounge seen through its arched alcove"),
+      img("1745301558339-44eb3217d5da", "Lime-washed walls and travertine in the pale living room"),
+      img("1613685303404-19f881533316", "A light-filled study with oak shelving"),
+    ],
     concept: {
       title: "One quiet palette, drawn to the last hinge.",
       text: "Calm comes from fewer decisions, made well. Three materials run through every room, storage is built into the walls rather than placed in front of them, and the lighting is warm and dimmable so the house feels the same at dawn as it does at dinner. Nothing shouts, so the light gets to lead.",
@@ -82,6 +87,11 @@ export const spacesProjects = [
       { title: "A kitchen hidden behind a wall.", image: img("1776935359460-6c789e972e6a", "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights") },
       { title: "Two materials, honestly used.", image: img("1632583824020-937ae9564495", "A dark kitchen with a ribbon light, timber panelling and bar seating") },
       { title: "One slab, one day.", image: img("1631889993959-41b4e9c6e3c5", "A dark-tiled bathroom with a freestanding tub and timber vanity") },
+    ],
+    mosaic: [
+      img("1696986681606-b156ccd761c5", "The stone island with its black fittings"),
+      img("1737898378296-94dc316cd443", "Walnut panelling running from the kitchen into the dining room"),
+      img("1623351143485-b1d4937747f3", "The dark-panelled dining room with its long table"),
     ],
     concept: {
       title: "Two materials, and the city left outside.",
@@ -254,6 +264,11 @@ export const spacesProjects = [
       { title: "A study at each end.", image: img("1737233030536-247c1379d82c", "A study alcove with an arched niche, oak desk and wall lamp") },
       { title: "Built in the workshop, fitted in a fortnight.", image: img("1578683010236-d716f9a3f461", "A bedroom with timber floors and a wall of glass to the outdoors") },
     ],
+    mosaic: [
+      img("1596255955697-49fa5328def9", "The living room's tall windows and soft neutral seating"),
+      img("1615880484746-a134be9a6ecf", "The balcony looking out over the forested valley"),
+      img("1759264244741-7175af0b7e75", "A quiet corner of the second study with its writing desk"),
+    ],
     concept: {
       title: "Two quiet rooms, and a seat for the view.",
       text: "The plan pulls the two studies to opposite ends of the house, each behind an acoustic door and lined walls, so a call in one is silence in the other. Everything between them is given to the valley: a nine-metre window seat, deep enough to work from, where the house gathers at the end of the day.",
@@ -306,6 +321,11 @@ export const spacesProjects = [
       { title: "Forty-eight covers in a narrow shell.", image: img("1744776411221-702f2848b0b2", "A dark restaurant dining room with set tables and warm lighting") },
       { title: "Three zones, every seat with a back.", image: img("1774989423979-6a7bf5add3f0", "A lounge with velvet banquettes, floral arrangements and glowing lamps") },
       { title: "Open on schedule, full in a month.", image: img("1551530241-1ccbaa7a9a84", "A warm-lit restaurant with timber shelving and pendant lights") },
+    ],
+    mosaic: [
+      img("1786996969696-27eb56028ae5", "The terrace tables under woven pendants"),
+      img("1783314863884-be035ed5ed5c", "The private table set for dinner"),
+      img("1762765684665-6b6855bb6fe6", "The long room under its skylights before service"),
     ],
     concept: {
       title: "A private dining room, forty-eight times over.",
@@ -451,6 +471,11 @@ export const spacesProjects = [
       { title: "Public to private, across one floor.", image: img("1623351143485-b1d4937747f3", "A dark, panelled office with a long table and patterned screens") },
       { title: "Twelve weeks, weekends only.", image: img("1780245997131-1af7a8de9538", "A curving stair rising beside a tall arched window") },
     ],
+    mosaic: [
+      img("1758448755952-42b404bc6f39", "The lounge under its chandelier, lit for an evening"),
+      img("1784400340288-a429a0c1f4d8", "The polished corridor leading to the boardroom"),
+      img("1761509844502-a2543f6f1df2", "The smoked-oak door to the founder's study"),
+    ],
     concept: {
       title: "One floor, read from public to private.",
       text: "The plan is a sequence. Visitors arrive into a lounge, move to a boardroom whose walnut table extends for dinner, and only the founder goes on to the study at the far end. Fluted glass and drapery soften the glare from three glass walls without giving up the views, and a single marble plinth marks where the work happens.",
@@ -503,6 +528,11 @@ export const spacesProjects = [
       { title: "Eating in shifts.", image: img("1696986681606-b156ccd761c5", "A modern kitchen with a stone island and black fittings") },
       { title: "Walnut on every wall.", image: img("1611095210561-67f0832b1ca3", "A grey and timber kitchen with a waterfall island and pendant lights") },
       { title: "Ten weeks, and the kitchen never closed.", image: img("1752004028694-72610be3604e", "A bright dining room with a long table and neutral chairs") },
+    ],
+    mosaic: [
+      img("1632583824020-937ae9564495", "The walnut pantry wall with its ribbon of light"),
+      img("1753800558729-7929703f81de", "Globe pendants over the dining table"),
+      img("1738168279272-c08d6dd22002", "The living room beyond, in oak and linen"),
     ],
     concept: {
       title: "One room, lined in walnut.",
