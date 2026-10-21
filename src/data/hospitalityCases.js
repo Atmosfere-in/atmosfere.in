@@ -9,9 +9,7 @@ const img = (id, alt) => ({ src: unsplash(id), alt });
 
 export const hospitalityCases = [
   {
-    // Flagship case study in the "editorial" layout (EditorialStory).
     slug: "the-dusk-pool-retreat",
-    layout: "editorial",
     name: "The Dusk Pool Retreat",
     planningType: "hotel-resort",
     category: "Resort",
@@ -47,6 +45,18 @@ export const hospitalityCases = [
       img("1774280954999-9758f11f3d41", "A timber-lined guest room opening onto tropical planting"),
       img("1786996969696-27eb56028ae5", "Shaded terrace dining under a woven pendant"),
     ],
+    concept: {
+      title: "Let the terrace lead.",
+      text: "The rooms step down the slope so no roof blocks another's view, and every path on the site ends at one shared terrace placed for the last hour of light. The bar and kitchen sit on that terrace, open to the town as much as to guests, so the resort earns from the sunset even on quiet nights.",
+      image: img("1692736933760-8a8a9b8c1b6f", "A private villa pool framed by tropical planting"),
+      palette: [
+        { name: "Lime-washed walls", note: "Hand-applied, left to weather with the salt air", color: "#ebe4d6" },
+        { name: "Weathered teak", note: "Decking, shutters and loungers", color: "#8b6a4e" },
+        { name: "Laterite stone", note: "Retaining walls and the terrace steps", color: "#a65d3f" },
+        { name: "Pool-blue tile", note: "Hand-glazed, for the pool and the bar front", color: "#5f9ea3" },
+        { name: "Sun-faded linen", note: "Canopies, cushions and room drapery", color: "#d9c9ad" },
+      ],
+    },
     stages: [
       {
         title: "Brief",
@@ -108,6 +118,23 @@ export const hospitalityCases = [
       img("1584132967334-10e028bd69f7", "Sun loungers and umbrellas on a quiet beach"),
       img("1527206363095-ca2f054128b0", "A thatched beach umbrella and loungers on white sand"),
     ],
+    chapters: [
+      { title: "A good beach, a dated hotel.", image: img("1540541338287-41700207dee6", "An aerial view of a resort with a lagoon pool and the sea beyond") },
+      { title: "Design for couples, not everyone.", image: img("1584132967334-10e028bd69f7", "Sun loungers and umbrellas on a quiet beach") },
+      { title: "Open through the monsoons.", image: img("1527206363095-ca2f054128b0", "A thatched beach umbrella and loungers on white sand") },
+    ],
+    concept: {
+      title: "Make the pool the destination.",
+      text: "A beach hotel competes with every other beach hotel. A pool with eight private cabanas, an adults-only end and a restaurant facing the water gives couples a reason to choose this one. The rooms were enlarged by combining pairs, so the building's footprint never changed; only what it offered did.",
+      image: img("1596178067639-5c6e68aea6dc", "A villa pool terrace with loungers and tropical planting"),
+      palette: [
+        { name: "Whitewashed laterite", note: "The original walls, cleaned and limewashed", color: "#e8dfd2" },
+        { name: "Sun-bleached teak", note: "Cabana frames, decking and headboards", color: "#a98566" },
+        { name: "Canvas canopy", note: "Cabana drapes, replaced each season", color: "#f3eee3" },
+        { name: "Sea-glass mosaic", note: "Pool lining and the bar counter", color: "#7fa9a4" },
+        { name: "Goan terracotta", note: "Floor tiles in the restaurant and corridors", color: "#c3734f" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A family-owned beach hotel was losing rate to newer resorts and asked whether to renovate room by room." },
       { title: "Challenge", text: "Small rooms, a featureless pool deck and a guest mix with no clear target meant renovation alone wouldn't move the rate." },
@@ -151,6 +178,16 @@ export const hospitalityCases = [
       img("1711707246899-cf0d1a5d0472", "The old water tank revived as a stone-edged courtyard pool"),
       img("1657349226767-66c983d7df39", "A heritage suite with a carved bed and warm lamps"),
       img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting"),
+    ],
+    chapters: [
+      { title: "One haveli, three generations.", image: img("1682414181845-a725f154a14a", "A painted haveli courtyard ringed by arched galleries") },
+      { title: "Fewer keys, both courtyards.", image: img("1711707246899-cf0d1a5d0472", "The old water tank revived as a stone-edged courtyard pool") },
+      { title: "Restored by hand.", image: img("1655323193437-c68a5b3281f3", "A courtyard fountain surrounded by arches and planting") },
+    ],
+    mosaic: [
+      img("1712661198955-b37aae39a714", "Deep red arched galleries lit warmly at night"),
+      img("1695347597952-f8626d36ffb0", "A carved haveli door with brass rings and studs"),
+      img("1657349226767-66c983d7df39", "A heritage suite with a carved bed and warm lamps"),
     ],
     context: {
       title: "Keep the haveli. Make it pay for itself.",
@@ -274,6 +311,23 @@ export const hospitalityCases = [
       img("1573052905904-34ad8c27f0cc", "A hotel room with an arched window and warm lighting"),
       img("1759264244741-7175af0b7e75", "A quiet hotel room corner with a writing desk"),
     ],
+    chapters: [
+      { title: "Eighteen rooms, half facing the road.", image: img("1615880484746-a134be9a6ecf", "A balcony with seating overlooking forested mountains") },
+      { title: "Twelve rooms, all facing the valley.", image: img("1573052905904-34ad8c27f0cc", "A hotel room with an arched window and warm lighting") },
+      { title: "One winter to deliver.", image: img("1759264244741-7175af0b7e75", "A quiet hotel room corner with a writing desk") },
+    ],
+    concept: {
+      title: "Turn every room toward the valley.",
+      text: "Instead of refreshing eighteen rooms, we kept the twelve that could face the view and gave the rest to the guest: a library lounge with a fire, a breakfast room and proper storage. The hotel stopped selling beds and started selling evenings, which is what the guests who paid more had wanted all along.",
+      image: img("1608198399988-341f712c3711", "A heritage hotel room with arched windows and jewel-toned textiles"),
+      palette: [
+        { name: "Deodar timber", note: "Floors, window seats and the library shelves", color: "#8f6b4a" },
+        { name: "Slate roof", note: "Repaired with stone from the same quarry", color: "#5c6066" },
+        { name: "Himalayan wool", note: "Blankets and rugs woven in Kullu", color: "#cfc4b2" },
+        { name: "Moss green", note: "Lounge walls and the lacquered library doors", color: "#6f7d5c" },
+        { name: "Oxblood leather", note: "Armchairs and the reading-lamp shades", color: "#6e3a35" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "An 18-room guesthouse with steady summer bookings and empty winters asked how to lift year-round income." },
       { title: "Challenge", text: "Half the rooms faced the road, rates were set by the cheapest competitor, and there was nowhere for guests to spend an evening." },
@@ -309,6 +363,23 @@ export const hospitalityCases = [
       img("1699949985517-cfcd9a3b154c", "A lake palace on still water at golden hour"),
       img("1776763255431-633c91b6b4b6", "A sunlit courtyard with a plunge pool and planting"),
     ],
+    chapters: [
+      { title: "A house empty most of the year.", image: img("1699949985517-cfcd9a3b154c", "A lake palace on still water at golden hour") },
+      { title: "Five equal suites, one private wing.", image: img("1776763255431-633c91b6b4b6", "A sunlit courtyard with a plunge pool and planting") },
+      { title: "Rented whole, still a home.", image: img("1723108034000-e7fd897e3be0", "A sunlit haveli courtyard with carved balconies") },
+    ],
+    concept: {
+      title: "A home first, a hotel second.",
+      text: "Guests book the whole house, so it has to feel like one: five suites of equal standing around the pool courtyard, a kitchen that cooks for the table rather than a menu, and the owners' wing behind one lockable door. Nothing in the house says hotel, which is exactly why it earns a hotel's rate.",
+      image: img("1601504410148-0c269aafd95c", "An arched corridor framed by bougainvillea"),
+      palette: [
+        { name: "Udaipur pink lime", note: "Exterior walls and the courtyard arches", color: "#e6b8ad" },
+        { name: "White marble", note: "Baths, thresholds and the pool surround", color: "#ece8e1" },
+        { name: "Mango wood", note: "Beds and wardrobes made in the city", color: "#b07f52" },
+        { name: "Lake-blue cotton", note: "Upholstery and the courtyard cushions", color: "#7c9bb3" },
+        { name: "Leheriya print", note: "Curtains and table linen from local dyers", color: "#d9a441" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A family's holiday villa sat empty most of the year; they wanted income without losing it as a home." },
       { title: "Challenge", text: "Uneven bedrooms, one shared bathroom and no staff quarters made it hard to rent to groups at a good rate." },
@@ -340,6 +411,23 @@ export const hospitalityCases = [
       img("1718821585734-e22a8fc425a2", "A backwater resort with cottages reflected in calm water"),
       img("1692736933760-8a8a9b8c1b6f", "A private villa pool framed by tropical planting"),
     ],
+    chapters: [
+      { title: "How many villas can a ridge hold?", image: img("1718821585734-e22a8fc425a2", "A backwater resort with cottages reflected in calm water") },
+      { title: "Six positions, six horizons.", image: img("1692736933760-8a8a9b8c1b6f", "A private villa pool framed by tropical planting") },
+      { title: "Earning from phase one.", image: img("1543489822-c49534f3271f", "A cliff-top infinity pool overlooking the sea") },
+    ],
+    concept: {
+      title: "Give each villa the whole horizon.",
+      text: "We surveyed sight lines from every buildable point on the ridge and kept only the six where a villa sees nothing but sea and sky. Kitchens, staff paths and services sit below the ridge line, so from any pool the only building in view is the horizon.",
+      image: img("1774280954999-9758f11f3d41", "A timber-lined guest room opening onto tropical planting"),
+      palette: [
+        { name: "Kerala laterite", note: "Cut on site for the villa walls", color: "#a9593b" },
+        { name: "Coconut timber", note: "Rafters, decks and pool pavilions", color: "#8c6a46" },
+        { name: "Lime plaster", note: "Interiors, left unpainted", color: "#ede6d8" },
+        { name: "Athangudi tile", note: "Hand-made floors in every villa", color: "#6b8a7a" },
+        { name: "Kasavu cream", note: "Linen and drapery in the local handloom", color: "#f1e9d2" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "An investor bought a ridge-top plot and asked how many villas it could hold — and whether they'd sell or rent better." },
       { title: "Challenge", text: "A steep, narrow ridge where most layouts put villas looking into each other's pools." },
@@ -372,6 +460,23 @@ export const hospitalityCases = [
       img("1762765684665-6b6855bb6fe6", "A long hall with skylights and rows of tables"),
       img("1783314863884-be035ed5ed5c", "A warm-lit banquet room set for dinner"),
     ],
+    chapters: [
+      { title: "Weddings only, weekdays empty.", image: img("1779308936221-89739e035a53", "A wedding reception with floral arches and set tables") },
+      { title: "A hall that changes shape.", image: img("1762765684665-6b6855bb6fe6", "A long hall with skylights and rows of tables") },
+      { title: "Twice the bookings.", image: img("1783314863884-be035ed5ed5c", "A warm-lit banquet room set for dinner") },
+    ],
+    concept: {
+      title: "One hall, three rooms, any occasion.",
+      text: "A wedding wants one grand room; a conference wants three smaller ones and somewhere to register. Acoustic partitions, new skylights and a pre-function lobby let the same floor do both. The finishes stay neutral, and lighting scenes do the dressing up, so the hall is never locked into a single look.",
+      image: img("1786996969696-27eb56028ae5", "Shaded terrace dining under a woven pendant"),
+      palette: [
+        { name: "Warm oak", note: "Wall panelling and the lobby floor", color: "#b08a5e" },
+        { name: "Acoustic felt", note: "Movable partitions and ceiling baffles", color: "#8e8a84" },
+        { name: "Brushed brass", note: "Door furniture, rails and light fittings", color: "#b9985a" },
+        { name: "Chalk white", note: "Walls that take any lighting scene", color: "#f2efe9" },
+        { name: "Charcoal", note: "Stage surround and AV housings", color: "#3a3a3c" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A 600-guest wedding hall stood empty on most weekdays and outside the wedding season." },
       { title: "Challenge", text: "One windowless box with fixed décor that suited weddings only, and no space for registrations or breakouts." },

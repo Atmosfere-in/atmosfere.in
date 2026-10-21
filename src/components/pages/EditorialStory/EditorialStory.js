@@ -1,22 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import Arrow from "@/components/ui/Icon/Arrow";
+import { Concept } from "@/components/pages/StoryDetail/StoryDeep";
 import styles from "./EditorialStory.module.css";
 
 const NUMERALS = ["I", "II", "III", "IV"];
 
 // The "editorial" case-study layout — a magazine long-read, deliberately
-// different from StoryDetail: split hero, drop-cap introduction, three
-// photographed chapters (two stages each), the client's words and results
-// beside a photograph, and a mosaic gallery.
+// different from StoryDetail: split hero, drop-cap introduction, the design
+// concept and its material palette, three photographed chapters (two stages
+// each), the client's words and results beside a photograph, and a mosaic
+// gallery.
 // story: { name, lead, summary, stages[6], chapters[{ title, image }],
-//          mosaic[3], quote, results, image }
+//          concept?, mosaic[3]?, voiceImage?, quote?, results?, image }
 // meta: [{ label, value }] · crumbs: [{ label, href }]
 export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nextLabel = "Next story" }) {
-  const chapters = story.chapters.map((chapter, i) => ({
+  // Stories without explicit chapters fall back to their gallery photographs,
+  // titled after the first stage of each pair.
+  const chapterSources =
+    story.chapters ??
+    (story.gallery ?? []).slice(0, 3).map((image, i) => ({
+      title: story.stages[i * 2]?.title ?? `Chapter ${NUMERALS[i]}`,
+      image,
+    }));
+  const chapters = chapterSources.map((chapter, i) => ({
     ...chapter,
     stages: story.stages.slice(i * 2, i * 2 + 2),
   }));
+  const voiceImage = story.voiceImage ?? chapters[chapters.length - 1]?.image ?? story.image;
 
   return (
     <>
@@ -59,6 +70,9 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
         </div>
       </section>
 
+      {/* The design idea and its material palette (shared with StoryDetail). */}
+      {story.concept && <Concept concept={story.concept} />}
+
       {chapters.map((chapter, i) => (
         <section key={chapter.title} className={styles.chapter}>
           <div className={styles.chapterMedia}>
@@ -93,8 +107,8 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
           <div className={`container ${styles.voiceGrid}`}>
             <div className={`${styles.voiceMedia} reveal-image`}>
               <Image
-                src={(story.voiceImage ?? story.chapters[story.chapters.length - 1].image).src}
-                alt={(story.voiceImage ?? story.chapters[story.chapters.length - 1].image).alt}
+                src={voiceImage.src}
+                alt={voiceImage.alt}
                 fill
                 quality={90}
                 sizes="(max-width: 900px) 100vw, 45vw"
