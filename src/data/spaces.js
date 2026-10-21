@@ -70,6 +70,16 @@ export const projects = {
       },
     },
     {
+      href: "/spaces/projects/arihant",
+      name: "Arihant",
+      details: "Workplace · Delhi NCR",
+      side: "One floor",
+      image: {
+        src: "/images/spaces/arihant/hero.jpg",
+        alt: "The open office, with white workstations under green acoustic baffles",
+      },
+    },
+    {
       href: "/spaces/projects/the-linen-house",
       name: "The Linen House",
       details: "Residence · Gurugram",
@@ -264,14 +274,14 @@ export const caseStudies = {
       },
     },
     {
-      href: "/spaces/projects/the-spiral-residence",
-      tag: "Residence · Chandigarh",
-      title: "The Spiral Residence",
+      href: "/spaces/projects/arihant",
+      tag: "Workplace · Delhi NCR",
+      title: "Arihant",
       summary:
-        "Turning a dark, compartmentalised floor plan into one continuous, light-filled volume around a sculpted timber stair.",
+        "A third-floor office planned as one open room — workstations under green acoustic baffles, a breakout table in the middle, and the quiet rooms at the edges.",
       image: {
-        src: unsplash("1758801304964-417e328be877"),
-        alt: "A sculpted timber spiral staircase in warm light",
+        src: "/images/spaces/arihant/chapter-1.jpg",
+        alt: "Workstations in long runs facing the 'Team Work' feature wall",
       },
     },
     {

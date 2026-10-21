@@ -5,9 +5,11 @@
 //   npm run images -- hospitality/punarnava   # one folder only
 //
 // For each source photo (jpg/jpeg/png/webp that is not itself a variant) it
-// writes <name>-640.webp, -1080.webp, -1920.webp and -2560.webp beside it,
-// skipping widths larger than the source and variants that are already newer
-// than the source. Sources stay in place so the set can be regenerated.
+// writes <name>-640.webp, -1080.webp, -1920.webp and -2560.webp beside it.
+// Every name is always written (the loader may ask for any of them), but a
+// photo is never upscaled: a 1920px source gives a 1920px "-2560" file.
+// Variants already newer than the source are skipped. Sources stay in place
+// so the set can be regenerated.
 import { readdir, stat } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
@@ -42,8 +44,6 @@ for await (const source of walk(start)) {
   const base = source.replace(/\.[^.]+$/, "");
   for (const w of WIDTHS) {
     const out = `${base}-${w}.webp`;
-    // Always produce the smallest variant; otherwise never upscale.
-    if (w > width && w !== WIDTHS[0]) continue;
     if (await newer(out, mtimeMs)) continue;
     await image
       .clone()

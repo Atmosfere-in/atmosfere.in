@@ -160,6 +160,81 @@ export const spacesProjects = [
     ],
   },
   {
+    // Real engagement: a third-floor office. Not on atmosfere.in, so the copy
+    // is written from the studio's renders; area and city to be confirmed.
+    slug: "arihant",
+    name: "Arihant",
+    type: "commercial",
+    category: "Workplace",
+    location: "Delhi NCR",
+    size: "One floor",
+    timeline: "Design stage",
+    image: photo("arihant/hero.jpg", "The open office: rows of white workstations under green acoustic baffles, with a timber breakfast-bar table for breaks"),
+    lead: "A third-floor office planned as one open room — workstations under green acoustic baffles, a timber breakout table in the middle, and the quiet rooms at the edges.",
+    summary:
+      "Arihant asked for a working floor that would feel open and energetic without being loud. We planned the third floor as a single open office, with workstations in long runs down the middle, a breakout table where people actually pass, and the rooms that need doors — reception, the boardroom and the director's cabin — around the edges. Timber, carpet tiles and a few strong colours do the rest.",
+    scope: ["Workplace interiors", "Space planning", "Acoustics", "Custom joinery", "Lighting design"],
+    chapters: [
+      { title: "One floor, one open room.", image: photo("arihant/chapter-1.jpg", "Workstations in long runs facing the 'Team Work' feature wall") },
+      { title: "Colour overhead, calm at the desk.", image: photo("arihant/chapter-2.jpg", "Workstations beside a teal wall, under timber slats and green baffles") },
+      { title: "Rooms with doors, at the edges.", image: photo("arihant/chapter-3.jpg", "The boardroom: a long white table, a ring light and a screen at the end") },
+    ],
+    mosaic: [
+      photo("arihant/mosaic-1.jpg", "Reception, with the logo on a perforated wall, a stone desk and a linen sofa"),
+      photo("arihant/mosaic-2.jpg", "The director's cabin, with a white desk, oak shelving and a small lounge"),
+      photo("arihant/mosaic-3.jpg", "Workstations beside the timber breakout table and the teal wall"),
+    ],
+    concept: {
+      title: "Open in the middle, quiet at the edges.",
+      text: "The floor is planned like a street: workstations run down the middle in long, light runs, a timber breakout table sits where everyone passes, and the rooms that need doors line the edges — reception at the entrance, the boardroom and the director's cabin behind glass. Green acoustic baffles carry colour and quiet across the ceiling, carpet tiles soften footsteps, and timber slats warm the walls so the open floor never feels like a hall.",
+      image: photo("arihant/concept.jpg", "The entrance lobby, with glass doors into the boardroom, a timber display wall and carpet tiles"),
+      palette: [
+        { name: "Natural oak", note: "Desk frames, slatted walls and the breakout table", color: "#c4a070" },
+        { name: "Moss-green felt", note: "Acoustic baffles across the open office", color: "#9bb07a" },
+        { name: "Striped carpet tile", note: "Floors, laid in alternating directions", color: "#8d7b68" },
+        { name: "Teal accent", note: "Feature walls at the breakout and the cabins", color: "#5f9aa0" },
+        { name: "Warm white", note: "Desktops, walls and the boardroom", color: "#f1ede6" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Arihant needed a full working floor — open desks for the team, a boardroom, a director's cabin and a reception — that would feel open and energetic without the noise that usually comes with it.",
+        points: ["One floor, planned from scratch", "Open workstations plus the rooms that need doors", "A space that reads as one office, not a row of cabins"],
+      },
+      {
+        title: "Challenge",
+        text: "Open offices get loud, long rows of desks get monotonous, and the enclosed rooms tend to steal the daylight from the floor.",
+        points: ["Noise across an open floor", "Long desk runs that feel like a hall", "Keeping daylight past the glass rooms"],
+      },
+      {
+        title: "Approach",
+        text: "We planned the floor like a street: desks down the middle, a breakout table where people pass, and the enclosed rooms at the edges behind glass so light still reaches the desks.",
+        points: ["Workstations in the centre, rooms at the edges", "A breakout table on the main route", "Glass rooms so daylight carries across"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Green acoustic baffles across the ceiling, striped carpet tiles underfoot, timber slats and feature walls with the team's own words, a white boardroom, and a director's cabin in oak and white.",
+        points: ["Acoustic baffles that double as the colour", "Timber slats and lettered feature walls", "A calm white boardroom and an oak cabin"],
+      },
+      {
+        title: "Execution",
+        text: "Design intent, layouts and finish schedules are complete; the office is set to be delivered as a single fit-out with joinery made off-site.",
+        points: ["Layouts and finish schedules issued", "Joinery detailed for off-site making", "Fit-out planned as one package"],
+      },
+      {
+        title: "Outcome",
+        text: "A floor that works as one office: open where the team sits, quiet where it meets, and with enough colour and timber to feel like somewhere people want to come in to.",
+        points: ["One open, legible floor", "Meeting rooms that don't block the light", "An office with a character of its own"],
+      },
+    ],
+    results: [
+      { value: "1", label: "Floor, planned as one open office" },
+      { value: "3", label: "Zones: work, meet, unwind" },
+      { value: "2", label: "Rooms behind glass: boardroom and cabin" },
+    ],
+  },
+  {
     slug: "the-linen-house",
     name: "The Linen House",
     type: "residential",
