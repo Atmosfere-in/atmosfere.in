@@ -25,6 +25,23 @@ export const spacesProjects = [
       img("1738168279272-c08d6dd22002", "A living room with an arc floor lamp, oak floors and linen upholstery"),
       img("1784653548747-dfe7370326b3", "A serene bathroom with a round mirror, fluted vanity and plants"),
     ],
+    chapters: [
+      { title: "Big, dark and full of things.", image: img("1583847268964-b28dc8f51f92", "A bright living room with a cream sofa, soft throws and potted greenery") },
+      { title: "One light-filled spine.", image: img("1738168279272-c08d6dd22002", "A living room with an arc floor lamp, oak floors and linen upholstery") },
+      { title: "Everything in its place.", image: img("1784653548747-dfe7370326b3", "A serene bathroom with a round mirror, fluted vanity and plants") },
+    ],
+    concept: {
+      title: "One quiet palette, drawn to the last hinge.",
+      text: "Calm comes from fewer decisions, made well. Three materials run through every room, storage is built into the walls rather than placed in front of them, and the lighting is warm and dimmable so the house feels the same at dawn as it does at dinner. Nothing shouts, so the light gets to lead.",
+      image: img("1596255955697-49fa5328def9", "A living room with tall arched windows and soft neutral seating"),
+      palette: [
+        { name: "White oak", note: "Floors, joinery fronts and the dining table", color: "#c9b48e" },
+        { name: "Lime plaster", note: "Every wall, hand-finished", color: "#ece6da" },
+        { name: "Natural linen", note: "Sofas, drapery and bed linen", color: "#d8cfbd" },
+        { name: "Warm brass", note: "Taps, lamps and the few visible handles", color: "#b08d57" },
+        { name: "Travertine", note: "Kitchen counters and bathroom floors", color: "#d6cbb8" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A family of four, two working parents and a home that felt cluttered and dark despite its size. They asked for calm, light and storage for everything." },
       { title: "Challenge", text: "Deep floor plates left the centre of the home without daylight, and the existing walls cut the living, dining and kitchen into three dim rooms." },
@@ -61,6 +78,23 @@ export const spacesProjects = [
       img("1632583824020-937ae9564495", "A dark kitchen with a ribbon light, timber panelling and bar seating"),
       img("1631889993959-41b4e9c6e3c5", "A dark-tiled bathroom with a freestanding tub and timber vanity"),
     ],
+    chapters: [
+      { title: "A kitchen hidden behind a wall.", image: img("1776935359460-6c789e972e6a", "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights") },
+      { title: "Two materials, honestly used.", image: img("1632583824020-937ae9564495", "A dark kitchen with a ribbon light, timber panelling and bar seating") },
+      { title: "One slab, one day.", image: img("1631889993959-41b4e9c6e3c5", "A dark-tiled bathroom with a freestanding tub and timber vanity") },
+    ],
+    concept: {
+      title: "Two materials, and the city left outside.",
+      text: "Walnut for everything the hand touches, stone for everything that takes a knife, a glass or a bath. Keeping to two materials lets the apartment read as one continuous room, and the honed finishes swallow Mumbai's glare instead of bouncing it. Brass appears only where light falls on it.",
+      image: img("1611095210561-67f0832b1ca3", "A grey and timber kitchen with a waterfall island and pendant lights"),
+      palette: [
+        { name: "Dark walnut", note: "Stabilised veneers, sealed for coastal air", color: "#5a3e2b" },
+        { name: "Honed grey stone", note: "Counters, island and bathroom vanities", color: "#8c8c88" },
+        { name: "Smoked glass", note: "Cabinet fronts and the shower screen", color: "#4a4f55" },
+        { name: "Brushed brass", note: "Taps, pendants and drawer pulls", color: "#a88a5c" },
+        { name: "Charcoal wool", note: "Sofas and the bedroom rug", color: "#3f3f42" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A couple who cook every evening and host every weekend wanted a kitchen at the heart of the home — not hidden behind a wall." },
       { title: "Challenge", text: "Mumbai humidity is hard on timber, and the apartment's narrow galley kitchen had no room for the island they wanted." },
@@ -106,6 +140,16 @@ export const spacesProjects = [
       img("1778731660244-b6e8f905107d", "An arched doorway framing a crystal chandelier and a stair landing"),
       img("1770107830461-f61bdc31f1e5", "A long hallway framed by a sequence of plastered arches"),
       img("1554703752-4a82234d396e", "A sweeping marble staircase with a carved balustrade"),
+      img("1505693416388-ac5ce068fe85", "The grandparents' suite with a tufted headboard and bedside lamps"),
+      img("1761509844502-a2543f6f1df2", "A smoked-oak door set into an arched opening"),
+    ],
+    chapters: [
+      { title: "Good bones, no rhythm.", image: img("1770107830461-f61bdc31f1e5", "A long hallway framed by a sequence of plastered arches") },
+      { title: "One arch, drawn once.", image: img("1554703752-4a82234d396e", "A sweeping marble staircase with a carved balustrade") },
+      { title: "Handed over floor by floor.", image: img("1634389312178-50613e56acda", "A dining room with tall arched windows, a round table and patterned chairs") },
+    ],
+    mosaic: [
+      img("1778731660244-b6e8f905107d", "An arched doorway framing a crystal chandelier and a stair landing"),
       img("1505693416388-ac5ce068fe85", "The grandparents' suite with a tufted headboard and bedside lamps"),
       img("1761509844502-a2543f6f1df2", "A smoked-oak door set into an arched opening"),
     ],
@@ -205,6 +249,23 @@ export const spacesProjects = [
       img("1737233030536-247c1379d82c", "A study alcove with an arched niche, oak desk and wall lamp"),
       img("1578683010236-d716f9a3f461", "A bedroom with timber floors and a wall of glass to the outdoors"),
     ],
+    chapters: [
+      { title: "Two people, one open plan.", image: img("1613685303404-19f881533316", "A light-filled home study with a desk, shelving and armchairs") },
+      { title: "A study at each end.", image: img("1737233030536-247c1379d82c", "A study alcove with an arched niche, oak desk and wall lamp") },
+      { title: "Built in the workshop, fitted in a fortnight.", image: img("1578683010236-d716f9a3f461", "A bedroom with timber floors and a wall of glass to the outdoors") },
+    ],
+    concept: {
+      title: "Two quiet rooms, and a seat for the view.",
+      text: "The plan pulls the two studies to opposite ends of the house, each behind an acoustic door and lined walls, so a call in one is silence in the other. Everything between them is given to the valley: a nine-metre window seat, deep enough to work from, where the house gathers at the end of the day.",
+      image: img("1696413542101-2479dd479982", "A finished lounge with arched niches, soft seating and warm lamps"),
+      palette: [
+        { name: "Natural oak", note: "Desks, shelving and the window seat", color: "#c4a16f" },
+        { name: "Wool felt", note: "Acoustic wall linings in both studies", color: "#9a9185" },
+        { name: "Deodar green", note: "Study walls and the lined curtains", color: "#5f6e5a" },
+        { name: "Chalk plaster", note: "Living spaces, left matte", color: "#ebe7df" },
+        { name: "Lined linen", note: "Curtains that keep rooms quiet and warm", color: "#d5ccbb" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "Two people working from home, full time, needed rooms where calls, writing and drawing could happen at once without interruption." },
       { title: "Challenge", text: "An open-plan layout carried every sound through the house, and the best valley views were from the busiest rooms." },
@@ -241,6 +302,23 @@ export const spacesProjects = [
       img("1774989423979-6a7bf5add3f0", "A lounge with velvet banquettes, floral arrangements and glowing lamps"),
       img("1551530241-1ccbaa7a9a84", "A warm-lit restaurant with timber shelving and pendant lights"),
     ],
+    chapters: [
+      { title: "Forty-eight covers in a narrow shell.", image: img("1744776411221-702f2848b0b2", "A dark restaurant dining room with set tables and warm lighting") },
+      { title: "Three zones, every seat with a back.", image: img("1774989423979-6a7bf5add3f0", "A lounge with velvet banquettes, floral arrangements and glowing lamps") },
+      { title: "Open on schedule, full in a month.", image: img("1551530241-1ccbaa7a9a84", "A warm-lit restaurant with timber shelving and pendant lights") },
+    ],
+    concept: {
+      title: "A private dining room, forty-eight times over.",
+      text: "Every table gets what a private room gives: a wall at its back, a view of the room and light that falls on the table rather than the guest. Velvet, fabric ceilings and timber take the noise out of a hard shell, and the lighting dims through the evening so the room feels different at seven and at eleven.",
+      image: img("1623351143485-b1d4937747f3", "A dark, panelled room with a long table and patterned screens"),
+      palette: [
+        { name: "Bottle-green velvet", note: "Banquettes and the private-table chairs", color: "#2f4f44" },
+        { name: "Fumed oak", note: "Bar front, shelving and table tops", color: "#5b4634" },
+        { name: "Antique brass", note: "Bar rail, pendants and sconces", color: "#a07f4a" },
+        { name: "Burgundy leather", note: "Bar stools and menu covers", color: "#5e2f33" },
+        { name: "Plaster, dimmed", note: "Walls lit low so the tables glow", color: "#cdbfa8" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A chef-led restaurant needed 48 covers, a bar that could stand on its own, and a room that photographs well without feeling staged." },
       { title: "Challenge", text: "A long, narrow shell with hard surfaces made the room loud at half capacity and left the back tables feeling like an afterthought." },
@@ -260,9 +338,7 @@ export const spacesProjects = [
     ],
   },
   {
-    // Flagship case study in the "editorial" layout (EditorialStory).
     slug: "the-spiral-residence",
-    layout: "editorial",
     name: "The Spiral Residence",
     type: "residential",
     category: "Residence",
@@ -298,6 +374,18 @@ export const spacesProjects = [
       img("1572558651886-d44748e0e3dd", "The timber spiral seen from the top landing"),
       img("1617126481205-cdf29da03b41", "Steam-bent oak treads rising through the hall"),
     ],
+    concept: {
+      title: "Take out the core. Let the light down.",
+      text: "The idea is one subtraction and one addition. Remove the concrete stair that blocked the centre of the house, open the roof above it, and set a single timber spiral in the light that pours down. The well is kept plaster-white and empty of anything else, so the stair reads as sculpture and the daylight reaches the ground floor.",
+      image: img("1526573059328-179b147e1b42", "A sweeping spiral staircase against a dark wall"),
+      palette: [
+        { name: "Steam-bent oak", note: "Treads and handrail, hand-oiled", color: "#b58a5a" },
+        { name: "Plaster white", note: "The stairwell, to bounce light down", color: "#f1ede6" },
+        { name: "Blackened steel", note: "The single spine that carries the stair", color: "#2f3134" },
+        { name: "Clear glass", note: "Balustrade and the skylight above", color: "#c9d6d8" },
+        { name: "Pale limestone", note: "Ground-floor paving under the stair", color: "#ddd5c6" },
+      ],
+    },
     stages: [
       {
         title: "Brief",
@@ -358,6 +446,23 @@ export const spacesProjects = [
       img("1623351143485-b1d4937747f3", "A dark, panelled office with a long table and patterned screens"),
       img("1758448511255-ac2a24a135d7", "A bright reception lounge with a sculptural ring light"),
     ],
+    chapters: [
+      { title: "Office, boardroom, dining room.", image: img("1758448511255-ac2a24a135d7", "A bright reception lounge with a sculptural ring light") },
+      { title: "Public to private, across one floor.", image: img("1623351143485-b1d4937747f3", "A dark, panelled office with a long table and patterned screens") },
+      { title: "Twelve weeks, weekends only.", image: img("1780245997131-1af7a8de9538", "A curving stair rising beside a tall arched window") },
+    ],
+    concept: {
+      title: "One floor, read from public to private.",
+      text: "The plan is a sequence. Visitors arrive into a lounge, move to a boardroom whose walnut table extends for dinner, and only the founder goes on to the study at the far end. Fluted glass and drapery soften the glare from three glass walls without giving up the views, and a single marble plinth marks where the work happens.",
+      image: img("1752004028694-72610be3604e", "A bright room with a long table and neutral chairs"),
+      palette: [
+        { name: "Statuario marble", note: "The founder's plinth desk and reception counter", color: "#e9e6e0" },
+        { name: "American walnut", note: "The boardroom table and wall panelling", color: "#6e4b35" },
+        { name: "Brushed brass", note: "Handles, lamps and trims only", color: "#b4935f" },
+        { name: "Fluted glass", note: "Partitions that blur without blocking", color: "#d3dadc" },
+        { name: "Slate wool", note: "Lounge seating and the boardroom rug", color: "#596066" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A founder needed one floor to work as an office, a boardroom and a place to host investors over dinner." },
       { title: "Challenge", text: "An open shell with glass on three sides offered great views, but no privacy and harsh afternoon glare." },
@@ -394,6 +499,23 @@ export const spacesProjects = [
       img("1611095210561-67f0832b1ca3", "A grey and timber kitchen with a waterfall island and pendant lights"),
       img("1752004028694-72610be3604e", "A bright dining room with a long table and neutral chairs"),
     ],
+    chapters: [
+      { title: "Eating in shifts.", image: img("1696986681606-b156ccd761c5", "A modern kitchen with a stone island and black fittings") },
+      { title: "Walnut on every wall.", image: img("1611095210561-67f0832b1ca3", "A grey and timber kitchen with a waterfall island and pendant lights") },
+      { title: "Ten weeks, and the kitchen never closed.", image: img("1752004028694-72610be3604e", "A bright dining room with a long table and neutral chairs") },
+    ],
+    concept: {
+      title: "One room, lined in walnut.",
+      text: "Three small rooms become one, and one material holds it together. Walnut runs across every vertical surface, so the pantry wall, the fridge and the appliances disappear behind pocket doors and the counters stay clear. Cooking moves to the window wall for light and air, and the dining table runs straight into the island.",
+      image: img("1776935359460-6c789e972e6a", "A grey stone kitchen with a sculpted island, walnut bar stools and pendant lights"),
+      palette: [
+        { name: "American walnut", note: "Panelling, pantry wall and pocket doors", color: "#6b4a33" },
+        { name: "Honed black granite", note: "Island and the cooking counter", color: "#3a3a3a" },
+        { name: "Matte black fittings", note: "Taps, handles and the extractor", color: "#1f1f1f" },
+        { name: "Off-white plaster", note: "Ceiling and the dining wall", color: "#efeae2" },
+        { name: "Rattan", note: "Dining chairs and the pendant shades", color: "#c8a877" },
+      ],
+    },
     stages: [
       { title: "Brief", text: "A family that cooks together wanted to stop eating in shifts — one room where everyone could cook, eat and talk." },
       { title: "Challenge", text: "Three small rooms, two load-bearing walls and a kitchen with no natural ventilation." },
