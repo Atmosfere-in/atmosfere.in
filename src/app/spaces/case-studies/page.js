@@ -34,7 +34,7 @@ export default function SpacesCaseStudies() {
           lead: p.lead,
           challenge: p.stages.find((s) => s.title === "Challenge")?.text,
           results: p.results,
-          image: p.gallery[0] ?? p.image,
+          image: p.gallery?.[0] ?? p.image,
         }))}
       />
     </main>
