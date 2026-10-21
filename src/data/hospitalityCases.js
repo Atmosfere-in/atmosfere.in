@@ -16,6 +16,7 @@ export const hospitalityCases = [
     // Real engagement. Copy from atmosfere.in's portfolio page; renders by
     // the studio.
     slug: "the-punarnava-spa-and-resort",
+    heroStyle: "full",
     name: "The Punarnava Spa & Resort",
     planningType: "hotel-resort",
     category: "Wellness resort",

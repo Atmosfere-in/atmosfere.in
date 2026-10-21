@@ -555,3 +555,54 @@
     border-radius: 12px;
   }
 }
+
+/* ---------- Full-bleed hero (heroStyle: "full") ----------
+   The photograph runs edge to edge and the facts sit over it, in the same
+   place as on the split hero. A scrim from the left and bottom keeps the
+   copy readable; the right-hand side of the photograph stays clear. */
+
+.heroFull {
+  display: flex;
+  position: relative;
+  min-height: 100svh;
+}
+
+.heroFull .heroMedia {
+  position: absolute;
+  inset: 0;
+  height: auto;
+  min-height: 0;
+  order: 0;
+}
+
+.heroFull .heroMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to right, rgb(20 18 16 / 0.82) 0%, rgb(20 18 16 / 0.55) 36%, rgb(20 18 16 / 0.12) 68%, rgb(20 18 16 / 0) 100%),
+    linear-gradient(to top, rgb(20 18 16 / 0.6) 0%, rgb(20 18 16 / 0) 45%);
+}
+
+.heroFull .heroPanel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-right: max(var(--gutter), calc((100vw - var(--max-width)) / 2 + var(--gutter)));
+}
+
+.heroFull .heroText {
+  max-width: 560px;
+}
+
+@media (max-width: 900px) {
+  .heroFull {
+    min-height: min(100svh, 760px);
+  }
+
+  .heroFull .heroMedia::after {
+    background:
+      linear-gradient(to top, rgb(20 18 16 / 0.85) 0%, rgb(20 18 16 / 0.55) 45%, rgb(20 18 16 / 0.15) 100%);
+  }
+}
