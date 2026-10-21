@@ -598,33 +598,50 @@
   max-width: 560px;
 }
 
-/* Phones and small tablets: there isn't room for the copy over the
-   photograph without hiding it, so the photograph runs full width at the
-   top and the copy follows on the dark panel beneath it. */
+/* Phones and small tablets: still full-bleed, no dark panel. The copy sits
+   at the bottom of a tall photograph over a gradient that fades to nothing
+   by the upper third, so the top of the picture stays clear. */
 @media (max-width: 900px) {
   .heroFull {
-    display: grid;
-    grid-template-columns: 1fr;
-    min-height: 0;
+    display: flex;
+    min-height: max(100svh, 720px);
   }
 
   .heroFull .heroMedia {
-    position: relative;
-    inset: auto;
-    order: -1;
-    height: 62svh;
-    min-height: 340px;
+    position: absolute;
+    inset: 0;
+    height: auto;
+    min-height: 0;
+    order: 0;
   }
 
   .heroFull .heroMedia::after {
-    background: linear-gradient(to top, rgb(20 18 16 / 0.45) 0%, rgb(20 18 16 / 0) 40%);
+    background: linear-gradient(
+      to top,
+      rgb(20 18 16 / 0.9) 0%,
+      rgb(20 18 16 / 0.74) 30%,
+      rgb(20 18 16 / 0.35) 52%,
+      rgb(20 18 16 / 0) 72%
+    );
   }
 
   .heroFull .heroPanel {
-    padding: var(--space-5) var(--gutter) var(--space-6);
+    align-items: flex-end;
+    padding: calc(var(--header-height) + var(--space-5)) var(--gutter) var(--space-6);
   }
 
   .heroFull .heroText {
     max-width: none;
+  }
+
+  .heroFull .heroLead {
+    margin-top: var(--space-3);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .heroFull .heroMeta {
+    margin-top: var(--space-5);
+    gap: var(--space-3) var(--space-4);
   }
 }
