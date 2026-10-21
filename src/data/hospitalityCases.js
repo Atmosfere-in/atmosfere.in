@@ -89,6 +89,82 @@ export const hospitalityCases = [
     ],
   },
   {
+    // Real engagement, at design-intent stage (June 2026). Copy and drawings
+    // from the studio's design-intent deck; counts read off the zoning plan.
+    slug: "jim-corbett-resort-dhela",
+    name: "Jim Corbett Resort, Dhela",
+    planningType: "hotel-resort",
+    category: "Resort",
+    location: "Dhela, Jim Corbett",
+    size: "15 keys planned",
+    engagement: "Design intent",
+    image: photo("jim-corbett-resort-dhela/hero.jpg", "The proposed resort laid over an aerial of the site: cottages around a central pool, with the banquet hall and arrival court by the road"),
+    lead: "A forest-edge plot at Dhela planned as a harmonious retreat rooted in nature: cottages and a villa around a central pool, a banquet hall and cafe at the arrival, and a meandering path tying it all together.",
+    summary:
+      "The owners of an irregular plot at Dhela, on the edge of Jim Corbett, asked what it should become. We planned a 15-key resort with its living in the middle — a central pool with floating decks, fourteen two-bedroom cottages and a four-bedroom duplex villa nestled in landscape — and its public life at the gate: a round reception and cafe, a 5,600 sq ft banquet hall and a welcoming arrival court. The forest land stays as it is.",
+    scope: ["Site analysis", "Zoning & master plan", "Area programme", "Concept & design intent", "Inspiration boards"],
+    chapters: [
+      { title: "A plot on the edge of the forest.", image: photo("jim-corbett-resort-dhela/chapter-1.jpg", "The zoning plan: gateway, reception and cafe, banquet, villa, cottages, pool, open lawn and forest land") },
+      { title: "Everything around the pool.", image: photo("jim-corbett-resort-dhela/chapter-2.jpg", "The conceptual site plan: cottages and the villa in planting around the central pool, the banquet hall and reception at the entrance") },
+      { title: "From the gate to the deck.", image: photo("jim-corbett-resort-dhela/chapter-3.jpg", "The plan superimposed on the site, showing the resort against the neighbouring fields and buildings") },
+    ],
+    mosaic: [
+      photo("jim-corbett-resort-dhela/mosaic-1.jpg", "The central pool with its floating decks, the row of cottages beside it"),
+      photo("jim-corbett-resort-dhela/mosaic-2.jpg", "The arrival court, the round reception and cafe, and the banquet hall"),
+      photo("jim-corbett-resort-dhela/mosaic-3.jpg", "The lower cottages along the meandering path"),
+    ],
+    concept: {
+      title: "A harmonious retreat, rooted in nature.",
+      text: "Private villas and cottages sit secluded in lush landscape, a central pool with deck and lounge spaces holds the middle of the site, and intimate courtyards and gardens run throughout. One curated, meandering pathway connects every space, from a welcoming arrival with feature landscaping to a private deck a level below the site, with the forest land left untouched beyond.",
+      image: photo("jim-corbett-resort-dhela/concept.jpg", "The conceptual site sketch, with its notes on private villas, pool and deck, landscape courtyards, the meandering path and the arrival experience"),
+      palette: [
+        { name: "Forest grey-green", note: "The planting that wraps every cottage", color: "#a9aea2" },
+        { name: "Pale olive", note: "Open lawn and the courtyard gardens", color: "#d8d9bd" },
+        { name: "River sand", note: "Paths, decks and the arrival court", color: "#e3d8bf" },
+        { name: "Taupe timber", note: "Cottage roofs, decks and screens", color: "#a89383" },
+        { name: "Slate blue", note: "The central pool and its floating decks", color: "#9ba6b3" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "An irregular plot at Dhela, with forest land on one side and the village road on the other, and a question: what kind of resort should this be?",
+        points: ["A plot on the edge of Jim Corbett", "Forest land adjoining the site", "A resort with rooms, events and a pool"],
+      },
+      {
+        title: "Challenge",
+        text: "The site is long and oddly shaped, narrowing to the road, with neighbouring buildings close on two sides — so privacy and arrival both needed careful planning.",
+        points: ["An irregular, tapering plot", "Neighbours close to the boundary", "Keeping the forest edge untouched"],
+      },
+      {
+        title: "Approach",
+        text: "We zoned the plot in two halves: the public programme at the road end, the guest cottages and pool deep in the site, and one meandering path to connect them.",
+        points: ["Arrival, reception, cafe and banquet at the gate", "Cottages and the villa around the pool", "A single curated path through the whole site"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Fourteen two-bedroom cottages and a four-bedroom duplex villa, a central pool with floating decks, a 5,600 sq ft banquet hall, a round reception and cafe, an open lawn and a private deck a level down.",
+        points: ["Cottages of 529 and 630 sq ft, villa of 1,700 sq ft", "Banquet hall of 78 by 72 feet", "Pool with floating decks at the heart of the plan"],
+      },
+      {
+        title: "Execution",
+        text: "The design intent — zoning, master plan, area programme and inspiration boards for each part of the resort — was issued in June 2026 as the basis for detailed design.",
+        points: ["Zoning and conceptual site plan", "Area programme for every building", "Inspiration boards: entrance, reception, convention, villa, cottages, decks and pool"],
+      },
+      {
+        title: "Outcome",
+        text: "A clear plan for a 15-key retreat that earns from events at the gate and keeps its guests in the quiet of the forest edge.",
+        points: ["15 keys around a central pool", "Events and arrival kept at the road end", "Forest land preserved as the setting"],
+      },
+    ],
+    voiceImage: photo("jim-corbett-resort-dhela/voice.jpg", "Detail of the conceptual sketch: the pool, the cottages and the planting between them"),
+    results: [
+      { value: "15", label: "Keys: 14 cottages and a 4BHK villa" },
+      { value: "5,600", label: "sq ft banquet hall" },
+      { value: "1", label: "Central pool with floating decks" },
+    ],
+  },
+  {
     slug: "the-dusk-pool-retreat",
     name: "The Dusk Pool Retreat",
     planningType: "hotel-resort",

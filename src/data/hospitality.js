@@ -64,6 +64,16 @@ export const projects = {
       },
     },
     {
+      href: "/hospitality/case-studies/jim-corbett-resort-dhela",
+      name: "Jim Corbett Resort, Dhela",
+      details: "Resort · Jim Corbett",
+      side: "15 keys",
+      image: {
+        src: "/images/hospitality/jim-corbett-resort-dhela/chapter-2.jpg",
+        alt: "The conceptual site plan: cottages and a villa in planting around a central pool",
+      },
+    },
+    {
       href: "/hospitality/case-studies/the-cabana-resort",
       name: "The Cabana Resort",
       details: "Resort · Goa",
@@ -205,14 +215,14 @@ export const caseStudies = {
       },
     },
     {
-      href: "/hospitality/case-studies/the-dusk-pool-retreat",
-      tag: "Resort · Konkan coast",
-      title: "The Dusk Pool Retreat",
+      href: "/hospitality/case-studies/jim-corbett-resort-dhela",
+      tag: "Resort · Dhela, Jim Corbett",
+      title: "Jim Corbett Resort, Dhela",
       summary:
-        "A plot zoned for villas, re-planned as a 24-key retreat whose pool terrace now draws guests who aren't even staying.",
+        "A forest-edge plot planned as a 15-key retreat: cottages and a villa around a central pool, with the banquet hall and cafe at the arrival.",
       image: {
-        src: unsplash("1759805583291-704d7af07682"),
-        alt: "Lounge chairs and umbrellas beside a resort pool at dusk",
+        src: "/images/hospitality/jim-corbett-resort-dhela/hero.jpg",
+        alt: "The proposed resort laid over an aerial photograph of the site",
       },
     },
     {

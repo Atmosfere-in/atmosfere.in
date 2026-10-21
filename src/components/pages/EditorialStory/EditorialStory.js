@@ -103,7 +103,7 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
 
       {/* The client in their own words, beside a photograph, with the results. */}
       {(story.quote || story.results) && (
-        <section className={`section ${styles.voice}`}>
+        <section className={`section ${styles.voice} ${story.quote ? "" : styles.voiceResultsOnly}`}>
           <div className={`container ${styles.voiceGrid}`}>
             <div className={`${styles.voiceMedia} reveal-image`}>
               <Image
@@ -127,6 +127,7 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
                   <figcaption className={styles.quoteName}>{story.quote.name}</figcaption>
                 </figure>
               )}
+              {!story.quote && <span className="eyebrow">In Numbers</span>}
               {story.results && (
                 <dl className={styles.results}>
                   {story.results.map((r) => (

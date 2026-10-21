@@ -314,6 +314,48 @@
   color: var(--color-stone-600);
 }
 
+/* Without a client quote the results stand alone beside the photograph: a
+   shorter photograph, and the numbers stacked as full-width rows so the
+   column fills its height instead of floating in empty space. */
+.voiceResultsOnly .voiceMedia {
+  aspect-ratio: 4 / 3;
+}
+
+.voiceResultsOnly .results {
+  flex-direction: column;
+  margin-top: var(--space-4);
+  padding-top: 0;
+  border-top: 0;
+}
+
+.voiceResultsOnly .result,
+.voiceResultsOnly .result:first-child {
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: clamp(18px, 2.6vh, 28px) 0;
+  border-top: 1px solid rgb(31 29 26 / 0.18);
+}
+
+.voiceResultsOnly .result + .result {
+  border-left: 0;
+}
+
+.voiceResultsOnly .result:last-child {
+  border-bottom: 1px solid rgb(31 29 26 / 0.18);
+}
+
+.voiceResultsOnly .resultValue {
+  flex: 0 0 5.5ch;
+  font-size: clamp(2.75rem, 4.4vw, 4rem);
+}
+
+.voiceResultsOnly .resultLabel {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-charcoal);
+}
+
 /* ---------- Mosaic gallery ---------- */
 
 .mosaic {
