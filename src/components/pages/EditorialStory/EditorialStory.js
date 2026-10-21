@@ -31,9 +31,9 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
 
   return (
     <>
-      {/* Hero: the story's facts beside the photograph (split), or, with
-          heroStyle "full", laid over a photograph that runs edge to edge. */}
-      <section className={`${styles.hero} ${story.heroStyle === "full" ? styles.heroFull : ""}`}>
+      {/* Hero: the story's facts laid over a photograph that runs edge to
+          edge. heroStyle "split" keeps the older panel-beside-photo hero. */}
+      <section className={`${styles.hero} ${story.heroStyle === "split" ? "" : styles.heroFull}`}>
         <div className={styles.heroPanel}>
           <div className={styles.heroText}>
             <nav aria-label="Breadcrumb" className={styles.crumbs}>

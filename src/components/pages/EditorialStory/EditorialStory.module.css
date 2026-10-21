@@ -570,6 +570,7 @@
 .heroFull .heroMedia {
   position: absolute;
   inset: 0;
+  z-index: 0;
   height: auto;
   min-height: 0;
   order: 0;
@@ -587,7 +588,8 @@
 
 .heroFull .heroPanel {
   position: relative;
-  z-index: 1;
+  /* Above the photograph and its scrim, so the copy is never dimmed. */
+  z-index: 2;
   width: 100%;
   padding-right: max(var(--gutter), calc((100vw - var(--max-width)) / 2 + var(--gutter)));
 }
