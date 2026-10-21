@@ -2,11 +2,16 @@ import Image from "next/image";
 import Button, { TextLink } from "@/components/ui/Button/Button";
 import styles from "./Hero.module.css";
 
+// image: { src, alt, position? } — the photograph, and the poster/fallback
+//        when a video is given.
+// video: { src, position? } — optional silent looping background video,
+//        played over the photograph (hidden for reduced-motion readers).
 export default function Hero({
   eyebrow,
   title,
   intro,
   image,
+  video,
   primary,
   secondary,
   centered = false,
@@ -23,6 +28,20 @@ export default function Hero({
         className={styles.image}
         style={image.position ? { objectPosition: image.position } : undefined}
       />
+      {video && (
+        <video
+          className={styles.video}
+          src={video.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          disablePictureInPicture
+          preload="auto"
+          aria-hidden="true"
+          style={video.position ? { objectPosition: video.position } : undefined}
+        />
+      )}
       <div className={styles.scrim} aria-hidden="true" />
 
       <div className={`container ${styles.content}`}>

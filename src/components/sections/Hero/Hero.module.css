@@ -12,9 +12,36 @@
 }
 
 .image {
-  z-index: -2;
+  z-index: -3;
   object-fit: cover;
   animation: settle 2.4s var(--ease) both;
+}
+
+/* Background video sits over the photograph, which stays visible while the
+   video loads and for readers who prefer reduced motion. */
+.video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fade 1.2s var(--ease) 0.4s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video {
+    display: none;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .scrim {

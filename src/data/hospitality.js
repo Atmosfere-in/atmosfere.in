@@ -21,11 +21,14 @@ export const hero = {
   title: "What should this property become?",
   intro:
     "Before anything is designed, we decide what a property should be — hotel, resort, villa or venue — and plan it to perform.",
+  // The poster frame of the video: shown while it loads, on reduced motion,
+  // and wherever video can't play.
   image: {
-    src: unsplash("1770887422169-7146365d2146"),
-    alt: "A grand stone archway opening onto a resort and the sea",
-    position: "50% 40%",
+    src: "/images/hospitality/hero-poster.jpg",
+    alt: "The lobby of a wellness resort, with a chandelier over a marble floor",
+    position: "50% 50%",
   },
+  video: { src: "/videos/hospitality-hero.mp4", position: "50% 50%" },
   primary: BOOK,
   secondary: { label: "Explore Planning Types", href: "/hospitality#planning-types" },
   centered: true,
