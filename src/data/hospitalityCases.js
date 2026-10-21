@@ -98,25 +98,25 @@ export const hospitalityCases = [
     location: "Dhela, Jim Corbett",
     size: "15 keys planned",
     engagement: "Design intent",
-    image: photo("jim-corbett-resort-dhela/hero.jpg", "The proposed resort laid over an aerial of the site: cottages around a central pool, with the banquet hall and arrival court by the road"),
+    image: photo("jim-corbett-resort-dhela/hero.jpg", "The four-bedroom duplex villa: a hipped roof over tall glazed walls, set among forest trees"),
     lead: "A forest-edge plot at Dhela planned as a harmonious retreat rooted in nature: cottages and a villa around a central pool, a banquet hall and cafe at the arrival, and a meandering path tying it all together.",
     summary:
       "The owners of an irregular plot at Dhela, on the edge of Jim Corbett, asked what it should become. We planned a 15-key resort with its living in the middle — a central pool with floating decks, fourteen two-bedroom cottages and a four-bedroom duplex villa nestled in landscape — and its public life at the gate: a round reception and cafe, a 5,600 sq ft banquet hall and a welcoming arrival court. The forest land stays as it is.",
     scope: ["Site analysis", "Zoning & master plan", "Area programme", "Concept & design intent", "Inspiration boards"],
     chapters: [
-      { title: "A plot on the edge of the forest.", image: photo("jim-corbett-resort-dhela/chapter-1.jpg", "The zoning plan: gateway, reception and cafe, banquet, villa, cottages, pool, open lawn and forest land") },
-      { title: "Everything around the pool.", image: photo("jim-corbett-resort-dhela/chapter-2.jpg", "The conceptual site plan: cottages and the villa in planting around the central pool, the banquet hall and reception at the entrance") },
-      { title: "From the gate to the deck.", image: photo("jim-corbett-resort-dhela/chapter-3.jpg", "The plan superimposed on the site, showing the resort against the neighbouring fields and buildings") },
+      { title: "A plot on the edge of the forest.", image: photo("jim-corbett-resort-dhela/chapter-1.jpg", "The gateway: a stone path passing between two split boulders into the resort") },
+      { title: "Everything around the pool.", image: photo("jim-corbett-resort-dhela/chapter-2.jpg", "A row of two-storey cottages with tiled roofs and balconies, lit at dusk") },
+      { title: "From the gate to the deck.", image: photo("jim-corbett-resort-dhela/chapter-3.jpg", "The banquet hall: a soaring bamboo-arched pavilion among palms") },
     ],
     mosaic: [
-      photo("jim-corbett-resort-dhela/mosaic-1.jpg", "The central pool with its floating decks, the row of cottages beside it"),
-      photo("jim-corbett-resort-dhela/mosaic-2.jpg", "The arrival court, the round reception and cafe, and the banquet hall"),
-      photo("jim-corbett-resort-dhela/mosaic-3.jpg", "The lower cottages along the meandering path"),
+      photo("jim-corbett-resort-dhela/mosaic-1.jpg", "Floating timber decks curving over the water, with a sunken lounge"),
+      photo("jim-corbett-resort-dhela/mosaic-2.jpg", "A bamboo-shaded deck with loungers beside the stream"),
+      photo("jim-corbett-resort-dhela/mosaic-3.jpg", "A private garden deck: timber loungers and a swing among planting"),
     ],
     concept: {
       title: "A harmonious retreat, rooted in nature.",
       text: "Private villas and cottages sit secluded in lush landscape, a central pool with deck and lounge spaces holds the middle of the site, and intimate courtyards and gardens run throughout. One curated, meandering pathway connects every space, from a welcoming arrival with feature landscaping to a private deck a level below the site, with the forest land left untouched beyond.",
-      image: photo("jim-corbett-resort-dhela/concept.jpg", "The conceptual site sketch, with its notes on private villas, pool and deck, landscape courtyards, the meandering path and the arrival experience"),
+      image: photo("jim-corbett-resort-dhela/concept.jpg", "The round reception and cafe: a thatched roof over two glazed floors and a balcony"),
       palette: [
         { name: "Forest grey-green", note: "The planting that wraps every cottage", color: "#a9aea2" },
         { name: "Pale olive", note: "Open lawn and the courtyard gardens", color: "#d8d9bd" },
@@ -157,7 +157,7 @@ export const hospitalityCases = [
         points: ["15 keys around a central pool", "Events and arrival kept at the road end", "Forest land preserved as the setting"],
       },
     ],
-    voiceImage: photo("jim-corbett-resort-dhela/voice.jpg", "Detail of the conceptual sketch: the pool, the cottages and the planting between them"),
+    voiceImage: photo("jim-corbett-resort-dhela/voice.jpg", "The cafe counter: a woven wall with round windows, a stone bar and log stools"),
     results: [
       { value: "15", label: "Keys: 14 cottages and a 4BHK villa" },
       { value: "5,600", label: "sq ft banquet hall" },
