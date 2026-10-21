@@ -50,6 +50,16 @@ export const projects = {
   intro: "Homes and workplaces we've designed and built, start to finish.",
   items: [
     {
+      href: "/spaces/projects/the-aranya",
+      name: "The Aranya",
+      details: "Sample flat · Noida Extension",
+      side: "1,500 sq ft",
+      image: {
+        src: "/images/spaces/the-aranya/hero.jpg",
+        alt: "The living room of the sample flat, with pale sofas on a marble-veined wall and a fluted oak screen",
+      },
+    },
+    {
       href: "/spaces/projects/the-linen-house",
       name: "The Linen House",
       details: "Residence · Gurugram",
@@ -233,6 +243,17 @@ export const caseStudies = {
   title: "The thinking behind the finish.",
   items: [
     {
+      href: "/spaces/projects/the-aranya",
+      tag: "Sample flat · Noida Extension",
+      title: "The Aranya",
+      summary:
+        "A 2BHK sample flat for a high-rise, designed to be aspirational and practical at once — the home a buyer can picture living in.",
+      image: {
+        src: "/images/spaces/the-aranya/concept.jpg",
+        alt: "The dining room of the sample flat, with a round table, green chairs and curtains",
+      },
+    },
+    {
       href: "/spaces/projects/the-spiral-residence",
       tag: "Residence · Chandigarh",
       title: "The Spiral Residence",
@@ -252,17 +273,6 @@ export const caseStudies = {
       image: {
         src: unsplash("1778731525532-d2ab833c8463"),
         alt: "A modern office with a marble desk and a plush chair",
-      },
-    },
-    {
-      href: "/spaces/projects/the-walnut-kitchen",
-      tag: "Residence · Pune",
-      title: "The Walnut Kitchen",
-      summary:
-        "A cramped kitchen opened into one walnut-lined room for cooking, dining and hosting — with storage that hides everything.",
-      image: {
-        src: unsplash("1737898378296-94dc316cd443"),
-        alt: "A walnut-panelled kitchen and dining room in soft daylight",
       },
     },
   ],

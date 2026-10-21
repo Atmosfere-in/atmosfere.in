@@ -5,8 +5,86 @@ import { unsplash } from "@/lib/images";
 // until the studio supplies its real portfolio.
 
 const img = (id, alt) => ({ src: unsplash(id), alt });
+// Local photographs (real projects) live under /public/images; run
+// `npm run images` after adding any so their resized variants exist.
+const photo = (file, alt) => ({ src: `/images/spaces/${file}`, alt });
 
 export const spacesProjects = [
+  {
+    // Real engagement. Copy from atmosfere.in's portfolio page; renders by
+    // the studio. A sample flat for a developer, so it files as commercial.
+    slug: "the-aranya",
+    name: "The Aranya",
+    type: "commercial",
+    category: "Sample flat",
+    location: "Noida Extension",
+    size: "1,500 sq ft",
+    timeline: "Ongoing",
+    image: photo("the-aranya/hero.jpg", "The living room of the sample flat: pale sofas on a marble-veined wall, black coffee tables and a fluted oak screen"),
+    lead: "A 2BHK sample flat for a high-rise, designed to be aspirational and practical at once — the home a buyer can picture living in.",
+    summary:
+      "For Unnati Fortune Group's high-rise at The Aranya, we are designing the 2BHK sample flat that sells the building: an aspirational yet practical living space that appeals to potential buyers. The design showcases modern aesthetics, efficient space utilization and high-quality finishes while keeping a warm and inviting atmosphere, with a layout that demonstrates functionality and décor that reflects one cohesive, contemporary urban theme.",
+    scope: ["Interior design", "Space planning", "Material & finish selection", "Furniture & décor", "Lighting design"],
+    chapters: [
+      { title: "A flat that has to sell a building.", image: photo("the-aranya/chapter-1.jpg", "The living room's TV wall, with fluted oak slats, marble and a low white console") },
+      { title: "Every square foot, working.", image: photo("the-aranya/chapter-2.jpg", "The master bedroom, with a floating bed, a timber headboard wall and soft cove lighting") },
+      { title: "Finishes a buyer can touch.", image: photo("the-aranya/chapter-3.jpg", "The kitchen in white and grey, with marble splashbacks and a dark fridge column") },
+    ],
+    mosaic: [
+      photo("the-aranya/mosaic-1.jpg", "The second bedroom, with a tan headboard, curtains and a full-height oak wardrobe"),
+      photo("the-aranya/mosaic-2.jpg", "The media wall, with dark slats, brass figures and a floating console"),
+      photo("the-aranya/mosaic-3.jpg", "A bedroom corner with the television, sheer curtains and open shelving"),
+    ],
+    concept: {
+      title: "Aspirational, but believable.",
+      text: "A sample flat has to make a buyer feel two things at once: that this is a step up, and that they could actually live here. So the finishes are rich — marble, fluted oak, brass — but the plan is honest: a living and dining room that flows, two bedrooms that each earn their keep, storage that disappears into the walls, and one warm palette carried from the front door to the kitchen.",
+      image: photo("the-aranya/concept.jpg", "The dining room, with a round table, green chairs, curtains and framed prints on the wall"),
+      palette: [
+        { name: "Veined marble", note: "Living-room feature walls and the kitchen splashback", color: "#e9e4dc" },
+        { name: "Fluted oak", note: "TV wall, headboards and wardrobe fronts", color: "#c9a874" },
+        { name: "Warm white plaster", note: "Walls and ceilings, with cove lighting", color: "#f2eee8" },
+        { name: "Olive velvet", note: "Dining chairs and throws", color: "#6f7d5c" },
+        { name: "Black metal", note: "Coffee tables, handles and the shelving", color: "#2b2b2b" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Unnati Fortune Group asked for a 2BHK sample flat for their high-rise at The Aranya in Noida Extension: a 1,500 sq ft home that shows buyers what the building can be.",
+        points: ["A 2BHK of 1,500 sq ft", "Aspirational, yet practical", "Modern aesthetics with high-quality finishes"],
+      },
+      {
+        title: "Challenge",
+        text: "A sample flat is judged in minutes. It has to look generous without hiding the real room sizes, feel warm without clutter, and read as one coherent home rather than a showroom of finishes.",
+        points: ["Real dimensions, generous feel", "Warm and inviting, not staged", "One theme across every room"],
+      },
+      {
+        title: "Approach",
+        text: "We planned the flat around how a family would use it — living and dining as one open room, bedrooms with built-in storage, a kitchen that works — and then chose finishes that photograph as well as they wear.",
+        points: ["Efficient space utilization first", "Layout that demonstrates functionality", "Décor that reflects contemporary urban lifestyles"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Veined marble and fluted oak on the living-room walls, a floating bed and timber headboard wall in the master bedroom, full-height wardrobes in both bedrooms, and a white kitchen with marble splashbacks.",
+        points: ["Marble and oak feature walls", "Cove lighting and warm white throughout", "Olive velvet and black metal as accents"],
+      },
+      {
+        title: "Execution",
+        text: "The design is complete and execution is under way on site, with our drawings, finish schedules and furniture selections guiding the fit-out.",
+        points: ["Design intent and detailed drawings issued", "Finish and furniture schedules", "Execution ongoing"],
+      },
+      {
+        title: "Outcome",
+        text: "A sample flat that lets buyers see a modern, efficient and warm home at The Aranya — and gives the developer a clear standard for the flats that follow.",
+        points: ["A home buyers can picture", "A finish standard for the tower", "Delivered as one cohesive theme"],
+      },
+    ],
+    results: [
+      { value: "1,500", label: "sq ft, 2BHK sample flat" },
+      { value: "2", label: "Bedrooms, each with built-in storage" },
+      { value: "1", label: "Cohesive theme, door to kitchen" },
+    ],
+  },
   {
     slug: "the-linen-house",
     name: "The Linen House",
