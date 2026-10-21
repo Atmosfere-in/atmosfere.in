@@ -86,6 +86,80 @@ export const spacesProjects = [
     ],
   },
   {
+    // Real engagement. Copy and renders from atmosfere.in's portfolio page.
+    slug: "villa-rise-resort-residency",
+    name: "Villa at Rise Resort Residency",
+    type: "residential",
+    category: "Villa",
+    location: "Rise Resort Residency",
+    size: "1,995 sq ft",
+    timeline: "Ongoing",
+    image: photo("villa-rise-resort-residency/hero.jpg", "The living room: tan leather sofas, a cowhide rug and full-height curtains opening to the balcony"),
+    lead: "A new-build 3BHK home designed on a tight budget — clean lines, a functional plan and cost-effective finishes that still read as sophisticated.",
+    summary:
+      "For Poonam and Dharmender Arora's new home at Rise Resort Residency, we are designing a modern 3BHK within a tight budget, balancing contemporary aesthetics with practicality. The design prioritises clean lines, functional layouts and cost-effective yet stylish materials and finishes, so the whole home reads as one cohesive, sophisticated space.",
+    scope: ["Interior design", "Space planning", "Material & finish selection", "Custom joinery", "Lighting design"],
+    chapters: [
+      { title: "A new build, a tight budget.", image: photo("villa-rise-resort-residency/chapter-1.jpg", "Living and dining as one room, with the balcony and a chandelier over the dining table") },
+      { title: "Spend where the eye lands.", image: photo("villa-rise-resort-residency/chapter-2.jpg", "The living-room TV wall in book-matched marble between fluted panels") },
+      { title: "A kitchen with character.", image: photo("villa-rise-resort-residency/chapter-3.jpg", "The slate-blue kitchen with a marble-topped breakfast counter and tan stools") },
+    ],
+    mosaic: [
+      photo("villa-rise-resort-residency/mosaic-1.jpg", "The dining table with grey chairs, the kitchen beyond"),
+      photo("villa-rise-resort-residency/mosaic-2.jpg", "The entrance foyer: an oval mirror on a panelled wall and a black console"),
+      photo("villa-rise-resort-residency/mosaic-3.jpg", "The blue shaker kitchen with white tile and marble counters"),
+    ],
+    concept: {
+      title: "Clean lines, warm finishes, careful money.",
+      text: "A tight budget sharpens the plan. Money goes to the surfaces people touch and see first — the marble TV wall, the panelled foyer, the kitchen fronts — and the rest stays simple: plain plaster with wall moulding, cove-lit ceilings, and a warm palette of tan leather, slate blue and champagne gold that makes modest materials feel considered.",
+      image: photo("villa-rise-resort-residency/concept.jpg", "The entrance foyer, with a console, a framed artwork and an oval mirror under a coffered ceiling"),
+      palette: [
+        { name: "Book-matched marble", note: "The TV wall and kitchen counters", color: "#e6ddd2" },
+        { name: "Champagne plaster", note: "Walls, with painted moulding", color: "#e8dcc8" },
+        { name: "Tan leather", note: "Living-room sofas and armchairs", color: "#b8824f" },
+        { name: "Slate-blue lacquer", note: "Kitchen shutters", color: "#5f7591" },
+        { name: "Antique gold", note: "Wall lights, handles and the chandelier", color: "#b99a5e" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "A family's new 3BHK home of 1,995 sq ft at Rise Resort Residency, to be designed as a modern, cohesive and sophisticated home within a tight budget.",
+        points: ["A 3BHK new build of 1,995 sq ft", "Contemporary, yet practical", "A clearly set budget"],
+      },
+      {
+        title: "Challenge",
+        text: "The budget ruled out expensive materials everywhere, and the home still had to feel finished and elegant rather than plain.",
+        points: ["Cost-effective finishes that look stylish", "No room for waste in the plan", "One cohesive look across three bedrooms and the living spaces"],
+      },
+      {
+        title: "Approach",
+        text: "We planned the home around clean lines and a functional layout, then placed the richer finishes where they are seen and touched most, keeping the rest simple.",
+        points: ["Functional layout first", "Feature surfaces, plain backgrounds", "A short list of materials used throughout"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A marble TV wall between fluted panels, a panelled foyer with an oval mirror, tan leather seating, a slate-blue shaker kitchen with a breakfast counter, and cove lighting in every room.",
+        points: ["Marble and fluted panels in the living room", "A slate-blue kitchen with a marble counter", "Wall moulding and cove lighting throughout"],
+      },
+      {
+        title: "Execution",
+        text: "The design is complete and execution is ongoing, with our drawings, finish schedules and joinery details guiding the site.",
+        points: ["Design intent and detailed drawings issued", "Finish and joinery schedules", "Execution ongoing"],
+      },
+      {
+        title: "Outcome",
+        text: "A home that balances contemporary aesthetics with practicality: clean lines, a layout that works, and finishes that feel sophisticated without the cost.",
+        points: ["Cohesive from foyer to kitchen", "Stylish finishes within budget", "A plan the family can live in"],
+      },
+    ],
+    results: [
+      { value: "1,995", label: "sq ft, 3BHK new build" },
+      { value: "3", label: "Bedrooms in one cohesive scheme" },
+      { value: "5", label: "Materials, used throughout" },
+    ],
+  },
+  {
     slug: "the-linen-house",
     name: "The Linen House",
     type: "residential",

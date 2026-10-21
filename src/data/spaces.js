@@ -60,6 +60,16 @@ export const projects = {
       },
     },
     {
+      href: "/spaces/projects/villa-rise-resort-residency",
+      name: "Villa at Rise Resort Residency",
+      details: "Villa · New build",
+      side: "1,995 sq ft",
+      image: {
+        src: "/images/spaces/villa-rise-resort-residency/hero.jpg",
+        alt: "The living room, with tan leather sofas and full-height curtains opening to the balcony",
+      },
+    },
+    {
       href: "/spaces/projects/the-linen-house",
       name: "The Linen House",
       details: "Residence · Gurugram",
@@ -265,14 +275,14 @@ export const caseStudies = {
       },
     },
     {
-      href: "/spaces/projects/marble-and-brass-office",
-      tag: "Workplace · Bengaluru",
-      title: "Marble & Brass Office",
+      href: "/spaces/projects/villa-rise-resort-residency",
+      tag: "Villa · Rise Resort Residency",
+      title: "Villa at Rise Resort Residency",
       summary:
-        "A founder's office that had to host board meetings and quiet focus — resolved with zoning, acoustics and a single marble plinth.",
+        "A new-build 3BHK home designed on a tight budget — clean lines, a functional plan and cost-effective finishes that still read as sophisticated.",
       image: {
-        src: unsplash("1778731525532-d2ab833c8463"),
-        alt: "A modern office with a marble desk and a plush chair",
+        src: "/images/spaces/villa-rise-resort-residency/chapter-3.jpg",
+        alt: "The slate-blue kitchen with a marble-topped breakfast counter and tan stools",
       },
     },
   ],
