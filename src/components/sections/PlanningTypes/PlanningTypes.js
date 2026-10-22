@@ -18,7 +18,7 @@ export default function PlanningTypes({ id, eyebrow, title, intro, types, action
           {intro && <p className={styles.intro}>{intro}</p>}
         </div>
 
-        <ul className={styles.grid} style={{ "--cols": types.length }}>
+        <ul className={`${styles.grid} ${types.length <= 2 ? styles.gridWide : ""}`} style={{ "--cols": types.length }}>
           {types.map((type, i) => (
             <li
               key={type.slug}

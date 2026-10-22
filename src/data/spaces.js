@@ -123,10 +123,13 @@ export const planningTypes = {
     src: unsplash("1520250497591-112f2f40a3f4"),
     alt: "A resort pool lined with palms and thatched pavilions",
   },
-  types: allPlanningTypes.map((type) => ({
-    ...type,
-    href: `/hospitality#${type.slug}`,
-  })),
+  // Only the two planning types the practice currently shows work for.
+  types: allPlanningTypes
+    .filter((type) => ["hotel-resort", "banquet"].includes(type.slug))
+    .map((type) => ({
+      ...type,
+      href: `/hospitality#${type.slug}`,
+    })),
 };
 
 // Same room, same camera angle. Both are placeholders edited from one stock

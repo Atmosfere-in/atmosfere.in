@@ -37,6 +37,16 @@
   list-style: none;
 }
 
+/* With only two types the cards run half the width each, so the photographs
+   go landscape to keep the row at a sensible height. */
+.gridWide {
+  gap: clamp(20px, 2.4vw, 40px);
+}
+
+.gridWide .media {
+  aspect-ratio: 16 / 10;
+}
+
 .card {
   display: block;
 }
