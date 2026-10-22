@@ -72,8 +72,8 @@ export const projects = {
     {
       href: "/spaces/projects/arihant",
       name: "Arihant",
-      details: "Workplace · Delhi NCR",
-      side: "One floor",
+      details: "Commercial compound · Delhi NCR",
+      side: "10,000 sq ft",
       image: {
         src: "/images/spaces/arihant/hero.jpg",
         alt: "The open office, with white workstations under green acoustic baffles",
@@ -275,10 +275,10 @@ export const caseStudies = {
     },
     {
       href: "/spaces/projects/arihant",
-      tag: "Workplace · Delhi NCR",
+      tag: "Commercial compound · Delhi NCR",
       title: "Arihant",
       summary:
-        "A third-floor office planned as one open room — workstations under green acoustic baffles, a breakout table in the middle, and the quiet rooms at the edges.",
+        "A 10,000 sq ft commercial compound — two basements, seven floors and the entry court — planned so one floor serves the owner, six earn rent, and the ground floor earns on its own.",
       image: {
         src: "/images/spaces/arihant/chapter-1.jpg",
         alt: "Workstations in long runs facing the 'Team Work' feature wall",
