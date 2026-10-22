@@ -252,12 +252,12 @@ export const spacesProjects = [
     scope: ["Retail planning & circulation", "Interior design", "Custom shelving & counters", "Brand visual identity", "Lighting design", "Execution"],
     chapters: [
       { title: "From the door to the right counter.", image: photo("lajpat-nagar/chapter-1.jpg", "The design render: the central aisle from the entrance, with counters down the middle and shelving on both walls") },
-      { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The shelf wall: printed gift boxes on pale timber shelves with brass uprights, cane-fronted cabinets below") },
+      { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: cards and boxes on pale shelving down the wall, marble counters and cane chairs, the chandelier above") },
       { title: "An identity from scratch.", image: photo("lajpat-nagar/chapter-3.jpg", "A marble-topped counter with cane-backed chairs, the shelves of boxes behind") },
     ],
     mosaic: [
       photo("lajpat-nagar/mosaic-1.jpg", "Gift boxes in traditional prints on the shelves, lit from above"),
-      photo("lajpat-nagar/mosaic-2.jpg", "The fluted ceiling medallion with the chandelier at its centre"),
+      photo("lajpat-nagar/mosaic-2.jpg", "A counter with cane-backed chairs and a marble top, the shelves of cards and boxes behind"),
       photo("lajpat-nagar/mosaic-3.jpg", "A display shelf of printed boxes and trays over cane-fronted cabinets"),
     ],
     concept: {
@@ -304,7 +304,6 @@ export const spacesProjects = [
         points: ["Three counters, twelve seats, no queue", "Shelves that show the stock, not themselves", "A brand identity from zero"],
       },
     ],
-    voiceImage: photo("lajpat-nagar/voice.jpg", "A counter with cane-backed chairs and a marble top, the shelves of cards and boxes behind"),
     results: [
       { value: "700", label: "sq ft, planned as one clear route" },
       { value: "3", label: "Counters, with seating for about twelve" },
