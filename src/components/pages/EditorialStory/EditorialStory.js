@@ -5,6 +5,8 @@ import { Concept } from "@/components/pages/StoryDetail/StoryDeep";
 import styles from "./EditorialStory.module.css";
 
 const NUMERALS = ["I", "II", "III", "IV"];
+// The concept & palette section is hidden on every story for now.
+const SHOW_CONCEPT = false;
 
 // The "editorial" case-study layout — a magazine long-read, deliberately
 // different from StoryDetail: split hero, drop-cap introduction, the design
@@ -71,8 +73,9 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
         </div>
       </section>
 
-      {/* The design idea and its material palette (shared with StoryDetail). */}
-      {story.concept && <Concept concept={story.concept} />}
+      {/* The design idea and its material palette (shared with StoryDetail) is
+          switched off for now; set SHOW_CONCEPT to true to bring it back. */}
+      {SHOW_CONCEPT && story.concept && <Concept concept={story.concept} />}
 
       {chapters.map((chapter, i) => (
         <section key={chapter.title} className={styles.chapter}>
