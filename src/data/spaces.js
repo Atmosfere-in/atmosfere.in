@@ -194,13 +194,13 @@ export const founders = {
       },
     },
     {
-      name: "Co-founder",
-      role: "",
+      name: "Vivek Sharma",
+      role: "Co-founder",
       quote:
         "We promise only what we can build, and then we build exactly that: on the date and the budget we agreed, with one team answerable for all of it.",
       image: {
         src: unsplash("1762341124796-530c0085f7d8"),
-        alt: "Portrait of the co-founder, seated, in a tailored black outfit",
+        alt: "Portrait of Vivek Sharma, co-founder of Atmosfere",
       },
     },
   ],

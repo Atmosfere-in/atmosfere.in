@@ -164,13 +164,13 @@ export const founders = {
       },
     },
     {
-      name: "Co-founder",
-      role: "",
+      name: "Vivek Sharma",
+      role: "Co-founder",
       quote:
         "Every property has a guest it is meant for. Our job is to find that guest first, and then plan the rooms, the revenue and the experience around them.",
       image: {
         src: unsplash("1762341124796-530c0085f7d8"),
-        alt: "Portrait of the co-founder, seated, in a tailored black outfit",
+        alt: "Portrait of Vivek Sharma, co-founder of Atmosfere",
       },
     },
   ],
