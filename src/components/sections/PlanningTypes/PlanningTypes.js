@@ -9,6 +9,8 @@ import styles from "./PlanningTypes.module.css";
 // types: [{ slug, name, href, text?, image }]. With `anchors`, each card gets
 // id={slug} so other pages can deep-link to a planning type.
 export default function PlanningTypes({ id, eyebrow, title, intro, types, action, anchors = false }) {
+  // Two cards run half the width each, so they need the larger image sizes.
+  const wide = types.length <= 2;
   return (
     <section id={id} className={`section ${styles.section}`}>
       <div className="container">
@@ -18,7 +20,7 @@ export default function PlanningTypes({ id, eyebrow, title, intro, types, action
           {intro && <p className={styles.intro}>{intro}</p>}
         </div>
 
-        <ul className={`${styles.grid} ${types.length <= 2 ? styles.gridWide : ""}`} style={{ "--cols": types.length }}>
+        <ul className={`${styles.grid} ${wide ? styles.gridWide : ""}`} style={{ "--cols": types.length }}>
           {types.map((type, i) => (
             <li
               key={type.slug}
@@ -32,7 +34,8 @@ export default function PlanningTypes({ id, eyebrow, title, intro, types, action
                     src={type.image.src}
                     alt={type.image.alt}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                    quality={wide ? 90 : 80}
+                    sizes={wide ? "(max-width: 640px) 100vw, 50vw" : "(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"}
                     className={styles.image}
                   />
                 </div>

@@ -21,10 +21,12 @@ export const hero = {
   title: "Interiors, designed and delivered end to end.",
   intro:
     "From the first sketch to the final styled shelf, one studio carries your home or workplace through design, execution and handover.",
+  // The studio's own render: a living room with a timber screen, a
+  // hand-painted wallpaper and a cylindrical pendant.
   image: {
-    src: unsplash("1760067537540-cc36c1700d7e"),
-    alt: "A warm, sunlit open kitchen and living space with floor-to-ceiling glass doors opening onto a tropical garden",
-    position: "50% 55%",
+    src: "/images/spaces/hero.jpg",
+    alt: "A living room with a sculpted timber screen, a hand-painted green wallpaper, a printed pendant lamp and marble-topped tables",
+    position: "50% 50%",
   },
   primary: { label: "Get a Quote", href: "/spaces/get-a-quote" },
   secondary: { label: "View Projects", href: "/spaces/projects" },

@@ -102,8 +102,14 @@
   align-items: center;
   gap: 10px;
   font-size: var(--text-small);
+  line-height: 1;
   color: var(--ft-muted);
   transition: color 0.3s var(--ease);
+}
+
+.social svg {
+  display: block;
+  flex: 0 0 auto;
 }
 
 .social:hover {

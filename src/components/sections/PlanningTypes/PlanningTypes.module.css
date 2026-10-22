@@ -133,6 +133,11 @@
     gap: var(--space-4) 12px;
   }
 
+  .gridWide {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
   .media {
     border-radius: 12px;
   }

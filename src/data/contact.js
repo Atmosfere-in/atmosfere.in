@@ -3,8 +3,8 @@ export const contact = {
   phone: "+91 885 102 9577",
   phoneHref: "tel:+918851029577",
   whatsappHref: "https://wa.me/918851029577",
-  email: "atmosfere.design@gmail.com",
-  emailHref: "mailto:atmosfere.design@gmail.com",
+  email: "marketing@atmosfere.in",
+  emailHref: "mailto:marketing@atmosfere.in",
   city: "Noida, Uttar Pradesh",
   // Consultation requests from the booking popup are sent to this WhatsApp
   // number (country code + number, no "+" or spaces).
