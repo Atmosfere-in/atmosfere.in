@@ -252,7 +252,7 @@ export const spacesProjects = [
     scope: ["Retail planning & circulation", "Interior design", "Custom shelving & counters", "Brand visual identity", "Lighting design", "Execution"],
     chapters: [
       { title: "From the door to the right counter.", image: photo("lajpat-nagar/chapter-1.jpg", "The design render: the central aisle from the entrance, with counters down the middle and shelving on both walls") },
-      { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The built store: pale shelving with slim brass uprights, cards and boxes lined along both walls") },
+      { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The shelf wall: printed gift boxes on pale timber shelves with brass uprights, cane-fronted cabinets below") },
       { title: "An identity from scratch.", image: photo("lajpat-nagar/chapter-3.jpg", "A marble-topped counter with cane-backed chairs, the shelves of boxes behind") },
     ],
     mosaic: [
