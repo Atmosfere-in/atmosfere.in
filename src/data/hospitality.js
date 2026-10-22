@@ -90,14 +90,17 @@ export const projects = {
 export const planningTypes = {
   id: "planning-types",
   eyebrow: "Planning Types",
-  title: "Four kinds of property. Four different questions.",
+  title: "Two kinds of property. Two different questions.",
   intro:
-    "An Airbnb, a resort and a banquet hall succeed for entirely different reasons. We plan each one on its own terms.",
+    "A resort and a banquet hall succeed for entirely different reasons. We plan each one on its own terms.",
   anchors: true,
-  types: allPlanningTypes.map((type) => ({
-    ...type,
-    href: `/hospitality/${type.slug}`,
-  })),
+  // Only the two planning types the practice currently shows work for.
+  types: allPlanningTypes
+    .filter((type) => ["hotel-resort", "banquet"].includes(type.slug))
+    .map((type) => ({
+      ...type,
+      href: `/hospitality/${type.slug}`,
+    })),
 };
 
 export const process = {

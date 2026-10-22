@@ -125,13 +125,12 @@ export const planningTypes = {
     src: unsplash("1520250497591-112f2f40a3f4"),
     alt: "A resort pool lined with palms and thatched pavilions",
   },
-  // Only the two planning types the practice currently shows work for.
-  types: allPlanningTypes
-    .filter((type) => ["hotel-resort", "banquet"].includes(type.slug))
-    .map((type) => ({
-      ...type,
-      href: `/hospitality#${type.slug}`,
-    })),
+  // All four types; each card opens that planning type's own page (the
+  // hospitality hub itself now shows only hotels and banquets).
+  types: allPlanningTypes.map((type) => ({
+    ...type,
+    href: `/hospitality/${type.slug}`,
+  })),
 };
 
 // Same room, same camera angle. Both are placeholders edited from one stock
