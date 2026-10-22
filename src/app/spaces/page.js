@@ -7,7 +7,6 @@ import Process from "@/components/sections/Process/Process";
 import Founders from "@/components/sections/Founders/Founders";
 import Split from "@/components/sections/Split/Split";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
-import TrustSignals from "@/components/sections/TrustSignals/TrustSignals";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import * as spaces from "@/data/spaces";
 
@@ -24,7 +23,6 @@ export default function SpacesHome() {
       <Founders {...spaces.founders} />
       <Split label="Residential and commercial work" panels={spaces.split} />
       <CaseStudies {...spaces.caseStudies} />
-      <TrustSignals {...spaces.trust} />
       <ClosingCta {...spaces.closing} />
     </main>
   );

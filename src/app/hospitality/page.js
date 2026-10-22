@@ -5,7 +5,6 @@ import PlanningTypes from "@/components/sections/PlanningTypes/PlanningTypes";
 import ProcessArches from "@/components/sections/ProcessArches/ProcessArches";
 import Founders from "@/components/sections/Founders/Founders";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
-import TrustSignals from "@/components/sections/TrustSignals/TrustSignals";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import * as hospitality from "@/data/hospitality";
 
@@ -22,7 +21,6 @@ export default function HospitalityHome() {
       </div>
       <Founders {...hospitality.founders} />
       <CaseStudies {...hospitality.caseStudies} />
-      <TrustSignals {...hospitality.trust} />
       <ClosingCta {...hospitality.closing} />
     </main>
   );

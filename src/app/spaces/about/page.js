@@ -2,10 +2,9 @@ import PageHero from "@/components/pages/PageHero/PageHero";
 import Principles from "@/components/pages/Principles/Principles";
 import About from "@/components/sections/About/About";
 import Founders from "@/components/sections/Founders/Founders";
-import TrustSignals from "@/components/sections/TrustSignals/TrustSignals";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { aboutPage } from "@/data/spacesPages";
-import { founders, trust, closing } from "@/data/spaces";
+import { founders, closing } from "@/data/spaces";
 
 export const metadata = {
   title: "About Us",
@@ -20,7 +19,6 @@ export default function SpacesAbout() {
       <About {...aboutPage.story} />
       <Principles {...aboutPage.principles} />
       <Founders {...founders} />
-      <TrustSignals {...trust} />
       <ClosingCta {...closing} />
     </main>
   );

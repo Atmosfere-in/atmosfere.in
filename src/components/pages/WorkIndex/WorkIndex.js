@@ -45,7 +45,7 @@ export default function WorkIndex({ filters, items, empty = "Nothing here yet." 
                       alt={item.image.alt}
                       fill
                       quality={85}
-                      sizes="(max-width: 768px) 100vw, 55vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className={styles.image}
                     />
                     <span className={styles.view}>
