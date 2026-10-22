@@ -165,6 +165,83 @@ export const hospitalityCases = [
     ],
   },
   {
+    // Real engagement, at design-intent stage (Sept 2025 → Jan 2026). Copy
+    // from the studio's design-intent decks; exterior renders by the studio,
+    // interiors from the decks' inspiration boards.
+    slug: "moradabad-sourcing-convention-centre",
+    name: "Moradabad Sourcing & Convention Centre",
+    planningType: "banquet",
+    category: "Convention centre & hotel",
+    location: "Moradabad",
+    size: "2,21,522 sq ft · 70 keys",
+    engagement: "Design intent",
+    image: photo("moradabad-sourcing-convention-centre/hero.jpg", "The proposed building: a white rendered block with a brass-toned lattice tower and a glass rotunda at the corner, seen from the road"),
+    lead: "A 1,26,600 sq ft plot in India's brass city, planned as the place where buyers come to see, source, meet and stay: exhibition and retail below, convention halls in the middle, 70 rooms above and an open exhibition deck on the roof.",
+    summary:
+      "The brief began as a hotel. As we tested it against what Moradabad actually needs — a city of exporters whose buyers fly in to source brassware and handicrafts, with nowhere built for that — it became something more useful: a sourcing and convention centre with a hotel inside it. Across six levels and 2,21,522 sq ft, seventy per cent of the building is given to exhibition and convention space and thirty per cent to rooms, cafés and retail, so a buyer can walk the shops in the basement, sit in a convention hall upstairs, and sleep two floors above.",
+    scope: ["Market-led repositioning", "Zoning & master plan", "Area programme", "Concept & facade intent", "Floor layouts", "Interior inspiration boards"],
+    chapters: [
+      { title: "From a hotel to a sourcing hub.", image: photo("moradabad-sourcing-convention-centre/chapter-1.jpg", "The building along the road, with the hotel wing, the lattice tower and the glass rotunda") },
+      { title: "Show, sell, meet, stay.", image: photo("moradabad-sourcing-convention-centre/chapter-2.jpg", "The front elevation: hotel floors over the convention levels, with the lattice and the rotunda at the corner") },
+      { title: "A building that announces itself.", image: photo("moradabad-sourcing-convention-centre/chapter-3.jpg", "The glass rotunda at the entrance, with the canopy and the drop-off below") },
+    ],
+    mosaic: [
+      photo("moradabad-sourcing-convention-centre/mosaic-1.jpg", "Convention hall intent: a stage under rings of light, with a white runway between the tables"),
+      photo("moradabad-sourcing-convention-centre/mosaic-2.jpg", "Reception intent: a sculptural white centrepiece under curtains of light"),
+      photo("moradabad-sourcing-convention-centre/mosaic-3.jpg", "Room intent: a cane headboard, bolster cushions and a timber bed base"),
+    ],
+    concept: {
+      title: "Moradabad's trade, under one roof.",
+      text: "The city sells brass to the world, but its buyers have had to see it in scattered workshops and stay wherever they can. The plan stacks the whole journey in one building: 116 shops and an exhibit hall in the basement, a 20,600 sq ft convention hall at the ground floor with its own entrance, two more halls on the first, rooms, a gym and a spa on the second, rooms, a café and a display gallery on the third, and an open exhibition deck with a live kitchen and seating for 300 on the roof. The facade says what the building is: a brass-toned lattice tower on white render, and a glass rotunda that shows the floors inside.",
+      image: photo("moradabad-sourcing-convention-centre/concept.jpg", "The brass-toned lattice tower on the white facade, with the drop-off and cars below"),
+      palette: [
+        { name: "Brass lattice", note: "The facade tower, in the metal the city is known for", color: "#b8864a" },
+        { name: "White render", note: "The main body of the building", color: "#efece6" },
+        { name: "Clear glass", note: "The rotunda and the hotel floors", color: "#c7d3d8" },
+        { name: "Charcoal frame", note: "Rotunda structure and window surrounds", color: "#3a3d40" },
+        { name: "Warm timber", note: "Halls, lobbies and the rooftop deck", color: "#a4784e" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "A 1,26,600 sq ft plot in Moradabad and a first idea: a hotel. The owners asked us to plan it, and to tell them whether a hotel was the right thing to build there.",
+        points: ["Plot of 1,26,600 sq ft", "First brief: a hotel", "An open question about what the city needs"],
+      },
+      {
+        title: "Challenge",
+        text: "Moradabad's economy is export: buyers arrive to source brass and handicrafts, but the city has no single place to show them the trade, host them, and put them up — and a plain hotel would have left all of that revenue on the table.",
+        points: ["Buyers with nowhere built for sourcing", "Exhibition, meetings and rooms in separate places", "A hotel alone earning only on beds"],
+      },
+      {
+        title: "Approach",
+        text: "We re-planned the building around the buyer's visit rather than the guest's night: exhibition and retail at the base, convention halls in the middle, rooms above, and an open exhibition deck on the roof — seventy per cent of the area for showing and meeting, thirty for staying and eating.",
+        points: ["Programme set by the sourcing journey", "70% exhibition and convention, 30% commercial", "Six levels, 2,21,522 sq ft in all"],
+      },
+      {
+        title: "Design Decisions",
+        text: "116 shops and a 4,700 sq ft exhibit hall in the basement; a 20,600 sq ft convention hall with its own entrance at ground; two halls of 12,300 and 9,900 sq ft on the first floor; 35 rooms with a gym, spa and yoga area on the second; 35 rooms, a 4,700 sq ft café and a display gallery on the third; and a rooftop exhibition deck with a live kitchen for 300.",
+        points: ["Three convention halls, 42,800 sq ft together", "70 rooms in three sizes across two floors", "A rooftop that exhibits and feeds 300"],
+      },
+      {
+        title: "Execution",
+        text: "The design intent was issued in two rounds — the hotel scheme in September 2025, the sourcing and convention scheme in January 2026 — with zoning, the area programme, floor layouts, facade concept and interior inspiration for every part of the building.",
+        points: ["Two design-intent rounds, Sept 2025 and Jan 2026", "Zoning, area programme and floor layouts", "Facade concept and interior intent per floor"],
+      },
+      {
+        title: "Outcome",
+        text: "A plan that fits the city: a building where Moradabad's exporters can show their work and their buyers can source, meet and stay in one place — and that earns from all four, not from rooms alone.",
+        points: ["One address for the city's trade", "Revenue from exhibition, halls, retail and rooms", "A facade in the city's own metal"],
+      },
+    ],
+    voiceImage: photo("moradabad-sourcing-convention-centre/voice.jpg", "The glass rotunda from below, with its floors showing through the glazing"),
+    results: [
+      { value: "2.2L", label: "sq ft over six levels, 70% for exhibition and convention" },
+      { value: "70", label: "Rooms across two floors" },
+      { value: "3", label: "Convention halls, 42,800 sq ft together" },
+    ],
+  },
+  {
     slug: "the-dusk-pool-retreat",
     name: "The Dusk Pool Retreat",
     planningType: "hotel-resort",

@@ -74,6 +74,16 @@ export const projects = {
       },
     },
     {
+      href: "/hospitality/case-studies/moradabad-sourcing-convention-centre",
+      name: "Moradabad Sourcing & Convention Centre",
+      details: "Convention centre & hotel · Moradabad",
+      side: "70 keys",
+      image: {
+        src: "/images/hospitality/moradabad-sourcing-convention-centre/hero.jpg",
+        alt: "The proposed building, with a brass-toned lattice tower and a glass rotunda at the corner",
+      },
+    },
+    {
       href: "/hospitality/case-studies/the-cabana-resort",
       name: "The Cabana Resort",
       details: "Resort · Goa",
@@ -226,14 +236,14 @@ export const caseStudies = {
       },
     },
     {
-      href: "/hospitality/case-studies/the-linden-rooms",
-      tag: "Boutique hotel · Shimla",
-      title: "The Linden Rooms",
+      href: "/hospitality/case-studies/moradabad-sourcing-convention-centre",
+      tag: "Convention centre & hotel · Moradabad",
+      title: "Moradabad Sourcing & Convention Centre",
       summary:
-        "A tired guesthouse repositioned as 12 boutique rooms — fewer keys, a far higher rate, and a waitlist in season.",
+        "A plot in the brass city, first briefed as a hotel, re-planned as the place buyers come to see, source, meet and stay — exhibition, convention halls and 70 rooms in one building.",
       image: {
-        src: unsplash("1761757821641-3b347c034042"),
-        alt: "A boutique hotel bedroom with a metal bed frame and framed artwork",
+        src: "/images/hospitality/moradabad-sourcing-convention-centre/chapter-3.jpg",
+        alt: "The glass rotunda at the entrance of the proposed building",
       },
     },
   ],
