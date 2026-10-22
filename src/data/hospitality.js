@@ -83,46 +83,6 @@ export const projects = {
         alt: "The proposed building, with a brass-toned lattice tower and a glass rotunda at the corner",
       },
     },
-    {
-      href: "/hospitality/case-studies/the-cabana-resort",
-      name: "The Cabana Resort",
-      details: "Resort · Goa",
-      side: "42 keys",
-      image: {
-        src: unsplash("1571003123894-1f0594d2b5d9"),
-        alt: "Draped poolside cabanas along an infinity pool at dusk",
-      },
-    },
-    {
-      href: "/hospitality/case-studies/olive-court",
-      name: "Olive Court",
-      details: "Heritage boutique hotel · Jaipur",
-      side: "18 keys",
-      image: {
-        src: unsplash("1570133435807-5feefeb2d196"),
-        alt: "A tiled courtyard with a pool, palms and carved arches",
-      },
-    },
-    {
-      href: "/hospitality/case-studies/the-pink-house",
-      name: "The Pink House",
-      details: "Private villa stay · Udaipur",
-      side: "5 suites",
-      image: {
-        src: unsplash("1683914791856-040e5de792b3"),
-        alt: "A pink-walled villa with a pool and garden umbrella",
-      },
-    },
-    {
-      href: "/hospitality/case-studies/horizon-villas",
-      name: "Horizon Villas",
-      details: "Villa stays · Kerala",
-      side: "6 villas",
-      image: {
-        src: unsplash("1782113286208-06b91ed3ad05"),
-        alt: "A curved lounge beside an infinity pool overlooking the sea",
-      },
-    },
   ],
 };
 

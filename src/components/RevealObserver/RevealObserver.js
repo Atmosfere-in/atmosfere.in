@@ -11,6 +11,13 @@ const SELECTOR = ".reveal:not([data-revealed]), .reveal-image:not([data-revealed
 // navigation, filtered lists) are picked up as they appear.
 export default function RevealObserver() {
   useEffect(() => {
+    // A reload or a return to the site always opens the page from the top
+    // (the browser would otherwise restore the old scroll position, with
+    // every reveal already past). Anchored links (/hospitality#banquet)
+    // still land on their section.
+    if ("scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+    if (!window.location.hash) window.scrollTo(0, 0);
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     document.documentElement.classList.add("js-reveal");
 

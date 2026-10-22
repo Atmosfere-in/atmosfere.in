@@ -80,6 +80,16 @@ export const projects = {
       },
     },
     {
+      href: "/spaces/projects/lajpat-nagar-boutique",
+      name: "Suneja Card Creations",
+      details: "Retail boutique · Lajpat Nagar",
+      side: "700 sq ft",
+      image: {
+        src: "/images/spaces/lajpat-nagar/hero.jpg",
+        alt: "The finished store, with shelves of cards and gift boxes down both walls and marble counters",
+      },
+    },
+    {
       href: "/spaces/projects/arihant",
       name: "Arihant",
       details: "Commercial compound · Delhi NCR",
@@ -87,56 +97,6 @@ export const projects = {
       image: {
         src: "/images/spaces/arihant/hero.jpg",
         alt: "The open office, with white workstations under green acoustic baffles",
-      },
-    },
-    {
-      href: "/spaces/projects/the-linen-house",
-      name: "The Linen House",
-      details: "Residence · Gurugram",
-      side: "4,200 sq ft",
-      image: {
-        src: unsplash("1705326701287-346fc37a2c86"),
-        alt: "A calm living room with curved cream sofas and a sculptural coffee table",
-      },
-    },
-    {
-      href: "/spaces/projects/walnut-and-stone",
-      name: "Walnut & Stone",
-      details: "Apartment · Mumbai",
-      side: "2,600 sq ft",
-      image: {
-        src: unsplash("1688647063090-36f36f692d95"),
-        alt: "A living room with a walnut and stone wall of lit shelving and soft grey sofas",
-      },
-    },
-    {
-      href: "/spaces/projects/the-arch-house",
-      name: "The Arch House",
-      details: "Residence · New Delhi",
-      side: "5,800 sq ft",
-      image: {
-        src: unsplash("1750420556288-d0e32a6f517b"),
-        alt: "A bedroom with an arched timber headboard wall and soft cove lighting",
-      },
-    },
-    {
-      href: "/spaces/projects/the-quiet-study",
-      name: "The Quiet Study",
-      details: "Residence · Dehradun",
-      side: "3,100 sq ft",
-      image: {
-        src: unsplash("1642541070065-3912f347e7c6"),
-        alt: "A quiet bedroom with a fluted wall, abstract art and a halo pendant",
-      },
-    },
-    {
-      href: "/spaces/projects/atelier-dining",
-      name: "Atelier Dining",
-      details: "Commercial · F&B · Gurugram",
-      side: "1,900 sq ft",
-      image: {
-        src: unsplash("1753800558729-7929703f81de"),
-        alt: "Globe pendant lights over a dining table with sculptural branches",
       },
     },
   ],
