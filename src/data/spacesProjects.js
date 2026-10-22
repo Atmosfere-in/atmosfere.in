@@ -161,6 +161,81 @@ export const spacesProjects = [
     ],
   },
   {
+    // Real engagement. Key facts from the studio; renders by the studio.
+    // City and stage to be confirmed.
+    slug: "tower-10-202",
+    name: "Tower 10 – 202",
+    type: "residential",
+    category: "Apartment",
+    location: "Delhi NCR",
+    size: "1,985 sq ft",
+    timeline: "Ongoing",
+    image: photo("tower-10-202/hero.jpg", "The living room: a pale sofa under a branching chandelier, a marble-effect feature wall and the TV unit beyond"),
+    lead: "A 3BHK of 1,985 sq ft for a family of four — an ultra-luxury look on a ₹35 lakh budget, designed around the family's daily routine rather than aesthetics alone.",
+    summary:
+      "The family of four in flat 202 wanted their 3BHK to look ultra-luxury, stay low-maintenance and suit a decent household — all within ₹35 lakh. So we started with how they live, not with how the rooms would photograph: the morning rush, meals, prayer, homework, guests, rest. The plan and the storage follow that routine; the look follows the plan. The result reads as luxury, costs what it should, and is easy to keep.",
+    scope: ["Full interiors", "Space planning", "Budget-led material selection", "Custom joinery", "Lighting design"],
+    chapters: [
+      { title: "Four people, one routine.", image: photo("tower-10-202/chapter-1.jpg", "The living room, wide: two fans, the chandelier, pale sofas and the rug") },
+      { title: "Function first, then the look.", image: photo("tower-10-202/chapter-2.jpg", "The kitchen and the dining nook, with a banquette and green chairs") },
+      { title: "Luxury that stays easy to keep.", image: photo("tower-10-202/chapter-3.jpg", "The master bedroom, with a marble-effect TV wall and curtains to the balcony") },
+    ],
+    mosaic: [
+      photo("tower-10-202/mosaic-1.jpg", "The dining table in walnut with green chairs, the living room beyond"),
+      photo("tower-10-202/mosaic-2.jpg", "The TV unit and display shelving, with the dining nook behind"),
+      photo("tower-10-202/mosaic-3.jpg", "A bedroom with an upholstered headboard, framed art and a balcony"),
+    ],
+    concept: {
+      title: "Designed for the day, not just the photo.",
+      text: "Every decision started with a question about daily life: where the family eats on a weekday, where the children do homework, where the morning prayer happens, what gets cleaned every day. The answers gave us a banquette dining nook, a pooja unit with its own screen, wardrobes that swallow everything, and finishes that wipe clean. The luxury is in the proportions, the lighting and a few marble-effect surfaces — not in materials that need looking after.",
+      image: photo("tower-10-202/concept.jpg", "The pooja unit: an embroidered backdrop behind curtains, two stools and a slatted timber screen"),
+      palette: [
+        { name: "Marble-effect panels", note: "Feature walls in the living room and bedroom, no sealing needed", color: "#e4ded6" },
+        { name: "Champagne laminate", note: "Wardrobes and kitchen shutters, wipe-clean", color: "#d8c7ae" },
+        { name: "Walnut-toned slats", note: "Screens, the pooja unit and the dining table", color: "#8a5f3c" },
+        { name: "Olive green upholstery", note: "Dining chairs, the banquette and cushions", color: "#6f7b55" },
+        { name: "Brass accents", note: "The chandelier, handles and trims", color: "#b9985a" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "A family of four, a 3BHK of 1,985 sq ft, and a budget of ₹35 lakh: they wanted an ultra-luxury look that would stay low-maintenance and feel right for a decent household.",
+        points: ["3BHK, 1,985 sq ft, family of four", "Ultra-luxury look within ₹35 lakh", "Low maintenance, everyday practicality"],
+      },
+      {
+        title: "Challenge",
+        text: "Luxury finishes usually cost more and ask for more care, and a show-home plan rarely survives a real family's week.",
+        points: ["Look expensive without spending like it", "Surfaces that forgive daily use", "A plan that works on a Tuesday, not just at a party"],
+      },
+      {
+        title: "Approach",
+        text: "We put function before aesthetics. We mapped the family's daily routine and needs first, planned the rooms and storage around them, and only then chose the look.",
+        points: ["Daily routine mapped room by room", "Storage sized to what the family owns", "Aesthetics layered on a working plan"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A living room with a marble-effect feature wall and a branching chandelier, a banquette dining nook off the kitchen, a pooja unit behind a slatted screen, bedrooms with full-height wardrobes and TV walls, and wipe-clean laminates where hands and water go.",
+        points: ["Banquette dining nook for weekday meals", "Pooja unit with its own screen", "Full-height wardrobes in every bedroom"],
+      },
+      {
+        title: "Execution",
+        text: "Our drawings, joinery details and finish schedules are guiding the fit-out, with costs tracked against the ₹35 lakh line.",
+        points: ["Detailed drawings and joinery", "Finish schedules with costs", "Execution ongoing"],
+      },
+      {
+        title: "Outcome",
+        text: "A home that looks ultra-luxury, costs what it should, and is easy to live in and keep — because it was designed for the family's day first.",
+        points: ["Luxury look, held to ₹35 lakh", "Low-maintenance finishes throughout", "A plan built on the family's routine"],
+      },
+    ],
+    results: [
+      { value: "1,985", label: "sq ft, 3BHK" },
+      { value: "₹35L", label: "Budget, with an ultra-luxury look" },
+      { value: "4", label: "People, one routine the plan follows" },
+    ],
+  },
+  {
     // Real engagement. Key facts from the studio; renders by the studio
     // (the owner's floor). City to be confirmed.
     slug: "arihant",

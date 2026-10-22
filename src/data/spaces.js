@@ -70,6 +70,16 @@ export const projects = {
       },
     },
     {
+      href: "/spaces/projects/tower-10-202",
+      name: "Tower 10 – 202",
+      details: "Apartment · 3BHK",
+      side: "1,985 sq ft",
+      image: {
+        src: "/images/spaces/tower-10-202/hero.jpg",
+        alt: "The living room, with a pale sofa under a branching chandelier and a marble-effect feature wall",
+      },
+    },
+    {
       href: "/spaces/projects/arihant",
       name: "Arihant",
       details: "Commercial compound · Delhi NCR",
