@@ -116,9 +116,12 @@ export const aboutPage = {
     title: "A design studio that builds what it draws.",
     intro:
       "Atmosfere Spaces is a turnkey interior studio for homes and workplaces — one team from the first sketch to the final styled shelf.",
+    // The studio's own render (the Rise Resorts villa): living and dining
+    // as one bright room, opening to the garden.
     image: {
-      src: unsplash("1699239116624-85268dce7377"),
-      alt: "A finished living room with a fluted wall and soft neutral furnishings",
+      src: "/images/spaces/villa-rise-resort-residency/chapter-1.jpg",
+      alt: "Living and dining as one room, with full-height curtains opening to the garden and a chandelier over the table",
+      position: "50% 60%",
     },
   },
   story: {
@@ -128,9 +131,11 @@ export const aboutPage = {
       "Atmosfere began with a simple frustration: beautiful drawings that never quite became beautiful rooms. Somewhere between the designer and the contractor, the details were always lost.",
       "So we built a studio where the people who design your space are the people who build it — with our own site team, our own joinery workshop and one point of contact from start to finish.",
     ],
+    // The studio's own render (Tower 10 – 202): the living room under its
+    // branching chandelier.
     image: {
-      src: unsplash("1599696848652-f0ff23bc911f"),
-      alt: "A warm, richly furnished living room with layered lighting",
+      src: "/images/spaces/tower-10-202/hero.jpg",
+      alt: "A living room with a pale sofa under a branching chandelier, a marble-effect feature wall and the TV unit beyond",
     },
     link: { label: "See our projects", href: "/spaces/projects" },
   },
