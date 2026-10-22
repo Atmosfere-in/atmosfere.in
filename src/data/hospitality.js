@@ -152,20 +152,22 @@ export const founders = {
   title: "Two founders. One question before every plan.",
   people: [
     {
-      name: "Co-founder",
-      role: "Principal Designer",
+      // Mohak Goel: BA (Hons) Interior Architecture & Design, Kingston
+      // University; founded Atmosfere in Noida in 2023.
+      name: "Mohak Goel",
+      role: "Co-founder",
       quote:
-        "The most expensive mistake in hospitality is building the wrong thing beautifully. We make sure the question is right before the answer is drawn.",
+        "The most expensive mistake in hospitality is building the wrong thing beautifully. We ask what a property should become before a single line is drawn, and only then do we design it.",
       image: {
         src: unsplash("1772404245810-b8b0a05c731e"),
-        alt: "Portrait of the co-founder in a cream suit, seated in a dark timber room",
+        alt: "Portrait of Mohak Goel, co-founder of Atmosfere",
       },
     },
     {
       name: "Co-founder",
-      role: "Strategy & Hospitality",
+      role: "",
       quote:
-        "Every property has a guest it's meant for. Our work is to find that guest before the first wall goes up.",
+        "Every property has a guest it is meant for. Our job is to find that guest first, and then plan the rooms, the revenue and the experience around them.",
       image: {
         src: unsplash("1762341124796-530c0085f7d8"),
         alt: "Portrait of the co-founder, seated, in a tailored black outfit",
