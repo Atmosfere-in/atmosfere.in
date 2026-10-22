@@ -90,6 +90,16 @@ export const projects = {
       },
     },
     {
+      href: "/spaces/projects/chelvets",
+      name: "Chelvets",
+      details: "Workplace & studio · Sector 88",
+      side: "2 × 2,500 sq ft",
+      image: {
+        src: "/images/spaces/chelvets/hero.jpg",
+        alt: "The creative team's floor: open workstations under timber slats",
+      },
+    },
+    {
       href: "/spaces/projects/arihant",
       name: "Arihant",
       details: "Commercial compound · Delhi NCR",

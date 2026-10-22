@@ -312,6 +312,83 @@ export const spacesProjects = [
     ],
   },
   {
+    // Real engagement, under execution. Key facts from the studio; renders
+    // from the studio's 3D-view decks and folder (construction photos not
+    // used). City to be confirmed.
+    slug: "chelvets",
+    name: "Chelvets",
+    type: "commercial",
+    category: "Workplace & studio",
+    location: "Sector 88, Delhi NCR",
+    size: "2 floors · 2,500 sq ft each",
+    timeline: "Under execution",
+    image: photo("chelvets/hero.jpg", "The creative team's floor: open workstations in long runs under timber slats, with the brand's displays along the wall"),
+    lead: "Two floors of 2,500 sq ft for a fashion brand — one for its creative designers, one for its exclusive display, photoshoot studio and business office — designed around the brand's existing identity.",
+    summary:
+      "Chelvets needed a home for both halves of the business under one roof. The first floor is for the creative designers' team, planned as open workstations so ideas move across the room and brainstorming happens in the open. The second floor is the brand's public face and its back office: an exclusive display, a photoshoot area and the business office, with private conference rooms, a manager's cabin and a director's cabin where quiet is needed. Everything is designed to the brand's existing identity, so the office looks like the label.",
+    scope: ["Workplace interiors", "Space planning across two floors", "Display & photoshoot studio", "Brand-led material direction", "Custom joinery", "Lighting design"],
+    chapters: [
+      { title: "A floor for the creative team.", image: photo("chelvets/chapter-1.jpg", "Open workstations with monitors along the window wall, a mannequin and shelving at the far end") },
+      { title: "Display, shoot, sell.", image: photo("chelvets/chapter-2.jpg", "The photoshoot area: mannequins in brass-framed cages, studio lights and leather ottomans") },
+      { title: "Quiet where it is needed.", image: photo("chelvets/chapter-3.jpg", "The conference room: a white table, grey chairs and a screen on the timber wall") },
+    ],
+    mosaic: [
+      photo("chelvets/mosaic-1.jpg", "The director's cabin: a desk against a timber wall with a dark chevron inlay"),
+      photo("chelvets/mosaic-2.jpg", "The podcast and lounge corner, with the brand's neon sign and a sofa"),
+      photo("chelvets/mosaic-3.jpg", "Workstations with monitors under the slatted ceiling"),
+    ],
+    concept: {
+      title: "The office should look like the label.",
+      text: "A fashion brand's office is part of its identity, so the materials, colours and details come from Chelvets' own look rather than from a generic workplace. The creative floor stays open — long runs of workstations, no partitions, a brainstorm never more than a turn of the chair away — while the second floor gives the brand its stage: a display that reads like a store, a photoshoot area ready for a campaign, and the business office behind glass.",
+      image: photo("chelvets/concept.jpg", "The display: garments on brass rails and shelving, a leather ottoman in front"),
+      palette: [
+        { name: "Pale timber", note: "Wall panelling, slats and desks", color: "#c9a97a" },
+        { name: "Brass frames", note: "Display rails and the photoshoot cages", color: "#b9985a" },
+        { name: "Striped carpet tile", note: "Workstation floors", color: "#8d7b68" },
+        { name: "Charcoal", note: "Exposed ceiling and the chevron inlays", color: "#2f3134" },
+        { name: "Tan leather", note: "Ottomans and lounge seating", color: "#b8824f" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Two floors of 2,500 sq ft each for Chelvets: one for the creative designers' team, one for the brand's exclusive display, its photoshoot area and the business office — all in keeping with the brand's existing identity.",
+        points: ["Two floors, 2,500 sq ft each", "Creative team on one, display, shoot and office on the other", "Designed to the existing brand identity"],
+      },
+      {
+        title: "Challenge",
+        text: "Designers need openness to think together; a display and a photoshoot need a stage; managers and directors need doors. All three had to share 5,000 sq ft and still read as one brand.",
+        points: ["Open creativity versus private meetings", "A shoot-ready studio inside an office", "One identity across very different rooms"],
+      },
+      {
+        title: "Approach",
+        text: "We split the programme by floor and by mood: the creative floor open and unpartitioned for better creativity and open brainstorming; the second floor staged for display and photography, with the private rooms grouped at one end.",
+        points: ["Open workstations for the creative team", "Display and photoshoot area as the brand's stage", "Conference rooms, manager's and director's cabins grouped"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Long runs of workstations under timber slats, brass-framed display rails and photoshoot cages, a glass-fronted conference room, a director's cabin with a chevron timber wall, and a podcast and lounge corner under the brand's neon sign.",
+        points: ["Timber slats, brass and striped carpet", "Glass-fronted conference rooms", "A podcast corner for the brand's content"],
+      },
+      {
+        title: "Execution",
+        text: "Civil work is under way on site, with our drawings, joinery details and finish schedules guiding the fit-out floor by floor.",
+        points: ["Detailed drawings and joinery issued", "Finish schedules per floor", "Execution ongoing"],
+      },
+      {
+        title: "Outcome",
+        text: "A workplace that works like the brand: open where ideas are made, staged where the collection is shown, and private where decisions are taken.",
+        points: ["Creative floor built for brainstorming", "Display and studio ready for campaigns", "Cabins and conference rooms for the business"],
+      },
+    ],
+    voiceImage: photo("chelvets/voice.jpg", "The open office looking towards the artwork wall, workstations on both sides"),
+    results: [
+      { value: "2", label: "Floors of 2,500 sq ft each" },
+      { value: "1", label: "Floor kept fully open for the creative team" },
+      { value: "3", label: "Private rooms: conference, manager, director" },
+    ],
+  },
+  {
     // Real engagement. Key facts from the studio; renders by the studio
     // (the owner's floor). City to be confirmed.
     slug: "arihant",
