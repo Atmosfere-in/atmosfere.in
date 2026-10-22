@@ -8,8 +8,9 @@ export const hospitalityNav = {
   section: { label: "Hospitality", href: "/hospitality" },
   nav: [
     { label: "Home", href: "/hospitality" },
-    { label: "Planning Types", href: "/hospitality#planning-types" },
+    { label: "Projects", href: "/hospitality/projects" },
     { label: "Case Studies", href: "/hospitality/case-studies" },
+    { label: "Planning Types", href: "/hospitality#planning-types" },
   ],
   cta: { label: "Book a Consultation", href: "/hospitality/book-a-consultation" },
 };
