@@ -1014,6 +1014,88 @@ export const spacesProjects = [
       { value: "2", label: "Rooms in one: the daybed room sits and sleeps" },
     ],
   },
+  {
+    // Real engagement: an apartment at SKA Orion. Renders by the studio
+    // (December 2025 set and the later living-room revisions); HD sources,
+    // resampled for the site.
+    slug: "ska-orion",
+    name: "SKA Orion",
+    type: "residential",
+    category: "Apartment",
+    location: "SKA Orion, Greater Noida West",
+    size: "Apartment",
+    timeline: "Design complete",
+    image: photo("ska-orion/hero.jpg", "The living room: a marble television panel between white moulded walls, blue armchairs, a cream sofa and the dining table beyond"),
+    lead: "A classic-contemporary apartment at SKA Orion: white moulded panels and oak doors, a book-matched marble television wall, a brass-wrapped console at the entrance, dusty-blue armchairs against cream, and bedrooms that each take one soft colour.",
+    summary:
+      "The family asked for an apartment that felt elegant without being formal. The living room sets the language: white wall panels with slim mouldings, fluted panels at the corners, oak doors with a brass inlay line, and a book-matched marble panel for the television. Dusty-blue armchairs and a cream modular sofa sit on a Berber rug under brass sconces and a mushroom floor lamp. The entrance is marked by a curved console wrapped in brass; the dining corner has a round oak table, a glazed bar cabinet and a wall of framed photographs, with the kitchen seen through a soft arch. The master bedroom runs wardrobes and a dressing table along one wall under a cove-lit ceiling; a second bedroom goes peach with an arched television niche and a floating console; the study has a floating oak desk and open shelves.",
+    scope: ["Full-apartment interiors", "Space planning", "Wall panelling and feature walls", "Custom wardrobes, consoles and units", "Modular kitchen", "Lighting design"],
+    chapters: [
+      { title: "Panelled, fluted and brass-lined.", image: photo("ska-orion/chapter-1.jpg", "The living room: cream sofa and blue armchairs under brass sconces, moulded panels and oak doors behind") },
+      { title: "A bedroom wall that does everything.", image: photo("ska-orion/chapter-2.jpg", "The master bedroom: a grey upholstered bed, a wall of wardrobes and a dressing table under a cove-lit ceiling") },
+      { title: "Kitchen through an arch.", image: photo("ska-orion/chapter-3.jpg", "The dining corner: a round oak table, a glazed bar cabinet and the blush kitchen seen through a soft arch") },
+    ],
+    mosaic: [
+      photo("ska-orion/mosaic-1.jpg", "The television wall: a white panel between brass strips and fluted oak, a floating console beneath"),
+      photo("ska-orion/mosaic-2.jpg", "The second bedroom: a peach arch holding the television, a floating oak console and a curved headboard"),
+      photo("ska-orion/mosaic-3.jpg", "The study: a floating oak desk, open shelves and a monitor by the window"),
+    ],
+    concept: {
+      title: "Elegant, not formal.",
+      text: "The apartment borrows the vocabulary of a classic home — mouldings, fluting, brass sconces, a marble panel — and uses it lightly: white on white, oak instead of dark timber, and one soft colour per room so nothing feels heavy. Brass runs through as the fine line that ties it together, from the inlay on the doors to the wrapped console and the strips on the television wall.",
+      image: photo("ska-orion/concept.jpg", "The hallway: oak doors with a brass inlay between moulded panels, brass sconces and a sculptural console"),
+      palette: [
+        { name: "White", note: "Moulded and fluted wall panels", color: "#f3f0ea" },
+        { name: "Oak", note: "Doors, the dining table and the desks", color: "#cfae82" },
+        { name: "Brass", note: "Inlays, sconces, strips and the console wrap", color: "#b8954f" },
+        { name: "Dusty blue", note: "The armchairs", color: "#5f8aa3" },
+        { name: "Peach", note: "The second bedroom's arch", color: "#e3b59a" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a complete apartment at SKA Orion for a family who wanted it elegant and welcoming: living and dining, a kitchen, a master bedroom, a second bedroom and a study.",
+        points: ["Full apartment", "Elegant but relaxed", "A study for working from home"],
+      },
+      {
+        title: "Challenge",
+        text: "Classic detailing can quickly make a developer apartment feel small and fussy; the mouldings, fluting and brass had to add richness without taking space or light.",
+        points: ["Detail without fuss", "Keeping the rooms light", "One language across very different rooms"],
+      },
+      {
+        title: "Approach",
+        text: "We kept the shell white and used the detail as line rather than mass: slim mouldings, shallow fluting, a brass inlay on every door. Each room then takes a single soft colour, and the marble television panel gives the living room its one bold moment.",
+        points: ["Detail as line, not mass", "One soft colour per room", "One bold panel in the living room"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A book-matched marble television panel, white moulded and fluted panels, oak doors with a brass inlay, a brass-wrapped curved console, dusty-blue armchairs on a Berber rug, a round oak dining table with a photo wall, a peach arch in the second bedroom and a floating oak desk in the study.",
+        points: ["Marble panel and brass strips", "Brass-wrapped console at the entrance", "A peach arch for the second bedroom"],
+      },
+      {
+        title: "Execution",
+        text: "The first set of views was issued in December 2025 and the living room revised afterwards with the marble panel and the console; working drawings follow for the fit-out.",
+        points: ["Views issued December 2025", "Living room revised", "Working drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "An apartment that reads as classic the moment you enter and as easy the moment you sit down.",
+        points: ["Classic detail, light rooms", "One colour to remember each room by", "Brass as the thread throughout"],
+      },
+    ],
+    voiceImage: photo("ska-orion/voice.jpg", "The guest bedroom: a grey bed with a rust throw, a floating desk and shelves by the window"),
+    results: [
+      { value: "1", label: "Marble panel as the living room's single bold move" },
+      { value: "3", label: "Bedrooms and a study, each with one soft colour" },
+      { value: "100%", label: "Panelling, consoles and wardrobes made to our drawings" },
+    ],
+    gallery: [
+      photo("ska-orion/gallery-1.jpg", "The dining corner: a round oak table, a glazed bar cabinet and a wall of framed photographs"),
+      photo("ska-orion/gallery-2.jpg", "The marble television panel up close, with its floating console and the sheer curtains beside it"),
+      photo("ska-orion/gallery-3.jpg", "Living and dining together: the bar cabinet, the round table and the television on its panel"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
