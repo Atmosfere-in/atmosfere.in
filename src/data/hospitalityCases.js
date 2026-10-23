@@ -93,7 +93,7 @@ export const hospitalityCases = [
         { ...photo("punarnava/layouts/fourth-floor.jpg", "Fourth floor plan: the rooftop terrace"), label: "Fourth floor" },
       ],
     },
-    voiceImage: photo("punarnava/voice.jpg", "Bedroom detail: a brass wall lamp against the fluted panel and the hand-painted mural"),
+    voiceImage: photo("punarnava/voice.jpg", "The reception desk, with a brass mandala on a stone wall, glass pendants and three clocks above"),
     results: [
       { value: "90,000", label: "sq ft, approx., in the new building" },
       { value: "5", label: "Natural elements shaping the plan" },
