@@ -33,9 +33,9 @@ export const hospitalityCases = [
       { title: "Guest side, staff side.", image: photo("punarnava/chapter-3.jpg", "A finished guest room: a hand-painted foliage mural behind the bed, timber posts and brass wall lights") },
     ],
     mosaic: [
-      photo("punarnava/mosaic-1.jpg", "A guest room with its mural headboard wall, timber-panelled ceiling and crisp white bedding"),
+      photo("punarnava/mosaic-1.jpg", "The reception as built: a stone wall, a crystal chandelier and the timber desk with carved figures"),
       photo("punarnava/mosaic-2.jpg", "A seating group against the lit timber-and-brass slatted wall"),
-      photo("punarnava/mosaic-3.jpg", "The reception as built: a stone wall, a crystal chandelier and the timber desk with carved figures"),
+      photo("punarnava/mosaic-3.jpg", "A guest room with its mural headboard wall, timber-panelled ceiling and crisp white bedding"),
     ],
     concept: {
       title: "Let the five elements plan the building.",
@@ -93,7 +93,7 @@ export const hospitalityCases = [
         { ...photo("punarnava/layouts/fourth-floor.jpg", "Fourth floor plan: the rooftop terrace"), label: "Fourth floor" },
       ],
     },
-    voiceImage: photo("punarnava/voice.jpg", "The lounge seen from the entrance, with its rose armchairs and curtained windows"),
+    voiceImage: photo("punarnava/voice.jpg", "Bedroom detail: a brass wall lamp against the fluted panel and the hand-painted mural"),
     results: [
       { value: "90,000", label: "sq ft, approx., in the new building" },
       { value: "5", label: "Natural elements shaping the plan" },
