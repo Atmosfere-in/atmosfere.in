@@ -703,6 +703,88 @@ export const spacesProjects = [
       { src: "/videos/spaces/express-one-1803-04/clip-4.mp4", poster: "/images/spaces/express-one-1803-04/clip-4-poster.jpg", alt: "A bedroom from the door: wardrobe, bed and the cove-lit ceiling" },
     ],
   },
+  {
+    // Real engagement: a family home in B Block, Ramprastha Colony, Ghaziabad,
+    // photographed professionally after completion.
+    slug: "b-ramprastha-colony",
+    name: "B Ramprastha Colony",
+    type: "residential",
+    category: "Family home",
+    location: "Ramprastha Colony, Ghaziabad",
+    size: "Three-bedroom home",
+    timeline: "Completed",
+    image: photo("b-ramprastha-colony/hero.jpg", "The living room: a black marble television wall between glass display cabinets, tan sofas and a brass sputnik chandelier"),
+    lead: "A completed family home in Ramprastha Colony where every room has its own colour — a teal-and-marble bedroom, an olive-green bedroom, a sage kitchen, a tropical-mural bathroom — held together by cream marble floors, cove-lit ceilings and polished timber doors.",
+    summary:
+      "The family wanted a home that felt generous and a little bit festive, with rooms that each had a character of their own. The living and dining space sets the tone: a black-and-gold marble television wall flanked by lit display cabinets, tan sofas on a patterned rug, a brass sputnik chandelier over the dining table. The master bedroom pairs a teal upholstered bed with a book-matched white marble panel and glossy grey wardrobes; a second bedroom goes olive green with fluted panels and a yellow cove; the kitchen is sage green with a stone splashback and a window over the sink. A powder bath gets a hand-drawn tropical mural, the pooja unit is carved and backlit, and the long balcony is lined in travertine under a timber-slat ceiling.",
+    scope: ["Full-home interiors", "Space planning", "Custom wardrobes, beds and television units", "Modular kitchen", "Pooja unit and balcony", "Lighting design"],
+    chapters: [
+      { title: "A living room with a centre.", image: photo("b-ramprastha-colony/chapter-1.jpg", "Dining and living together: a white dining table with tan chairs, the marble television wall and the sofas beyond") },
+      { title: "Teal and marble for the master bedroom.", image: photo("b-ramprastha-colony/chapter-2.jpg", "The master bedroom: a teal bed against a white marble panel lit from its edges, grey gloss wardrobes either side") },
+      { title: "A kitchen in sage.", image: photo("b-ramprastha-colony/chapter-3.jpg", "The kitchen: sage-green shutters, a white stone counter and splashback, a window over the sink") },
+    ],
+    mosaic: [
+      photo("b-ramprastha-colony/mosaic-1.jpg", "The second bedroom: an olive-green bed and headboard wall with a yellow cove and a wall clock"),
+      photo("b-ramprastha-colony/mosaic-2.jpg", "The dressing corner: an arched backlit mirror, grey gloss wardrobes and the television unit"),
+      photo("b-ramprastha-colony/mosaic-3.jpg", "The master bedroom from the door, with the television wall and the wardrobe run"),
+    ],
+    concept: {
+      title: "A colour for every room.",
+      text: "Rather than one palette for the whole house, each room was given its own: teal and white marble for the master bedroom, olive and yellow for the second, sage for the kitchen, black-and-gold marble for the living room. What keeps them one home is everything else — cream marble floors, the same cove-lit ceiling detail, polished timber doors and black hardware throughout.",
+      image: photo("b-ramprastha-colony/concept.jpg", "The balcony: travertine walls, a dark timber floor and a slatted ceiling, looking out to the street"),
+      palette: [
+        { name: "Cream marble", note: "Floors throughout", color: "#e6dfd2" },
+        { name: "Teal", note: "The master bed and side tables", color: "#2f6472" },
+        { name: "Olive", note: "The second bedroom's wall and bed", color: "#6b7a2e" },
+        { name: "Sage", note: "The kitchen shutters", color: "#8aa08a" },
+        { name: "Black marble & brass", note: "The television wall and the chandelier", color: "#1f1f1f" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design and build a complete family home in Ramprastha Colony: living and dining, three bedrooms, a kitchen, bathrooms, a pooja unit and the balcony, with each room given its own character.",
+        points: ["Full home, every room", "Rooms with their own colour and mood", "Built-in storage throughout"],
+      },
+      {
+        title: "Challenge",
+        text: "Strong colours in every room can easily turn a house into a set of disconnected boxes, and the floor plate had the usual constraints of a colony plot: long rooms, doors in the corners, a narrow balcony.",
+        points: ["Many colours, one home", "Long rooms and corner doors", "A narrow balcony to make useful"],
+      },
+      {
+        title: "Approach",
+        text: "We fixed the shared language first — cream marble floors, the cove-lit ceiling detail, polished timber doors, black handles and fittings — and then let each room take its colour. Storage is built into every bedroom wall so the rooms stay clear.",
+        points: ["One shared language of floor, ceiling and doors", "One accent colour per room", "Wardrobes built into the walls"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A black-and-gold marble television wall with glass display cabinets, a brass sputnik chandelier, a teal bed against book-matched white marble, grey gloss wardrobes, an olive bedroom with fluted panels, a sage kitchen, a hand-painted tropical mural in the powder bath and a backlit carved pooja unit.",
+        points: ["Marble television wall with lit cabinets", "Gloss wardrobes with black pulls", "A mural in the powder bath"],
+      },
+      {
+        title: "Execution",
+        text: "The home was built and furnished by the studio, with the marble, joinery and lighting completed before the family moved in; the photographs were taken on completion.",
+        points: ["Marble and joinery to drawing", "Furnished and styled", "Photographed on completion"],
+      },
+      {
+        title: "Outcome",
+        text: "A home where each room has a mood of its own and the whole still reads as one house — the family's brief, delivered room by room.",
+        points: ["Three bedrooms, each with its own colour", "A living room built around the television wall", "Storage everywhere, clutter nowhere"],
+      },
+    ],
+    voiceImage: photo("b-ramprastha-colony/voice.jpg", "The living room from the window side: tan sofas, a marble coffee table and the patterned rug"),
+    results: [
+      { value: "3", label: "Bedrooms, each with its own colour" },
+      { value: "1", label: "Black-and-gold marble television wall" },
+      { value: "100%", label: "Wardrobes, beds and units made to our drawings" },
+    ],
+    gallery: [
+      photo("b-ramprastha-colony/gallery-1.jpg", "The powder bath: a hand-painted tropical mural, a round mirror and a basin on a stone counter"),
+      photo("b-ramprastha-colony/gallery-2.jpg", "The pooja unit: carved, backlit panels and columns in white"),
+      photo("b-ramprastha-colony/gallery-3.jpg", "A sitting room with a blue and an olive sofa around a white marble table"),
+      photo("b-ramprastha-colony/gallery-4.jpg", "The master bedroom's wardrobe wall, grey gloss shutters with a wall clock"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
