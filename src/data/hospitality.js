@@ -206,7 +206,7 @@ export const caseStudies = {
       tag: "Convention centre & hotel · Moradabad",
       title: "Moradabad Sourcing & Convention Centre",
       summary:
-        "A plot in the brass city, first briefed as a hotel, re-planned as the place buyers come to see, source, meet and stay — exhibition, convention halls and 70 rooms in one building.",
+        "A plot in the brass city planned as the place buyers come to see, source, meet and stay — exhibition, convention halls and 70 rooms in one building.",
       image: {
         src: "/images/hospitality/moradabad-sourcing-convention-centre/chapter-3.jpg",
         alt: "The glass rotunda at the entrance of the proposed building",

@@ -729,3 +729,20 @@
     gap: var(--space-5);
   }
 }
+
+/* A single plan takes two of the three columns so it is not a lone small tile. */
+.plans:has(.plan:only-child) .plan {
+  grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+  .plans:has(.plan:only-child) .plan {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .plans:has(.plan:only-child) .plan {
+    grid-column: auto;
+  }
+}

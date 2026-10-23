@@ -169,6 +169,11 @@ export const hospitalityCases = [
         points: ["15 keys around a central pool", "Events and arrival kept at the road end", "Forest land preserved as the setting"],
       },
     ],
+    layouts: {
+      title: "The site, planned.",
+      intro: "Cottages and the villa around the central pool, the banquet hall and reception at the arrival, and one meandering path through it all. Click the plan to open it at full size.",
+      items: [{ ...photo("jim-corbett-resort-dhela/layouts/site-plan.jpg", "Conceptual site plan of the resort"), label: "Conceptual site plan" }],
+    },
     voiceImage: photo("jim-corbett-resort-dhela/voice.jpg", "The cafe counter: a woven wall with round windows, a stone bar and log stools"),
     results: [
       { value: "15", label: "Keys: 14 cottages and a 4BHK villa" },
@@ -190,10 +195,10 @@ export const hospitalityCases = [
     image: photo("moradabad-sourcing-convention-centre/hero.jpg", "The proposed building: a white rendered block with a brass-toned lattice tower and a glass rotunda at the corner, seen from the road"),
     lead: "A 1,26,600 sq ft plot in India's brass city, planned as the place where buyers come to see, source, meet and stay: exhibition and retail below, convention halls in the middle, 70 rooms above and an open exhibition deck on the roof.",
     summary:
-      "The brief began as a hotel. As we tested it against what Moradabad actually needs — a city of exporters whose buyers fly in to source brassware and handicrafts, with nowhere built for that — it became something more useful: a sourcing and convention centre with a hotel inside it. Across six levels and 2,21,522 sq ft, seventy per cent of the building is given to exhibition and convention space and thirty per cent to rooms, cafés and retail, so a buyer can walk the shops in the basement, sit in a convention hall upstairs, and sleep two floors above.",
-    scope: ["Market-led repositioning", "Zoning & master plan", "Area programme", "Concept & facade intent", "Floor layouts", "Interior inspiration boards"],
+      "Moradabad is a city of exporters whose buyers fly in to source brassware and handicrafts, with nowhere built for that visit. The plan gives them one address: a sourcing and convention centre with a hotel inside it. Across six levels and 2,21,522 sq ft, seventy per cent of the building is given to exhibition and convention space and thirty per cent to rooms, cafés and retail, so a buyer can walk the shops in the basement, sit in a convention hall upstairs, and sleep two floors above.",
+    scope: ["Market study", "Zoning & master plan", "Area programme", "Concept & facade intent", "Floor layouts", "Interior inspiration boards"],
     chapters: [
-      { title: "From a hotel to a sourcing hub.", image: photo("moradabad-sourcing-convention-centre/chapter-1.jpg", "The building along the road, with the hotel wing, the lattice tower and the glass rotunda") },
+      { title: "A site in the brass city.", image: photo("moradabad-sourcing-convention-centre/chapter-1.jpg", "The building along the road, with the hotel wing, the lattice tower and the glass rotunda") },
       { title: "Show, sell, meet, stay.", image: photo("moradabad-sourcing-convention-centre/chapter-2.jpg", "The front elevation: hotel floors over the convention levels, with the lattice and the rotunda at the corner") },
       { title: "A building that announces itself.", image: photo("moradabad-sourcing-convention-centre/chapter-3.jpg", "The glass rotunda at the entrance, with the canopy and the drop-off below") },
     ],
@@ -217,17 +222,17 @@ export const hospitalityCases = [
     stages: [
       {
         title: "Brief",
-        text: "A 1,26,600 sq ft plot in Moradabad and a first idea: a hotel. The owners asked us to plan it, and to tell them whether a hotel was the right thing to build there.",
-        points: ["Plot of 1,26,600 sq ft", "First brief: a hotel", "An open question about what the city needs"],
+        text: "A 1,26,600 sq ft plot in Moradabad, and a question from the owners: what should it become to serve the city's export trade and the buyers who visit it?",
+        points: ["Plot of 1,26,600 sq ft", "A sourcing, convention and hotel programme", "Planned around what the city needs"],
       },
       {
         title: "Challenge",
-        text: "Moradabad's economy is export: buyers arrive to source brass and handicrafts, but the city has no single place to show them the trade, host them, and put them up — and a plain hotel would have left all of that revenue on the table.",
-        points: ["Buyers with nowhere built for sourcing", "Exhibition, meetings and rooms in separate places", "A hotel alone earning only on beds"],
+        text: "Moradabad's economy is export: buyers arrive to source brass and handicrafts, but the city has no single place to show them the trade, host their meetings and put them up.",
+        points: ["Buyers with nowhere built for sourcing", "Exhibition, meetings and rooms in separate places", "Revenue needed from more than rooms"],
       },
       {
         title: "Approach",
-        text: "We re-planned the building around the buyer's visit rather than the guest's night: exhibition and retail at the base, convention halls in the middle, rooms above, and an open exhibition deck on the roof — seventy per cent of the area for showing and meeting, thirty for staying and eating.",
+        text: "We planned the building around the buyer's visit: exhibition and retail at the base, convention halls in the middle, rooms above, and an open exhibition deck on the roof — seventy per cent of the area for showing and meeting, thirty for staying and eating.",
         points: ["Programme set by the sourcing journey", "70% exhibition and convention, 30% commercial", "Six levels, 2,21,522 sq ft in all"],
       },
       {
@@ -237,8 +242,8 @@ export const hospitalityCases = [
       },
       {
         title: "Execution",
-        text: "The design intent was issued in two rounds — the hotel scheme in September 2025, the sourcing and convention scheme in January 2026 — with zoning, the area programme, floor layouts, facade concept and interior inspiration for every part of the building.",
-        points: ["Two design-intent rounds, Sept 2025 and Jan 2026", "Zoning, area programme and floor layouts", "Facade concept and interior intent per floor"],
+        text: "The design intent covers zoning, the area programme, floor layouts, the facade concept and interior inspiration for every part of the building.",
+        points: ["Design intent issued January 2026", "Zoning, area programme and floor layouts", "Facade concept and interior intent per floor"],
       },
       {
         title: "Outcome",
