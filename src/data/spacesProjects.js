@@ -862,6 +862,82 @@ export const spacesProjects = [
       { value: "2", label: "Shared spaces at the balcony end: meeting and leisure" },
     ],
   },
+  {
+    // Real engagement: an office at Masters Capitol, Sector 63, Noida.
+    // Renders by the studio (day and evening sets), upscaled for the site.
+    slug: "sector-63-masters-capitol",
+    name: "Sector 63 Masters Capitol",
+    type: "commercial",
+    category: "Office",
+    location: "Sector 63, Noida",
+    size: "Office floor",
+    timeline: "Design complete",
+    image: photo("sector-63-masters-capitol/hero.jpg", "The open office: a row of workstations under white overhead storage and an oak strip, a lounge sofa behind a brass-framed glass screen"),
+    lead: "An office in Masters Capitol, Sector 63, planned as one calm, well-organised floor: a fluted reception desk, a long run of workstations under white storage, a meeting room in oak and tan leather, and a glass-and-oak display cabinet that doubles as the room's divider.",
+    summary:
+      "The brief was an office that looks organised the moment you walk in and stays that way. Storage is the architecture: white overhead cabinets run the length of the workstation wall over an oak band, a tall oak-and-glass display cabinet divides the reception from the desks, and a ladder on a brass rail reaches the upper cupboards. The reception desk is fluted oak and white with a brass base; the lounge beside the workstations has a cream sofa, a brass side table and a grid of framed maps. The meeting room keeps the same materials — oak shelving, a white table, tan leather chairs — under a timber-slat blind that softens the window. Services stay exposed and dark above, with a single red line of conduit as the one bold stroke.",
+    scope: ["Workplace interiors", "Space planning", "Reception and display joinery", "Workstation storage wall", "Meeting room", "Lighting design"],
+    chapters: [
+      { title: "Storage as architecture.", image: photo("sector-63-masters-capitol/chapter-1.jpg", "The reception: a fluted oak-and-white desk, open shelves and the tall oak-and-glass display cabinet beside it") },
+      { title: "A meeting room in oak and tan.", image: photo("sector-63-masters-capitol/chapter-2.jpg", "The meeting room: a white table, tan leather chairs, oak shelving and a timber-slat blind over the window") },
+      { title: "Desks in one long run.", image: photo("sector-63-masters-capitol/chapter-3.jpg", "The workstation row seen from the cabin, laptops on white desks under the oak-fronted storage wall") },
+    ],
+    mosaic: [
+      photo("sector-63-masters-capitol/mosaic-1.jpg", "The display cabinet in oak and glass, the ladder on its brass rail and the storage wall beyond"),
+      photo("sector-63-masters-capitol/mosaic-2.jpg", "The fluted reception desk with its brass base, open oak shelving behind"),
+      photo("sector-63-masters-capitol/mosaic-3.jpg", "The lounge: a cream sofa, a brass side table and framed maps behind a brass-framed glass screen"),
+    ],
+    concept: {
+      title: "Everything in its place.",
+      text: "The office is organised by its storage. One white cabinet run with an oak band ties the whole workstation wall together, a tall display cabinet stands in for a partition, and the ladder on its brass rail turns the upper cupboards into part of the room rather than dead space. Oak, white and brass repeat in the reception desk, the meeting room and the lounge, so the floor reads as one piece.",
+      image: photo("sector-63-masters-capitol/hero.jpg", "The open office: a row of workstations under white overhead storage and an oak strip, a lounge sofa behind a brass-framed glass screen"),
+      palette: [
+        { name: "White", note: "Overhead cabinets, desks and the meeting table", color: "#f2f0eb" },
+        { name: "Oak", note: "Storage fronts, shelving and the reception desk", color: "#c8a878" },
+        { name: "Brass", note: "Rails, frames and the desk base", color: "#b8954f" },
+        { name: "Tan leather", note: "Meeting chairs", color: "#b5633a" },
+        { name: "Charcoal", note: "The exposed ceiling", color: "#3a3a3a" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design an office floor at Masters Capitol, Sector 63, with a reception, a team workstation run, a meeting room and a lounge, with enough storage that the floor never looks cluttered.",
+        points: ["Reception, workstations, meeting room, lounge", "Storage for the whole team's paperwork", "A calm, consistent look"],
+      },
+      {
+        title: "Challenge",
+        text: "A tall floor with services overhead and a long workstation wall: storage had to be generous without boxing the room in, and the reception needed a partition without losing light.",
+        points: ["A long wall of desks", "Overhead height to use well", "A partition that keeps the light"],
+      },
+      {
+        title: "Approach",
+        text: "We turned storage into the architecture: overhead cabinets along the desks with a ladder on a rail, a glass display cabinet as the divider, and one material palette — oak, white, brass — from the reception to the meeting room.",
+        points: ["Overhead cabinets with a ladder rail", "A display cabinet instead of a wall", "One palette throughout"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A fluted oak reception desk on a brass base, white cabinet fronts over an oak band, an oak-and-glass display cabinet, a brass-framed glass screen to the lounge, tan leather meeting chairs under a timber-slat blind, and the ceiling left dark with one red conduit line.",
+        points: ["Fluted desk and brass base", "White storage over an oak band", "Tan leather in the meeting room"],
+      },
+      {
+        title: "Execution",
+        text: "Day and evening views were issued with the plan; the joinery is detailed as continuous runs so the storage wall, the display cabinet and the reception desk can be built as one set.",
+        points: ["Joinery detailed as continuous runs", "Day and evening views issued", "Ready for fit-out"],
+      },
+      {
+        title: "Outcome",
+        text: "An office that stays tidy by design: every file has a cupboard, every seat has its place, and the whole floor shares one warm, clear language.",
+        points: ["A storage wall the length of the desks", "A reception that doubles as display", "Meeting room and lounge in the same palette"],
+      },
+    ],
+    voiceImage: photo("sector-63-masters-capitol/voice.jpg", "The meeting table from the shelving side, tan leather chairs and the slatted blind beyond"),
+    results: [
+      { value: "1", label: "Storage wall the full length of the workstations" },
+      { value: "1", label: "Display cabinet that stands in for a partition" },
+      { value: "3", label: "Materials carried through: oak, white and brass" },
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
