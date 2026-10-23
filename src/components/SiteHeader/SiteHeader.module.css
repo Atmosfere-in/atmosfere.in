@@ -54,6 +54,18 @@
   --hdr-cta-fg: var(--color-charcoal);
 }
 
+/* Pages that open on the light background (project galleries) ask the
+   floating header to keep its dark text until it turns solid. */
+:global(body[data-light-opening]) .overlay:not([data-scrolled="true"]) {
+  background: none;
+  --hdr-fg: var(--color-charcoal);
+  --hdr-muted: var(--color-stone-600);
+  --hdr-line: var(--color-border);
+  --hdr-chip: var(--color-stone-100);
+  --hdr-cta-bg: var(--color-charcoal);
+  --hdr-cta-fg: var(--color-ivory);
+}
+
 .overlay[data-scrolled="true"] {
   background: rgb(247 244 239 / 0.94);
   backdrop-filter: blur(12px);

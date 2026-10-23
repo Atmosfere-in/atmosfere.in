@@ -47,9 +47,10 @@ export default async function SpacesProject({ params }) {
     <main>
       <ProjectGallery
         name={project.name}
-        eyebrow={`${project.category} · ${project.location}`}
         lead={project.lead}
         meta={[
+          { label: "Type", value: project.category },
+          { label: "Location", value: project.location },
           { label: "Area", value: project.size },
           { label: "Timeline", value: project.timeline },
         ]}

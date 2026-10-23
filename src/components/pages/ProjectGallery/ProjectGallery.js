@@ -7,16 +7,23 @@ import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./ProjectGallery.module.css";
 
 // A project shown through its photographs alone: a full-bleed opening
-// photograph with the name and two facts, an editorial grid of every other
+// photograph beneath the name and facts, an editorial grid of every other
 // photograph (opening in a lightbox), and the way to the written case study
 // and the neighbouring projects.
 // photos: [{ src, alt }] · meta: [{ label, value }] · prev/next: { href, name, details }
-export default function ProjectGallery({ name, eyebrow, lead, meta, photos, caseStudyHref, prev, next }) {
+export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref, prev, next }) {
   const [hero, ...rest] = photos;
   const [open, setOpen] = useState(null); // index into `photos`, or null
 
   const show = useCallback((i) => setOpen(((i % photos.length) + photos.length) % photos.length), [photos.length]);
   const close = useCallback(() => setOpen(null), []);
+
+  // The page opens on the light background, so the floating header keeps
+  // its dark text here instead of the white it uses over photographs.
+  useEffect(() => {
+    document.body.setAttribute("data-light-opening", "");
+    return () => document.body.removeAttribute("data-light-opening");
+  }, []);
 
   // Keyboard and scroll lock while the lightbox is open.
   useEffect(() => {
@@ -37,13 +44,10 @@ export default function ProjectGallery({ name, eyebrow, lead, meta, photos, case
 
   return (
     <>
-      {/* Opening photograph, edge to edge, with the name over its lower edge. */}
-      <section className={styles.hero}>
-        <button type="button" className={styles.heroMedia} onClick={() => show(0)} aria-label="Open the photograph">
-          <Image src={hero.src} alt={hero.alt} fill preload quality={90} sizes="100vw" className={styles.image} />
-        </button>
-        <div className={styles.heroShade} aria-hidden="true" />
-        <div className={`container ${styles.heroText}`}>
+      {/* Opening: the name and facts on the light page, the photograph framed
+          beneath them. Nothing is written over the photograph. */}
+      <section className={styles.opening}>
+        <div className="container">
           <nav aria-label="Breadcrumb" className={styles.crumbs}>
             <ol>
               <li>
@@ -54,16 +58,23 @@ export default function ProjectGallery({ name, eyebrow, lead, meta, photos, case
               </li>
             </ol>
           </nav>
-          <span className={styles.eyebrow}>{eyebrow}</span>
-          <h1 className={styles.title}>{name}</h1>
-          <dl className={styles.meta}>
-            {meta.map((m) => (
-              <div key={m.label}>
-                <dt>{m.label}</dt>
-                <dd>{m.value}</dd>
-              </div>
-            ))}
-          </dl>
+          <div className={styles.openingHead}>
+            <h1 className={styles.title}>{name}</h1>
+            <dl className={styles.meta}>
+              {meta.map((m) => (
+                <div key={m.label}>
+                  <dt>{m.label}</dt>
+                  <dd>{m.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <button type="button" className={styles.heroMedia} onClick={() => show(0)} aria-label="Open the photograph">
+            <Image src={hero.src} alt={hero.alt} fill preload quality={90} sizes="(max-width: 1760px) 100vw, 1760px" className={styles.image} />
+            <span className={styles.heroCount} aria-hidden="true">
+              01 / {String(photos.length).padStart(2, "0")}
+            </span>
+          </button>
         </div>
       </section>
 
