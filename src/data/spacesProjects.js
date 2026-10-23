@@ -462,6 +462,88 @@ export const spacesProjects = [
       { value: "3", label: "Ground-floor earners: reception, cafeteria, gym" },
     ],
   },
+  {
+    // Real engagement: an independent house in Sector 14, Noida. Site
+    // photographs by the studio; the brief is written from the finished house.
+    slug: "d-3-10-sector-14-noida",
+    name: "D-3/10, Sector 14",
+    type: "residential",
+    category: "Independent house",
+    location: "Sector 14, Noida",
+    size: "3 floors & a terrace",
+    timeline: "Completed",
+    image: photo("d-3-10-sector-14/hero.jpg", "The living room: cream sofas and timber-framed armchairs against a textured wallpaper panel lit from its edges"),
+    lead: "A family house in one of Noida's oldest sectors, rebuilt inside as a calm, classic home — marble floors, panelled timber doors, soft cream rooms — with the roof turned into a lit terrace lounge for the evenings.",
+    summary:
+      "The house at D-3/10 is a three-storey family home on a tree-lined street in Sector 14. The family wanted it to feel settled rather than showy: rooms that would still look right in twenty years, materials that age well, and a roof they could actually use. Inside, the ground floor opens from a foyer lined in navy block-print wallpaper onto a marble floor with a black inlaid border, through to the living and dining rooms in cream, timber and brass. Upstairs the bedrooms stay quiet and warm. On the roof, a pergola with a glass top, a timber deck, loungers and a swing on turf give the family an outdoor room that comes alive after dark.",
+    scope: ["Full-house interiors", "Space planning across three floors", "Terrace & pergola design", "Custom doors and joinery", "Loose furniture", "Lighting design"],
+    chapters: [
+      { title: "A foyer that sets the tone.", image: photo("d-3-10-sector-14/chapter-1.jpg", "The foyer: navy block-print wallpaper, a marble floor with a black inlaid border and the dining room beyond") },
+      { title: "The roof becomes a room.", image: photo("d-3-10-sector-14/chapter-2.jpg", "The terrace at dusk: a pergola with a timber deck, loungers and a stone-clad wall against the sunset") },
+      { title: "Corners to sit in.", image: photo("d-3-10-sector-14/chapter-3.jpg", "A lounge corner with a beige and a blue armchair, a sculpted side table and a chequered marble runner") },
+    ],
+    mosaic: [
+      photo("d-3-10-sector-14/mosaic-1.jpg", "The main door: panelled dark timber with brass lining and an oval brass handle"),
+      photo("d-3-10-sector-14/mosaic-2.jpg", "The crockery unit, with glass cabinets either side of a lit stone niche"),
+      photo("d-3-10-sector-14/mosaic-3.jpg", "A bedroom door in sunburst-grooved timber beside a gold curtain"),
+    ],
+    concept: {
+      title: "Classic rooms, a modern roof.",
+      text: "Downstairs the house leans classic: panelled doors, marble with a dark border, block-print wallpaper and cream upholstery with timber frames. The roof takes the opposite view. A glass-topped pergola, a timber deck, turf and a swing make a second living room in the open air, lit so the family can use it long after sunset. The two halves share a palette — dark timber, brass, cream and stone — so the house reads as one.",
+      image: photo("d-3-10-sector-14/concept.jpg", "The terrace lounge at night: the pergola lit from above, lounge chairs on the timber deck and turf in front"),
+      palette: [
+        { name: "Dark walnut", note: "Doors, frames and the pergola's fascia", color: "#4a3426" },
+        { name: "Brass", note: "Door handles, inlays and the sideboard's grips", color: "#b08d4b" },
+        { name: "Cream", note: "Sofas, armchairs and the fluted sideboard", color: "#e8dfcf" },
+        { name: "Navy block print", note: "The foyer's wallpaper", color: "#1f2a4a" },
+        { name: "Marble", note: "Floors with a black inlaid border", color: "#d9d3c7" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Redo the interiors of a three-storey family house in Sector 14, Noida, with a classic, long-lasting feel inside and a terrace the family could use as an outdoor room.",
+        points: ["Three floors and a roof terrace", "A calm, classic look that will last", "The roof made usable in the evenings"],
+      },
+      {
+        title: "Challenge",
+        text: "An older house with a fixed structure: columns in the ground-floor plan, modest ceiling heights and a bare roof slab exposed to Noida's sun. The design had to make the rooms feel generous and the roof feel sheltered.",
+        points: ["Columns and beams to work around", "Ceiling heights to keep light", "A roof exposed to sun and heat"],
+      },
+      {
+        title: "Approach",
+        text: "We kept the ground floor flowing — foyer to dining to living — and used floor inlays and ceiling coves to mark rooms instead of walls. On the roof we built a pergola with a glass top and a slatted ceiling so the deck is shaded by day and lit by night.",
+        points: ["Open ground floor, rooms marked by the floor and ceiling", "Bedrooms kept quiet and warm", "A pergola that shades by day and glows by night"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Marble floors with a black border inlay, navy block-print wallpaper in the foyer, a panelled main door with an oval brass handle, cream seating on timber frames under a ring chandelier, a fluted white sideboard with brass grips, and timber-and-steel gates with a green wall outside.",
+        points: ["Marble with a dark inlaid border", "Panelled doors, brass handles and inlays", "Cream upholstery on timber frames"],
+      },
+      {
+        title: "Execution",
+        text: "The house was built floor by floor from our drawings, with doors, the sideboard and the crockery unit made to detail and the terrace pergola fabricated on site.",
+        points: ["Custom doors and joinery made to drawing", "Terrace pergola fabricated on site", "Loose furniture selected and placed"],
+      },
+      {
+        title: "Outcome",
+        text: "A family home that feels settled from the front gate to the roof: classic rooms downstairs, warm bedrooms above and a terrace lounge the family uses every evening.",
+        points: ["Three finished floors", "A terrace lounge with a swing and loungers", "One palette from the gate to the roof"],
+      },
+    ],
+    voiceImage: photo("d-3-10-sector-14/voice.jpg", "The white fluted sideboard with brass grips, a glazed timber door behind it"),
+    results: [
+      { value: "3", label: "Floors redesigned, plus the roof" },
+      { value: "1", label: "Terrace lounge under a glass-topped pergola" },
+      { value: "100%", label: "Doors and joinery made to our drawings" },
+    ],
+    gallery: [
+      photo("d-3-10-sector-14/gallery-1.jpg", "The swing on the terrace under the pergola's lit beams at dusk"),
+      photo("d-3-10-sector-14/gallery-2.jpg", "The entrance: a dark glazed door under a timber-slat ceiling beside a stone-clad wall"),
+      photo("d-3-10-sector-14/gallery-3.jpg", "The house from the street, with its timber-faced balconies under the old trees"),
+      photo("d-3-10-sector-14/gallery-4.jpg", "A bedroom with a cove-lit ceiling, a padded headboard wall and cream wardrobes"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
