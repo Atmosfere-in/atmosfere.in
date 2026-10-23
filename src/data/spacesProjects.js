@@ -703,10 +703,10 @@ export const spacesProjects = [
     ],
   },
   {
-    // Real engagement: a family home in B Block, Ramprastha Colony, Ghaziabad,
+    // Real engagement: a family home at B-203, Ramprastha Colony, Ghaziabad,
     // photographed professionally after completion.
     slug: "b-ramprastha-colony",
-    name: "B Ramprastha Colony",
+    name: "B-203 Ramprastha Colony",
     type: "residential",
     category: "Family home",
     location: "Ramprastha Colony, Ghaziabad",
