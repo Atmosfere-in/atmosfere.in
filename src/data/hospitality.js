@@ -21,7 +21,7 @@ export const hero = {
   eyebrow: "Atmosfere Hospitality · Planning & Advisory",
   title: "What should this property become?",
   intro:
-    "Before anything is designed, we decide what a property should be — hotel, resort, villa or venue — and plan it to perform.",
+    "Before anything is designed, we decide what a property should be — hotel, resort or venue — and plan it to perform.",
   // The poster frame of the video: shown while it loads, on reduced motion,
   // and wherever video can't play.
   image: {
@@ -262,7 +262,7 @@ export const footer = {
   theme: "light",
   section: { label: "Hospitality", href: "/hospitality" },
   tagline:
-    "Planning and advisory for hotels, resorts, villas and banquets — deciding what a property should become.",
+    "Planning and advisory for hotels, resorts and banquets — deciding what a property should become.",
   cta: {
     title: "What should your property become?",
     text: "Book a 30-minute consultation to talk through your site, concept and budget.",

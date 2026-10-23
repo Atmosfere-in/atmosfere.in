@@ -29,13 +29,13 @@ export const hospitalityCases = [
     scope: ["Space planning", "Design intent", "Guest experience", "Back-of-house planning", "Material & lighting direction"],
     chapters: [
       { title: "A resort that needed room to grow.", image: photo("punarnava/chapter-1.jpg", "The lobby seen from the entrance, with the sculpture on its black marble plinth and seating to each side") },
-      { title: "Five elements, one plan.", image: photo("punarnava/chapter-2.jpg", "A curtained lounge opening onto the hills, with blue armchairs and a round table") },
-      { title: "Guest side, staff side.", image: photo("punarnava/chapter-3.jpg", "The lobby looking out through the entrance to palms and the hills beyond") },
+      { title: "Five elements, one plan.", image: photo("punarnava/chapter-2.jpg", "The finished lounge: curved cream sofas and rose armchairs around a marble-topped table on a patterned rug") },
+      { title: "Guest side, staff side.", image: photo("punarnava/chapter-3.jpg", "A finished guest room: a hand-painted foliage mural behind the bed, timber posts and brass wall lights") },
     ],
     mosaic: [
-      photo("punarnava/mosaic-1.jpg", "The lounge under glass pendants, looking through to the meeting room"),
+      photo("punarnava/mosaic-1.jpg", "A guest room with its mural headboard wall, timber-panelled ceiling and crisp white bedding"),
       photo("punarnava/mosaic-2.jpg", "A seating group against the lit timber-and-brass slatted wall"),
-      photo("punarnava/mosaic-3.jpg", "The lounge with its blue armchairs and the corridor to the offices"),
+      photo("punarnava/mosaic-3.jpg", "The reception as built: a stone wall, a crystal chandelier and the timber desk with carved figures"),
     ],
     concept: {
       title: "Let the five elements plan the building.",
@@ -81,7 +81,7 @@ export const hospitalityCases = [
         points: ["One design language from lobby to back of house", "Wellness philosophy built into the plan", "A clear brief for detailed design"],
       },
     ],
-    voiceImage: photo("punarnava/voice.jpg", "The lobby from the corner, with the chandelier, the sculpture and tall glazed doors"),
+    voiceImage: photo("punarnava/voice.jpg", "The lounge seen from the entrance, with its rose armchairs and curtained windows"),
     results: [
       { value: "90,000", label: "sq ft, approx., in the new building" },
       { value: "5", label: "Natural elements shaping the plan" },

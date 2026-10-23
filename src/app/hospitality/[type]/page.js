@@ -10,7 +10,7 @@ import { planningTypeDetails } from "@/data/planningTypeDetails";
 import { hospitalityCases } from "@/data/hospitalityCases";
 import { closing } from "@/data/hospitality";
 
-// /hospitality/hotel-resort, /villa-cottage, /banquet, /airbnb
+// /hospitality/hotel-resort, /banquet
 export function generateStaticParams() {
   return planningTypes.map((t) => ({ type: t.slug }));
 }
@@ -31,10 +31,7 @@ export default async function PlanningTypePage({ params }) {
   const type = find((await params).type);
   if (!type) notFound();
 
-  // Airbnb engagements are run like villa stays, so show those stories.
-  const related = hospitalityCases.filter(
-    (c) => c.planningType === (type.slug === "airbnb" ? "villa-cottage" : type.slug),
-  );
+  const related = hospitalityCases.filter((c) => c.planningType === type.slug);
   const others = planningTypes.filter((t) => t.slug !== type.slug);
 
   return (

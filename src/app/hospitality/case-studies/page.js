@@ -6,10 +6,10 @@ import { unsplash } from "@/lib/images";
 export const metadata = {
   title: "Case Studies",
   description:
-    "How the right question changed the property: hotels, resorts, villas and banquets planned by Atmosfere Hospitality.",
+    "How the right question changed the property: hotels, resorts and banquets planned by Atmosfere Hospitality.",
 };
 
-// /hospitality/case-studies?type=hotel-resort|villa-cottage|banquet
+// /hospitality/case-studies?type=hotel-resort|banquet
 export default async function HospitalityCaseStudies({ searchParams }) {
   const { type } = await searchParams;
   const active = hospitalityCaseFilters.some((f) => f.value === type) ? type : null;

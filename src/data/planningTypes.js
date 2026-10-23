@@ -1,6 +1,6 @@
 import { unsplash } from "@/lib/images";
 
-// The four hospitality planning types. Shared by the Hospitality homepage
+// The two hospitality planning types. Shared by the Hospitality homepage
 // (anchored tiles) and the Spaces cross-sell, which deep-links into them.
 
 export const planningTypes = [
@@ -14,30 +14,12 @@ export const planningTypes = [
     },
   },
   {
-    slug: "villa-cottage",
-    name: "Villa / Cottage",
-    text: "Private stays that feel like homes — and earn like boutique hotels.",
-    image: {
-      src: unsplash("1613977257365-aaae5a9817ff"),
-      alt: "A white modern villa with a swimming pool",
-    },
-  },
-  {
     slug: "banquet",
     name: "Banquet",
     text: "Flexible halls that host a wedding on Saturday and a conference on Monday.",
     image: {
       src: unsplash("1554009975-d74653b879f1"),
       alt: "Rows of glowing pendant lamps in a tall hall",
-    },
-  },
-  {
-    slug: "airbnb",
-    name: "Airbnb",
-    text: "Short-stay homes styled to photograph well, review well and book out.",
-    image: {
-      src: unsplash("1599777560450-e462cffc5368"),
-      alt: "A stay with an infinity pool reflecting the evening sky",
     },
   },
 ];

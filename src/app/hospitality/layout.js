@@ -6,11 +6,11 @@ import { hospitalityNav, footer } from "@/data/hospitality";
 
 export const metadata = {
   title: {
-    default: "Atmosfere Hospitality — Hotel, Resort, Villa & Banquet Planning",
+    default: "Atmosfere Hospitality — Hotel, Resort & Banquet Planning",
     template: "%s · Atmosfere Hospitality",
   },
   description:
-    "Hospitality planning and advisory: what should this property become? Hotels, resorts, villas, Airbnbs and banquets.",
+    "Hospitality planning and advisory: what should this property become? Hotels, resorts and banquets.",
 };
 
 export default function HospitalityLayout({ children }) {
