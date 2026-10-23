@@ -785,6 +785,84 @@ export const spacesProjects = [
       photo("b-ramprastha-colony/gallery-4.jpg", "The master bedroom's wardrobe wall, grey gloss shutters with a wall clock"),
     ],
   },
+  {
+    // Real engagement: a compact office at Gaur City for a cleanroom
+    // engineering company (the studio's "Enviro Cleanroom" design intent,
+    // June 2026). Renders by the studio, upscaled for the site; the plan
+    // and mood board from the deck are not used as photographs.
+    slug: "gaur-city-office",
+    name: "Gaur City Office",
+    type: "commercial",
+    category: "Office",
+    location: "Gaur City, Greater Noida West",
+    size: "Compact office · 6 workstations",
+    timeline: "Design intent issued June 2026",
+    image: photo("gaur-city-office/hero.jpg", "The meeting table with six blue chairs under a linear light, the MD's glass cubicle beside it and a blue wall at the far end"),
+    lead: "A compact office for a cleanroom engineering company, planned down to the inch: six workstations, a managing director's cubicle, a meeting table and a small leisure corner on a balcony, all in a palette of white, grey and the brand's blue.",
+    summary:
+      "The brief was a long, narrow floor plate at Gaur City and a company that builds cleanrooms for a living, so the office had to feel as precise as the work. The plan runs the six workstations down one side behind a two-foot passage, puts the managing director in a curved glass cubicle where the room turns, and keeps a meeting table and a tall-stool leisure corner by the balcony at the far end. The ceiling stays open and painted dark with the services exposed in red, while the walls, desks and storage are white and pale grey so the blue chairs, the blue end wall and the brand's blue accents carry the identity.",
+    scope: ["Workplace interiors", "Space planning", "MD cubicle and meeting area", "Workstation and storage joinery", "Brand-led colour direction", "Lighting design"],
+    chapters: [
+      { title: "A narrow floor, planned to the inch.", image: photo("gaur-city-office/chapter-1.jpg", "The office from the entrance: the meeting table, the MD's glass cubicle and the workstations under an open ceiling") },
+      { title: "Six desks in a row.", image: photo("gaur-city-office/chapter-2.jpg", "Workstations in white with low screens, a pinboard on the wall and a linear pendant above") },
+      { title: "A corner to step away.", image: photo("gaur-city-office/chapter-3.jpg", "The leisure corner: two tall stools and a round table against the blue wall") },
+    ],
+    mosaic: [
+      photo("gaur-city-office/mosaic-1.jpg", "The meeting table along the window wall, six blue chairs under the exposed ceiling"),
+      photo("gaur-city-office/mosaic-2.jpg", "The meeting table and the MD's cubicle in daylight"),
+      photo("gaur-city-office/mosaic-3.jpg", "The leisure corner in daylight, the MD's cubicle beyond"),
+    ],
+    concept: {
+      title: "As precise as a cleanroom.",
+      text: "A company that builds controlled environments should work in one. Every element is drawn to a grid: white workstations with low acoustic screens, overhead storage in white, a meeting table that doubles as the entrance's first impression, and the MD's cubicle in curved glass so the director stays part of the room. The dark open ceiling with red services gives the small floor height and honesty, and the brand's blue is used sparingly, where it reads.",
+      image: photo("gaur-city-office/hero.jpg", "The meeting table with six blue chairs under a linear light, the MD's glass cubicle beside it and a blue wall at the far end"),
+      palette: [
+        { name: "Ivory", note: "Walls, desks and overhead storage", color: "#efece6" },
+        { name: "Clouds", note: "Acoustic screens and the floor", color: "#c9cfd3" },
+        { name: "Sky", note: "Chairs and the leisure corner", color: "#8fb3d6" },
+        { name: "Deep ocean", note: "The end wall and the brand strip", color: "#2a4a66" },
+        { name: "Walnut", note: "The MD's desk and the leisure table", color: "#6b4a34" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Fit six workstations, a managing director's cubicle, a meeting table and a leisure area into a compact, narrow office at Gaur City for a cleanroom engineering company, and make it look like the company's own work.",
+        points: ["Six workstations and an MD cubicle", "A meeting table and a leisure corner", "A compact, narrow floor plate"],
+      },
+      {
+        title: "Challenge",
+        text: "The floor is barely nine feet deep along most of its length, with the balcony at the far end. Everything had to sit on one side of a two-foot passage without the room feeling like a corridor.",
+        points: ["A long, narrow plan", "A two-foot passage to keep clear", "Daylight only from the balcony end"],
+      },
+      {
+        title: "Approach",
+        text: "We lined the workstations along one wall in a single run, placed the MD's cubicle where the plan widens so it anchors the room, and used the balcony end for the meeting table and the leisure stools so the best light goes to the shared spaces.",
+        points: ["Workstations in one run", "The MD's cubicle at the turn of the plan", "Meeting and leisure at the balcony end"],
+      },
+      {
+        title: "Design Decisions",
+        text: "White desks with pale acoustic screens, white overhead storage with a blue brand strip, curved glass for the MD's cubicle, a dark open ceiling with services painted red, blue task chairs, a blue end wall for the leisure corner and a walnut desk and table for warmth.",
+        points: ["White, grey and the brand's blue", "Curved glass MD cubicle", "Open dark ceiling with red services"],
+      },
+      {
+        title: "Execution",
+        text: "The design intent was issued in two rounds in June 2026, with the plan, inspiration board and views; working drawings follow for the fit-out.",
+        points: ["Design intent issued June 2026", "Plan and views agreed", "Working drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "A small office that reads as organised and confident the moment the door opens, with every seat, screen and shelf accounted for.",
+        points: ["Six desks, one MD cubicle, one meeting table", "A leisure corner with daylight", "The brand's blue carried throughout"],
+      },
+    ],
+    voiceImage: photo("gaur-city-office/voice.jpg", "The workstations in daylight, with plants on the screens and the pinboard behind"),
+    results: [
+      { value: "6", label: "Workstations in a single run" },
+      { value: "1", label: "MD cubicle in curved glass" },
+      { value: "2", label: "Shared spaces at the balcony end: meeting and leisure" },
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
