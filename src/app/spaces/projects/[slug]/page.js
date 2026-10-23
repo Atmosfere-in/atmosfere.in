@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import EditorialStory from "@/components/pages/EditorialStory/EditorialStory";
+import ProjectGallery from "@/components/pages/ProjectGallery/ProjectGallery";
 import { spacesProjects, getSpacesProject } from "@/data/spacesProjects";
 
 export function generateStaticParams() {
@@ -13,37 +13,50 @@ export async function generateMetadata({ params }) {
   return project ? { title: project.name, description: project.lead } : {};
 }
 
-// Every Spaces project uses the magazine-style editorial layout.
+// Every photograph a project has, in order, without repeats: the hero, the
+// chapters, the gallery, the one beside the numbers and the concept image.
+function collectPhotos(project) {
+  const seen = new Set();
+  const out = [];
+  const add = (img) => {
+    if (!img?.src || seen.has(img.src)) return;
+    seen.add(img.src);
+    out.push({ src: img.src, alt: img.alt ?? "" });
+  };
+  add(project.image);
+  (project.chapters ?? []).forEach((c) => add(c.image));
+  (project.mosaic ?? []).forEach(add);
+  add(project.voiceImage);
+  add(project.concept?.image);
+  (project.gallery ?? []).forEach(add);
+  return out;
+}
+
+// /spaces/projects/<slug>: the project's photographs, nothing else.
 export default async function SpacesProject({ params }) {
   const { slug } = await params;
   const project = getSpacesProject(slug);
   if (!project) notFound();
 
   const index = spacesProjects.indexOf(project);
+  const prev = spacesProjects[(index - 1 + spacesProjects.length) % spacesProjects.length];
   const next = spacesProjects[(index + 1) % spacesProjects.length];
+  const link = (p) => ({ href: `/spaces/projects/${p.slug}`, name: p.name, details: `${p.category} · ${p.location}` });
 
   return (
     <main>
-      <EditorialStory
-        story={project}
+      <ProjectGallery
+        name={project.name}
         eyebrow={`${project.category} · ${project.location}`}
-        crumbs={[
-          { label: "Spaces", href: "/spaces" },
-          { label: "Projects", href: "/spaces/projects" },
-        ]}
+        lead={project.lead}
         meta={[
-          { label: "Type", value: project.category },
-          { label: "Location", value: project.location },
           { label: "Area", value: project.size },
           { label: "Timeline", value: project.timeline },
         ]}
-        next={{
-          href: `/spaces/projects/${next.slug}`,
-          name: next.name,
-          details: `${next.category} · ${next.location}`,
-          image: next.image,
-        }}
-        nextLabel="Next project"
+        photos={collectPhotos(project)}
+        caseStudyHref={`/spaces/case-studies/${project.slug}`}
+        prev={link(prev)}
+        next={link(next)}
       />
     </main>
   );

@@ -231,7 +231,7 @@ export const caseStudies = {
   title: "The thinking behind the finish.",
   items: [
     {
-      href: "/spaces/projects/the-aranya",
+      href: "/spaces/case-studies/the-aranya",
       tag: "Sample flat · Noida Extension",
       title: "The Aranya",
       summary:
@@ -242,7 +242,7 @@ export const caseStudies = {
       },
     },
     {
-      href: "/spaces/projects/arihant",
+      href: "/spaces/case-studies/arihant",
       tag: "Commercial compound · Delhi NCR",
       title: "Arihant",
       summary:
@@ -253,7 +253,7 @@ export const caseStudies = {
       },
     },
     {
-      href: "/spaces/projects/villa-rise-resort-residency",
+      href: "/spaces/case-studies/villa-rise-resort-residency",
       tag: "Villa · Rise Resorts, Greater Noida West",
       title: "Villa at Rise Resorts",
       summary:

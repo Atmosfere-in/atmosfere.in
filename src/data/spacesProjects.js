@@ -263,7 +263,7 @@ export const spacesProjects = [
     concept: {
       title: "Let the products do the decorating.",
       text: "Every card and box in this store is printed, embroidered or gilded, so the interior had to be the calm behind them. The shelving is minimal and traditional at once — pale timber, slim brass uprights, cane-fronted cabinets below — and the walls are kept plain so colour comes only from the stock. Three counters sit in the middle of the room, each with its own seating, so a customer walks in, is shown to a counter, and sits with the collection in front of them. Traditional prints appear in the brand's identity rather than on the walls: on the signage, the packaging and the small details.",
-      image: photo("lajpat-nagar/concept.jpg", "The shelf wall: printed gift boxes on pale timber shelves with brass uprights, cane-fronted cabinets below"),
+      image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: shelving, counters and the chandelier"),
       palette: [
         { name: "Pale timber", note: "Shelving, counters and cabinet frames", color: "#d9c4a0" },
         { name: "Slim brass", note: "Shelf uprights, trims and lighting", color: "#b9985a" },

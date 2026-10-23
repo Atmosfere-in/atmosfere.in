@@ -28,7 +28,7 @@ export default function SpacesCaseStudies() {
       />
       <CaseStudyList
         items={spacesProjects.map((p) => ({
-          href: `/spaces/projects/${p.slug}`,
+          href: `/spaces/case-studies/${p.slug}`,
           name: p.name,
           tag: `${p.category} · ${p.location}`,
           lead: p.lead,
