@@ -1258,6 +1258,83 @@ export const spacesProjects = [
       photo("tower-12-104/gallery-2.jpg", "The second bedroom's television wall with a lit shelf and a desk by the window"),
     ],
   },
+  {
+    // Real engagement: TLJ Law Offices (with KVA Hospitality) across a ground
+    // floor and a basement. Renders by the studio, June 2025; HD sources
+    // resampled for the site.
+    slug: "tlj-offices",
+    name: "TLJ Offices",
+    type: "commercial",
+    category: "Law office",
+    location: "Delhi NCR",
+    size: "Ground floor & basement",
+    timeline: "Design complete",
+    image: photo("tlj-offices/hero.jpg", "The partner's cabin: a walnut desk with two white chairs in front of a lit, shelved wall, flanked by oak-framed glass partitions"),
+    lead: "A law practice designed to feel established the day it opens: a panelled ground floor with a walnut cabin, a reception and a waiting lounge behind oak-framed fluted glass, and a working basement with a wall of lockable filing and open desks — all in oak, walnut, cream and brass.",
+    summary:
+      "TLJ Law Offices wanted the gravitas of a traditional chambers without the gloom. On the ground floor the entrance porch, the reception and the waiting lounge are panelled in walnut to dado height with cream above, the partitions are oak frames filled with fluted glass so light passes but faces do not, and the partner's cabin sits at the back with a walnut desk and a lit wall of shelving behind it. The basement does the practice's real work: a long wall of lockable oak filing cabinets, a row of workstations on a white tiled floor, a printer station and a second reception for the firm's hospitality arm. The street front is a simple cream porch with a canopy, panelled doors and a short flight of steps.",
+    scope: ["Office interiors", "Space planning across two levels", "Partner cabin and reception joinery", "Filing wall and workstations", "Facade and entrance porch", "Lighting design"],
+    chapters: [
+      { title: "A reception that reassures.", image: photo("tlj-offices/chapter-1.jpg", "The reception lounge: a tufted cream sofa under the firm's screen, oak-framed glass doors either side and a lit niche") },
+      { title: "A basement that works.", image: photo("tlj-offices/chapter-2.jpg", "The basement workstations: desks with white chairs on a tiled floor, a curved white reception desk and the filing wall") },
+      { title: "Somewhere to wait.", image: photo("tlj-offices/chapter-3.jpg", "The waiting lounge: a cream armchair with a side table, walnut dado panelling, a framed certificate and fluted-glass doors") },
+    ],
+    mosaic: [
+      photo("tlj-offices/mosaic-1.jpg", "The filing wall: lockable oak cabinets floor to ceiling, a printer station and a plant"),
+      photo("tlj-offices/mosaic-2.jpg", "The waiting room from the corridor: oak-framed fluted-glass partitions and a cream sofa against walnut panelling"),
+      photo("tlj-offices/mosaic-3.jpg", "The street front: a cream porch with a canopy, panelled glazed doors and steps"),
+    ],
+    concept: {
+      title: "Chambers, made light.",
+      text: "The classic law-office language — walnut panelling, a partner's desk, filing by the wall — is kept, but the heavy parts are lightened: cream above the dado, fluted glass instead of solid partitions, oak instead of dark timber for the frames and cabinets, and brass only as a line. The basement is treated as a proper working floor rather than storage, so the whole practice reads as one office.",
+      image: photo("tlj-offices/concept.jpg", "The street front from the side: the porch canopy, the panelled doors and the steps"),
+      palette: [
+        { name: "Cream", note: "Upper walls and the facade", color: "#efe7d8" },
+        { name: "Walnut", note: "Dado panelling and the partner's desk", color: "#5e3b26" },
+        { name: "Oak", note: "Partition frames and the filing cabinets", color: "#c9a26e" },
+        { name: "Fluted glass", note: "The partitions", color: "#d9d5cc" },
+        { name: "Brass", note: "Handles, the signage and the lines", color: "#b08d4b" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a law practice over a ground floor and a basement: a reception and waiting lounge, a partner's cabin, workstations and extensive secure filing, with a street front to match.",
+        points: ["Ground floor and basement", "Reception, lounge and a partner's cabin", "Secure filing for the practice"],
+      },
+      {
+        title: "Challenge",
+        text: "Law offices need privacy and a sense of permanence, but panelled rooms and solid partitions can turn a small ground floor and a basement into a series of dark boxes.",
+        points: ["Privacy without darkness", "A basement that feels like an office", "Permanence in a modest footprint"],
+      },
+      {
+        title: "Approach",
+        text: "We panelled to dado height only and kept everything above it cream, used fluted glass in oak frames for every partition, and put the firm's filing on one wall of lockable cabinets so the desks stay clear.",
+        points: ["Dado panelling, cream above", "Fluted glass partitions", "Filing on one wall"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A walnut partner's desk against a lit shelved wall, a tufted cream sofa in the reception, oak-framed fluted-glass doors and screens, a floor-to-ceiling wall of lockable oak filing, a curved white reception desk in the basement, and a cream porch with a canopy on the street.",
+        points: ["Walnut desk and lit shelving", "Oak-and-glass partitions", "A full wall of lockable filing"],
+      },
+      {
+        title: "Execution",
+        text: "Views for the facade, the ground floor and the basement were issued in June 2025; the panelling, partitions and filing wall are detailed as joinery sets for the fit-out.",
+        points: ["Views issued June 2025", "Joinery sets for panelling and filing", "Ready for fit-out"],
+      },
+      {
+        title: "Outcome",
+        text: "A practice that looks established and feels calm, with a working basement as considered as the rooms clients see.",
+        points: ["A reception that reassures", "A cabin with presence", "Filing for the whole practice"],
+      },
+    ],
+    voiceImage: photo("tlj-offices/voice.jpg", "The basement reception: a curved white desk under the firm's brass signage, with the filing wall alongside"),
+    results: [
+      { value: "2", label: "Levels: ground floor and basement" },
+      { value: "1", label: "Wall of lockable filing for the whole practice" },
+      { value: "100%", label: "Panelling, partitions and desks made to our drawings" },
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
