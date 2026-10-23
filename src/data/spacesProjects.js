@@ -485,12 +485,12 @@ export const spacesProjects = [
     mosaic: [
       photo("d-3-10-sector-14/mosaic-1.jpg", "The main door: panelled dark timber with brass lining and an oval brass handle"),
       photo("d-3-10-sector-14/mosaic-2.jpg", "The crockery unit, with glass cabinets either side of a lit stone niche"),
-      photo("d-3-10-sector-14/mosaic-3.jpg", "A bedroom door in sunburst-grooved timber beside a gold curtain"),
+      photo("d-3-10-sector-14/mosaic-3.jpg", "Two armchairs and a sculpted side table in front of the gold curtains"),
     ],
     concept: {
       title: "Classic rooms, a modern roof.",
       text: "Downstairs the house leans classic: panelled doors, marble with a dark border, block-print wallpaper and cream upholstery with timber frames. The roof takes the opposite view. A glass-topped pergola, a timber deck, turf and a swing make a second living room in the open air, lit so the family can use it long after sunset. The two halves share a palette — dark timber, brass, cream and stone — so the house reads as one.",
-      image: photo("d-3-10-sector-14/concept.jpg", "The terrace lounge at night: the pergola lit from above, lounge chairs on the timber deck and turf in front"),
+      image: photo("d-3-10-sector-14/concept.jpg", "The terrace lounge at night: swivel chairs on the timber deck under the lit pergola, plants along the glass"),
       palette: [
         { name: "Dark walnut", note: "Doors, frames and the pergola's fascia", color: "#4a3426" },
         { name: "Brass", note: "Door handles, inlays and the sideboard's grips", color: "#b08d4b" },
@@ -531,7 +531,7 @@ export const spacesProjects = [
         points: ["Three finished floors", "A terrace lounge with a swing and loungers", "One palette from the gate to the roof"],
       },
     ],
-    voiceImage: photo("d-3-10-sector-14/voice.jpg", "The white fluted sideboard with brass grips, a glazed timber door behind it"),
+    voiceImage: photo("d-3-10-sector-14/voice.jpg", "The living room from the dining side: cream sofas and armchairs around a brass table"),
     results: [
       { value: "3", label: "Floors redesigned, plus the roof" },
       { value: "1", label: "Terrace lounge under a glass-topped pergola" },
