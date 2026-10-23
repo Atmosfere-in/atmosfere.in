@@ -544,6 +544,82 @@ export const spacesProjects = [
       photo("d-3-10-sector-14/gallery-4.jpg", "A bedroom with a cove-lit ceiling, a padded headboard wall and cream wardrobes"),
     ],
   },
+  {
+    // Real engagement: a travel agency's office. Renders by the studio,
+    // graded for the site; the brief is written from the design.
+    slug: "eji-travel-solutions",
+    name: "Eji Travel Solutions",
+    type: "commercial",
+    category: "Office",
+    location: "Delhi NCR",
+    size: "Single-floor office",
+    timeline: "Design complete",
+    image: photo("eji-travel-solutions/hero.jpg", "The consultation counter: three orange chairs at a white desk, airport-style signage overhead and a cork pinboard wall behind"),
+    lead: "An office for a travel company designed to feel like the start of a journey — airport signage, an arrivals board, world clocks and a cork wall of destinations — with proper desks for the team and a calm cabin and lounge for the people who run it.",
+    summary:
+      "Eji Travel Solutions sells journeys, so its office should feel like one. The plan is a single open floor with the team's workstations along the walls under white cabinets, and a consultation counter in the middle where clients sit on orange chairs across from the advisors. The travel theme is in the details rather than slogans: departure-board signage over the counter, an arrivals screen by the entrance, a row of world clocks, and a long cork wall pinned with maps and postcards above every desk. The director's cabin and a small lounge in warm yellow and orange, with a rattan armchair and a sofa on a chevron timber floor, give the leadership somewhere quieter to meet.",
+    scope: ["Workplace interiors", "Space planning", "Consultation counter design", "Custom joinery and storage", "Brand-led art direction", "Lighting design"],
+    chapters: [
+      { title: "One floor, one team.", image: photo("eji-travel-solutions/chapter-1.jpg", "The open office: workstations down both walls under white cabinets, the consultation counter in the middle") },
+      { title: "A cabin for the director.", image: photo("eji-travel-solutions/chapter-2.jpg", "The director's cabin: a desk with two tan chairs, oak shelving and a glazed wall to the office") },
+      { title: "Somewhere quieter to talk.", image: photo("eji-travel-solutions/chapter-3.jpg", "The lounge: a sofa and a rattan armchair on an orange rug under a yellow ceiling") },
+    ],
+    mosaic: [
+      photo("eji-travel-solutions/mosaic-1.jpg", "Workstations under the cork wall, with a column of world clocks by the door"),
+      photo("eji-travel-solutions/mosaic-2.jpg", "The entrance, with an arrivals board on the wall and a desk beyond"),
+      photo("eji-travel-solutions/mosaic-3.jpg", "Three workstations along a wall, with a small shrine niche in the corner"),
+    ],
+    concept: {
+      title: "The office as a departure lounge.",
+      text: "Travel is the product, so the office borrows the language of airports without copying one: a departure board over the counter, an arrivals screen at the door, clocks set to the world's cities and a cork wall that fills up with the places clients have been. Underneath, it is a well-organised office — long desks, closed storage overhead, good task lighting — in oak, white and a warm yellow that keeps it from feeling corporate.",
+      image: photo("eji-travel-solutions/chapter-1.jpg", "The open office: workstations down both walls under white cabinets, the consultation counter in the middle"),
+      palette: [
+        { name: "Oak", note: "Desks, shelving and the chevron floor in the cabin", color: "#c8a97e" },
+        { name: "White", note: "Overhead cabinets, counters and the floor tiles", color: "#f1efea" },
+        { name: "Sun yellow", note: "Ceiling bands and the lounge walls", color: "#f2d35a" },
+        { name: "Orange", note: "Client chairs, the rug and cushions", color: "#d9743a" },
+        { name: "Cork", note: "The pinboard wall above every desk", color: "#b58a5a" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design an office for a travel company where clients are advised across a counter, the team works at proper desks and the leadership has a cabin and a lounge — and make it feel like travel.",
+        points: ["A consultation counter for clients", "Workstations for the full team", "A director's cabin and a lounge"],
+      },
+      {
+        title: "Challenge",
+        text: "One open floor had to hold public and private work at once: clients at the counter, advisors on calls, the director in meetings. And a 'travel' theme is easy to overdo.",
+        points: ["Clients and staff sharing one floor", "A cabin that is private yet connected", "A theme that stays tasteful"],
+      },
+      {
+        title: "Approach",
+        text: "We put the team's desks along the walls and the client counter in the middle, so advisors turn from their screens to the counter without moving rooms. The cabin and lounge sit behind glass at one end. The theme lives in signage, screens and the cork wall, not in the architecture.",
+        points: ["Desks on the walls, counter in the centre", "Cabin and lounge behind glass", "Theme carried by details"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Departure-board signage over the counter, an arrivals screen at the door, a column of world clocks, cork pinboards the length of every desk, white overhead cabinets for the paperwork, orange client chairs, and a cabin and lounge in oak with yellow walls and an orange rug.",
+        points: ["Airport signage and an arrivals screen", "Cork wall and world clocks", "Oak, white, yellow and orange"],
+      },
+      {
+        title: "Execution",
+        text: "Working drawings, joinery details and the lighting layout are ready for the fit-out, with the counter and the desk runs detailed as continuous joinery.",
+        points: ["Joinery and counter detailed", "Lighting layout issued", "Ready for fit-out"],
+      },
+      {
+        title: "Outcome",
+        text: "An office that sells the idea of going somewhere the moment a client walks in, and that works as a disciplined workplace for the people who make the trips happen.",
+        points: ["A counter built for conversations", "Every desk with storage and a pinboard", "A cabin and lounge for the leadership"],
+      },
+    ],
+    voiceImage: photo("eji-travel-solutions/voice.jpg", "The director's cabin from the door: a tan leather chair at the desk, the lounge beyond"),
+    results: [
+      { value: "1", label: "Open floor for clients and team together" },
+      { value: "3", label: "Client seats at the consultation counter" },
+      { value: "2", label: "Private rooms: the director's cabin and lounge" },
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
