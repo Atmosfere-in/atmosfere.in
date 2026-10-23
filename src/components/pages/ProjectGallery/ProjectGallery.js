@@ -6,13 +6,16 @@ import Link from "next/link";
 import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./ProjectGallery.module.css";
 
-// A project shown through its photographs alone: a full-bleed opening
-// photograph beneath the name and facts, an editorial grid of every other
-// photograph (opening in a lightbox), and the way to the written case study
-// and the neighbouring projects.
+// A project shown through its photographs alone: a small centred masthead,
+// the first three photographs as an opening mosaic, an editorial grid of
+// every other photograph (all opening in a lightbox), and the way to the
+// written case study and the neighbouring projects.
 // photos: [{ src, alt }] · meta: [{ label, value }] · prev/next: { href, name, details }
 export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref, prev, next }) {
-  const [hero, ...rest] = photos;
+  // The first three photographs open the page together; the rest follow in the grid.
+  const openingCount = photos.length >= 3 ? 3 : 1;
+  const first = photos.slice(0, openingCount);
+  const rest = photos.slice(openingCount);
   const [open, setOpen] = useState(null); // index into `photos`, or null
 
   const show = useCallback((i) => setOpen(((i % photos.length) + photos.length) % photos.length), [photos.length]);
@@ -44,37 +47,55 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
 
   return (
     <>
-      {/* Opening: the name and facts on the light page, the photograph framed
-          beneath them. Nothing is written over the photograph. */}
+      {/* Opening: a quiet centred masthead, then the first photographs at
+          once: one tall, two stacked beside it. Nothing is set over them. */}
       <section className={styles.opening}>
         <div className="container">
-          <nav aria-label="Breadcrumb" className={styles.crumbs}>
-            <ol>
-              <li>
-                <Link href="/spaces">Spaces</Link>
-              </li>
-              <li>
-                <Link href="/spaces/projects">Projects</Link>
-              </li>
-            </ol>
-          </nav>
-          <div className={styles.openingHead}>
+          <header className={styles.masthead}>
+            <nav aria-label="Breadcrumb" className={styles.crumbs}>
+              <ol>
+                <li>
+                  <Link href="/spaces">Spaces</Link>
+                </li>
+                <li>
+                  <Link href="/spaces/projects">Projects</Link>
+                </li>
+              </ol>
+            </nav>
             <h1 className={styles.title}>{name}</h1>
-            <dl className={styles.meta}>
-              {meta.map((m) => (
-                <div key={m.label}>
-                  <dt>{m.label}</dt>
-                  <dd>{m.value}</dd>
-                </div>
+            <p className={styles.facts}>
+              {meta.map((m, i) => (
+                <span key={m.label}>
+                  {i > 0 && (
+                    <span className={styles.dot} aria-hidden="true">
+                      ·
+                    </span>
+                  )}
+                  {m.value}
+                </span>
               ))}
-            </dl>
-          </div>
-          <button type="button" className={styles.heroMedia} onClick={() => show(0)} aria-label="Open the photograph">
-            <Image src={hero.src} alt={hero.alt} fill preload quality={90} sizes="(max-width: 1760px) 100vw, 1760px" className={styles.image} />
-            <span className={styles.heroCount} aria-hidden="true">
-              01 / {String(photos.length).padStart(2, "0")}
-            </span>
-          </button>
+            </p>
+          </header>
+          <ul className={`${styles.mosaic} ${first.length < 3 ? styles.mosaicSingle : ""}`}>
+            {first.map((photo, i) => (
+              <li key={photo.src} className={i === 0 ? styles.mosaicMain : styles.mosaicSide}>
+                <button type="button" className={styles.tile} onClick={() => show(i)} aria-label={`Open photograph ${i + 1} of ${photos.length}`}>
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    preload={i === 0}
+                    quality={90}
+                    sizes={i === 0 ? "(max-width: 900px) 100vw, (max-width: 1760px) 66vw, 1180px" : "(max-width: 640px) 100vw, (max-width: 900px) 50vw, (max-width: 1760px) 33vw, 580px"}
+                    className={styles.image}
+                  />
+                  <span className={styles.count} aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -93,7 +114,7 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
         <ul className={`container ${styles.grid}`}>
           {rest.map((photo, i) => (
             <li key={photo.src} className={`${styles.cell} reveal-image`} style={{ "--reveal-delay": `${(i % 2) * 120}ms` }}>
-              <button type="button" className={styles.tile} onClick={() => show(i + 1)} aria-label={`Open photograph ${i + 2} of ${photos.length}`}>
+              <button type="button" className={styles.tile} onClick={() => show(i + openingCount)} aria-label={`Open photograph ${i + openingCount + 1} of ${photos.length}`}>
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -103,7 +124,7 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
                   className={styles.image}
                 />
                 <span className={styles.count} aria-hidden="true">
-                  {String(i + 2).padStart(2, "0")}
+                  {String(i + openingCount + 1).padStart(2, "0")}
                 </span>
               </button>
             </li>
