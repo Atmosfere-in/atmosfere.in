@@ -222,6 +222,59 @@
   opacity: 0.9;
 }
 
+/* ---------- Clips ---------- */
+
+.clips {
+  padding-top: 0;
+}
+
+.clipsLabel {
+  margin-bottom: clamp(16px, 2vh, 24px);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.clipGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(14px, 1.8vw, 28px);
+  list-style: none;
+}
+
+.clipCell {
+  position: relative;
+}
+
+.clip {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: var(--color-stone-100);
+  cursor: zoom-in;
+}
+
+.clipVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.6s var(--ease);
+}
+
+.clip:hover .clipVideo,
+.clip:focus-visible .clipVideo {
+  transform: scale(1.03);
+}
+
 /* ---------- Neighbouring projects ---------- */
 
 .neighbours {
@@ -316,6 +369,15 @@
 
 .lightboxImage {
   object-fit: contain;
+}
+
+.lightboxVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
 }
 
 .lightboxBar {
@@ -430,6 +492,10 @@
     aspect-ratio: 16 / 10;
   }
 
+  .clipGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .neighboursInner {
     grid-template-columns: 1fr 1fr;
   }
@@ -480,6 +546,10 @@
 
   .count {
     opacity: 0.9;
+  }
+
+  .clip {
+    border-radius: 12px;
   }
 
   .neighboursInner {

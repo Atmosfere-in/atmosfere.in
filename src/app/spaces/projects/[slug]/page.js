@@ -15,11 +15,12 @@ export async function generateMetadata({ params }) {
 
 // Every photograph a project has, in order, without repeats: the hero, the
 // chapters, the gallery, the one beside the numbers and the concept image.
+// Frames lifted from a clip (marked `still`) are left out; the clip itself shows.
 function collectPhotos(project) {
   const seen = new Set();
   const out = [];
   const add = (img) => {
-    if (!img?.src || seen.has(img.src)) return;
+    if (!img?.src || img.still || seen.has(img.src)) return; // `still`: a frame taken from a clip shown below
     seen.add(img.src);
     out.push({ src: img.src, alt: img.alt ?? "" });
   };
@@ -55,6 +56,7 @@ export default async function SpacesProject({ params }) {
           { label: "Timeline", value: project.timeline },
         ]}
         photos={collectPhotos(project)}
+        videos={project.videos ?? []}
         caseStudyHref={`/spaces/case-studies/${project.slug}`}
         prev={link(prev)}
         next={link(next)}

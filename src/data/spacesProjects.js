@@ -620,6 +620,89 @@ export const spacesProjects = [
       { value: "2", label: "Private rooms: the director's cabin and lounge" },
     ],
   },
+  {
+    // Real engagement: apartment 1803/04 at Express One, Ghaziabad, photographed
+    // and filmed on site at handover. Clips play on the gallery page; the frames
+    // lifted from them (marked `still`) serve only the written case study.
+    slug: "express-one-1803-04",
+    name: "Express One 1803/04",
+    type: "residential",
+    category: "Apartment",
+    location: "Express One, Ghaziabad",
+    size: "High-rise apartment",
+    timeline: "Handover",
+    image: photo("express-one-1803-04/hero.jpg", "The living hall: white moulded wall panels with black inlay lines, brass sconces, a walnut door and a grey marble floor"),
+    lead: "A high-rise apartment finished in a quiet classic language — white panelled walls with a black inlay line, grey marble underfoot, coffered ceilings with hidden coves — and bedrooms softened with curved upholstered headboards and timber floors.",
+    summary:
+      "The family wanted an apartment that felt composed rather than decorated. We gave the living hall a single idea and carried it through: full-height wall panels in white with a thin black inlay, brass sconces in the panels, walnut doors, and a grey-veined marble floor under a coffered ceiling lit from its coves. The bedrooms take a softer version of the same discipline, with curved upholstered headboards that wrap into bedside storage, wardrobes with slim brass pulls, a dressing unit by the window and timber flooring in place of the marble. The clips were shot on site as the rooms were handed over.",
+    scope: ["Full-apartment interiors", "Wall panelling and ceiling design", "Custom beds, wardrobes and dressers", "Marble and timber flooring", "Lighting design", "Site supervision"],
+    chapters: [
+      { title: "One language for the hall.", image: photo("express-one-1803-04/chapter-1.jpg", "The panelled wall of the living hall: three white moulded panels edged with a black inlay line") },
+      { title: "Bedrooms that wrap around you.", image: { ...photo("express-one-1803-04/chapter-2.jpg", "The master bedroom: a curved upholstered headboard flowing into bedside storage, a timber floor and sheer curtains"), still: true } },
+      { title: "Storage that disappears.", image: { ...photo("express-one-1803-04/chapter-3.jpg", "A bedroom with its wardrobe, walnut door and bed under a cove-lit ceiling"), still: true } },
+    ],
+    mosaic: [
+      photo("express-one-1803-04/mosaic-1.jpg", "The hall's panelled wall between two walnut doors under the coffered ceiling"),
+      { ...photo("express-one-1803-04/mosaic-2.jpg", "Brass sconces on the panelled wall, with the kitchen beyond"), still: true },
+      { ...photo("express-one-1803-04/mosaic-3.jpg", "The hall towards the kitchen, with the lit display niche and the balcony door"), still: true },
+    ],
+    concept: {
+      title: "Composed, not decorated.",
+      text: "Everything in the hall comes from one move: the panel. The same white panel with its black inlay line frames the walls, holds the sconces and sets the rhythm of the doors, so the room needs nothing else. The bedrooms soften the idea into curves and timber, keeping the palette of white, walnut and brass.",
+      image: photo("express-one-1803-04/hero.jpg", "The living hall: white moulded wall panels with black inlay lines, brass sconces, a walnut door and a grey marble floor"),
+      palette: [
+        { name: "White", note: "Wall panels and ceilings", color: "#f3f1ec" },
+        { name: "Black inlay", note: "The line that edges every panel", color: "#1e1e1e" },
+        { name: "Grey marble", note: "The hall floor", color: "#b9b6b0" },
+        { name: "Walnut", note: "Doors and wardrobe shutters", color: "#5a3b2a" },
+        { name: "Brass", note: "Sconces and wardrobe pulls", color: "#b08d4b" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Finish a high-rise apartment for a family who wanted it calm and classic, with the hall as a single composed room and bedrooms built for comfort and storage.",
+        points: ["A classic, composed hall", "Comfortable bedrooms with full storage", "Materials that will last"],
+      },
+      {
+        title: "Challenge",
+        text: "A developer's shell with ordinary proportions and a flat slab. Classic panelling can make such rooms feel heavy, and bedrooms with full wardrobes can feel boxed in.",
+        points: ["A standard shell with flat ceilings", "Panelling without heaviness", "Storage without closing rooms in"],
+      },
+      {
+        title: "Approach",
+        text: "One panel module sets out the whole hall, with the ceiling coffered and lit from its coves to add height. In the bedrooms the headboards curve into the bedside units so the furniture reads as one piece, and the wardrobes sit flush with slim pulls.",
+        points: ["One panel module across the hall", "Coffered, cove-lit ceilings for height", "Curved headboards that join the bedside storage"],
+      },
+      {
+        title: "Design Decisions",
+        text: "White panels with a black inlay line, brass sconces, walnut doors, grey-veined marble in the hall, timber flooring and sheer curtains in the bedrooms, wardrobes with slim brass pulls and a dressing unit by the window.",
+        points: ["White, walnut, brass and grey marble", "Timber floors in the bedrooms", "Flush wardrobes with slim pulls"],
+      },
+      {
+        title: "Execution",
+        text: "The panelling, ceilings, beds and wardrobes were built on site to our drawings, with the clips here shot as the rooms were being handed over.",
+        points: ["Panelling and joinery built on site", "Beds and wardrobes made to drawing", "Filmed at handover"],
+      },
+      {
+        title: "Outcome",
+        text: "An apartment that feels settled the moment the door opens: one calm idea in the hall, and bedrooms that are soft, warm and fully stored.",
+        points: ["A hall with one clear idea", "Bedrooms with built-in comfort", "A palette that will age well"],
+      },
+    ],
+    voiceImage: { ...photo("express-one-1803-04/voice.jpg", "The dressing unit by the bedroom window, with the city beyond at dusk"), still: true },
+    results: [
+      { value: "1", label: "Panel module that sets out the whole hall" },
+      { value: "4", label: "Clips shot on site at handover" },
+      { value: "100%", label: "Beds, wardrobes and panelling made to our drawings" },
+    ],
+    videos: [
+      { src: "/videos/spaces/express-one-1803-04/clip-1.mp4", poster: "/images/spaces/express-one-1803-04/clip-1-poster.jpg", alt: "Walking into the living hall: panelled walls, brass sconces and the marble floor" },
+      { src: "/videos/spaces/express-one-1803-04/clip-2.mp4", poster: "/images/spaces/express-one-1803-04/clip-2-poster.jpg", alt: "The hall towards the kitchen and the lit display niche" },
+      { src: "/videos/spaces/express-one-1803-04/clip-3.mp4", poster: "/images/spaces/express-one-1803-04/clip-3-poster.jpg", alt: "The master bedroom: the curved headboard, the bed and the wardrobe" },
+      { src: "/videos/spaces/express-one-1803-04/clip-4.mp4", poster: "/images/spaces/express-one-1803-04/clip-4-poster.jpg", alt: "A bedroom from the door: wardrobe, bed and the cove-lit ceiling" },
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [

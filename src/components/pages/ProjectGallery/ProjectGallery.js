@@ -10,15 +10,19 @@ import styles from "./ProjectGallery.module.css";
 // the first three photographs as an opening mosaic, an editorial grid of
 // every other photograph (all opening in a lightbox), and the way to the
 // written case study and the neighbouring projects.
-// photos: [{ src, alt }] · meta: [{ label, value }] · prev/next: { href, name, details }
-export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref, prev, next }) {
+// photos: [{ src, alt }] · videos: [{ src, poster, alt }] (short portrait clips, shown
+// after the photographs) · meta: [{ label, value }] · prev/next: { href, name, details }
+export default function ProjectGallery({ name, lead, meta, photos, videos = [], caseStudyHref, prev, next }) {
   // The first three photographs open the page together; the rest follow in the grid.
   const openingCount = photos.length >= 3 ? 3 : 1;
   const first = photos.slice(0, openingCount);
   const rest = photos.slice(openingCount);
-  const [open, setOpen] = useState(null); // index into `photos`, or null
+  // Everything the lightbox can show, photographs first and then the clips.
+  const items = [...photos.map((p) => ({ kind: "photo", ...p })), ...videos.map((v) => ({ kind: "video", ...v }))];
+  const total = items.length;
+  const [open, setOpen] = useState(null); // index into `items`, or null
 
-  const show = useCallback((i) => setOpen(((i % photos.length) + photos.length) % photos.length), [photos.length]);
+  const show = useCallback((i) => setOpen(((i % total) + total) % total), [total]);
   const close = useCallback(() => setOpen(null), []);
 
   // The page opens on the light background, so the floating header keeps
@@ -79,7 +83,7 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
           <ul className={`${styles.mosaic} ${first.length < 3 ? styles.mosaicSingle : ""}`}>
             {first.map((photo, i) => (
               <li key={photo.src} className={i === 0 ? styles.mosaicMain : styles.mosaicSide}>
-                <button type="button" className={styles.tile} onClick={() => show(i)} aria-label={`Open photograph ${i + 1} of ${photos.length}`}>
+                <button type="button" className={styles.tile} onClick={() => show(i)} aria-label={`Open photograph ${i + 1} of ${total}`}>
                   <Image
                     src={photo.src}
                     alt={photo.alt}
@@ -110,11 +114,12 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
       </section>
 
       {/* The photographs, in an editorial rhythm: wide, pair, third-and-two-thirds. */}
+      {rest.length > 0 && (
       <section className={`section ${styles.gallery}`} aria-label="Photographs">
         <ul className={`container ${styles.grid}`}>
           {rest.map((photo, i) => (
             <li key={photo.src} className={`${styles.cell} reveal-image`} style={{ "--reveal-delay": `${(i % 2) * 120}ms` }}>
-              <button type="button" className={styles.tile} onClick={() => show(i + openingCount)} aria-label={`Open photograph ${i + openingCount + 1} of ${photos.length}`}>
+              <button type="button" className={styles.tile} onClick={() => show(i + openingCount)} aria-label={`Open photograph ${i + openingCount + 1} of ${total}`}>
                 <Image
                   src={photo.src}
                   alt={photo.alt}
@@ -131,6 +136,28 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
           ))}
         </ul>
       </section>
+      )}
+
+      {/* Short clips from the finished rooms, portrait as they were shot. */}
+      {videos.length > 0 && (
+        <section className={`section ${styles.clips}`} aria-label="Clips">
+          <div className="container">
+            <p className={styles.clipsLabel}>On site</p>
+            <ul className={styles.clipGrid}>
+              {videos.map((v, i) => (
+                <li key={v.src} className={`${styles.clipCell} reveal-image`} style={{ "--reveal-delay": `${(i % 4) * 100}ms` }}>
+                  <button type="button" className={styles.clip} onClick={() => show(photos.length + i)} aria-label={`Play clip ${i + 1} of ${videos.length}`}>
+                    <video src={v.src} poster={v.poster} muted loop autoPlay playsInline preload="metadata" className={styles.clipVideo} />
+                    <span className={styles.count} aria-hidden="true">
+                      {String(photos.length + i + 1).padStart(2, "0")}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* Neighbouring projects. */}
       <nav className={`section ${styles.neighbours}`} aria-label="Other projects">
@@ -156,20 +183,24 @@ export default function ProjectGallery({ name, lead, meta, photos, caseStudyHref
       </nav>
 
       {open !== null && (
-        <div className={styles.lightbox} role="dialog" aria-modal="true" aria-label={`${name}: photograph ${open + 1} of ${photos.length}`} onClick={close}>
+        <div className={styles.lightbox} role="dialog" aria-modal="true" aria-label={`${name}: ${open + 1} of ${total}`} onClick={close}>
           <div className={styles.lightboxMedia} onClick={(e) => e.stopPropagation()}>
-            <Image src={photos[open].src} alt={photos[open].alt} fill quality={90} sizes="100vw" className={styles.lightboxImage} />
+            {items[open].kind === "video" ? (
+              <video key={items[open].src} src={items[open].src} poster={items[open].poster} autoPlay muted loop playsInline controls className={styles.lightboxVideo} />
+            ) : (
+              <Image src={items[open].src} alt={items[open].alt} fill quality={90} sizes="100vw" className={styles.lightboxImage} />
+            )}
           </div>
           <div className={styles.lightboxBar} onClick={(e) => e.stopPropagation()}>
             <span className={styles.lightboxCount}>
-              {String(open + 1).padStart(2, "0")} / {String(photos.length).padStart(2, "0")}
+              {String(open + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
             </span>
-            <span className={styles.lightboxCaption}>{photos[open].alt}</span>
+            <span className={styles.lightboxCaption}>{items[open].alt}</span>
           </div>
-          <button type="button" className={`${styles.lightboxNav} ${styles.lightboxPrev}`} onClick={(e) => { e.stopPropagation(); show(open - 1); }} aria-label="Previous photograph">
+          <button type="button" className={`${styles.lightboxNav} ${styles.lightboxPrev}`} onClick={(e) => { e.stopPropagation(); show(open - 1); }} aria-label="Previous">
             <Arrow size={22} className={styles.arrowBack} />
           </button>
-          <button type="button" className={`${styles.lightboxNav} ${styles.lightboxNext}`} onClick={(e) => { e.stopPropagation(); show(open + 1); }} aria-label="Next photograph">
+          <button type="button" className={`${styles.lightboxNav} ${styles.lightboxNext}`} onClick={(e) => { e.stopPropagation(); show(open + 1); }} aria-label="Next">
             <Arrow size={22} />
           </button>
           <button type="button" className={styles.lightboxClose} onClick={close} aria-label="Close">
