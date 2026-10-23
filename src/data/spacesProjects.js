@@ -540,7 +540,6 @@ export const spacesProjects = [
     gallery: [
       photo("d-3-10-sector-14/gallery-1.jpg", "The swing on the terrace under the pergola's lit beams at dusk"),
       photo("d-3-10-sector-14/gallery-2.jpg", "The entrance: a dark glazed door under a timber-slat ceiling beside a stone-clad wall"),
-      photo("d-3-10-sector-14/gallery-3.jpg", "The house from the street, with its timber-faced balconies under the old trees"),
       photo("d-3-10-sector-14/gallery-4.jpg", "A bedroom with a cove-lit ceiling, a padded headboard wall and cream wardrobes"),
     ],
   },
