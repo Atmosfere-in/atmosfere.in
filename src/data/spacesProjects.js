@@ -938,6 +938,82 @@ export const spacesProjects = [
       { value: "3", label: "Materials carried through: oak, white and brass" },
     ],
   },
+  {
+    // Real engagement: apartment 912 at SKA. Renders by the studio (April
+    // 2026), with four views re-rendered photographically; upscaled for the site.
+    slug: "ska-912",
+    name: "SKA 912",
+    type: "residential",
+    category: "Apartment",
+    location: "SKA, Greater Noida West",
+    size: "Apartment",
+    timeline: "Design complete",
+    image: photo("ska-912/hero.jpg", "Living and dining as one room: a cream sofa, a wall of framed photographs, a timber dining table and a cove-lit ceiling"),
+    lead: "A warm, pale apartment where the living and dining share one room, a green-marble feature wall holds the television, a daybed room doubles as a guest room, and the bedroom pairs a tan upholstered bed with a curved dressing corner — all in cream, oak and soft green.",
+    summary:
+      "The family wanted calm rather than colour, with every room feeling warm. The living and dining room is one long space: a cream sofa and dark-framed armchairs at one end, a timber dining table under a wall of framed photographs at the other, with a fluted panel and a cove-lit ceiling tying them together. The television sits on a wall of soft green marble veining with a curved cream unit beneath. The kitchen is small and glossy, with a patterned splashback, pendant cages over the counter and a breakfast ledge. A second room takes an olive daybed under a hand-drawn green mural so it works as a sitting room by day and a guest room by night. The bedroom pairs a tan upholstered bed and a fluted headboard with a curved dressing table and a rose-pink stool, the one playful note.",
+    scope: ["Full-apartment interiors", "Space planning", "Feature walls and ceilings", "Custom beds, units and dressers", "Modular kitchen", "Lighting design"],
+    chapters: [
+      { title: "One room for living and dining.", image: photo("ska-912/chapter-1.jpg", "The living room: a cream sofa with dark cushions, two dark-framed armchairs, a fluted panel and a cove-lit ceiling") },
+      { title: "Tan, oak and a curve.", image: photo("ska-912/chapter-2.jpg", "The bedroom: a tan upholstered bed with a fluted headboard, a curved dressing table and a pink stool by the window") },
+      { title: "A small kitchen with character.", image: photo("ska-912/chapter-3.jpg", "The kitchen: glossy cream shutters, a patterned splashback, cage pendants and a breakfast ledge") },
+    ],
+    mosaic: [
+      photo("ska-912/mosaic-1.jpg", "The television wall: soft green marble veining with a curved cream unit beneath"),
+      photo("ska-912/mosaic-2.jpg", "The study corner: a floating desk, a curved stool and the television on a blush wall"),
+      photo("ska-912/mosaic-3.jpg", "The daybed room: an olive daybed under a green mural, a rattan pendant and a timber door"),
+    ],
+    concept: {
+      title: "Warm, pale and soft.",
+      text: "The apartment is built on three tones — cream walls and floors, oak doors and tables, and a soft green that appears as marble veining on the television wall and as a mural in the daybed room. Curves soften the joinery: the television unit, the dressing table, the stools. Light comes from coves rather than fittings, so every room glows evenly.",
+      image: photo("ska-912/hero.jpg", "Living and dining as one room: a cream sofa, a wall of framed photographs, a timber dining table and a cove-lit ceiling"),
+      palette: [
+        { name: "Cream", note: "Walls, floors and the sofa", color: "#ece4d6" },
+        { name: "Oak", note: "Doors, the dining table and frames", color: "#c49a6c" },
+        { name: "Soft green", note: "The marble wall and the mural", color: "#b7c49a" },
+        { name: "Tan", note: "The bed and armchair frames", color: "#b58a62" },
+        { name: "Blush", note: "The dressing stool and the study wall", color: "#e2b8a8" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a complete apartment at SKA for a family who wanted it warm and calm: living and dining, a kitchen, a bedroom, and a second room that works for guests and for sitting.",
+        points: ["Full apartment", "Warm and calm rather than colourful", "A guest room that is also a sitting room"],
+      },
+      {
+        title: "Challenge",
+        text: "A compact plan with the living and dining in one room and a small kitchen: the rooms had to feel generous without strong colour to lean on.",
+        points: ["Living and dining in one room", "A small kitchen", "Generosity without colour"],
+      },
+      {
+        title: "Approach",
+        text: "We kept the palette to cream, oak and one soft green, used coves instead of fittings so the ceilings glow, and gave each room a single feature — the marble wall, the mural, the curved dressing corner — rather than many.",
+        points: ["Three tones only", "Cove-lit ceilings throughout", "One feature per room"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A green-veined marble television wall with a curved unit, a wall of framed photographs over the dining table, a fluted panel in the living room, a daybed under a mural, a tan bed with a fluted headboard, a curved dressing table with a blush stool, and cage pendants in the kitchen.",
+        points: ["Marble wall and curved unit", "Daybed under a mural", "Curved dressing table and blush stool"],
+      },
+      {
+        title: "Execution",
+        text: "The design views were issued in April 2026 with four of them re-rendered photographically for the family; working drawings follow for the fit-out.",
+        points: ["Views issued April 2026", "Photographic re-renders of key rooms", "Working drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "An apartment that feels soft and warm in every room, with just enough feature to remember each one by.",
+        points: ["Living and dining that read as one calm room", "A guest room that earns its keep", "A bedroom with one playful note"],
+      },
+    ],
+    voiceImage: photo("ska-912/voice.jpg", "The living room from the dining end: the sofa, the dark armchairs and the television on its wall"),
+    results: [
+      { value: "3", label: "Tones across the whole apartment: cream, oak, green" },
+      { value: "1", label: "Feature per room, no more" },
+      { value: "2", label: "Rooms in one: the daybed room sits and sleeps" },
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
