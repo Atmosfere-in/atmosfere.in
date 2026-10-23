@@ -1259,8 +1259,7 @@ export const spacesProjects = [
     ],
   },
   {
-    // Real engagement: TLJ Law Offices (with KVA Hospitality) across a ground
-    // floor and a basement. Renders by the studio, June 2025; HD sources
+    // Real engagement: TLJ Law Offices across a ground floor and a basement. Renders by the studio, June 2025; HD sources
     // resampled for the site.
     slug: "tlj-offices",
     name: "TLJ Offices",
