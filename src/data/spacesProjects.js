@@ -809,7 +809,7 @@ export const spacesProjects = [
     ],
     mosaic: [
       photo("gaur-city-office/mosaic-1.jpg", "The meeting table along the window wall, six blue chairs under the exposed ceiling"),
-      photo("gaur-city-office/mosaic-2.jpg", "The meeting table and the MD's cubicle in daylight"),
+      photo("gaur-city-office/mosaic-2.jpg", "Inside the MD's cubicle: a walnut desk, two blue chairs and the curved glass wall"),
       photo("gaur-city-office/mosaic-3.jpg", "The leisure corner in daylight, the MD's cubicle beyond"),
     ],
     concept: {
@@ -856,7 +856,7 @@ export const spacesProjects = [
         points: ["Six desks, one MD cubicle, one meeting table", "A leisure corner with daylight", "The brand's blue carried throughout"],
       },
     ],
-    voiceImage: photo("gaur-city-office/voice.jpg", "The workstations in daylight, with plants on the screens and the pinboard behind"),
+    voiceImage: photo("gaur-city-office/voice.jpg", "The director's desk at the head of the workstation run, the pinboard and pendant beyond"),
     results: [
       { value: "6", label: "Workstations in a single run" },
       { value: "1", label: "MD cubicle in curved glass" },
