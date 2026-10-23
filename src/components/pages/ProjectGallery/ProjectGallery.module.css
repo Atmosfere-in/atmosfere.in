@@ -323,7 +323,7 @@
   z-index: 100;
   display: grid;
   grid-template-rows: 1fr auto;
-  background: rgb(20 18 16 / 0.96);
+  background: rgb(20 18 16 / 0.985);
   color: var(--color-ivory);
   animation: fadeIn 0.35s var(--ease) both;
   cursor: zoom-out;
