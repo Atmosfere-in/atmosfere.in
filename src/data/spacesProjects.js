@@ -1096,6 +1096,88 @@ export const spacesProjects = [
       photo("ska-orion/gallery-3.jpg", "Living and dining together: the bar cabinet, the round table and the television on its panel"),
     ],
   },
+  {
+    // Real engagement: apartment 1003 in Tower 10 (the same tower as 202).
+    // Renders by the studio, one folder per room; the second washroom's
+    // folder was left out at the studio's request. 4K sources, resampled.
+    slug: "tower-10-1003",
+    name: "Tower 10 – 1003",
+    type: "residential",
+    category: "Apartment",
+    location: "Delhi NCR",
+    size: "Apartment",
+    timeline: "Design complete",
+    image: photo("tower-10-1003/hero.jpg", "The master bedroom: a cream bed between two arched wardrobe doors, a pair of line drawings above and sheer curtains either side"),
+    lead: "A family apartment in Tower 10 where each room is designed around who sleeps in it: a soft peach-and-cream master bedroom with arched doors, a cream guest bedroom with bold graphic art, a children's room under a hot-air-balloon mural, and bathrooms in terrazzo, ginkgo tiles and pastel pinks and greens.",
+    summary:
+      "The family wanted every room to feel like its own, especially for the children. The master bedroom takes peach and cream: an upholstered bed under a pair of line drawings, arched doors to the wardrobes and the bathroom, a floating television unit and a cove-lit ceiling. The guest bedroom stays calm in cream with a textured wall, flush wardrobes with round brass pulls and two bold graphic prints. The children's room is the most playful: twin beds under a mural of hot-air balloons and clouds, a desk by the window, pastel blue and pink wardrobes and a vanity with a round mirror. The bathrooms follow the rooms: the children's in pink-and-blue tiles with a bear-shaped mirror and a green shower; the master's in terrazzo with ginkgo-leaf tiles, an arched mirror and brass lights.",
+    scope: ["Full-apartment interiors", "Space planning", "Custom beds, wardrobes and vanities", "Children's room design", "Bathroom design", "Lighting design"],
+    chapters: [
+      { title: "A room under the balloons.", image: photo("tower-10-1003/chapter-1.jpg", "The children's room: twin beds under a hot-air-balloon mural, a desk by the window and pastel wardrobes") },
+      { title: "Calm for the guests.", image: photo("tower-10-1003/chapter-2.jpg", "The guest bedroom: a grey upholstered bed, a textured cream wall with two graphic prints and flush wardrobes with brass pulls") },
+      { title: "Bathrooms with a sense of humour.", image: photo("tower-10-1003/chapter-3.jpg", "The children's bathroom: pink and pale-blue tiles, a bear-shaped backlit mirror and a terrazzo vanity") },
+    ],
+    mosaic: [
+      photo("tower-10-1003/mosaic-1.jpg", "The master bedroom from the door: the peach bed, the floating television unit and the arched doors"),
+      photo("tower-10-1003/mosaic-2.jpg", "The master bathroom: ginkgo-leaf tiles in the shower, a terrazzo basin counter and black-framed glass"),
+      photo("tower-10-1003/mosaic-3.jpg", "A child's bed with a toy rabbit under the mural, pink and blue wardrobes beside it"),
+    ],
+    concept: {
+      title: "One mood per person.",
+      text: "Instead of one scheme for the whole apartment, each bedroom is tuned to the person who uses it — soft and grown-up for the parents, calm and neutral for guests, bright and storybook for the children — while the floors, ceilings and joinery details stay the same so the home holds together. The bathrooms borrow their room's mood, which is how a bear-shaped mirror and ginkgo tiles end up in the same apartment.",
+      image: photo("tower-10-1003/concept.jpg", "The children's shower in sage-green tiles with a recessed shelf and a glass screen"),
+      palette: [
+        { name: "Cream", note: "Walls, floors and the guest room", color: "#efe7da" },
+        { name: "Peach", note: "The master bedroom's bed and units", color: "#e7b8a2" },
+        { name: "Pastel blue", note: "The children's wardrobes", color: "#b9c9d9" },
+        { name: "Terrazzo", note: "Vanity counters in both bathrooms", color: "#d9d2c8" },
+        { name: "Sage", note: "The children's shower", color: "#b9c7a8" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a family apartment in Tower 10 with a master bedroom, a guest bedroom, a children's room and their bathrooms, giving the children a room that feels like theirs.",
+        points: ["Three bedrooms and their bathrooms", "A proper children's room", "Rooms with distinct moods"],
+      },
+      {
+        title: "Challenge",
+        text: "Distinct moods can fragment a small apartment, and a children's room that is fun today has to work for the same children in five years.",
+        points: ["Different moods, one home", "A children's room that grows up", "Compact bathrooms with character"],
+      },
+      {
+        title: "Approach",
+        text: "We fixed the shared elements — floors, cove-lit ceilings, flush joinery with round pulls — and let colour and art carry each room's mood. In the children's room the mural and pastels can change later while the beds, desk and wardrobes stay.",
+        points: ["Shared floors, ceilings and joinery", "Colour and art do the work", "A children's room built to be repainted"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Arched doors and a peach bed in the master bedroom, graphic prints on a textured wall in the guest room, twin beds under a balloon mural with a window desk, a bear-shaped mirror and pink-and-blue tiles for the children's bath, and ginkgo tiles with terrazzo for the master's.",
+        points: ["Arched doors and peach joinery", "A balloon mural and twin beds", "Terrazzo and ginkgo tiles"],
+      },
+      {
+        title: "Execution",
+        text: "Views were developed room by room through several iterations, with the final options for each room agreed before working drawings.",
+        points: ["Room-by-room iterations", "Final option per room agreed", "Working drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "An apartment where the parents, the guests and the children each get a room that feels made for them, in one coherent home.",
+        points: ["Three rooms, three moods", "Bathrooms that match their rooms", "One family home throughout"],
+      },
+    ],
+    voiceImage: photo("tower-10-1003/voice.jpg", "The master bedroom's television wall: a floating unit, open shelves and arched niches in peach"),
+    results: [
+      { value: "3", label: "Bedrooms, each designed for who sleeps there" },
+      { value: "2", label: "Bathrooms with their own tile stories" },
+      { value: "1", label: "Children's room built to grow with them" },
+    ],
+    gallery: [
+      photo("tower-10-1003/gallery-1.jpg", "The children's vanity: a round mirror, a ribbed cabinet and toys on the counter between pink and blue wardrobes"),
+      photo("tower-10-1003/gallery-2.jpg", "The master bathroom's arched mirror over a terrazzo counter, with a black pendant light"),
+      photo("tower-10-1003/gallery-3.jpg", "The guest bedroom's art wall and cove-lit ceiling"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
