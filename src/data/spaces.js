@@ -115,22 +115,20 @@ export const planningTypes = {
     })),
 };
 
-// Same room, same camera angle. Both are placeholders edited from one stock
-// photo — before: bare walls, no lamps, dated brown sofa, dry twigs, flat
-// yellowed light; after: styled, with fresh greenery. Replace both with the
-// client's real before/after shots when available.
+// The studio's own before/after: the living room as it was, and the same
+// room from the same camera angle as designed.
 export const beforeAfter = {
   eyebrow: "Transformation",
   title: "From a plain room to a home that feels finished.",
-  project: "The Linen House, Gurugram",
+  project: "A living room, Delhi NCR",
   before: {
-    src: "/images/spaces/linen-house-before.webp",
-    alt: "Before: the living room with bare walls, flat yellowed lighting and no styling",
+    src: "/images/spaces/living-room-before.jpg",
+    alt: "Before: the living room with a sage wall, a plain beige sofa, two wall-mounted fans and no feature wall",
     asIs: true,
   },
   after: {
-    src: "/images/spaces/linen-house-after.webp",
-    alt: "After: a cream bouclé sofa, table lamps, framed abstract art and fresh greenery in a white vase",
+    src: "/images/spaces/living-room-after.jpg",
+    alt: "After: a fluted and brass-lined feature wall with a plaster artwork, a sputnik chandelier, cream seating and a patterned rug",
   },
 };
 
