@@ -1334,6 +1334,87 @@ export const spacesProjects = [
       { value: "100%", label: "Panelling, partitions and desks made to our drawings" },
     ],
   },
+  {
+    // Real engagement: an apartment at Veridia, Wave City, Ghaziabad. Renders
+    // by the studio (May 2025 docket); 4K sources resampled for the site.
+    slug: "veridia-wave-city",
+    name: "Veridia Wave City",
+    type: "residential",
+    category: "Apartment",
+    location: "Wave City, Ghaziabad",
+    size: "Apartment",
+    timeline: "Design complete",
+    image: photo("veridia-wave-city/hero.jpg", "The living room: a cream sectional sofa, two tan leather armchairs, a round timber coffee table on a cream rug, abstract prints and fluted panels"),
+    lead: "A sunlit apartment at Veridia, Wave City, designed in cream, oak and brass: a living room with tan leather armchairs and a brass display wall, a dining corner in blush and green, bedrooms with slatted and arched headboards, a study, a pooja niche in marble and balconies lined in timber slats.",
+    summary:
+      "The family wanted a home that felt light and warm at every hour, with a little gloss. The living room keeps to cream — a sectional sofa, a round timber table, a soft rug — with tan leather armchairs and a pair of abstract prints for colour, and fluted panels and sheer curtains to catch the light. A display wall in oak with brass-edged shelves and a marble ledge holds the family's objects; the dining corner pairs a white table with blush and green chairs under a grid-panelled wall. The master bedroom has a slatted oak headboard wall rising to the ceiling, the second a rattan arch over the bed, the third a grid-panelled headboard; the study has a floating desk and a green chair. The foyer carries a round mirror on a floral wallpaper, the pooja niche sits in a marble arch, and the balconies are lined in timber slats with a seat and a green wall.",
+    scope: ["Full-apartment interiors", "Space planning", "Feature walls and panelling", "Custom beds, units and the display wall", "Pooja niche and foyer", "Balconies and lighting design"],
+    chapters: [
+      { title: "A wall for the family's things.", image: photo("veridia-wave-city/chapter-1.jpg", "The display wall: oak panels with brass-edged shelves, framed prints, a marble ledge and curved marble side panels") },
+      { title: "Slats to the ceiling.", image: photo("veridia-wave-city/chapter-2.jpg", "The master bedroom: a slatted oak headboard wall rising to the ceiling, a cream bed and a black floor lamp") },
+      { title: "Blush and green at the table.", image: photo("veridia-wave-city/chapter-3.jpg", "The dining corner: a white table with blush and green chairs under a grid-panelled wall and brass pendants") },
+    ],
+    mosaic: [
+      photo("veridia-wave-city/mosaic-1.jpg", "The second bedroom: a rattan arch with a shelf over the bed, cream wardrobes either side"),
+      photo("veridia-wave-city/mosaic-2.jpg", "The foyer: a round mirror on a floral wallpaper panel between oak slats, a console beneath"),
+      photo("veridia-wave-city/mosaic-3.jpg", "The pooja niche: a marble arch with a lit idol shelf and drawers beneath, the living room beyond"),
+    ],
+    concept: {
+      title: "Light, warm and a little gloss.",
+      text: "Cream and oak keep the apartment light, brass and marble add the gloss, and each room gets one shape to remember it by — the slatted wall, the rattan arch, the marble arch of the pooja niche, the round mirror in the foyer. Sheer curtains and fluted panels do the rest, turning the afternoon sun into the apartment's main finish.",
+      image: photo("veridia-wave-city/concept.jpg", "A television wall in white marble between oak slats and glass shelving, a floating marble console beneath"),
+      palette: [
+        { name: "Cream", note: "Walls, sofa and rugs", color: "#efe6d6" },
+        { name: "Oak", note: "Slats, panels and the display wall", color: "#cfa878" },
+        { name: "Brass", note: "Shelf edges, pendants and frames", color: "#b8954f" },
+        { name: "Marble", note: "Ledges, the television wall and the pooja arch", color: "#e2ded6" },
+        { name: "Blush & tan", note: "Dining chairs and the leather armchairs", color: "#d7a089" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a complete apartment at Veridia, Wave City: living and dining, three bedrooms, a study, a pooja space, the foyer and two balconies, for a family who wanted it bright and warm.",
+        points: ["Full apartment with balconies", "Bright, warm and a little glossy", "A pooja space and a proper foyer"],
+      },
+      {
+        title: "Challenge",
+        text: "Many rooms in one palette can blur together; each needed its own identity without breaking the calm, and the balconies had to become rooms rather than leftover space.",
+        points: ["Identity per room, one palette", "Balconies to make useful", "A pooja niche that belongs"],
+      },
+      {
+        title: "Approach",
+        text: "One palette of cream, oak, brass and marble, and one memorable shape per room. The balconies are lined in timber slats with a seat and a green wall so they read as small outdoor rooms.",
+        points: ["One palette, one shape per room", "Timber-lined balconies", "Marble for the pooja arch"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A brass-edged oak display wall, tan leather armchairs on cream, blush and green dining chairs, a slatted headboard wall to the ceiling, a rattan arch over the second bed, a marble pooja arch, a round mirror on floral wallpaper in the foyer and slatted balconies with a green wall.",
+        points: ["Brass-edged display wall", "Slatted and arched headboards", "Marble pooja arch"],
+      },
+      {
+        title: "Execution",
+        text: "The final 3D docket was issued in May 2025 with every room and both balconies; working drawings follow for the fit-out.",
+        points: ["Final docket issued May 2025", "Every room and balcony covered", "Working drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "An apartment that stays calm from the foyer to the balconies, with a shape in every room to remember it by.",
+        points: ["One warm palette throughout", "A shape per room", "Balconies that work as rooms"],
+      },
+    ],
+    voiceImage: photo("veridia-wave-city/voice.jpg", "The third bedroom: a grey bed under a grid-panelled headboard wall, oak slats and a sheer curtain"),
+    results: [
+      { value: "3", label: "Bedrooms, each with its own headboard wall" },
+      { value: "2", label: "Balconies lined in timber slats" },
+      { value: "1", label: "Palette of cream, oak, brass and marble" },
+    ],
+    gallery: [
+      photo("veridia-wave-city/gallery-1.jpg", "The study: a floating desk, a green chair and a glass-fronted cabinet"),
+      photo("veridia-wave-city/gallery-2.jpg", "A bedroom's television wall with a peach curved niche, an oak unit and a tall mirror"),
+      photo("veridia-wave-city/gallery-3.jpg", "A balcony lined in timber slats with a green wall and a rattan chair"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
