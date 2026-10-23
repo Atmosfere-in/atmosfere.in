@@ -105,6 +105,32 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
         </section>
       ))}
 
+      {/* Floor plans, where a project has them: a grid of drawings on white,
+          each opening at full size. layouts: { title?, intro?, items: [{ src, alt, label }] } */}
+      {story.layouts?.items?.length > 0 && (
+        <section className={`section ${styles.layouts}`} aria-label="Layouts">
+          <div className="container">
+            <div className={`${styles.layoutsHead} reveal`}>
+              <span className="eyebrow">Layouts</span>
+              <h2 className={styles.layoutsTitle}>{story.layouts.title ?? "Floor by floor."}</h2>
+              {story.layouts.intro && <p className={styles.layoutsIntro}>{story.layouts.intro}</p>}
+            </div>
+            <ul className={styles.plans}>
+              {story.layouts.items.map((plan, i) => (
+                <li key={plan.src} className={`${styles.plan} reveal`} style={{ "--reveal-delay": `${(i % 3) * 100}ms` }}>
+                  <a href={plan.src} target="_blank" rel="noopener" className={styles.planLink} aria-label={`${plan.label}: open full size`}>
+                    <span className={styles.planMedia}>
+                      <Image src={plan.src} alt={plan.alt} fill quality={90} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className={styles.planImage} />
+                    </span>
+                    <span className={styles.planLabel}>{plan.label}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       {/* The client in their own words, beside a photograph, with the results. */}
       {(story.quote || story.results) && (
         <section className={`section ${styles.voice} ${story.quote ? "" : styles.voiceResultsOnly}`}>

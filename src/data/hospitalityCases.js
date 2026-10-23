@@ -81,6 +81,18 @@ export const hospitalityCases = [
         points: ["One design language from lobby to back of house", "Wellness philosophy built into the plan", "A clear brief for detailed design"],
       },
     ],
+    layouts: {
+      title: "Six levels, planned floor by floor.",
+      intro: "From the ground floor to the rooftop terrace, every level places guest and staff spaces around the same five-element idea. Click a plan to open it at full size.",
+      items: [
+        { ...photo("punarnava/layouts/ground-floor.jpg", "Ground floor plan"), label: "Ground floor" },
+        { ...photo("punarnava/layouts/upper-ground-floor.jpg", "Upper ground floor plan"), label: "Upper ground floor" },
+        { ...photo("punarnava/layouts/first-floor.jpg", "First floor plan"), label: "First floor" },
+        { ...photo("punarnava/layouts/second-floor.jpg", "Second floor plan"), label: "Second floor" },
+        { ...photo("punarnava/layouts/third-floor.jpg", "Third floor plan"), label: "Third floor" },
+        { ...photo("punarnava/layouts/fourth-floor.jpg", "Fourth floor plan: the rooftop terrace"), label: "Fourth floor" },
+      ],
+    },
     voiceImage: photo("punarnava/voice.jpg", "The lounge seen from the entrance, with its rose armchairs and curtained windows"),
     results: [
       { value: "90,000", label: "sq ft, approx., in the new building" },
