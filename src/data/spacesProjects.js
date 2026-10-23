@@ -1178,6 +1178,86 @@ export const spacesProjects = [
       photo("tower-10-1003/gallery-3.jpg", "The guest bedroom's art wall and cove-lit ceiling"),
     ],
   },
+  {
+    // Real engagement: apartment 104 in Tower 12. Renders by the studio;
+    // HD sources resampled, the one portrait bathroom view upscaled.
+    slug: "tower-12-104",
+    name: "Tower 12 – 104",
+    type: "residential",
+    category: "Apartment",
+    location: "Delhi NCR",
+    size: "Apartment",
+    timeline: "Design complete",
+    image: photo("tower-12-104/hero.jpg", "The living room from the window: the slatted oak partition with its shelves, the botanical wall and the olive sofa under brass sconces"),
+    lead: "A warm, nature-led apartment in Tower 12: olive-green sofas on a limewashed wall, a slatted oak partition that holds plants and books, a botanical wallpaper behind a rattan pendant, a bar counter with red stools by the kitchen, and bedrooms in chocolate brown and navy.",
+    summary:
+      "The family wanted a home that felt earthy and calm, with greenery as part of the room. The living room is built around a slatted oak partition with open shelves for plants and objects, which screens the dining and kitchen without closing them off. Olive-green floral sofas sit against limewashed walls with slim panel mouldings and brass sconces; one wall carries a botanical wallpaper under a rattan pendant, with a low bench and a floor plant beneath. The dining table runs along the kitchen, which opens through a bar counter with red stools. The master bedroom goes chocolate brown — a wall of wardrobes with lit niches, a bed with a brown throw, sheer curtains — and the second bedroom takes navy, with a study desk, a lit arched niche and wardrobes with brass pulls. The bathrooms get patterned floor tiles and a tree-print wall.",
+    scope: ["Full-apartment interiors", "Space planning", "Slatted partition and bar counter", "Custom wardrobes and study units", "Modular kitchen", "Lighting design"],
+    chapters: [
+      { title: "Green against limewash.", image: photo("tower-12-104/chapter-1.jpg", "The living room: olive-green floral sofas against a panelled limewashed wall, brass sconces and low tables") },
+      { title: "A brown bedroom for the parents.", image: photo("tower-12-104/chapter-2.jpg", "The master bedroom: a wall of brown wardrobes with lit niches, a bed with a brown throw and a bench at its foot") },
+      { title: "Dining by the kitchen.", image: photo("tower-12-104/chapter-3.jpg", "The dining table along the kitchen, green chairs, a red pendant and the slatted partition beyond") },
+    ],
+    mosaic: [
+      photo("tower-12-104/mosaic-1.jpg", "The bar counter by the kitchen with red stools, a glazed crockery unit and the slatted partition"),
+      photo("tower-12-104/mosaic-2.jpg", "The second bedroom: a navy bed, a study desk with blue chairs and a lit arched mirror"),
+      photo("tower-12-104/mosaic-3.jpg", "The kitchen: champagne gloss shutters, a white stone splashback and a black fridge"),
+    ],
+    concept: {
+      title: "Earthy, green and open.",
+      text: "The apartment is planned so the living, dining and kitchen read as one open room, divided by a slatted oak screen rather than a wall. Materials stay natural — limewash, oak, rattan, green upholstery, a botanical print — and the bedrooms each take one deep colour, brown for the parents and navy for the second room, so they feel distinct from the open, pale living space.",
+      image: photo("tower-12-104/concept.jpg", "The living room towards the entrance: olive sofas, brass sconces, the arched console and the partition"),
+      palette: [
+        { name: "Limewash", note: "Walls throughout", color: "#e9e2d4" },
+        { name: "Oak", note: "The slatted partition, tables and doors", color: "#c9a473" },
+        { name: "Olive", note: "The sofas and dining chairs", color: "#8a9a5b" },
+        { name: "Chocolate", note: "The master bedroom's wardrobes and throw", color: "#5a3e30" },
+        { name: "Navy", note: "The second bedroom's bed and chairs", color: "#2c3e6b" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a family apartment in Tower 12 that feels natural and calm, with the living, dining and kitchen working as one open space and the bedrooms given their own character.",
+        points: ["Full apartment", "An open living, dining and kitchen", "Natural materials and greenery"],
+      },
+      {
+        title: "Challenge",
+        text: "Opening the kitchen to the living room risks noise and clutter on show; the plan needed a divider that screens without blocking light, and storage that disappears.",
+        points: ["Screening without walls", "A kitchen on show", "Storage that stays quiet"],
+      },
+      {
+        title: "Approach",
+        text: "A slatted oak partition with open shelves does the screening, a bar counter marks the kitchen's edge, and the walls stay pale so the green upholstery and plants carry the colour. Each bedroom then takes one deep tone.",
+        points: ["A slatted screen instead of a wall", "A bar counter at the kitchen's edge", "One deep colour per bedroom"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Olive floral sofas, limewashed walls with slim mouldings and brass sconces, a botanical wallpaper wall with a rattan pendant, a slatted oak partition, a bar counter with red stools, brown wardrobes with lit niches, a navy bedroom with a study desk, and patterned tiles in the bathrooms.",
+        points: ["Slatted oak partition and bar counter", "Botanical wall and rattan pendant", "Brown and navy bedrooms"],
+      },
+      {
+        title: "Execution",
+        text: "The views were developed for the family room by room, with the living room, kitchen and both bedrooms agreed; working drawings follow for the fit-out.",
+        points: ["Room-by-room views agreed", "Partition and counter detailed", "Working drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "A home that feels open and green the moment the door opens, with bedrooms that feel like retreats.",
+        points: ["One open living space", "Two bedrooms with their own colour", "Natural materials throughout"],
+      },
+    ],
+    voiceImage: photo("tower-12-104/voice.jpg", "The entrance: a brass console under an artwork, the dining table and the kitchen beyond"),
+    results: [
+      { value: "1", label: "Slatted partition in place of a wall" },
+      { value: "2", label: "Bedrooms, in chocolate brown and navy" },
+      { value: "100%", label: "Partition, counter and wardrobes made to our drawings" },
+    ],
+    gallery: [
+      photo("tower-12-104/gallery-1.jpg", "The second bedroom's wardrobes and study desk, with two blue chairs"),
+      photo("tower-12-104/gallery-2.jpg", "The second bedroom's television wall with a lit shelf and a desk by the window"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
