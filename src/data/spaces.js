@@ -185,7 +185,7 @@ export const founders = {
       name: "Mohak Goel",
       role: "Co-founder",
       quote:
-        "Every home we design starts with how the family actually lives: where they have their morning tea, where the children do homework, where guests end up sitting. Get those right and the beauty follows.",
+        "Every space we design starts with how the people in it actually live and work: where the morning tea happens, where the work gets done, where guests end up sitting. Get those right and the beauty follows.",
       image: {
         src: "/images/founders/mohak-goel-seated.jpg",
         alt: "Mohak Goel, co-founder of Atmosfere, seated on a cream sofa in a black jacket",
@@ -195,7 +195,7 @@ export const founders = {
       name: "Vivek Sharma",
       role: "Co-founder",
       quote:
-        "Design is only half the job. The other half is the site: the right carpenter, the right marble, the right week. We stay on site until the last handle is fitted, because that is where a drawing becomes a home.",
+        "Design is only half the job. The other half is the site: the right carpenter, the right marble, the right week. We stay on site until the last handle is fitted, because that is where a drawing becomes a space.",
       image: {
         src: "/images/founders/vivek-sharma-seated.jpg",
         alt: "Vivek Sharma, co-founder of Atmosfere, seated on a cream sofa in a sand jacket",

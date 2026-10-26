@@ -157,7 +157,7 @@ export const founders = {
       name: "Mohak Goel",
       role: "Co-founder",
       quote:
-        "The most expensive mistake in hospitality is building the wrong thing beautifully. We ask what a property should become before a single line is drawn, and only then do we design it.",
+        "A hotel is a business before it is a building. We start with the numbers, the location and the guest it is meant for, and only then decide what the space should look like.",
       image: {
         src: "/images/founders/mohak-goel.jpg",
         alt: "Mohak Goel, co-founder of Atmosfere, standing in a black jacket",
@@ -167,7 +167,7 @@ export const founders = {
       name: "Vivek Sharma",
       role: "Co-founder",
       quote:
-        "Every property has a guest it is meant for. Our job is to find that guest first, and then plan the rooms, the revenue and the experience around them.",
+        "The best plans are the ones an operator can actually run: the right room mix, back-of-house that works, and a design that still looks right ten years in. That is what we draw for.",
       image: {
         src: "/images/founders/vivek-sharma.jpg",
         alt: "Vivek Sharma, co-founder of Atmosfere, standing in a sand jacket",
