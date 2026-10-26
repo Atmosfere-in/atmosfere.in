@@ -223,7 +223,10 @@ function EnquiryForm({ vertical, showType }) {
     ];
     if (showType) lines.push(`Project type: ${data.get("type")}`);
     if (links?.length) {
-      lines.push("", `Photos (${links.length}):`, ...links);
+      // One numbered link per photo, with a blank line between them so
+      // WhatsApp shows them as separate, tappable links.
+      lines.push("", `Photos sent: ${links.length}`);
+      links.forEach((link, i) => lines.push("", `Photo ${i + 1} of ${links.length}:`, link));
     } else if (photos.length) {
       lines.push(`Photos: ${photos.length} (attaching in this chat)`);
     }
