@@ -72,9 +72,6 @@
 }
 
 html {
-  /* The site is light-only: form controls and the text cursor stay dark even
-     on devices set to dark mode. */
-  color-scheme: light;
   -webkit-text-size-adjust: 100%;
   /* In-page anchors (e.g. /hospitality#banquet) land below the sticky header. */
   scroll-padding-top: calc(var(--header-height) + var(--space-5));
@@ -232,12 +229,4 @@ ul {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
-}
-
-/* The typing cursor in every field is dark, never the system default. */
-input,
-textarea,
-select,
-[contenteditable] {
-  caret-color: var(--color-charcoal);
 }
