@@ -47,7 +47,10 @@
    drops below 400px on short laptops or grows past 860px on tall ones. */
 .frame {
   position: relative;
-  height: clamp(460px, calc(100svh - var(--header-height) - 136px), 860px);
+  /* The frame keeps the photographs' own 16:9 shape so nothing is cropped
+     and the before and after line up edge to edge. */
+  height: auto;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
