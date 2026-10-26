@@ -47,9 +47,12 @@
    drops below 400px on short laptops or grows past 860px on tall ones. */
 .frame {
   position: relative;
-  /* Fits the viewport with the heading above it, so the whole section is seen
-     at once. The two photographs are pre-aligned on their ceiling line. */
-  height: clamp(420px, calc(100svh - var(--header-height) - 190px), 720px);
+  /* The whole photograph is shown, never cropped: the frame keeps the
+     photographs' 16:9 shape and shrinks in width until it fits the screen
+     under the heading. The two photographs are pre-aligned on their ceiling line. */
+  width: min(100%, calc((100svh - var(--header-height) - 190px) * 16 / 9));
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
@@ -61,7 +64,6 @@
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
-  object-position: 50% 38%;
 }
 
 .before {
