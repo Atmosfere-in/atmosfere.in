@@ -157,7 +157,7 @@ export const founders = {
       name: "Mohak Goel",
       role: "Co-founder",
       quote:
-        "A hotel is a business before it is a building. We start with the numbers, the location and the guest it is meant for, and only then decide what the space should look like.",
+        "Every hotel we plan is a business first. Before a single line is drawn we ask who the guest is, what the property can earn and what the market around it still lacks. The design is the answer to those questions, not the starting point.",
       image: {
         src: "/images/founders/mohak-goel.jpg",
         alt: "Mohak Goel, co-founder of Atmosfere, standing in a black jacket",
@@ -167,7 +167,7 @@ export const founders = {
       name: "Vivek Sharma",
       role: "Co-founder",
       quote:
-        "The best plans are the ones an operator can actually run: the right room mix, back-of-house that works, and a design that still looks right ten years in. That is what we draw for.",
+        "A good plan is one an operator can run on a quiet Tuesday in the off-season: the right room mix, a back-of-house that flows and finishes that still look right in ten years. We design for the hundredth day of operations, not just the opening.",
       image: {
         src: "/images/founders/vivek-sharma.jpg",
         alt: "Vivek Sharma, co-founder of Atmosfere, standing in a sand jacket",
