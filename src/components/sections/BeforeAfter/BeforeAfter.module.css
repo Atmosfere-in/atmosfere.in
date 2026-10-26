@@ -52,11 +52,11 @@
      full width wherever the screen is tall enough. On a short window the
      frame narrows instead of cropping further, so the heading and the whole
      room are always visible together without scrolling. */
-  width: min(100%, calc((100svh - var(--header-height) - 150px) * 2));
-  min-width: min(100%, 640px);
+  width: min(100%, calc((100svh - var(--header-height) - 150px) * 2.2));
+  min-width: min(100%, 720px);
   margin-inline: auto;
   height: auto;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 11 / 5;
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
@@ -142,6 +142,27 @@
 .knob:focus-visible {
   outline: 1px solid var(--color-accent);
   outline-offset: 3px;
+}
+
+/* Short windows (small laptops, browsers with toolbars): a tighter heading
+   gives the frame more height, and therefore more width. */
+@media (max-height: 720px) and (min-width: 769px) {
+  .section {
+    padding: var(--space-2) 0 var(--space-3);
+  }
+
+  .inner {
+    gap: var(--space-2);
+  }
+
+  .title {
+    margin-top: 2px;
+    font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  }
+
+  .frame {
+    width: min(100%, calc((100svh - var(--header-height) - 104px) * 2.2));
+  }
 }
 
 @media (max-width: 768px) {
