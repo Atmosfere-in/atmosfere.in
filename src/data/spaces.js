@@ -185,7 +185,7 @@ export const founders = {
       name: "Mohak Goel",
       role: "Co-founder",
       quote:
-        "We never begin with a look. We begin by listening: how you live, how you work, what the space has to do every single day. The design comes from those answers, which is why it still feels right years later.",
+        "Good design is quiet. It is felt in the proportion of a space, in the way light moves through it, in how naturally it fits the people who use it. We design for that feeling, not for the photograph.",
       image: {
         src: "/images/founders/mohak-goel-seated.jpg",
         alt: "Mohak Goel, co-founder of Atmosfere, seated on a cream sofa in a black jacket",
@@ -195,7 +195,7 @@ export const founders = {
       name: "Vivek Sharma",
       role: "Co-founder",
       quote:
-        "A drawing is a promise. Keeping it means the same team that designed the space chooses the marble, briefs the carpenter and stands on site until the last handle is fitted. That is what one team, start to finish, means to us.",
+        "Every space we create is built exactly as it was designed. One team carries the idea from the first drawing to the final finish, so nothing is lost in between and what you imagined is what you walk into.",
       image: {
         src: "/images/founders/vivek-sharma-seated.jpg",
         alt: "Vivek Sharma, co-founder of Atmosfere, seated on a cream sofa in a sand jacket",

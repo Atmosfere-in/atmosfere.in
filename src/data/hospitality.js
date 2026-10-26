@@ -157,7 +157,7 @@ export const founders = {
       name: "Mohak Goel",
       role: "Co-founder",
       quote:
-        "Every hotel we plan is a business first. Before a single line is drawn we ask who the guest is, what the property can earn and what the market around it still lacks. The design is the answer to those questions, not the starting point.",
+        "A great hotel begins long before its design, in understanding the place, the guest and the economics that will sustain it. We plan that foundation first, so the design that follows has purpose and the property has a future.",
       image: {
         src: "/images/founders/mohak-goel.jpg",
         alt: "Mohak Goel, co-founder of Atmosfere, standing in a black jacket",
@@ -167,7 +167,7 @@ export const founders = {
       name: "Vivek Sharma",
       role: "Co-founder",
       quote:
-        "A good plan is one an operator can run on a quiet Tuesday in the off-season: the right room mix, a back-of-house that flows and finishes that still look right in ten years. We design for the hundredth day of operations, not just the opening.",
+        "Hospitality is the art of anticipating needs. We plan properties the same way: every room, every flow and every service considered from the guest's side and the operator's, so the experience feels effortless and the business endures.",
       image: {
         src: "/images/founders/vivek-sharma.jpg",
         alt: "Vivek Sharma, co-founder of Atmosfere, standing in a sand jacket",
