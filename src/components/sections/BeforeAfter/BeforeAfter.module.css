@@ -47,7 +47,8 @@
    drops below 400px on short laptops or grows past 860px on tall ones. */
 .frame {
   position: relative;
-  height: clamp(460px, calc(100svh - var(--header-height) - 136px), 860px);
+  /* Uses the room under the heading down to the bottom of the screen. */
+  height: clamp(460px, calc(100svh - var(--header-height) - 60px), 960px);
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
