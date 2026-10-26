@@ -157,7 +157,7 @@ export const founders = {
       name: "Mohak Goel",
       role: "Co-founder",
       quote:
-        "A great hotel begins long before its design, in understanding the place, the guest and the economics that will sustain it. We plan that foundation first, so the design that follows has purpose and the property has a future.",
+        "A great property begins long before its design, in understanding the place, the guest and the economics that will sustain it. We plan that foundation first, so the design that follows has purpose and the property has a future.",
       image: {
         src: "/images/founders/mohak-goel.jpg",
         alt: "Mohak Goel, co-founder of Atmosfere, standing in a black jacket",
