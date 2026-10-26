@@ -47,11 +47,15 @@
    drops below 400px on short laptops or grows past 860px on tall ones. */
 .frame {
   position: relative;
-  /* Responsive: full container width, and the height follows the
-     photographs' own 16:9 shape, so the complete picture shows on every
-     screen size instead of being cropped to the window height. */
+  /* Responsive: full width on every screen. The height follows the
+     photographs' 16:9 shape until the screen is too short for that, then it
+     is capped so the heading and the whole slider stay in view together;
+     the photographs then crop evenly top and bottom (object-fit: cover). */
+  width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+  min-height: 380px;
+  max-height: calc(100svh - var(--header-height) - 170px);
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;

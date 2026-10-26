@@ -115,20 +115,20 @@ export const planningTypes = {
     })),
 };
 
-// The studio's own before/after: the design render first, then the room as
-// it was built, from the same camera angle.
+// The studio's own before/after: the room as it was, then the same view as
+// redesigned, from the same camera angle.
 export const beforeAfter = {
   eyebrow: "Transformation",
   title: "From a plain room to a home that feels finished.",
   project: "A living room, Delhi NCR",
   before: {
     src: "/images/spaces/living-room-before.jpg",
-    alt: "Before: the design render of the living room, with a fluted and brass-lined feature wall, a sputnik chandelier and a patterned rug",
+    alt: "Before: the living room as it was, with a sage wall, chevron timber panels, a beige sofa and a marble coffee table",
     asIs: true,
   },
   after: {
     src: "/images/spaces/living-room-after.jpg",
-    alt: "After: the living room as built, with a sage wall, chevron timber panels, a beige sofa and a marble coffee table",
+    alt: "After: the same room redesigned, with a fluted and brass-lined feature wall, a plaster artwork, a sputnik chandelier and a patterned rug",
   },
 };
 
