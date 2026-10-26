@@ -187,8 +187,8 @@ export const founders = {
       quote:
         "A space should do more than look right on the day we hand it over. It should inspire the people who live in it, and keep connecting them to it for years. That is why we draw with precision, and build exactly what we draw.",
       image: {
-        src: unsplash("1772404245810-b8b0a05c731e"),
-        alt: "Portrait of Mohak Goel, co-founder of Atmosfere",
+        src: "/images/founders/mohak-goel-seated.jpg",
+        alt: "Mohak Goel, co-founder of Atmosfere, seated on a cream sofa in a black jacket",
       },
     },
     {
@@ -197,8 +197,8 @@ export const founders = {
       quote:
         "We promise only what we can build, and then we build exactly that: on the date and the budget we agreed, with one team answerable for all of it.",
       image: {
-        src: unsplash("1762341124796-530c0085f7d8"),
-        alt: "Portrait of Vivek Sharma, co-founder of Atmosfere",
+        src: "/images/founders/vivek-sharma-seated.jpg",
+        alt: "Vivek Sharma, co-founder of Atmosfere, seated on a cream sofa in a sand jacket",
       },
     },
   ],
