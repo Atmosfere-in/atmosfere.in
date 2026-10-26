@@ -1,5 +1,5 @@
 .section {
-  padding: var(--space-4) 0;
+  padding: var(--space-3) 0 var(--space-4);
 }
 
 .inner {
@@ -47,15 +47,16 @@
    drops below 400px on short laptops or grows past 860px on tall ones. */
 .frame {
   position: relative;
-  /* Responsive: full width on every screen. The height follows the
-     photographs' 16:9 shape until the screen is too short for that, then it
-     is capped so the heading and the whole slider stay in view together;
-     the photographs then crop evenly top and bottom (object-fit: cover). */
-  width: 100%;
+  /* Responsive on every screen: the frame is a 2:1 window on the two
+     photographs (a thin band off the top and bottom of the 16:9 originals),
+     full width wherever the screen is tall enough. On a short window the
+     frame narrows instead of cropping further, so the heading and the whole
+     room are always visible together without scrolling. */
+  width: min(100%, calc((100svh - var(--header-height) - 150px) * 2));
+  min-width: min(100%, 640px);
+  margin-inline: auto;
   height: auto;
-  aspect-ratio: 16 / 9;
-  min-height: 380px;
-  max-height: calc(100svh - var(--header-height) - 170px);
+  aspect-ratio: 2 / 1;
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
@@ -64,6 +65,7 @@
 /* Images never take pointer events, so clicks and drags reach the frame. */
 .image {
   object-fit: cover;
+  object-position: 50% 45%;
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
@@ -160,6 +162,8 @@
   }
 
   .frame {
+    width: 100%;
+    min-width: 0;
     height: auto;
     aspect-ratio: 4 / 5;
   }
