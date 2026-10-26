@@ -47,12 +47,7 @@
    drops below 400px on short laptops or grows past 860px on tall ones. */
 .frame {
   position: relative;
-  /* The whole photograph is shown, never cropped: the frame keeps the
-     photographs' 16:9 shape and shrinks in width until it fits the screen
-     under the heading. The two photographs are pre-aligned on their ceiling line. */
-  width: min(100%, calc((100svh - var(--header-height) - 190px) * 16 / 9));
-  margin-inline: auto;
-  aspect-ratio: 16 / 9;
+  height: clamp(460px, calc(100svh - var(--header-height) - 136px), 860px);
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
