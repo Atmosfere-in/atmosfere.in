@@ -55,12 +55,11 @@
 .arch::after {
   content: "";
   position: absolute;
-  inset: 10px;
-  border: 1px solid rgb(247 244 239 / 0.55);
+  inset: 12px;
+  border: 1px solid rgb(247 244 239 / 0.7);
   border-radius: 999px 999px 2px 2px;
   pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.6s var(--ease), inset 0.8s var(--ease);
+  transition: inset 0.8s var(--ease);
 }
 
 .image {
@@ -73,8 +72,7 @@
 }
 
 .stage:hover .arch::after {
-  inset: 14px;
-  opacity: 1;
+  inset: 16px;
 }
 
 .body {
