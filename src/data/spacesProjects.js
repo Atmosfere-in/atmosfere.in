@@ -1415,6 +1415,87 @@ export const spacesProjects = [
       photo("veridia-wave-city/gallery-3.jpg", "A balcony lined in timber slats with a green wall and a rattan chair"),
     ],
   },
+  {
+    // Real engagement: a jewellery store in Krishna Nagar, Delhi, over a
+    // ground floor and a first-floor lounge. Renders by the studio (August
+    // 2025); HD sources resampled. The plan view and the shell render are
+    // not used.
+    slug: "krishna-nagar-jewellery-store",
+    name: "Krishna Nagar Jewellery Store",
+    type: "commercial",
+    category: "Retail",
+    location: "Krishna Nagar, Delhi",
+    size: "Two floors",
+    timeline: "Design complete",
+    image: photo("krishna-nagar-jewellery-store/hero.jpg", "The ground floor: a lit brass display wall of necklaces, marble-and-brass counters and a sculptural plaster ceiling"),
+    lead: "A jewellery store in Krishna Nagar designed around one idea: the jewellery is the only colour. Ivory plaster, white marble and brass hold the room, a double-height void lit by a cascade of brass pendants joins the two floors, and a first-floor lounge turns the longer purchase into a seated conversation.",
+    summary:
+      "Jewellery retail in Delhi is loud by habit. This store goes the other way. The ground floor is a calm ivory room: a long display wall with necklaces on black busts in brass-lined niches, counters in white marble with brass plinths and bases in deep red marble, and a sculptural plaster ceiling with a sweep of brass pendants overhead. A double-height void at the stair, hung with a cascade of brass rods, draws customers up to the first floor, where the counters give way to cream lounge seating, a few glass vitrines and warm cove lighting, so the family buying for a wedding can sit, see and decide without being hurried. Security is built into the plan rather than bolted on: a single controlled entrance, counters that keep the stock on the staff side and sightlines from the cash desk to every display.",
+    scope: ["Retail interiors", "Space planning across two floors", "Display and counter joinery", "Double-height void and stair", "First-floor lounge", "Lighting design"],
+    chapters: [
+      { title: "The jewellery is the only colour.", image: photo("krishna-nagar-jewellery-store/chapter-1.jpg", "The front of the store: the central display niche with its brass frame, counters either side and the pendant cluster above") },
+      { title: "A lounge, not a counter.", image: photo("krishna-nagar-jewellery-store/chapter-2.jpg", "The first-floor lounge: cream club chairs, necklaces on tall brass stands and a cove-lit ceiling") },
+      { title: "A void that draws you up.", image: photo("krishna-nagar-jewellery-store/chapter-3.jpg", "The ground floor towards the stair: red marble and brass counters, a cash desk and the pendant cascade above the void") },
+    ],
+    mosaic: [
+      photo("krishna-nagar-jewellery-store/mosaic-1.jpg", "The display wall: necklaces on black busts in brass-lined niches, a marble counter in front"),
+      photo("krishna-nagar-jewellery-store/mosaic-2.jpg", "The first floor: lounge seating, a brass pendant chandelier and the window to the street"),
+      photo("krishna-nagar-jewellery-store/mosaic-3.jpg", "The ground floor in the evening, with the display wall and counters under warm light"),
+    ],
+    concept: {
+      title: "Ivory, marble, brass. Nothing else.",
+      text: "The palette is deliberately short so that gold and stones read against it: ivory plaster on the walls and ceiling, white marble for the counters, brass for every frame, plinth and pendant, and one deep red marble for the counter bases to anchor the room. The double-height void is the store's one dramatic move, a cascade of brass rods that makes the stair a destination and gives the first-floor lounge a reason to exist.",
+      image: photo("krishna-nagar-jewellery-store/concept.jpg", "A revised view of the display wall: brass-framed niches, a marble counter and a round glass vitrine"),
+      palette: [
+        { name: "Ivory plaster", note: "Walls and the sculptural ceiling", color: "#ece3d3" },
+        { name: "White marble", note: "Counter tops", color: "#e9e6e0" },
+        { name: "Brass", note: "Frames, plinths and the pendant cascade", color: "#b8954f" },
+        { name: "Red marble", note: "Counter bases", color: "#5a1f1f" },
+        { name: "Black velvet", note: "The display busts", color: "#141414" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "Design a jewellery store over two floors in Krishna Nagar: display and counters on the ground floor, a quieter space for longer purchases above, with security considered from the start.",
+        points: ["Two floors of retail", "A calmer space for wedding buying", "Security built into the plan"],
+      },
+      {
+        title: "Challenge",
+        text: "A narrow Delhi shopfront with two separate floors that had to feel like one store, and a category where the usual answer is more gold leaf and more light.",
+        points: ["Two floors, one store", "A narrow frontage", "Standing out by restraint"],
+      },
+      {
+        title: "Approach",
+        text: "One short palette for both floors, a double-height void at the stair to connect them, counters on the ground floor and seating on the first, and sightlines planned so the cash desk sees every display.",
+        points: ["One palette on both floors", "A void that links the floors", "Counters below, seating above"],
+      },
+      {
+        title: "Design Decisions",
+        text: "Brass-lined display niches with black busts, white marble counters on red marble bases, a sculptural plaster ceiling with a sweep of brass pendants, a cascade of brass rods through the void, cream club chairs and glass vitrines in the first-floor lounge.",
+        points: ["Brass-lined niches and marble counters", "A pendant cascade through the void", "A first-floor lounge with vitrines"],
+      },
+      {
+        title: "Execution",
+        text: "Views were developed for the ground floor, the void, the entrance and the first floor through August 2025, with the display wall revised to its final form; joinery drawings follow.",
+        points: ["Ground floor, void and first floor resolved", "Display wall revised", "Joinery drawings next"],
+      },
+      {
+        title: "Outcome",
+        text: "A jewellery store that lets the jewellery do the talking, with a second floor where the biggest purchases are made sitting down.",
+        points: ["A calm ivory room for the stock", "A void that draws customers upstairs", "A lounge for the long purchase"],
+      },
+    ],
+    voiceImage: photo("krishna-nagar-jewellery-store/voice.jpg", "The first floor from the stair: a lit display column, vitrines and the lounge beyond"),
+    results: [
+      { value: "2", label: "Floors joined by a double-height void" },
+      { value: "4", label: "Materials in the whole store: ivory, marble, brass, red marble" },
+      { value: "1", label: "Lounge for wedding purchases" },
+    ],
+    gallery: [
+      photo("krishna-nagar-jewellery-store/gallery-1.jpg", "The void from below: a brass pendant cascade, the stair and the marble counters"),
+    ],
+  },
 ];
 
 export const spacesProjectFilters = [
