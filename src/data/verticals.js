@@ -11,8 +11,8 @@ export const verticals = [
     description: "Turnkey interiors for homes and commercial spaces.",
     href: "/spaces",
     image: {
-      src: "/images/spaces/ska-orion/chapter-1.jpg",
-      alt: "A living room at SKA Orion: blue armchairs and a cream sofa under a panelled wall and a cove-lit ceiling",
+      src: "/images/home/spaces.jpg",
+      alt: "A finished master bedroom at Tower 10: a tufted bed under a cove-lit ceiling, a timber-slat wall and curtains to the balcony",
       position: "50% 50%",
     },
   },
@@ -23,9 +23,9 @@ export const verticals = [
     description: "Planning for hotels, resorts and banquets.",
     href: "/hospitality",
     image: {
-      src: "/images/hospitality/moradabad-sourcing-convention-centre/concept.jpg",
-      alt: "The brass-toned lattice tower of the Moradabad convention centre, with the drop-off below",
-      position: "50% 45%",
+      src: "/images/home/hospitality.jpg",
+      alt: "The pool at The Punarnava Resort, Dehradun, ringed by palms and sal trees, with the resort building behind",
+      position: "50% 50%",
     },
   },
   {
