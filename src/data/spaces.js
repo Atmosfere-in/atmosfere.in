@@ -123,12 +123,12 @@ export const beforeAfter = {
   project: "A living room, Delhi NCR",
   before: {
     src: "/images/spaces/living-room-before.jpg",
-    alt: "Before: the living room as it was, with a sage wall, chevron timber panels, a beige sofa and a marble coffee table",
+    alt: "Before: the living room as a bare shell, with plastered walls, a dropped ceiling beam and the window to the towers opposite",
     asIs: true,
   },
   after: {
     src: "/images/spaces/living-room-after.jpg",
-    alt: "After: the same room redesigned, with a fluted and brass-lined feature wall, a plaster artwork, a sputnik chandelier and a patterned rug",
+    alt: "After: the same room finished, with cove-lit walls, grey leather sofas, a marble floor, a mirrored television wall and sheer curtains at the window",
   },
 };
 
