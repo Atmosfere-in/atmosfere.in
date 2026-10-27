@@ -229,14 +229,14 @@ export const caseStudies = {
   title: "The thinking behind the finish.",
   items: [
     {
-      href: "/spaces/case-studies/the-aranya",
-      tag: "Sample flat · Noida Extension",
-      title: "The Aranya",
+      href: "/spaces/case-studies/d-3-10-sector-14-noida",
+      tag: "Independent house · Sector 14, Noida",
+      title: "D-3/10, Sector 14",
       summary:
-        "A 2BHK sample flat for a high-rise developer, designed to show buyers a home they can actually have — 1,100 sq ft, finished for under ₹10 lakh.",
+        "A family house in one of Noida's oldest sectors, rebuilt inside as a calm, classic space — marble floors, panelled timber doors, soft cream rooms — with the roof turned into a lit terrace lounge.",
       image: {
-        src: "/images/spaces/the-aranya/concept.jpg",
-        alt: "The dining room of the sample flat, with a round table, green chairs and curtains",
+        src: "/images/spaces/d-3-10-sector-14/hero.jpg",
+        alt: "The living room: cream sofas and timber-framed armchairs against a textured wallpaper panel lit from its edges",
       },
     },
     {
