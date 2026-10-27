@@ -254,7 +254,7 @@ export const spacesProjects = [
     chapters: [
       { title: "From the door to the right counter.", image: photo("lajpat-nagar/chapter-1.jpg", "The design render: the central aisle from the entrance, with counters down the middle and shelving on both walls") },
       { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: cards and boxes on pale shelving down the wall, marble counters and cane chairs, the chandelier above") },
-      { title: "An identity from scratch.", image: photo("lajpat-nagar/chapter-3.jpg", "A marble-topped counter with cane-backed chairs, the shelves of boxes behind") },
+      { title: "An identity from scratch.", image: photo("lajpat-nagar/chapter-3.jpg", "The design render of the counters: the Suneja Card Creations mark on a printed panel over the timber counter, pendant lamps and a herringbone floor") },
     ],
     mosaic: [
       photo("lajpat-nagar/mosaic-1.jpg", "Gift boxes in traditional prints on the shelves, lit from above"),
@@ -309,6 +309,13 @@ export const spacesProjects = [
       { value: "700", label: "sq ft, planned as one clear route" },
       { value: "3", label: "Counters, with seating for about twelve" },
       { value: "1", label: "Brand identity, built from scratch" },
+    ],
+    gallery: [
+      photo("lajpat-nagar/gallery-1.jpg", "A marble-topped counter with cane-backed chairs, the shelves of boxes behind"),
+      photo("lajpat-nagar/gallery-2.jpg", "The finished store from the entrance: cards and boxes on brass-trimmed shelves down both walls, three marble counters with cane chairs"),
+      photo("lajpat-nagar/gallery-3.jpg", "The gifting display: printed boxes, bags and trays on brass-and-glass shelves"),
+      photo("lajpat-nagar/gallery-4.jpg", "The design render of the shelving wall: pale timber shelves on slim brass uprights over cane-fronted cabinets"),
+      photo("lajpat-nagar/gallery-5.jpg", "The design render of the aisle: shelving on both walls, the counters with their green-seated chairs down the middle"),
     ],
   },
   {
