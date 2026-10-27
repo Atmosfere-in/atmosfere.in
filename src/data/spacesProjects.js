@@ -316,6 +316,8 @@ export const spacesProjects = [
       photo("lajpat-nagar/gallery-3.jpg", "The gifting display: printed boxes, bags and trays on brass-and-glass shelves"),
       photo("lajpat-nagar/gallery-4.jpg", "The design render of the shelving wall: pale timber shelves on slim brass uprights over cane-fronted cabinets"),
       photo("lajpat-nagar/gallery-5.jpg", "The design render of the aisle: shelving on both walls, the counters with their green-seated chairs down the middle"),
+      photo("lajpat-nagar/gallery-6.jpg", "The design render of the long shelving wall: boxes and cards on pale timber shelves, the counters and cane chairs alongside"),
+      photo("lajpat-nagar/gallery-7.jpg", "The display shelf as designed: printed gift boxes and card sets between brass uprights, lit from above"),
     ],
   },
   {
