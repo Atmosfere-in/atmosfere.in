@@ -683,7 +683,7 @@
   .heroFullDrawing {
     /* Room for the whole drawing above the copy, which starts a third of
        the way down; the hero scrolls a little on short phones. */
-    min-height: max(100svh, 940px);
+    min-height: max(100svh, 980px);
   }
 
   .heroFullDrawing .heroMedia .image {
