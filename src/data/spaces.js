@@ -142,24 +142,24 @@ export const process = {
       name: "Consult",
       text: "We listen first — how you live, what you need, and what you want to spend.",
       image: {
-        src: unsplash("1646987916641-1f3c8992daa2"),
-        alt: "A sculpted lounge with soft seating and a large abstract artwork",
+        src: unsplash("1758448755856-01d3add0177b"),
+        alt: "A lounge set for conversation: cream sofas around a houndstooth ottoman under three crystal rings, with sheer curtains behind",
       },
     },
     {
       name: "Design",
       text: "Layouts, 3D views, materials and a fixed quote, signed off before work begins.",
       image: {
-        src: unsplash("1776362658611-2067c9ded1d1"),
-        alt: "A drawn-to-detail lounge with a fluted timber wall and framed art",
+        src: unsplash("1758448500596-ce0e0239f1be"),
+        alt: "A living room resolved to the last detail: a marble television wall with brass trims, a cream sofa and a coffered, cove-lit ceiling",
       },
     },
     {
       name: "Execute",
       text: "Our own site team builds it, with weekly updates and one point of contact.",
       image: {
-        src: unsplash("1757524826474-efe6b2758055"),
-        alt: "A stone-clad bathroom with a sculpted dark bathtub and a garden view",
+        src: unsplash("1758448755778-90ebf4d0f1e7"),
+        alt: "A built wall of dark marble with brass lights, a round crystal chandelier and cream sofas below",
       },
     },
     {
