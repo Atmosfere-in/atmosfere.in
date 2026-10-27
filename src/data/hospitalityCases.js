@@ -193,6 +193,9 @@ export const hospitalityCases = [
     size: "2,21,522 sq ft · 70 keys",
     engagement: "Design intent",
     image: photo("moradabad-sourcing-convention-centre/hero.jpg", "The proposed building: a white rendered block with a brass-toned lattice tower and a glass rotunda at the corner, seen from the road"),
+    // The page opens on the site layout rather than the render.
+    heroStyle: "split",
+    heroImage: { width: 2474, height: 601, ...photo("moradabad-sourcing-convention-centre/layout.jpg", "The site layout: the hotel block with its rotunda at the entry end of the plot, parking and the service road behind, water bodies, a pathway and a private lawn along the length of the site") },
     lead: "A 1,26,600 sq ft plot in India's brass city, planned as the place where buyers come to see, source, meet and stay: exhibition and retail below, convention halls in the middle, 70 rooms above and an open exhibition deck on the roof.",
     summary:
       "Moradabad is a city of exporters whose buyers fly in to source brassware and handicrafts, with nowhere built for that visit. The plan gives them one address: a sourcing and convention centre with a hotel inside it. Across six levels and 2,21,522 sq ft, seventy per cent of the building is given to exhibition and convention space and thirty per cent to rooms, cafés and retail, so a buyer can walk the shops in the basement, sit in a convention hall upstairs, and sleep two floors above.",

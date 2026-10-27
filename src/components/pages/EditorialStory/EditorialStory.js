@@ -30,12 +30,16 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
     stages: story.stages.slice(i * 2, i * 2 + 2),
   }));
   const voiceImage = story.voiceImage ?? chapters[chapters.length - 1]?.image ?? story.image;
+  // A story may open on a drawing (a site or floor layout) instead of its
+  // photograph; the photograph still fronts its cards elsewhere.
+  const heroImage = story.heroImage ?? story.image;
+  const heroClass = [styles.hero, story.heroStyle === "split" ? "" : styles.heroFull, story.heroImage ? styles.heroDrawing : ""].join(" ");
 
   return (
     <>
       {/* Hero: the story's facts laid over a photograph that runs edge to
           edge. heroStyle "split" keeps the older panel-beside-photo hero. */}
-      <section className={`${styles.hero} ${story.heroStyle === "split" ? "" : styles.heroFull}`}>
+      <section className={heroClass}>
         <div className={styles.heroPanel}>
           <div className={styles.heroText}>
             <nav aria-label="Breadcrumb" className={styles.crumbs}>
@@ -61,7 +65,13 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
           </div>
         </div>
         <div className={styles.heroMedia}>
-          <Image src={story.image.src} alt={story.image.alt} fill preload quality={90} sizes="(max-width: 900px) 100vw, 58vw" className={styles.image} />
+          {story.heroImage ? (
+            <figure className={styles.heroSheet}>
+              <Image src={heroImage.src} alt={heroImage.alt} width={heroImage.width} height={heroImage.height} preload quality={90} sizes="(max-width: 900px) 100vw, 58vw" className={styles.drawing} />
+            </figure>
+          ) : (
+            <Image src={heroImage.src} alt={heroImage.alt} fill preload quality={90} sizes="(max-width: 900px) 100vw, 58vw" className={styles.image} />
+          )}
         </div>
       </section>
 
