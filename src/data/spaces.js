@@ -78,7 +78,7 @@ export const projects = {
       side: "1,985 sq ft",
       image: {
         src: "/images/spaces/tower-10-202/hero.jpg",
-        alt: "The living room, with a pale sofa under a branching chandelier and a marble-effect feature wall",
+        alt: "The finished TV wall: marble-effect panels between timber slats and a floating unit",
       },
     },
     {
