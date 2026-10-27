@@ -194,7 +194,6 @@ export const hospitalityCases = [
     engagement: "Design intent",
     image: photo("moradabad-sourcing-convention-centre/hero.jpg", "The proposed building: a white rendered block with a brass-toned lattice tower and a glass rotunda at the corner, seen from the road"),
     // The page opens on the deck's area programme drawing rather than the render.
-    heroStyle: "split",
     heroImage: { width: 2937, height: 1596, ...photo("moradabad-sourcing-convention-centre/area-programme.jpg", "The area programme: the building drawn floor by floor on its site, from the retail and exhibition basement up through the reception and convention halls, two floors of rooms and the open exhibition rooftop, each level colour-coded in the legend") },
     lead: "A 1,26,600 sq ft plot in India's brass city, planned as the place where buyers come to see, source, meet and stay: exhibition and retail below, convention halls in the middle, 70 rooms above and an open exhibition deck on the roof.",
     summary:

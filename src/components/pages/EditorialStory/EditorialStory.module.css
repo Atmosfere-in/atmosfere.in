@@ -618,6 +618,22 @@
     linear-gradient(to top, rgb(20 18 16 / 0.6) 0%, rgb(20 18 16 / 0) 45%);
 }
 
+/* A drawing run full-bleed: a deeper scrim, since the paper is light, and
+   the picture weighted to the right so its legend stays clear of the copy. */
+.heroFullDrawing .heroMedia {
+  background: var(--color-ivory);
+}
+
+.heroFullDrawing .heroMedia .image {
+  object-position: 72% 50%;
+}
+
+.heroFullDrawing .heroMedia::after {
+  background:
+    linear-gradient(to right, rgb(20 18 16 / 0.92) 0%, rgb(20 18 16 / 0.76) 34%, rgb(20 18 16 / 0.28) 62%, rgb(20 18 16 / 0.06) 100%),
+    linear-gradient(to top, rgb(20 18 16 / 0.7) 0%, rgb(20 18 16 / 0) 45%);
+}
+
 .heroFull .heroPanel {
   position: relative;
   /* Above the photograph and its scrim, so the copy is never dimmed. */
@@ -660,6 +676,13 @@
   .heroFull .heroPanel {
     align-items: flex-end;
     padding: calc(var(--header-height) + var(--space-5)) var(--gutter) var(--space-6);
+  }
+
+  /* On phones the drawing is shown whole in the clear upper part of the
+     hero, on its ivory paper, with the copy below it over the gradient. */
+  .heroFullDrawing .heroMedia .image {
+    object-fit: contain;
+    object-position: 50% calc(var(--header-height) + 16px);
   }
 
   .heroFull .heroText {
