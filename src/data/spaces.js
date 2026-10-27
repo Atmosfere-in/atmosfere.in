@@ -52,13 +52,13 @@ export const projects = {
   intro: "Homes and workplaces we've designed and built, start to finish.",
   items: [
     {
-      href: "/spaces/projects/the-aranya",
-      name: "The Aranya",
-      details: "Sample flat · Noida Extension",
-      side: "1,100 sq ft",
+      href: "/spaces/projects/arihant",
+      name: "Arihant",
+      details: "Commercial compound · Delhi NCR",
+      side: "10,000 sq ft",
       image: {
-        src: "/images/spaces/the-aranya/hero.jpg",
-        alt: "The living room of the sample flat, with pale sofas on a marble-veined wall and a fluted oak screen",
+        src: "/images/spaces/arihant/chapter-3.jpg",
+        alt: "The Arihant compound from above: the glass tower, the entry court with its food kiosk and outdoor seating",
       },
     },
     {

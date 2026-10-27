@@ -9,8 +9,8 @@ export const planningTypes = [
     name: "Hotel / Resort",
     text: "Room mix, guest flow and amenities planned around the market you're entering.",
     image: {
-      src: unsplash("1605346434674-a440ca4dc4c0"),
-      alt: "A crisp hotel bed beside a dark timber nightstand",
+      src: "/images/hospitality/planning/hotel-resort.jpg",
+      alt: "The pool at The Punarnava Resort, Dehradun, ringed by palms and sal trees, with the resort building behind",
     },
   },
   {

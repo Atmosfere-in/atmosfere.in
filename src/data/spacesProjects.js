@@ -406,12 +406,12 @@ export const spacesProjects = [
     chapters: [
       { title: "Seven floors, two basements, one compound.", image: photo("arihant/chapter-1.jpg", "Workstations in long runs facing the 'Team Work' feature wall on the owner's floor") },
       { title: "One floor for the owner, six for tenants.", image: photo("arihant/chapter-2.jpg", "Workstations beside a teal wall, under timber slats and green baffles") },
-      { title: "A ground floor that earns.", image: photo("arihant/chapter-3.jpg", "The boardroom: a long white table, a ring light and a screen at the end") },
+      { title: "A ground floor that earns.", image: photo("arihant/chapter-3.jpg", "The compound from above: the glass tower, the entry court with its food kiosk and outdoor seating, and the city beyond") },
     ],
     mosaic: [
       photo("arihant/mosaic-1.jpg", "Reception, with the logo on a perforated wall, a stone desk and a linen sofa"),
       photo("arihant/mosaic-2.jpg", "The director's cabin on the owner's floor, with a white desk, oak shelving and a small lounge"),
-      photo("arihant/mosaic-3.jpg", "Workstations beside the timber breakout table and the teal wall"),
+      photo("arihant/mosaic-3.jpg", "The food kiosk in the court at night: a container-style counter under a lit canopy, with umbrella tables beside it"),
     ],
     concept: {
       title: "Plan the building like a business.",
@@ -461,6 +461,13 @@ export const spacesProjects = [
       { value: "10,000", label: "sq ft: two basements, seven floors, the entry court" },
       { value: "6", label: "Floors let out, fitted to each tenant's need" },
       { value: "3", label: "Ground-floor earners: reception, cafeteria, gym" },
+    ],
+    gallery: [
+      photo("arihant/gallery-1.jpg", "The boardroom: a long white table, a ring light and a screen at the end"),
+      photo("arihant/gallery-2.jpg", "Workstations beside the timber breakout table and the teal wall"),
+      photo("arihant/gallery-3.jpg", "The court at night: a water feature with lit stone edges, umbrella tables and the kiosk beyond"),
+      photo("arihant/gallery-4.jpg", "A timber bench against a gabion wall in the court, with a tree and the water channel beside it"),
+      photo("arihant/gallery-5.jpg", "Outdoor seating under umbrellas at the tower entrance, with the kiosk lit for the evening"),
     ],
   },
   {

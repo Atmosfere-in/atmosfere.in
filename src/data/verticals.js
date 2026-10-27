@@ -11,9 +11,9 @@ export const verticals = [
     description: "Turnkey interiors for homes and commercial spaces.",
     href: "/spaces",
     image: {
-      src: unsplash("1564078516393-cf04bd966897"),
-      alt: "A double-height living room glowing with warm light at dusk",
-      position: "50% 60%",
+      src: "/images/spaces/ska-orion/chapter-1.jpg",
+      alt: "A living room at SKA Orion: blue armchairs and a cream sofa under a panelled wall and a cove-lit ceiling",
+      position: "50% 50%",
     },
   },
   {
@@ -23,9 +23,9 @@ export const verticals = [
     description: "Planning for hotels, resorts and banquets.",
     href: "/hospitality",
     image: {
-      src: unsplash("1544984243-ec57ea16fe25"),
-      alt: "A villa terrace and pool under a violet sunset sky",
-      position: "50% 50%",
+      src: "/images/hospitality/moradabad-sourcing-convention-centre/concept.jpg",
+      alt: "The brass-toned lattice tower of the Moradabad convention centre, with the drop-off below",
+      position: "50% 45%",
     },
   },
   {
