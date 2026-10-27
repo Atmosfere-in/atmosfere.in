@@ -33,10 +33,12 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
   // A story may open on a drawing (a site or floor layout) instead of its
   // photograph; the photograph still fronts its cards elsewhere.
   const heroImage = story.heroImage ?? story.image;
-  // On the split hero the drawing sits whole on a sheet; on the full-bleed
-  // hero it runs edge to edge like a photograph, under a deeper scrim.
-  const sheet = story.heroStyle === "split" && Boolean(story.heroImage);
-  const heroClass = [styles.hero, story.heroStyle === "split" ? "" : styles.heroFull, sheet ? styles.heroDrawing : "", !sheet && story.heroImage ? styles.heroFullDrawing : ""].join(" ");
+  // heroImage swaps the opening picture without touching the cards. With
+  // heroDrawing it is treated as a drawing: whole on a sheet in the split
+  // hero, or full-bleed on light paper under a deeper scrim.
+  const drawing = Boolean(story.heroImage) && story.heroDrawing === true;
+  const sheet = drawing && story.heroStyle === "split";
+  const heroClass = [styles.hero, story.heroStyle === "split" ? "" : styles.heroFull, sheet ? styles.heroDrawing : "", drawing && !sheet ? styles.heroFullDrawing : ""].join(" ");
 
   return (
     <>
