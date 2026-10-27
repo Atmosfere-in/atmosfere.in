@@ -52,11 +52,13 @@
      full width wherever the screen is tall enough. On a short window the
      frame narrows instead of cropping further, so the heading and the whole
      room are always visible together without scrolling. */
-  width: min(100%, calc((100svh - var(--header-height) - 150px) * 2.2));
+  /* The pair is shot at 3:2; the frame keeps that ratio so neither room
+     is cropped. */
+  width: min(100%, calc((100svh - var(--header-height) - 150px) * 1.5));
   min-width: min(100%, 720px);
   margin-inline: auto;
   height: auto;
-  aspect-ratio: 11 / 5;
+  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: var(--color-stone-100);
   user-select: none;
@@ -161,7 +163,7 @@
   }
 
   .frame {
-    width: min(100%, calc((100svh - var(--header-height) - 104px) * 2.2));
+    width: min(100%, calc((100svh - var(--header-height) - 104px) * 1.5));
   }
 }
 
@@ -186,7 +188,7 @@
     width: 100%;
     min-width: 0;
     height: auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 2;
     /* Tablets: keep the heading and the whole frame on one screen; the
        frame grows a little wider than 4:5 rather than taller. */
     max-height: calc(100svh - var(--header-height) - 200px);
