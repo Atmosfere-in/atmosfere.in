@@ -421,7 +421,7 @@ export const spacesProjects = [
     chapters: [
       { title: "Seven floors, two basements, one compound.", image: photo("arihant/chapter-1.jpg", "Workstations in long runs facing the 'Team Work' feature wall on the owner's floor") },
       { title: "One floor for the owner, six for tenants.", image: photo("arihant/chapter-2.jpg", "Workstations beside a teal wall, under timber slats and green baffles") },
-      { title: "A ground floor that earns.", image: photo("arihant/chapter-3.jpg", "The compound from above: the glass tower, the entry court with its food kiosk and outdoor seating, and the city beyond") },
+      { title: "A ground floor that earns.", image: photo("arihant/chapter-3.jpg", "The compound from above: the glass tower beside its neighbour, the entry court with its food kiosk and outdoor seating, and the city beyond") },
     ],
     mosaic: [
       photo("arihant/mosaic-1.jpg", "Reception, with the logo on a perforated wall, a stone desk and a linen sofa"),

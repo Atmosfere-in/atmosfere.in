@@ -57,8 +57,8 @@ export const projects = {
       details: "Commercial compound · Delhi NCR",
       side: "10,000 sq ft",
       image: {
-        src: "/images/spaces/arihant/court.jpg",
-        alt: "The Arihant compound from above: the glass tower over the entry court, with the canopy, outdoor seating and the city beyond",
+        src: "/images/spaces/arihant/chapter-3.jpg",
+        alt: "The Arihant compound from above: the glass tower beside its neighbour, the entry court with its canopy, food kiosk and outdoor seating, and the city beyond",
       },
     },
     {
