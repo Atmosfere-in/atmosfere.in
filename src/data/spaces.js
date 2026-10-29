@@ -40,8 +40,8 @@ export const about = {
     "We work across apartments, villas, offices and retail, with a single point of contact, a fixed scope and a finish that holds up long after the photographs.",
   ],
   image: {
-    src: unsplash("1748184201792-8bee75fceb41"),
-    alt: "A designer and a client choosing fabric swatches together at a table",
+    src: unsplash("1758448755952-42b404bc6f39"),
+    alt: "A finished living room with a crystal chandelier, curved cream sofas and warm lighting",
   },
   link: { label: "More about us", href: "/spaces/about" },
 };
