@@ -57,7 +57,7 @@ export default async function SpacesProject({ params }) {
         ]}
         photos={collectPhotos(project)}
         videos={project.videos ?? []}
-        caseStudyHref={`/spaces/case-studies/${project.slug}`}
+        caseStudyHref={project.caseStudy ? `/spaces/case-studies/${project.slug}` : null}
         prev={link(prev)}
         next={link(next)}
       />

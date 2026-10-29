@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import EditorialStory from "@/components/pages/EditorialStory/EditorialStory";
-import { spacesProjects, getSpacesProject } from "@/data/spacesProjects";
+import { caseStudyProjects, getSpacesProject } from "@/data/spacesProjects";
 
 export function generateStaticParams() {
-  return spacesProjects.map((p) => ({ slug: p.slug }));
+  return caseStudyProjects.map((p) => ({ slug: p.slug }));
 }
 
 export const dynamicParams = false;
@@ -18,10 +18,10 @@ export async function generateMetadata({ params }) {
 export default async function SpacesCaseStudy({ params }) {
   const { slug } = await params;
   const project = getSpacesProject(slug);
-  if (!project) notFound();
+  if (!project?.caseStudy) notFound();
 
-  const index = spacesProjects.indexOf(project);
-  const next = spacesProjects[(index + 1) % spacesProjects.length];
+  const index = caseStudyProjects.indexOf(project);
+  const next = caseStudyProjects[(index + 1) % caseStudyProjects.length];
 
   return (
     <main>

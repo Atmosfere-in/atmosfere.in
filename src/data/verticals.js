@@ -12,7 +12,7 @@ export const verticals = [
     href: "/spaces",
     image: {
       src: "/images/home/spaces.jpg",
-      alt: "A finished master bedroom at Tower 10: a tufted bed under a cove-lit ceiling, a timber-slat wall and curtains to the balcony",
+      alt: "A living room at SKA Orion: blue armchairs and a cream sofa under a panelled wall and a cove-lit ceiling",
       position: "50% 50%",
     },
   },
@@ -24,7 +24,7 @@ export const verticals = [
     href: "/hospitality",
     image: {
       src: "/images/home/hospitality.jpg",
-      alt: "The pool at The Punarnava Resort, Dehradun, ringed by palms and sal trees, with the resort building behind",
+      alt: "The brass-toned lattice tower of the Moradabad convention centre, with the drop-off below",
       position: "50% 50%",
     },
   },

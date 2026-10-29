@@ -14,6 +14,7 @@ export const spacesProjects = [
     // Real engagement for a high-rise developer. Key facts from the studio;
     // renders by the studio.
     slug: "the-aranya",
+    caseStudy: true,
     name: "The Aranya",
     type: "commercial",
     category: "Sample flat",
@@ -89,6 +90,7 @@ export const spacesProjects = [
     // Real engagement. Key facts from the studio; renders from atmosfere.in's
     // portfolio page.
     slug: "villa-rise-resort-residency",
+    caseStudy: true,
     name: "Villa at Rise Resorts",
     type: "residential",
     category: "Villa",
@@ -164,6 +166,7 @@ export const spacesProjects = [
     // Real engagement. Key facts from the studio; renders by the studio.
     // City and stage to be confirmed.
     slug: "tower-10-202",
+    caseStudy: true,
     name: "Tower 10 – 202",
     type: "residential",
     category: "Apartment",
@@ -240,31 +243,32 @@ export const spacesProjects = [
     // Real engagement, completed. Key facts from the studio; photographs of
     // the finished store (AI-enhanced) and the studio's renders.
     slug: "lajpat-nagar-boutique",
+    caseStudy: true,
     name: "Suneja Card Creations, Lajpat Nagar",
     type: "commercial",
     category: "Retail boutique",
     location: "Lajpat Nagar, New Delhi",
     size: "700 sq ft",
     timeline: "Completed",
-    image: photo("lajpat-nagar/hero.jpg", "The finished store: shelves of wedding cards and gift boxes down both walls, marble-topped counters with cane chairs, and a chandelier under the ceiling medallion"),
+    image: photo("lajpat-nagar/hero.jpg", "The finished store from the door: cards and gift boxes on brass-trimmed shelves down both walls, three marble counters with cane chairs and the chandelier under the ceiling medallion"),
     lead: "A 700 sq ft wedding-card and gifting boutique planned around how a customer moves from the door to one of three counters — with minimal, traditional shelving that keeps the eye on the products, and a visual identity built from scratch.",
     summary:
       "Suneja Card Creations sells wedding cards and gift boxes that are themselves the decoration, so the store had one job: get each customer from the entrance to the right counter without a queue, and never compete with what is on the shelves. In 700 sq ft we planned three counters with seating for about twelve customers, lined the walls with minimal shelving in a traditional language, and built the brand's visual identity from scratch — traditional prints on a clean, pale background, carried from the shelves to the signage.",
     scope: ["Retail planning & circulation", "Interior design", "Custom shelving & counters", "Brand visual identity", "Lighting design", "Execution"],
     chapters: [
-      { title: "From the door to the right counter.", image: photo("lajpat-nagar/chapter-1.jpg", "The design render: the central aisle from the entrance, with counters down the middle and shelving on both walls") },
-      { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: cards and boxes on pale shelving down the wall, marble counters and cane chairs, the chandelier above") },
+      { title: "From the door to the right counter.", image: photo("lajpat-nagar/chapter-1.jpg", "The aisle: a shelving wall of printed boxes and card sets, the marble counters and cane chairs alongside") },
+      { title: "Shelves that stay out of the way.", image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: boxes and cards on pale shelving down the wall, counters and cane chairs in front") },
       { title: "An identity from scratch.", image: photo("lajpat-nagar/chapter-3.jpg", "The design render of the counters: the Suneja Card Creations mark on a printed panel over the timber counter, pendant lamps and a herringbone floor") },
     ],
     mosaic: [
-      photo("lajpat-nagar/mosaic-1.jpg", "Gift boxes in traditional prints on the shelves, lit from above"),
+      photo("lajpat-nagar/mosaic-1.jpg", "Printed gift boxes close up on the shelves, lit from the brass strip above"),
       photo("lajpat-nagar/mosaic-2.jpg", "A counter with cane-backed chairs and a marble top, the shelves of cards and boxes behind"),
-      photo("lajpat-nagar/mosaic-3.jpg", "A display shelf of printed boxes and trays over cane-fronted cabinets"),
+      photo("lajpat-nagar/mosaic-3.jpg", "The shelving wall at the back: boxes, card sets and trays on timber shelves over cane-fronted cabinets"),
     ],
     concept: {
       title: "Let the products do the decorating.",
       text: "Every card and box in this store is printed, embroidered or gilded, so the interior had to be the calm behind them. The shelving is minimal and traditional at once — pale timber, slim brass uprights, cane-fronted cabinets below — and the walls are kept plain so colour comes only from the stock. Three counters sit in the middle of the room, each with its own seating, so a customer walks in, is shown to a counter, and sits with the collection in front of them. Traditional prints appear in the brand's identity rather than on the walls: on the signage, the packaging and the small details.",
-      image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: shelving, counters and the chandelier"),
+      image: photo("lajpat-nagar/chapter-2.jpg", "The length of the store: boxes and cards on pale shelving down the wall, counters and cane chairs in front"),
       palette: [
         { name: "Pale timber", note: "Shelving, counters and cabinet frames", color: "#d9c4a0" },
         { name: "Slim brass", note: "Shelf uprights, trims and lighting", color: "#b9985a" },
@@ -312,11 +316,11 @@ export const spacesProjects = [
     ],
     gallery: [
       photo("lajpat-nagar/gallery-1.jpg", "A marble-topped counter with cane-backed chairs, the shelves of boxes behind"),
-      photo("lajpat-nagar/gallery-2.jpg", "The finished store from the entrance: cards and boxes on brass-trimmed shelves down both walls, three marble counters with cane chairs"),
+      photo("lajpat-nagar/gallery-2.jpg", "The store with its sign lit: the shelving walls, the counters and the chandelier above"),
       photo("lajpat-nagar/gallery-3.jpg", "The gifting display: printed boxes, bags and trays on brass-and-glass shelves"),
-      photo("lajpat-nagar/gallery-4.jpg", "The design render of the shelving wall: pale timber shelves on slim brass uprights over cane-fronted cabinets"),
-      photo("lajpat-nagar/gallery-5.jpg", "The design render of the aisle: shelving on both walls, the counters with their green-seated chairs down the middle"),
-      photo("lajpat-nagar/gallery-6.jpg", "The design render of the long shelving wall: boxes and cards on pale timber shelves, the counters and cane chairs alongside"),
+      photo("lajpat-nagar/gallery-4.jpg", "The shelving wall of printed boxes beside a marble counter and cane chairs"),
+      photo("lajpat-nagar/gallery-5.jpg", "The Suneja Card Creations sign over the counter, with the gifting display shelves beside it"),
+      photo("lajpat-nagar/gallery-6.jpg", "Wedding card boxes close up on the shelf, with the street outside the window"),
       photo("lajpat-nagar/gallery-7.jpg", "The display shelf as designed: printed gift boxes and card sets between brass uprights, lit from above"),
     ],
   },
@@ -325,6 +329,7 @@ export const spacesProjects = [
     // from the studio's 3D-view decks and folder (construction photos not
     // used). City to be confirmed.
     slug: "chelvets",
+    caseStudy: true,
     name: "Chelvets",
     type: "commercial",
     category: "Workplace & studio",
@@ -401,6 +406,7 @@ export const spacesProjects = [
     // Real engagement. Key facts from the studio; renders by the studio
     // (the owner's floor). City to be confirmed.
     slug: "arihant",
+    caseStudy: true,
     name: "Arihant",
     type: "commercial",
     category: "Commercial compound",
@@ -647,25 +653,25 @@ export const spacesProjects = [
     location: "Express One, Ghaziabad",
     size: "High-rise apartment",
     timeline: "Handover",
-    image: photo("express-one-1803-04/hero.jpg", "The living hall: white moulded wall panels with black inlay lines, brass sconces, a walnut door and a grey marble floor"),
+    image: photo("express-one-1803-04/hero.jpg", "The living hall: white moulded panels with brass sconces between walnut doors, grey sofas and the marble-topped dining table under a cove-lit ceiling"),
     lead: "A high-rise apartment finished in a quiet classic language — white panelled walls with a black inlay line, grey marble underfoot, coffered ceilings with hidden coves — and bedrooms softened with curved upholstered headboards and timber floors.",
     summary:
       "The family wanted an apartment that felt composed rather than decorated. We gave the living hall a single idea and carried it through: full-height wall panels in white with a thin black inlay, brass sconces in the panels, walnut doors, and a grey-veined marble floor under a coffered ceiling lit from its coves. The bedrooms take a softer version of the same discipline, with curved upholstered headboards that wrap into bedside storage, wardrobes with slim brass pulls, a dressing unit by the window and timber flooring in place of the marble. The clips were shot on site as the rooms were handed over.",
     scope: ["Full-apartment interiors", "Wall panelling and ceiling design", "Custom beds, wardrobes and dressers", "Marble and timber flooring", "Lighting design", "Site supervision"],
     chapters: [
-      { title: "One language for the hall.", image: photo("express-one-1803-04/chapter-1.jpg", "The panelled wall of the living hall: three white moulded panels edged with a black inlay line") },
-      { title: "Bedrooms that wrap around you.", image: { ...photo("express-one-1803-04/chapter-2.jpg", "The master bedroom: a curved upholstered headboard flowing into bedside storage, a timber floor and sheer curtains"), still: true } },
-      { title: "Storage that disappears.", image: { ...photo("express-one-1803-04/chapter-3.jpg", "A bedroom with its wardrobe, walnut door and bed under a cove-lit ceiling"), still: true } },
+      { title: "One language for the hall.", image: photo("express-one-1803-04/chapter-1.jpg", "The hall's television wall: a dark panelled unit with a floating console, facing the grey sofas and the moulded wall") },
+      { title: "Bedrooms that wrap around you.", image: photo("express-one-1803-04/chapter-2.jpg", "The master bedroom: a curved upholstered headboard wrapping the bed, sheer curtains and a cove-lit ceiling") },
+      { title: "Storage that disappears.", image: photo("express-one-1803-04/chapter-3.jpg", "A bedroom with its wardrobe wall, the television on the dresser side and the bed under a cove-lit ceiling") },
     ],
     mosaic: [
-      photo("express-one-1803-04/mosaic-1.jpg", "The hall's panelled wall between two walnut doors under the coffered ceiling"),
-      { ...photo("express-one-1803-04/mosaic-2.jpg", "Brass sconces on the panelled wall, with the kitchen beyond"), still: true },
-      { ...photo("express-one-1803-04/mosaic-3.jpg", "The hall towards the kitchen, with the lit display niche and the balcony door"), still: true },
+      photo("express-one-1803-04/mosaic-1.jpg", "The lit crockery display beside the kitchen, with the arched pooja niche and the fridge recess"),
+      photo("express-one-1803-04/mosaic-2.jpg", "The hall from the entrance: the television wall, the sofas and the panelled wall beyond"),
+      photo("express-one-1803-04/mosaic-3.jpg", "The bathroom: a glass shower enclosure, grey stone walls and a marble-framed mirror over the basin"),
     ],
     concept: {
       title: "Composed, not decorated.",
       text: "Everything in the hall comes from one move: the panel. The same white panel with its black inlay line frames the walls, holds the sconces and sets the rhythm of the doors, so the room needs nothing else. The bedrooms soften the idea into curves and timber, keeping the palette of white, walnut and brass.",
-      image: photo("express-one-1803-04/hero.jpg", "The living hall: white moulded wall panels with black inlay lines, brass sconces, a walnut door and a grey marble floor"),
+      image: photo("express-one-1803-04/hero.jpg", "The living hall: white moulded panels with brass sconces between walnut doors, grey sofas and the marble-topped dining table under a cove-lit ceiling"),
       palette: [
         { name: "White", note: "Wall panels and ceilings", color: "#f3f1ec" },
         { name: "Black inlay", note: "The line that edges every panel", color: "#1e1e1e" },
@@ -706,7 +712,7 @@ export const spacesProjects = [
         points: ["A hall with one clear idea", "Bedrooms with built-in comfort", "A palette that will age well"],
       },
     ],
-    voiceImage: { ...photo("express-one-1803-04/voice.jpg", "The dressing unit by the bedroom window, with the city beyond at dusk"), still: true },
+    voiceImage: photo("express-one-1803-04/voice.jpg", "The dressing unit by the bedroom window, with the city beyond at dusk"),
     results: [
       { value: "1", label: "Panel module that sets out the whole hall" },
       { value: "4", label: "Clips shot on site at handover" },
@@ -1524,3 +1530,8 @@ export const spacesProjectFilters = [
 export function getSpacesProject(slug) {
   return spacesProjects.find((p) => p.slug === slug);
 }
+
+// Only projects briefed by the studio carry a written case study; the rest
+// have a photo gallery alone.
+export const caseStudyProjects = spacesProjects.filter((p) => p.caseStudy === true);
+

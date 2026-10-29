@@ -40,8 +40,8 @@ export const about = {
     "We work across apartments, villas, offices and retail, with a single point of contact, a fixed scope and a finish that holds up long after the photographs.",
   ],
   image: {
-    src: unsplash("1782795799287-a3ca32de0d72"),
-    alt: "A warm timber-lined dining room with a round table and a framed mountain print",
+    src: unsplash("1748184201792-8bee75fceb41"),
+    alt: "A designer and a client choosing fabric swatches together at a table",
   },
   link: { label: "More about us", href: "/spaces/about" },
 };
@@ -57,8 +57,8 @@ export const projects = {
       details: "Commercial compound · Delhi NCR",
       side: "10,000 sq ft",
       image: {
-        src: "/images/spaces/arihant/chapter-3.jpg",
-        alt: "The Arihant compound from above: the glass tower, the entry court with its food kiosk and outdoor seating",
+        src: "/images/spaces/arihant/gallery-3.jpg",
+        alt: "The Arihant court at night: a water feature with lit stone edges, umbrella tables and the kiosk beyond",
       },
     },
     {
@@ -142,32 +142,32 @@ export const process = {
       name: "Consult",
       text: "We listen first — how you live, what you need, and what you want to spend.",
       image: {
-        src: unsplash("1758448755856-01d3add0177b"),
-        alt: "A lounge set for conversation: cream sofas around a houndstooth ottoman under three crystal rings, with sheer curtains behind",
+        src: "/images/spaces/process/consult.jpg",
+        alt: "A hand-drawn sketch of the Suneja Card Creations store: the chandelier under the ceiling medallion, the shelves and the counters, with the design notes written in",
       },
     },
     {
       name: "Design",
       text: "Layouts, 3D views, materials and a fixed quote, signed off before work begins.",
       image: {
-        src: unsplash("1758448500596-ce0e0239f1be"),
-        alt: "A living room resolved to the last detail: a marble television wall with brass trims, a cream sofa and a coffered, cove-lit ceiling",
+        src: "/images/spaces/process/design.jpg",
+        alt: "The design view of the store's display shelf: printed gift boxes between brass uprights over cane-fronted cabinets",
       },
     },
     {
       name: "Execute",
       text: "Our own site team builds it, with weekly updates and one point of contact.",
       image: {
-        src: unsplash("1758448755778-90ebf4d0f1e7"),
-        alt: "A built wall of dark marble with brass lights, a round crystal chandelier and cream sofas below",
+        src: "/images/spaces/process/execute.jpg",
+        alt: "The Atmosfere site team at work in an office fit-out: drawings on the desk, a ladder at the ceiling and the joinery going in",
       },
     },
     {
       name: "Handover",
       text: "Snag-checked, styled and handed over — ready to live in from day one.",
       image: {
-        src: unsplash("1758448755952-42b404bc6f39"),
-        alt: "A finished living room with a crystal chandelier, curved sofa and warm lighting",
+        src: "/images/spaces/process/handover.jpg",
+        alt: "A finished living room at Tower 10: a pale sofa under a branching chandelier, the marble-effect feature wall and the television unit",
       },
     },
   ],
@@ -229,14 +229,14 @@ export const caseStudies = {
   title: "The thinking behind the finish.",
   items: [
     {
-      href: "/spaces/case-studies/d-3-10-sector-14-noida",
-      tag: "Independent house · Sector 14, Noida",
-      title: "D-3/10, Sector 14",
+      href: "/spaces/case-studies/chelvets",
+      tag: "Workplace & studio · Sector 88, Delhi NCR",
+      title: "Chelvets",
       summary:
-        "A family house in one of Noida's oldest sectors, rebuilt inside as a calm, classic space — marble floors, panelled timber doors, soft cream rooms — with the roof turned into a lit terrace lounge.",
+        "Two floors of 2,500 sq ft for a fashion brand — one for its creative designers, one for its exclusive display, photoshoot studio and business office — designed around the brand's existing identity.",
       image: {
-        src: "/images/spaces/d-3-10-sector-14/hero.jpg",
-        alt: "The living room: cream sofas and timber-framed armchairs against a textured wallpaper panel lit from its edges",
+        src: "/images/spaces/chelvets/hero.jpg",
+        alt: "The creative team's floor: open workstations in long runs under timber slats, with the brand's displays along the wall",
       },
     },
     {

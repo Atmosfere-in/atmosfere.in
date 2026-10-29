@@ -1,6 +1,6 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
 import CaseStudyList from "@/components/pages/CaseStudyList/CaseStudyList";
-import { spacesProjects } from "@/data/spacesProjects";
+import { caseStudyProjects } from "@/data/spacesProjects";
 import { unsplash } from "@/lib/images";
 
 export const metadata = {
@@ -27,7 +27,7 @@ export default function SpacesCaseStudies() {
         }}
       />
       <CaseStudyList
-        items={spacesProjects.map((p) => ({
+        items={caseStudyProjects.map((p) => ({
           href: `/spaces/case-studies/${p.slug}`,
           name: p.name,
           tag: `${p.category} · ${p.location}`,

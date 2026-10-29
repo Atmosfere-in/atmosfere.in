@@ -107,9 +107,11 @@ export default function ProjectGallery({ name, lead, meta, photos, videos = [], 
       <section className={`section ${styles.intro}`}>
         <div className={`container ${styles.introInner}`}>
           <p className={`${styles.lead} reveal`}>{lead}</p>
-          <Link href={caseStudyHref} className={`${styles.storyLink} reveal`} style={{ "--reveal-delay": "120ms" }}>
-            Read the case study <Arrow size={14} />
-          </Link>
+          {caseStudyHref && (
+            <Link href={caseStudyHref} className={`${styles.storyLink} reveal`} style={{ "--reveal-delay": "120ms" }}>
+              Read the case study <Arrow size={14} />
+            </Link>
+          )}
         </div>
       </section>
 
