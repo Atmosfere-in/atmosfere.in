@@ -271,18 +271,18 @@ export const hospitalityCases = [
     location: "Vasundhara, Ghaziabad",
     size: "5,000 sq yd · two halls · 4 keys",
     engagement: "Architecture & banquet design",
-    image: photo("evara-bliss/hero.jpg", "The venue at night: the glass front lit from within, tall lantern panels along the facade and the lounge visible through the glazing"),
+    image: photo("evara-bliss/hero.jpg", "The grand hall set for a wedding: the stage under its sculpted arch, dressed in flowers, with the patterned stone floor in front"),
     lead: "A 5,000 sq yd plot in Vasundhara, Ghaziabad, built as a destination for celebrations of every scale: a 22,000 sq ft grand banquet, a 7,000 sq ft intimate hall, four guest rooms, offices and food-tasting rooms, under one architectural identity.",
     summary:
       "Evara Bliss is a purpose-built venue for celebrations, planned so that events of very different sizes can run side by side without losing a sense of place. Two banquet halls, of about 22,000 and 7,000 sq ft, take the grand wedding and the intimate function; four guest rooms, administrative offices and dedicated food-tasting rooms carry the operational side, so a host can plan the menu, stay the night and hold the event at one address. The architecture is part of the experience: the massing, the facade and the lighting are composed to make arrival feel like the first act of the celebration, and the interiors carry that drama through the halls, the lounge and the corridors.",
     scope: ["Hospitality architecture", "Site & circulation planning", "Two banquet halls", "Guest rooms & offices", "Food-tasting rooms", "Facade, interiors & lighting"],
     chapters: [
       { title: "Arrival as the first act.", image: photo("evara-bliss/chapter-1.jpg", "The entrance at night: the Evara name in brass over the glass front, with the patterned screens and lanterns lit") },
-      { title: "The grand banquet.", image: photo("evara-bliss/chapter-2.jpg", "The 22,000 sq ft hall set for a wedding: the stage under its sculpted arch, rings of light overhead and the patterned floor") },
-      { title: "Everything around the celebration.", image: photo("evara-bliss/chapter-3.jpg", "The lounge: curved sofas on a patterned floor under the sculpted ceiling, with the hall's tall panels behind") },
+      { title: "Everything around the celebration.", image: photo("evara-bliss/chapter-2.jpg", "The lounge: curved sofas on the patterned floor, under the tall panelled wall with its brass-edged leaves") },
+      { title: "Light as architecture.", image: photo("evara-bliss/chapter-3.jpg", "The hall wall at night: tall lit panels behind the patterned screens, with the lounge seating below") },
     ],
     mosaic: [
-      photo("evara-bliss/mosaic-1.jpg", "The tall lit panels of the hall wall, with the lounge seating below"),
+      photo("evara-bliss/mosaic-1.jpg", "The sculpted ceiling: a tree of leaves rising to the ring of light above the hall"),
       photo("evara-bliss/mosaic-2.jpg", "A tiered crystal chandelier against the dark panelled wall"),
       photo("evara-bliss/mosaic-3.jpg", "A guest corridor: brass wall lights, panelled walls and the inlaid marble floor"),
     ],

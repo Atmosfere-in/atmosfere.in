@@ -57,7 +57,7 @@ export const planningTypeDetails = {
     noun: "banquet hall",
     question: "How many days a week can this hall earn?",
     intro: "Flexible halls that host a wedding on Saturday and a conference on Monday.",
-    hero: img("1554009975-d74653b879f1", "Rows of glowing pendant lamps in a tall hall"),
+    hero: { src: "/images/hospitality/planning/banquet.jpg", alt: "A banquet venue at night: a glass-fronted hall glowing with chandeliers, sculptural gilded forms over the entrance, lit trees and a water feature in front" },
     story: {
       eyebrow: "The question",
       title: "A banquet hall is only as good as its calendar.",
