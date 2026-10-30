@@ -153,29 +153,24 @@
   position: relative;
 }
 
-/* Rhythm of five: wide · half · half · third · two-thirds. */
+/* Rhythm of five: one wide, then two rows of halves. Every tile keeps the
+   photographs' own 16:9 or 16:10 shape, so nothing is cropped away. */
 .cell:nth-child(5n + 1) {
   grid-column: span 6;
 }
 
 .cell:nth-child(5n + 2),
-.cell:nth-child(5n + 3) {
-  grid-column: span 3;
-}
-
-.cell:nth-child(5n + 4) {
-  grid-column: span 2;
-}
-
+.cell:nth-child(5n + 3),
+.cell:nth-child(5n + 4),
 .cell:nth-child(5n + 5) {
-  grid-column: span 4;
+  grid-column: span 3;
 }
 
 .tile {
   position: relative;
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   padding: 0;
   overflow: hidden;
   border: 0;
@@ -185,19 +180,9 @@
 }
 
 .cell:nth-child(5n + 1) .tile {
-  aspect-ratio: 21 / 10;
+  aspect-ratio: 16 / 9;
 }
 
-/* The third-and-two-thirds pair share one height: the wide tile sets it
-   at 16:10 and the narrow one stretches to match. */
-.cell:nth-child(5n + 4) .tile {
-  aspect-ratio: auto;
-  height: 100%;
-}
-
-.cell:nth-child(5n + 5) .tile {
-  aspect-ratio: 16 / 10;
-}
 
 .tile .image {
   transition: transform 1.6s var(--ease);
@@ -488,7 +473,7 @@
   }
 
   .cell:nth-child(n) .tile {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 10;
     height: auto;
   }
 
@@ -544,7 +529,7 @@
   }
 
   .cell:nth-child(n) .tile {
-    aspect-ratio: 4 / 3.2;
+    aspect-ratio: 16 / 10;
     border-radius: 12px;
   }
 
