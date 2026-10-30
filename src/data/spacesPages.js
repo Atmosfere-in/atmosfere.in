@@ -16,8 +16,8 @@ export const processPage = {
     intro:
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
-      src: unsplash("1752321532730-ed24a51e7b3f"),
-      alt: "Material samples laid out for selection: dark stone with gold veining, brushed brass and figured timber",
+      src: unsplash("1628900941064-ba8df8b51e4a"),
+      alt: "A designer's desk: the hand sketch in the notebook, the drawn detail with its dimensions, and the 3D view of the finished piece",
     },
   },
   detail: {
