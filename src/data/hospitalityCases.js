@@ -261,6 +261,82 @@ export const hospitalityCases = [
       { value: "3", label: "Convention halls, 42,800 sq ft together" },
     ],
   },
+  {
+    // Real engagement, built. Brief and figures from the studio (October
+    // 2026); photographs of the finished venue by the studio.
+    slug: "evara-bliss",
+    name: "Evara Bliss",
+    planningType: "banquet",
+    category: "Banquet destination",
+    location: "Vasundhara, Ghaziabad",
+    size: "5,000 sq yd · two halls · 4 keys",
+    engagement: "Architecture & banquet design",
+    image: photo("evara-bliss/hero.jpg", "The venue at night: the glass front lit from within, tall lantern panels along the facade and the lounge visible through the glazing"),
+    lead: "A 5,000 sq yd plot in Vasundhara, Ghaziabad, built as a destination for celebrations of every scale: a 22,000 sq ft grand banquet, a 7,000 sq ft intimate hall, four guest rooms, offices and food-tasting rooms, under one architectural identity.",
+    summary:
+      "Evara Bliss is a purpose-built venue for celebrations, planned so that events of very different sizes can run side by side without losing a sense of place. Two banquet halls, of about 22,000 and 7,000 sq ft, take the grand wedding and the intimate function; four guest rooms, administrative offices and dedicated food-tasting rooms carry the operational side, so a host can plan the menu, stay the night and hold the event at one address. The architecture is part of the experience: the massing, the facade and the lighting are composed to make arrival feel like the first act of the celebration, and the interiors carry that drama through the halls, the lounge and the corridors.",
+    scope: ["Hospitality architecture", "Site & circulation planning", "Two banquet halls", "Guest rooms & offices", "Food-tasting rooms", "Facade, interiors & lighting"],
+    chapters: [
+      { title: "Arrival as the first act.", image: photo("evara-bliss/chapter-1.jpg", "The entrance at night: the Evara name in brass over the glass front, with the patterned screens and lanterns lit") },
+      { title: "The grand banquet.", image: photo("evara-bliss/chapter-2.jpg", "The 22,000 sq ft hall set for a wedding: the stage under its sculpted arch, rings of light overhead and the patterned floor") },
+      { title: "Everything around the celebration.", image: photo("evara-bliss/chapter-3.jpg", "The lounge: curved sofas on a patterned floor under the sculpted ceiling, with the hall's tall panels behind") },
+    ],
+    mosaic: [
+      photo("evara-bliss/mosaic-1.jpg", "The tall lit panels of the hall wall, with the lounge seating below"),
+      photo("evara-bliss/mosaic-2.jpg", "A tiered crystal chandelier against the dark panelled wall"),
+      photo("evara-bliss/mosaic-3.jpg", "A guest corridor: brass wall lights, panelled walls and the inlaid marble floor"),
+    ],
+    concept: {
+      title: "Two halls, one identity.",
+      text: "The brief was grandeur, function and operation in one building. Two halls of very different sizes are planned to work independently, with their own arrival, circulation and service, while the facade, the materials and the lighting hold them as one destination. The guest rooms, offices and tasting rooms make the venue a place to plan an event as well as hold it.",
+      image: photo("evara-bliss/concept.jpg", "The design view of the venue at night: the glass-fronted hall under sculpted gilded forms, with lit trees and a water feature in front"),
+      palette: [
+        { name: "Warm brass", note: "The name, the lantern frames and the trims", color: "#b9924f" },
+        { name: "Patterned stone", note: "The hall and lounge floors", color: "#c9c2b6" },
+        { name: "Deep bronze", note: "Panelled walls and screens", color: "#5a4634" },
+        { name: "Ivory plaster", note: "The sculpted ceilings", color: "#efe9df" },
+        { name: "Warm light", note: "The facade and the halls after dark", color: "#f2c98a" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "A 5,000 sq yd plot in Vasundhara, Ghaziabad, to become a destination for celebrations: two banquet halls of different scales, guest rooms, offices and food-tasting rooms in one development.",
+        points: ["Plot of 5,000 sq yd", "Halls of 22,000 and 7,000 sq ft", "Rooms, offices and tasting rooms alongside"],
+      },
+      {
+        title: "Challenge",
+        text: "Two halls of very different sizes had to hold different events at the same time, each with its own arrival and service, without the venue reading as two separate buildings.",
+        points: ["Events of different scale side by side", "Separate arrival, circulation and service", "One architectural identity"],
+      },
+      {
+        title: "Approach",
+        text: "The planning followed the guest: arrival, the route to each hall, and the relationship between public, private and service functions. The offices and tasting rooms were placed to support operations, the guest rooms to serve hosts and visitors.",
+        points: ["Planned from the guest's arrival", "Public, private and service kept apart", "Operations designed in, not added"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A facade composed of massing, patterned screens, lantern panels and light, so the building announces itself before anyone goes in; halls with sculpted ceilings, patterned stone floors and tall lit panels; a lounge, guest corridors and rooms in the same language.",
+        points: ["A facade that makes the arrival", "Sculpted ceilings and patterned floors", "Lighting as part of the architecture"],
+      },
+      {
+        title: "Execution",
+        text: "The venue was built as designed, from the structure and the facade screens to the hall interiors, the lounge, the rooms and the lighting, and is now hosting events.",
+        points: ["Structure, facade and interiors delivered", "Halls, lounge, rooms and corridors fitted out", "Open and hosting celebrations"],
+      },
+      {
+        title: "Outcome",
+        text: "A venue that serves the grand wedding and the intimate function alike, plans the event under its own roof, and is recognised from the road.",
+        points: ["Two halls, every scale of celebration", "Planning, tasting and staying at one address", "A destination with a face of its own"],
+      },
+    ],
+    voiceImage: photo("evara-bliss/voice.jpg", "The venue from the street at night, its name lit over the entrance and the gardens lit in colour"),
+    results: [
+      { value: "22,000", label: "sq ft grand banquet hall" },
+      { value: "7,000", label: "sq ft intimate hall" },
+      { value: "4", label: "Guest rooms, with offices and tasting rooms" },
+    ],
+  },
 ];
 
 export const hospitalityCaseFilters = [

@@ -55,6 +55,16 @@ export const projects = {
   intro: "Hospitality engagements from first feasibility to opening day.",
   items: [
     {
+      href: "/hospitality/case-studies/evara-bliss",
+      name: "Evara Bliss",
+      details: "Banquet destination · Vasundhara, Ghaziabad",
+      side: "5,000 sq yd",
+      image: {
+        src: "/images/hospitality/evara-bliss/hero.jpg",
+        alt: "The Evara Bliss venue at night, its glass front lit from within",
+      },
+    },
+    {
       href: "/hospitality/case-studies/the-punarnava-spa-and-resort",
       name: "The Punarnava Spa & Resort",
       details: "Wellness resort · Dehradun",
@@ -191,14 +201,14 @@ export const caseStudies = {
       },
     },
     {
-      href: "/hospitality/case-studies/jim-corbett-resort-dhela",
-      tag: "Resort · Dhela, Jim Corbett",
-      title: "Jim Corbett Resort, Dhela",
+      href: "/hospitality/case-studies/evara-bliss",
+      tag: "Banquet destination · Vasundhara, Ghaziabad",
+      title: "Evara Bliss",
       summary:
-        "A forest-edge plot planned as a 15-key retreat: cottages and a villa around a central pool, with the banquet hall and cafe at the arrival.",
+        "A 5,000 sq yd plot built as a destination for celebrations: a 22,000 sq ft grand banquet, a 7,000 sq ft intimate hall, guest rooms, offices and tasting rooms under one identity.",
       image: {
-        src: "/images/hospitality/jim-corbett-resort-dhela/concept.jpg",
-        alt: "The round, thatched reception and cafe",
+        src: "/images/hospitality/evara-bliss/chapter-1.jpg",
+        alt: "The Evara Bliss entrance at night, the name in brass over the lit glass front",
       },
     },
     {

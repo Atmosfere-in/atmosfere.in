@@ -2,8 +2,10 @@ import PageHero from "@/components/pages/PageHero/PageHero";
 import ProcessDetail from "@/components/pages/ProcessDetail/ProcessDetail";
 import Faq from "@/components/pages/Faq/Faq";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
+import SiteDiary from "@/components/sections/SiteDiary/SiteDiary";
 import { processPage } from "@/data/spacesPages";
 import { closing } from "@/data/spaces";
+import { siteDiary } from "@/data/siteDiary";
 
 export const metadata = {
   title: "Design Process",
@@ -16,6 +18,7 @@ export default function SpacesProcess() {
     <main>
       <PageHero size="short" {...processPage.hero} />
       <ProcessDetail {...processPage.detail} />
+      <SiteDiary {...siteDiary} />
       <Faq {...processPage.faq} />
       <ClosingCta {...closing} />
     </main>
