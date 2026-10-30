@@ -1,7 +1,7 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
 import WorkIndex from "@/components/pages/WorkIndex/WorkIndex";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
-import { spacesProjects, spacesProjectFilters } from "@/data/spacesProjects";
+import { spacesProjectsListing as spacesProjects, spacesProjectFilters } from "@/data/spacesProjects";
 import { closing } from "@/data/spaces";
 import { unsplash } from "@/lib/images";
 

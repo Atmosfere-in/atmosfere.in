@@ -1526,6 +1526,33 @@ export const spacesProjectFilters = [
   { label: "Commercial", value: "commercial" },
 ];
 
+// Order of the cards on /spaces/projects: the strongest photography first,
+// renders-only projects after. The array above keeps its own order for the
+// case-study sequence.
+const LISTING_ORDER = [
+  "tower-10-202",
+  "lajpat-nagar-boutique",
+  "express-one-1803-04",
+  "d-3-10-sector-14-noida",
+  "villa-rise-resort-residency",
+  "ska-orion",
+  "veridia-wave-city",
+  "arihant",
+  "chelvets",
+  "krishna-nagar-jewellery-store",
+  "tlj-offices",
+  "sector-63-masters-capitol",
+  "ska-912",
+  "tower-12-104",
+  "tower-10-1003",
+  "gaur-city-office",
+  "eji-travel-solutions",
+  "b-ramprastha-colony",
+  "the-aranya",
+];
+const rank = (p) => (LISTING_ORDER.indexOf(p.slug) + 1 || LISTING_ORDER.length + 1);
+export const spacesProjectsListing = [...spacesProjects].sort((a, b) => rank(a) - rank(b));
+
 export function getSpacesProject(slug) {
   return spacesProjects.find((p) => p.slug === slug);
 }
