@@ -36,7 +36,7 @@ export const siteDiary = {
     photo("evara-3.jpg", "Evara Bliss", "Sculpture", "Fixing a sculpted leaf to the facade from the scaffold"),
     photo("veridia-7.jpg", "Veridia Wave City", "Setting out", "Checking the drawings against the work on site"),
     photo("lajpat-5.jpg", "Suneja Card Creations", "Cane fronts", "Fitting the brass handles on the cane-fronted cabinets"),
-    photo("evara-5.jpg", "Evara Bliss", "Sculpture", "Lifting a sculpted leaf up the scaffold at the facade"),
+    photo("evara-5.jpg", "Evara Bliss", "Entrance lighting", "Rigging the lights at the entrance between the marble lantern columns, before an event"),
     photo("nri-1.jpg", "NRI Residency", "Wall panelling", "Checking the black-and-gold chevron panel as it goes on the wall"),
   ],
 };
