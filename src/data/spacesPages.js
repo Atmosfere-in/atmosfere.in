@@ -16,8 +16,8 @@ export const processPage = {
     intro:
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
-      src: unsplash("1781859240244-61e274c2bf39"),
-      alt: "A curated material palette of marble, stone and ceramics",
+      src: "/images/spaces/process/hero.jpg",
+      alt: "A joiner fitting the brass-trimmed shelving at Suneja Card Creations, the strip lights already on",
     },
   },
   detail: {
