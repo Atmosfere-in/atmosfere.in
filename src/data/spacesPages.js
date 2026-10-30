@@ -16,8 +16,8 @@ export const processPage = {
     intro:
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
-      src: unsplash("1770970831074-6e88b6cc260b"),
-      alt: "Material sample boards and a sketchbook laid out on a desk by a window",
+      src: unsplash("1752321532730-ed24a51e7b3f"),
+      alt: "Material samples laid out for selection: dark stone with gold veining, brushed brass and figured timber",
     },
   },
   detail: {
