@@ -20,7 +20,7 @@ export const siteDiary = {
     photo("express-2.jpg", "Express One", "Bedroom joinery", "The curved headboard wall being built in ply, the bed base beside it"),
     photo("t10-202-1.jpg", "Tower 10 – 202", "Shell", "The living room as a shell: plastered walls, boards stacked on the floor, the window to the towers"),
     photo("krishna-2.jpg", "Krishna Nagar Jewellery Store", "Facade", "The shopfront behind scaffolding while the new facade is fitted"),
-    photo("arihant-1.jpg", "Arihant", "Carpet and ceiling", "The team laying carpet tiles under the coloured acoustic ceiling"),
+    photo("arihant-1.jpg", "Arihant", "Flooring", "The Atmosfere team laying the floor tiles under the coloured acoustic ceiling"),
     photo("veridia-2.jpg", "Veridia Wave City", "Joinery", "The television unit and wall panelling built, before the finishes"),
     clip("express-c1.mp4", "express-c1.jpg", "Express One", "Finishing", "A walk through the hall as the panelled wall and lighting are finished"),
     photo("lajpat-3.jpg", "Suneja Card Creations", "Shelving", "The brass-trimmed shelving uprights fitted and taped, the strip lights already on"),
