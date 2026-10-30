@@ -18,8 +18,8 @@ export const planningTypes = [
     name: "Banquet",
     text: "Flexible halls that host a wedding on Saturday and a conference on Monday.",
     image: {
-      src: unsplash("1554009975-d74653b879f1"),
-      alt: "Rows of glowing pendant lamps in a tall hall",
+      src: "/images/hospitality/planning/banquet.jpg",
+      alt: "A banquet venue at night: a glass-fronted hall glowing with chandeliers, sculptural gilded forms over the entrance, lit trees and a water feature in front",
     },
   },
 ];
