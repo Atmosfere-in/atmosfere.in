@@ -16,8 +16,8 @@ export const processPage = {
     intro:
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
-      src: unsplash("1628900941064-ba8df8b51e4a"),
-      alt: "A designer's desk: the hand sketch in the notebook, the drawn detail with its dimensions, and the 3D view of the finished piece",
+      src: "/images/spaces/process/hero.jpg",
+      alt: "The studio's hand sketch of the Suneja Card Creations store: the chandelier under the ceiling medallion and the shelves of boxes down both walls",
     },
   },
   detail: {
