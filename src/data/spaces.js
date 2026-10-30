@@ -229,14 +229,14 @@ export const caseStudies = {
   title: "The thinking behind the finish.",
   items: [
     {
-      href: "/spaces/case-studies/chelvets",
-      tag: "Workplace & studio · Sector 88, Delhi NCR",
-      title: "Chelvets",
+      href: "/spaces/case-studies/tower-10-202",
+      tag: "Apartment · Delhi NCR",
+      title: "Tower 10 – 202",
       summary:
-        "Two floors of 2,500 sq ft for a fashion brand — one for its creative designers, one for its exclusive display, photoshoot studio and business office — designed around the brand's existing identity.",
+        "A 3BHK of 1,985 sq ft for a family of four — an ultra-luxury look on a ₹35 lakh budget, designed around the family's daily routine rather than aesthetics alone.",
       image: {
-        src: "/images/spaces/chelvets/hero.jpg",
-        alt: "The creative team's floor: open workstations in long runs under timber slats, with the brand's displays along the wall",
+        src: "/images/spaces/tower-10-202/chapter-3.jpg",
+        alt: "The master bedroom as built: a tufted bed, a cove-lit ceiling, a timber-slat wall and curtains to the balcony",
       },
     },
     {
