@@ -17,7 +17,7 @@ export const processPage = {
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
       src: "/images/spaces/process/hero.jpg",
-      alt: "The studio's hand sketch of the Suneja Card Creations store: the chandelier under the ceiling medallion and the shelves of boxes down both walls",
+      alt: "The studio's floor plan for Tower 10 – 202: the living and dining areas, the bedrooms and bathrooms drawn with their sizes",
     },
   },
   detail: {
