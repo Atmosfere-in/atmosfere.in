@@ -188,8 +188,11 @@
   aspect-ratio: 21 / 10;
 }
 
+/* The third-and-two-thirds pair share one height: the wide tile sets it
+   at 16:10 and the narrow one stretches to match. */
 .cell:nth-child(5n + 4) .tile {
-  aspect-ratio: 3 / 4;
+  aspect-ratio: auto;
+  height: 100%;
 }
 
 .cell:nth-child(5n + 5) .tile {
@@ -486,6 +489,7 @@
 
   .cell:nth-child(n) .tile {
     aspect-ratio: 4 / 3;
+    height: auto;
   }
 
   .cell:nth-child(5n + 1) .tile {
