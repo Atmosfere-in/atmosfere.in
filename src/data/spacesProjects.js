@@ -173,7 +173,7 @@ export const spacesProjects = [
     location: "Delhi NCR",
     size: "1,985 sq ft",
     timeline: "Ongoing",
-    image: photo("tower-10-202/hero.jpg", "The finished TV wall: book-matched marble-effect panels between timber slats, a floating unit below and the wardrobes to the right"),
+    image: photo("tower-10-202/hero.jpg", "The living room as designed: a pale sofa under a branching chandelier and the marble-effect feature wall"),
     lead: "A 3BHK of 1,985 sq ft for a family of four — an ultra-luxury look on a ₹35 lakh budget, designed around the family's daily routine rather than aesthetics alone.",
     summary:
       "The family of four in flat 202 wanted their 3BHK to look ultra-luxury, stay low-maintenance and suit a decent household — all within ₹35 lakh. So we started with how they live, not with how the rooms would photograph: the morning rush, meals, prayer, homework, guests, rest. The plan and the storage follow that routine; the look follows the plan. The result reads as luxury, costs what it should, and is easy to keep.",
@@ -232,7 +232,6 @@ export const spacesProjects = [
         points: ["Luxury look, held to ₹35 lakh", "Low-maintenance finishes throughout", "A plan built on the family's routine"],
       },
     ],
-    gallery: [photo("tower-10-202/gallery-1.jpg", "The living room as designed: a pale sofa under a branching chandelier and the marble-effect feature wall")],
     results: [
       { value: "1,985", label: "sq ft, 3BHK" },
       { value: "₹35L", label: "Budget, with an ultra-luxury look" },

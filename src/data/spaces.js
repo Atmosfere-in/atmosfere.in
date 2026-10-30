@@ -40,7 +40,7 @@ export const about = {
     "We work across apartments, villas, offices and retail, with a single point of contact, a fixed scope and a finish that holds up long after the photographs.",
   ],
   image: {
-    src: unsplash("1758448755952-42b404bc6f39"),
+    src: "/images/spaces/studio.jpg",
     alt: "A finished living room with a crystal chandelier, curved cream sofas and warm lighting",
   },
   link: { label: "More about us", href: "/spaces/about" },
@@ -78,7 +78,7 @@ export const projects = {
       side: "1,985 sq ft",
       image: {
         src: "/images/spaces/tower-10-202/hero.jpg",
-        alt: "The finished TV wall: marble-effect panels between timber slats and a floating unit",
+        alt: "The living room as designed: a pale sofa under a branching chandelier and the marble-effect feature wall",
       },
     },
     {
