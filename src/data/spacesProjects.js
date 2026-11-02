@@ -1559,5 +1559,5 @@ export function getSpacesProject(slug) {
 
 // Only projects briefed by the studio carry a written case study; the rest
 // have a photo gallery alone.
-export const caseStudyProjects = spacesProjects.filter((p) => p.caseStudy === true);
+export const caseStudyProjects = [...spacesProjects].sort((a, b) => rank(a) - rank(b)).filter((p) => p.caseStudy === true);
 
