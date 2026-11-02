@@ -283,7 +283,7 @@ export const hospitalityCases = [
     mosaic: [
       photo("evara-bliss/mosaic-1.jpg", "The sculpted ceiling: a tree of leaves rising to the ring of light above the hall"),
       photo("evara-bliss/mosaic-2.jpg", "A tiered crystal chandelier against the dark panelled wall"),
-      photo("evara-bliss/mosaic-3.jpg", "A guest corridor: brass wall lights, panelled walls and the inlaid marble floor"),
+      photo("evara-bliss/mosaic-3.jpg", "The entrance corridor: tasselled lattice chandeliers down a timber ceiling, fluted walls with brass lamps and a polished marble floor"),
     ],
     concept: {
       title: "Two halls, one identity.",
