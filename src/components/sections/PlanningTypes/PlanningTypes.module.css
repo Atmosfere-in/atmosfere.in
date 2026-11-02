@@ -55,7 +55,8 @@
 
 .media {
   position: relative;
-  aspect-ratio: 4 / 4.6;
+  /* Landscape, so the whole photograph shows rather than a tall crop of it. */
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 16px;
   background: var(--color-stone-200);
