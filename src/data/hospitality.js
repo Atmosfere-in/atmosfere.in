@@ -43,8 +43,8 @@ export const about = {
     "We advise owners, investors and operators on what a property should become, then carry that plan into layout, design and execution with Atmosfere Spaces.",
   ],
   image: {
-    src: unsplash("1590381105924-c72589b9ef3f"),
-    alt: "A wood-panelled hotel suite with warm lamps and a framed portrait",
+    src: unsplash("1667206761103-3c321c234eed"),
+    alt: "A resort lounge under a timber ceiling hung with a field of lights, open to the garden",
   },
   link: { label: "About the practice", href: "/hospitality#process" },
 };
