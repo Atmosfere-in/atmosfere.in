@@ -5,10 +5,8 @@ import { unsplash } from "@/lib/images";
 import { hospitalityNav, footer } from "@/data/hospitality";
 
 export const metadata = {
-  title: {
-    default: "Atmosfere Hospitality — Hotel, Resort & Banquet Planning",
-    template: "%s · Atmosfere Hospitality",
-  },
+  title: { absolute: "Atmosfere Hospitality — Hotel, Resort & Banquet Planning" },
+
   description:
     "Hospitality planning and advisory: what should this property become? Hotels, resorts and banquets.",
 };

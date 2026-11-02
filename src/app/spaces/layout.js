@@ -5,10 +5,8 @@ import { unsplash } from "@/lib/images";
 import { spacesNav, footer } from "@/data/spaces";
 
 export const metadata = {
-  title: {
-    default: "Atmosfere Spaces — Turnkey Interior Design & Execution",
-    template: "%s · Atmosfere Spaces",
-  },
+  title: { absolute: "Atmosfere Spaces — Turnkey Interior Design & Execution" },
+
   description:
     "Turnkey interior design and execution for homes, villas, offices and retail — one studio from concept to handover.",
 };
