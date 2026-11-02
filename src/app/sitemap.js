@@ -18,6 +18,7 @@ export default function sitemap() {
     page("/spaces/get-a-quote", 0.7),
     page("/hospitality", 0.9, "weekly"),
     page("/hospitality/projects", 0.7),
+    page("/hospitality/about", 0.6),
     page("/hospitality/case-studies", 0.8, "weekly"),
     page("/hospitality/book-a-consultation", 0.7),
     page("/privacy-policy", 0.2, "yearly"),

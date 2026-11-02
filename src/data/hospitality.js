@@ -11,6 +11,7 @@ export const hospitalityNav = {
     { label: "Projects", href: "/hospitality/projects" },
     { label: "Case Studies", href: "/hospitality/case-studies" },
     { label: "Planning Types", href: "/hospitality#planning-types" },
+    { label: "About", href: "/hospitality/about" },
   ],
   cta: { label: "Book a Consultation", href: "/hospitality/book-a-consultation" },
 };
@@ -46,7 +47,7 @@ export const about = {
     src: unsplash("1667206761103-3c321c234eed"),
     alt: "A resort lounge under a timber ceiling hung with a field of lights, open to the garden",
   },
-  link: { label: "About the practice", href: "/hospitality#process" },
+  link: { label: "About the practice", href: "/hospitality/about" },
 };
 
 export const projects = {
@@ -299,6 +300,7 @@ export const footer = {
     {
       title: "The Practice",
       links: [
+        { label: "About", href: "/hospitality/about" },
         { label: "Case Studies", href: "/hospitality/case-studies" },
         { label: "Book a Consultation", href: BOOK.href },
       ],

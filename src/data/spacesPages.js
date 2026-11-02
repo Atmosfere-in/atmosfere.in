@@ -16,8 +16,8 @@ export const processPage = {
     intro:
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
-      src: unsplash("1664638413739-d571590cb51b"),
-      alt: "Choosing finishes at the design table: stone, timber and fabric samples laid out beside the drawings",
+      src: unsplash("1752321531753-d02f83283c5e"),
+      alt: "Finishes laid out on the design table: dark stone with gold veining, figured timber and leather",
     },
   },
   detail: {
