@@ -347,6 +347,7 @@ export const hospitalityCases = [
     size: "850 sq m · 4 bedrooms",
     engagement: "Hospitality & farm stay",
     image: photo("the-oasis/card.jpg", "The Oasis: the two-storey villa across its lawn under a wide sky"),
+    heroImage: photo("the-oasis/hero.jpg", "The villa behind its palm, two storeys of balconies over the lawn, under an evening sky"),
     lead: "A private farmhouse of 850 sq m in Sector 135, Noida, planned as a leisure retreat inside Delhi NCR: a four-bedroom villa, a generous common living area, a pool, landscaped gardens and a gazebo, arranged so guests move easily between private rest and shared time outdoors.",
     summary:
       "The Oasis is a farmhouse conceived as more than a place to stay. The brief was a property for relaxed getaways, social gatherings and longer stays, and the plan answers it by treating the outdoors as an extension of the interior. A four-bedroom villa and its common living room carry the accommodation; the pool, the garden and a dedicated gazebo form the property's social life, with the gazebo offering a quieter corner within the landscape. Inside and out are planned together, so a group can spend a weekend drifting between the living room, the pool deck and the lawn without the property ever feeling crowded.",
