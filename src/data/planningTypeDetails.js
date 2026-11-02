@@ -80,7 +80,7 @@ export const planningTypeDetails = {
     noun: "short stay",
     question: "What will make this stay book out?",
     intro: "Short-stay homes styled to photograph well, review well and book out.",
-    hero: img("1599777560450-e462cffc5368", "A stay with an infinity pool reflecting the evening sky"),
+    hero: { src: "/images/hospitality/planning/airbnb-hero.jpg", alt: "The Oasis farmhouse in Noida: the two-storey villa across its lawn under a wide sky" },
     story: {
       eyebrow: "The question",
       title: "Short stays are won in the photographs and kept in the reviews.",
@@ -88,7 +88,7 @@ export const planningTypeDetails = {
         "Guests choose a short stay in seconds, from a single photograph — and decide whether to recommend it from the details: a good shower, a real workspace, a bed they slept well in.",
         "We plan and style apartments and homes for short-stay platforms so they stand out in search, earn five-star reviews and stay booked.",
       ],
-      image: img("1705326701287-346fc37a2c86", "A curved cream sofa and sculptural coffee table in a neutral lounge"),
+      image: { src: "/images/hospitality/planning/airbnb-story.jpg", alt: "The common living room at The Oasis: sofas around a low table under a double-height ceiling" },
     },
     plan: [
       { title: "Market & pricing", text: "What similar stays earn nearby, and the rate your space can reach." },

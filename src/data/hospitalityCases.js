@@ -336,12 +336,91 @@ export const hospitalityCases = [
       { value: "4", label: "Guest rooms, with offices and tasting rooms" },
     ],
   },
+  {
+    // Real engagement, built. Brief and figures from the studio (November
+    // 2026); photographs of the property by the studio.
+    slug: "the-oasis",
+    name: "The Oasis",
+    planningType: "airbnb",
+    category: "Farmhouse & leisure retreat",
+    location: "Sector 135, Noida",
+    size: "850 sq m · 4 bedrooms",
+    engagement: "Hospitality & farm stay",
+    heroStyle: "split",
+    image: photo("the-oasis/card.jpg", "The Oasis: the two-storey villa across its lawn under a wide sky"),
+    heroImage: photo("the-oasis/hero.jpg", "The villa from the garden: two storeys of balconies behind a palm, the lawn in front"),
+    lead: "A private farmhouse of 850 sq m in Sector 135, Noida, planned as a leisure retreat inside Delhi NCR: a four-bedroom villa, a generous common living area, a pool, landscaped gardens and a gazebo, arranged so guests move easily between private rest and shared time outdoors.",
+    summary:
+      "The Oasis is a farmhouse conceived as more than a place to stay. The brief was a property for relaxed getaways, social gatherings and longer stays, and the plan answers it by treating the outdoors as an extension of the interior. A four-bedroom villa and its common living room carry the accommodation; the pool, the garden and a dedicated gazebo form the property's social life, with the gazebo offering a quieter corner within the landscape. Inside and out are planned together, so a group can spend a weekend drifting between the living room, the pool deck and the lawn without the property ever feeling crowded.",
+    scope: ["Space planning", "Villa & common living design", "Pool, garden & gazebo", "Guest experience planning", "Short-stay positioning"],
+    chapters: [
+      { title: "A retreat inside the city.", image: photo("the-oasis/chapter-1.jpg", "The villa across the lawn: a white two-storey house with deep balconies, the garden in front") },
+      { title: "The outdoors as the living room.", image: photo("the-oasis/chapter-2.jpg", "The pool at night: lit water, a timber deck and the gazebo lounge with its hanging chair beyond") },
+      { title: "Room for everyone, together.", image: photo("the-oasis/chapter-3.jpg", "The common living room: sofas around a low table, tall windows and a double-height ceiling") },
+    ],
+    mosaic: [
+      photo("the-oasis/mosaic-1.jpg", "A first-floor balcony with cane chairs, looking out over the fields"),
+      photo("the-oasis/mosaic-2.jpg", "The pool and gazebo lit for the evening"),
+      photo("the-oasis/mosaic-3.jpg", "The villa behind its palm, seen from the garden"),
+    ],
+    concept: {
+      title: "Accommodation, landscape and recreation as one plan.",
+      text: "The property is organised around three complementary experiences. The villa and its common spaces hold living and accommodation, balanced between collective time and individual comfort. The pool, garden and gazebo make an outdoor leisure environment that draws guests beyond the interiors. Together they take anything from a laid-back weekend to a celebration or an extended stay.",
+      image: photo("the-oasis/concept.jpg", "The common living room, with the stair and the balcony above"),
+      palette: [
+        { name: "White render", note: "The villa's walls and balconies", color: "#efece6" },
+        { name: "Lawn green", note: "The garden that surrounds the house", color: "#5f8a46" },
+        { name: "Pool blue", note: "The water, lit at night", color: "#4fa3b8" },
+        { name: "Timber deck", note: "Around the pool and the gazebo", color: "#b58a5a" },
+        { name: "Warm light", note: "The gazebo and the balconies after dark", color: "#f0c98c" },
+      ],
+    },
+    stages: [
+      {
+        title: "Brief",
+        text: "A private farmhouse in Sector 135, Noida, of about 850 sq m, to work as a leisure retreat for getaways, gatherings and longer stays.",
+        points: ["850 sq m in Delhi NCR", "A four-bedroom villa with shared living", "Pool, garden and gazebo"],
+      },
+      {
+        title: "Challenge",
+        text: "A farmhouse that is only bedrooms and a lawn empties out by the afternoon. The property had to give a group reasons to stay together and move around, without losing the privacy of a retreat.",
+        points: ["Group time and private time in one plan", "Outdoors that pull guests out of the rooms", "A retreat that still feels calm"],
+      },
+      {
+        title: "Approach",
+        text: "The plan centres on openness and connection: the garden and pool are planned as extensions of the interior, the gazebo as an intimate room within the landscape, and the common living spaces as the hinge between them.",
+        points: ["Outdoors planned as an extension of inside", "A gazebo as the quiet room", "Common living as the hinge"],
+      },
+      {
+        title: "Design Decisions",
+        text: "A two-storey villa with deep balconies that look over the fields; a double-height common living room; a pool with a timber deck and a lit gazebo lounge beside it; and a lawn that holds the whole composition together.",
+        points: ["Balconies over the fields", "A double-height living room", "Pool, deck and gazebo as one setting"],
+      },
+      {
+        title: "Execution",
+        text: "The property is built and in use: the villa, the common areas, the pool, the gardens and the gazebo, planned and delivered as one leisure environment.",
+        points: ["Villa and common areas complete", "Pool, deck and gazebo built", "Gardens planted"],
+      },
+      {
+        title: "Outcome",
+        text: "A farmhouse that works as an experience rather than an address: accommodation, landscape and recreation in one setting, where the architecture supports the stay and the memories made in it.",
+        points: ["A retreat for weekends and celebrations", "Indoors and outdoors used together", "A short stay that earns its reviews"],
+      },
+    ],
+    voiceImage: photo("the-oasis/voice.jpg", "The villa and its lawn under a clear sky"),
+    results: [
+      { value: "850", label: "sq m of villa, pool, garden and gazebo" },
+      { value: "4", label: "Bedrooms with a shared living room" },
+      { value: "3", label: "Settings in one plan: living, landscape, gatherings" },
+    ],
+  },
 ];
 
 export const hospitalityCaseFilters = [
   { label: "All", value: null },
   { label: "Hotels & Resorts", value: "hotel-resort" },
   { label: "Banquets & Conventions", value: "banquet" },
+  { label: "Short stays", value: "airbnb" },
 ];
 
 export function getHospitalityCase(slug) {

@@ -22,4 +22,13 @@ export const planningTypes = [
       alt: "A banquet venue at night: a glass-fronted hall glowing with chandeliers, sculptural gilded forms over the entrance, lit trees and a water feature in front",
     },
   },
+  {
+    slug: "airbnb",
+    name: "Airbnb",
+    text: "Short-stay homes and farm stays styled to photograph well, review well and book out.",
+    image: {
+      src: "/images/hospitality/planning/airbnb.jpg",
+      alt: "The pool at The Oasis at night, with the lit gazebo lounge beyond",
+    },
+  },
 ];

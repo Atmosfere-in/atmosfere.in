@@ -108,7 +108,7 @@ export const planningTypes = {
   // Only the two planning types the practice currently shows work for; each
   // card opens that planning type's own page.
   types: allPlanningTypes
-    .filter((type) => ["hotel-resort", "banquet"].includes(type.slug))
+    .filter((type) => ["hotel-resort", "banquet", "airbnb"].includes(type.slug))
     .map((type) => ({
       ...type,
       href: `/hospitality/${type.slug}`,

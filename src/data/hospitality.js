@@ -65,6 +65,16 @@ export const projects = {
       },
     },
     {
+      href: "/hospitality/case-studies/the-oasis",
+      name: "The Oasis",
+      details: "Farmhouse & leisure retreat · Sector 135, Noida",
+      side: "850 sq m",
+      image: {
+        src: "/images/hospitality/the-oasis/card.jpg",
+        alt: "The Oasis: the two-storey villa across its lawn",
+      },
+    },
+    {
       href: "/hospitality/case-studies/the-punarnava-spa-and-resort",
       name: "The Punarnava Spa & Resort",
       details: "Wellness resort · Dehradun",
@@ -107,7 +117,7 @@ export const planningTypes = {
   anchors: true,
   // Only the two planning types the practice currently shows work for.
   types: allPlanningTypes
-    .filter((type) => ["hotel-resort", "banquet"].includes(type.slug))
+    .filter((type) => ["hotel-resort", "banquet", "airbnb"].includes(type.slug))
     .map((type) => ({
       ...type,
       href: `/hospitality/${type.slug}`,
