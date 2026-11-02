@@ -55,26 +55,6 @@ export const projects = {
   intro: "Hospitality engagements from first feasibility to opening day.",
   items: [
     {
-      href: "/hospitality/case-studies/evara-bliss",
-      name: "Evara Bliss",
-      details: "Banquet destination · Vasundhara, Ghaziabad",
-      side: "5,000 sq yd",
-      image: {
-        src: "/images/hospitality/evara-bliss/hero.jpg",
-        alt: "The Evara Bliss venue at night, its glass front lit from within",
-      },
-    },
-    {
-      href: "/hospitality/case-studies/the-oasis",
-      name: "The Oasis",
-      details: "Farmhouse & leisure retreat · Sector 135, Noida",
-      side: "850 sq m",
-      image: {
-        src: "/images/hospitality/the-oasis/card.jpg",
-        alt: "The Oasis: the two-storey villa across its lawn",
-      },
-    },
-    {
       href: "/hospitality/case-studies/the-punarnava-spa-and-resort",
       name: "The Punarnava Spa & Resort",
       details: "Wellness resort · Dehradun",
@@ -102,6 +82,26 @@ export const projects = {
       image: {
         src: "/images/hospitality/moradabad-sourcing-convention-centre/hero.jpg",
         alt: "The proposed building, with a brass-toned lattice tower and a glass rotunda at the corner",
+      },
+    },
+    {
+      href: "/hospitality/case-studies/evara-bliss",
+      name: "Evara Bliss",
+      details: "Banquet destination · Vasundhara, Ghaziabad",
+      side: "5,000 sq yd",
+      image: {
+        src: "/images/hospitality/evara-bliss/hero.jpg",
+        alt: "The Evara Bliss venue at night, its glass front lit from within",
+      },
+    },
+    {
+      href: "/hospitality/case-studies/the-oasis",
+      name: "The Oasis",
+      details: "Farmhouse & leisure retreat · Sector 135, Noida",
+      side: "850 sq m",
+      image: {
+        src: "/images/hospitality/the-oasis/carousel.jpg",
+        alt: "The Oasis: the two-storey villa behind its palm, the lawn in front",
       },
     },
   ],
