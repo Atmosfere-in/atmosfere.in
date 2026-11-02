@@ -90,8 +90,8 @@ export const projects = {
       details: "Banquet destination · Vasundhara, Ghaziabad",
       side: "5,000 sq yd",
       image: {
-        src: "/images/hospitality/evara-bliss/hero.jpg",
-        alt: "The Evara Bliss venue at night, its glass front lit from within",
+        src: "/images/hospitality/evara-bliss/carousel.jpg",
+        alt: "The Evara Bliss venue at night: the glass-fronted hall glowing under its sculpted gilded forms, with lit trees and the water feature in front",
       },
     },
     {
