@@ -3,12 +3,12 @@ export const contact = {
   phone: "+91 885 102 9577",
   phoneHref: "tel:+918851029577",
   whatsappHref: "https://wa.me/918851029577",
-  email: "marketing@atmosfere.in",
-  emailHref: "mailto:marketing@atmosfere.in",
+  email: "info@atmosfere.in",
+  emailHref: "mailto:info@atmosfere.in",
   city: "Noida, Uttar Pradesh",
   // Consultation requests from the booking popup are sent to this WhatsApp
   // number (country code + number, no "+" or spaces).
-  consultWhatsapp: "918510988703",
+  consultWhatsapp: "918851029577",
   // The studio's "Design Consultation" (30 min) Calendly page, the same one
   // embedded on the old atmosfere.in booking page.
   calendlyUrl: "https://calendly.com/mohakgoel74/consultation",
