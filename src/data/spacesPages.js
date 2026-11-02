@@ -16,8 +16,8 @@ export const processPage = {
     intro:
       "How a project moves from the first conversation to the day you move in — and what you receive at every step.",
     image: {
-      src: "/images/spaces/process/hero.jpg",
-      alt: "The studio's floor plan for Tower 10 – 202: the living and dining areas, the bedrooms and bathrooms drawn with their sizes",
+      src: unsplash("1664638413739-d571590cb51b"),
+      alt: "Choosing finishes at the design table: stone, timber and fabric samples laid out beside the drawings",
     },
   },
   detail: {
