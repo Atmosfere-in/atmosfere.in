@@ -193,15 +193,14 @@ export const hospitalityCases = [
     size: "2,21,522 sq ft · 70 keys",
     engagement: "Design intent",
     image: photo("moradabad-sourcing-convention-centre/hero.jpg", "The proposed building: a white rendered block with a brass-toned lattice tower and a glass rotunda at the corner, seen from the road"),
-    // The page opens on the deck's area programme drawing rather than the render.
-    heroDrawing: true,
-    heroImage: { width: 2937, height: 1596, ...photo("moradabad-sourcing-convention-centre/area-programme.jpg", "The area programme: the building drawn floor by floor on its site, from the retail and exhibition basement up through the reception and convention halls, two floors of rooms and the open exhibition rooftop, each level colour-coded in the legend") },
+    // The page opens on the road view; the lattice tower leads the first chapter.
+    heroImage: photo("moradabad-sourcing-convention-centre/chapter-1.jpg", "The building along the road, with the hotel wing, the lattice tower and the glass rotunda"),
     lead: "A 1,26,600 sq ft plot in India's brass city, planned as the place where buyers come to see, source, meet and stay: exhibition and retail below, convention halls in the middle, 70 rooms above and an open exhibition deck on the roof.",
     summary:
       "Moradabad is a city of exporters whose buyers fly in to source brassware and handicrafts, with nowhere built for that visit. The plan gives them one address: a sourcing and convention centre with a hotel inside it. Across six levels and 2,21,522 sq ft, seventy per cent of the building is given to exhibition and convention space and thirty per cent to rooms, cafés and retail, so a buyer can walk the shops in the basement, sit in a convention hall upstairs, and sleep two floors above.",
     scope: ["Market study", "Zoning & master plan", "Area programme", "Concept & facade intent", "Floor layouts", "Interior inspiration boards"],
     chapters: [
-      { title: "A site in the brass city.", image: photo("moradabad-sourcing-convention-centre/chapter-1.jpg", "The building along the road, with the hotel wing, the lattice tower and the glass rotunda") },
+      { title: "A site in the brass city.", image: photo("moradabad-sourcing-convention-centre/concept.jpg", "The brass-toned lattice tower on the white facade, with the drop-off and cars below") },
       { title: "Show, sell, meet, stay.", image: photo("moradabad-sourcing-convention-centre/chapter-2.jpg", "The front elevation: hotel floors over the convention levels, with the lattice and the rotunda at the corner") },
       { title: "A building that announces itself.", image: photo("moradabad-sourcing-convention-centre/chapter-3.jpg", "The glass rotunda at the entrance, with the canopy and the drop-off below") },
     ],
