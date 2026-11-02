@@ -270,7 +270,7 @@ export const hospitalityCases = [
     location: "Vasundhara, Ghaziabad",
     size: "5,000 sq yd · two halls · 4 keys",
     engagement: "Architecture & banquet design",
-    image: photo("evara-bliss/hero.jpg", "The grand hall set for a wedding: the stage under its sculpted arch, dressed in flowers, with the patterned stone floor in front"),
+    image: photo("evara-bliss/concept.jpg", "The venue at night: the glass-fronted hall glowing with chandeliers, sculptural gilded forms over the entrance, lit trees and a water feature in front"),
     lead: "A 5,000 sq yd plot in Vasundhara, Ghaziabad, built as a destination for celebrations of every scale: a 22,000 sq ft grand banquet, a 7,000 sq ft intimate hall, four guest rooms, offices and food-tasting rooms, under one architectural identity.",
     summary:
       "Evara Bliss is a purpose-built venue for celebrations, planned so that events of very different sizes can run side by side without losing a sense of place. Two banquet halls, of about 22,000 and 7,000 sq ft, take the grand wedding and the intimate function; four guest rooms, administrative offices and dedicated food-tasting rooms carry the operational side, so a host can plan the menu, stay the night and hold the event at one address. The architecture is part of the experience: the massing, the facade and the lighting are composed to make arrival feel like the first act of the celebration, and the interiors carry that drama through the halls, the lounge and the corridors.",
