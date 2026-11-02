@@ -40,8 +40,8 @@ export const about = {
     "We work across apartments, villas, offices and retail, with a single point of contact, a fixed scope and a finish that holds up long after the photographs.",
   ],
   image: {
-    src: unsplash("1752321531753-d02f83283c5e"),
-    alt: "Material samples laid out in the studio: honed stone, oak, brushed metal and leather on a dark table",
+    src: unsplash("1763630730206-2c3a5d6c82d1"),
+    alt: "Inside a design studio: mood boards pinned on the glass wall, samples and drawings spread on the table under warm light",
   },
   link: { label: "More about us", href: "/spaces/about" },
 };
