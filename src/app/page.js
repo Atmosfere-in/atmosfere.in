@@ -1,6 +1,11 @@
 import SiteHeader from "@/components/SiteHeader/SiteHeader";
 import HubBanners from "@/components/HubBanners/HubBanners";
 import { verticals } from "@/data/verticals";
+import { pageMeta } from "@/lib/seo";
+
+// The page's own address as its canonical link; title and description come
+// from the root layout.
+export const metadata = pageMeta({ path: "/" });
 
 // atmosfere.in — a single-page hub whose only job is routing the visitor
 // to the right vertical in one click.

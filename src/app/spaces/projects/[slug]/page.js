@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import ProjectGallery from "@/components/pages/ProjectGallery/ProjectGallery";
 import { spacesProjects, getSpacesProject } from "@/data/spacesProjects";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { breadcrumbLd, pageMeta, projectTitle } from "@/lib/seo";
 
 export function generateStaticParams() {
   return spacesProjects.map((p) => ({ slug: p.slug }));
@@ -10,7 +12,13 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const project = getSpacesProject((await params).slug);
-  return project ? { title: project.name, description: project.lead } : {};
+  if (!project) return {};
+  return pageMeta({
+    title: projectTitle(project),
+    description: `${project.category} in ${project.location} by Atmosfere Spaces. ${project.lead}`,
+    path: `/spaces/projects/${project.slug}`,
+    image: project.image,
+  });
 }
 
 // Every photograph a project has, in order, without repeats: the hero, the
@@ -46,6 +54,15 @@ export default async function SpacesProject({ params }) {
 
   return (
     <main>
+      <JsonLd
+        data={breadcrumbLd(
+          [
+            { label: "Spaces", href: "/spaces" },
+            { label: "Projects", href: "/spaces/projects" },
+          ],
+          project.name
+        )}
+      />
       <ProjectGallery
         name={project.name}
         lead={project.lead}

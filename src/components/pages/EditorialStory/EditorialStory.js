@@ -3,6 +3,8 @@ import Link from "next/link";
 import Arrow from "@/components/ui/Icon/Arrow";
 import { Concept } from "@/components/pages/StoryDetail/StoryDeep";
 import styles from "./EditorialStory.module.css";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 
 const NUMERALS = ["I", "II", "III", "IV"];
 // The concept & palette section is hidden on every story for now.
@@ -47,6 +49,7 @@ export default function EditorialStory({ story, eyebrow, meta, crumbs, next, nex
       <section className={heroClass}>
         <div className={styles.heroPanel}>
           <div className={styles.heroText}>
+            <JsonLd data={breadcrumbLd(crumbs, story.name)} />
             <nav aria-label="Breadcrumb" className={styles.crumbs}>
               <ol>
                 {crumbs.map((c) => (

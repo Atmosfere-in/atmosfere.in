@@ -6,12 +6,14 @@ import SiteDiary from "@/components/sections/SiteDiary/SiteDiary";
 import { processPage } from "@/data/spacesPages";
 import { closing } from "@/data/spaces";
 import { siteDiary } from "@/data/siteDiary";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Design Process",
+export const metadata = pageMeta({
+  title: "Our Interior Design Process",
   description:
     "How Atmosfere Spaces takes a home or workplace from first conversation to handover: Consult, Design, Execute, Handover.",
-};
+  path: "/spaces/process",
+});
 
 export default function SpacesProcess() {
   return (

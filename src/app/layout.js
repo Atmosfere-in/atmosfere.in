@@ -1,6 +1,8 @@
 import { Marcellus, Jost } from "next/font/google";
 import RevealObserver from "@/components/RevealObserver/RevealObserver";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import { SITE_URL } from "@/lib/site";
+import { businessLd } from "@/lib/seo";
 import "./globals.css";
 
 // Display: a simple, flared serif with an engraved, premium feel — the same
@@ -20,11 +22,11 @@ const sans = Jost({
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Atmosfere — Interior Design, Hospitality & Living",
+    default: "Atmosfere — Interior Design & Hospitality Planning in Noida, Delhi NCR",
     template: "%s · Atmosfere",
   },
   description:
-    "Atmosfere is one house with three rooms: turnkey interior design and execution, hospitality planning, and curated furniture and decor.",
+    "Atmosfere, Noida: one house with three rooms — turnkey interior design and execution, hospitality planning, and curated furniture and decor across Delhi NCR.",
   openGraph: {
     type: "website",
     siteName: "Atmosfere",
@@ -37,10 +39,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en-IN" className={`${serif.variable} ${sans.variable}`}>
       <body>
         {children}
         <RevealObserver />
+        <JsonLd data={businessLd} />
       </body>
     </html>
   );

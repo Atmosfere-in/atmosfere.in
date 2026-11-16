@@ -5,12 +5,15 @@ import Founders from "@/components/sections/Founders/Founders";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { aboutPage } from "@/data/hospitalityPages";
 import { founders, closing } from "@/data/hospitality";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "About Us",
+export const metadata = pageMeta({
+  title: "About Us — Hospitality Planning & Advisory",
   description:
-    "Atmosfere Hospitality is a planning and advisory practice for hotels, resorts, banquets and short stays: the question of what a property should become, answered before it is designed.",
-};
+    "Atmosfere Hospitality is a planning and advisory practice for hotels, resorts, banquets and short stays: what a property should become, answered before it is designed.",
+  path: "/hospitality/about",
+  image: { src: "/images/hospitality/punarnava/hero.jpg", alt: "The lobby of the new building at Punarnava" },
+});
 
 export default function HospitalityAbout() {
   return (

@@ -3,11 +3,14 @@ import WorkIndex from "@/components/pages/WorkIndex/WorkIndex";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { hospitalityCases, hospitalityCaseFilters } from "@/data/hospitalityCases";
 import { closing } from "@/data/hospitality";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Projects",
-  description: "Hotels, resorts and convention centres planned by Atmosfere Hospitality.",
-};
+export const metadata = pageMeta({
+  title: "Hotel, Resort & Banquet Projects",
+  description:
+    "Hotels, resorts, banquet venues and convention centres planned by Atmosfere Hospitality.",
+  path: "/hospitality/projects",
+});
 
 // /hospitality/projects?type=hotel-resort|banquet — the same stories as the
 // case studies, shown as a project grid (as /spaces/projects does).

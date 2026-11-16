@@ -5,10 +5,13 @@ import { unsplash } from "@/lib/images";
 import { hospitalityNav, footer } from "@/data/hospitality";
 
 export const metadata = {
-  title: { absolute: "Atmosfere Hospitality — Hotel, Resort & Banquet Planning" },
-
+  // `absolute` titles the hub itself; `template` brands every page below it.
+  title: {
+    absolute: "Atmosfere Hospitality — Hotel, Resort & Banquet Planning Consultants",
+    template: "%s · Atmosfere Hospitality",
+  },
   description:
-    "Hospitality planning and advisory: what should this property become? Hotels, resorts and banquets.",
+    "Hospitality planning and advisory for hotels, resorts, banquets and short stays: what should this property become, answered before it is designed.",
 };
 
 export default function HospitalityLayout({ children }) {

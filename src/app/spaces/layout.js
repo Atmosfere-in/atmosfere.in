@@ -5,10 +5,13 @@ import { unsplash } from "@/lib/images";
 import { spacesNav, footer } from "@/data/spaces";
 
 export const metadata = {
-  title: { absolute: "Atmosfere Spaces — Turnkey Interior Design & Execution" },
-
+  // `absolute` titles the hub itself; `template` brands every page below it.
+  title: {
+    absolute: "Atmosfere Spaces — Turnkey Interior Designers in Noida & Delhi NCR",
+    template: "%s · Atmosfere Spaces",
+  },
   description:
-    "Turnkey interior design and execution for homes, villas, offices and retail — one studio from concept to handover.",
+    "Turnkey interior design and execution for homes, villas, offices and retail in Noida, Greater Noida, Ghaziabad and Delhi — one studio from concept to handover.",
 };
 
 export default function SpacesLayout({ children }) {

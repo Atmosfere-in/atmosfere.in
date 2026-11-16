@@ -1,10 +1,13 @@
 import { contact } from "@/data/contact";
 import styles from "../legal.module.css";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Terms of Service — Atmosfere",
-  description: "The terms that apply when you use the Atmosfere website.",
-};
+export const metadata = pageMeta({
+  title: "Terms of Service",
+  description:
+    "The terms that apply when you use the Atmosfere website, atmosfere.in, and enquire about our interior design and hospitality services.",
+  path: "/terms-of-service",
+});
 
 // General website terms. Project work is governed by each client's signed
 // agreement. To be reviewed by the client's legal adviser before launch.

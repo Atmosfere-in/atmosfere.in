@@ -35,7 +35,7 @@ export default function CaseStudyList({ filters, items }) {
               <Link href={item.href} className={`${styles.media} reveal-image`} tabIndex={-1} aria-hidden="true">
                 <Image
                   src={item.image.src}
-                  alt=""
+                  alt={item.image.alt ?? ""}
                   fill
                   quality={90}
                   sizes="(max-width: 900px) 100vw, 55vw"

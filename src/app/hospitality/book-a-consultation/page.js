@@ -1,12 +1,14 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
 import ConsultPage from "@/components/pages/ConsultPage/ConsultPage";
 import { unsplash } from "@/lib/images";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Book a Consultation",
+export const metadata = pageMeta({
+  title: "Book a Hospitality Consultation",
   description:
     "Book a 30-minute consultation with Atmosfere Hospitality about your hotel, resort, villa or banquet project.",
-};
+  path: "/hospitality/book-a-consultation",
+});
 
 export default function HospitalityBook() {
   return (

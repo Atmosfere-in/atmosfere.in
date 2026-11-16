@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import EditorialStory from "@/components/pages/EditorialStory/EditorialStory";
 import { hospitalityCases, getHospitalityCase } from "@/data/hospitalityCases";
+import { hospitalityCaseTitle, pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return hospitalityCases.map((c) => ({ slug: c.slug }));
@@ -10,7 +11,13 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const study = getHospitalityCase((await params).slug);
-  return study ? { title: study.name, description: study.lead } : {};
+  if (!study) return {};
+  return pageMeta({
+    title: hospitalityCaseTitle(study),
+    description: study.lead,
+    path: `/hospitality/case-studies/${study.slug}`,
+    image: study.image,
+  });
 }
 
 // Every hospitality case study uses the magazine-style editorial layout.

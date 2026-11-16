@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./PageHero.module.css";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 
 // Opening photograph for inner pages (projects, process, case studies…).
 // Shorter than the homepage hero; the transparent header floats over it.
@@ -21,6 +23,7 @@ export default function PageHero({ eyebrow, title, intro, image, crumbs, meta, s
       <div className={styles.scrim} aria-hidden="true" />
 
       <div className={`container ${styles.content}`}>
+        {crumbs && <JsonLd data={breadcrumbLd(crumbs)} />}
         {crumbs && (
           <nav aria-label="Breadcrumb" className={styles.crumbs}>
             <ol>

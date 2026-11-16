@@ -4,7 +4,8 @@ import Arrow from "@/components/ui/Icon/Arrow";
 import styles from "./not-found.module.css";
 
 export const metadata = {
-  title: "Page not found — Atmosfere",
+  title: "Page not found",
+  robots: { index: false },
 };
 
 export default function NotFound() {

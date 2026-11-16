@@ -7,6 +7,10 @@ import Founders from "@/components/sections/Founders/Founders";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import * as hospitality from "@/data/hospitality";
+import { pageMeta } from "@/lib/seo";
+
+// Canonical link and share image; title and description come from the layout.
+export const metadata = pageMeta({ path: "/hospitality", image: { src: "/images/hospitality/punarnava/hero.jpg", alt: "The lobby of the new building at Punarnava" } });
 
 // atmosfere.in/hospitality — authority-led, built to generate consultation enquiries.
 export default function HospitalityHome() {

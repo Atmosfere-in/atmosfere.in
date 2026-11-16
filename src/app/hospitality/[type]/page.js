@@ -9,6 +9,7 @@ import { planningTypes } from "@/data/planningTypes";
 import { planningTypeDetails } from "@/data/planningTypeDetails";
 import { hospitalityCases } from "@/data/hospitalityCases";
 import { closing } from "@/data/hospitality";
+import { pageMeta } from "@/lib/seo";
 
 // /hospitality/hotel-resort, /banquet
 export function generateStaticParams() {
@@ -24,7 +25,13 @@ function find(slug) {
 
 export async function generateMetadata({ params }) {
   const type = find((await params).type);
-  return type ? { title: `${type.name} Planning`, description: type.intro } : {};
+  if (!type) return {};
+  return pageMeta({
+    title: `${type.name} Planning & Advisory`,
+    description: `${type.intro} ${type.name} planning and advisory by Atmosfere Hospitality.`,
+    path: `/hospitality/${type.slug}`,
+    image: type.image,
+  });
 }
 
 export default async function PlanningTypePage({ params }) {

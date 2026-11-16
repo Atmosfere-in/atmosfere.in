@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import EditorialStory from "@/components/pages/EditorialStory/EditorialStory";
 import { caseStudyProjects, getSpacesProject } from "@/data/spacesProjects";
+import { caseStudyTitle, pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return caseStudyProjects.map((p) => ({ slug: p.slug }));
@@ -10,7 +11,13 @@ export const dynamicParams = false;
 
 export async function generateMetadata({ params }) {
   const project = getSpacesProject((await params).slug);
-  return project ? { title: `${project.name} · Case Study`, description: project.lead } : {};
+  if (!project) return {};
+  return pageMeta({
+    title: caseStudyTitle(project),
+    description: `Case study: ${project.lead}`,
+    path: `/spaces/case-studies/${project.slug}`,
+    image: project.image,
+  });
 }
 
 // The full story of a project, in the magazine-style editorial layout.

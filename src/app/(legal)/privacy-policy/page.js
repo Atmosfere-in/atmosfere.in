@@ -1,10 +1,13 @@
 import { contact } from "@/data/contact";
 import styles from "../legal.module.css";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Privacy Policy — Atmosfere",
-  description: "How Atmosfere collects, uses and protects the information you share with us.",
-};
+export const metadata = pageMeta({
+  title: "Privacy Policy",
+  description:
+    "How Atmosfere collects, uses and protects the information you share with us through atmosfere.in.",
+  path: "/privacy-policy",
+});
 
 // Plain-language policy covering what the site actually collects. To be
 // reviewed by the client's legal adviser before launch.

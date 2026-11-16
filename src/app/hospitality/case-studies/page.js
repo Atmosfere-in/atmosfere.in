@@ -2,12 +2,14 @@ import PageHero from "@/components/pages/PageHero/PageHero";
 import CaseStudyList from "@/components/pages/CaseStudyList/CaseStudyList";
 import { hospitalityCases, hospitalityCaseFilters } from "@/data/hospitalityCases";
 import { unsplash } from "@/lib/images";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Case Studies",
+export const metadata = pageMeta({
+  title: "Hospitality Planning Case Studies",
   description:
     "How the right question changed the property: hotels, resorts and banquets planned by Atmosfere Hospitality.",
-};
+  path: "/hospitality/case-studies",
+});
 
 // /hospitality/case-studies?type=hotel-resort|banquet
 export default async function HospitalityCaseStudies({ searchParams }) {

@@ -4,11 +4,14 @@ import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import { spacesProjectsListing as spacesProjects, spacesProjectFilters } from "@/data/spacesProjects";
 import { closing } from "@/data/spaces";
 import { unsplash } from "@/lib/images";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Projects",
-  description: "Homes, apartments, restaurants and workplaces designed and built end to end by Atmosfere Spaces.",
-};
+export const metadata = pageMeta({
+  title: "Interior Design Projects in Noida & Delhi NCR",
+  description:
+    "Homes, apartments, offices and retail spaces in Noida, Greater Noida, Ghaziabad and Delhi, designed and built end to end by Atmosfere Spaces.",
+  path: "/spaces/projects",
+});
 
 // /spaces/projects?type=residential|commercial
 export default async function SpacesProjects({ searchParams }) {

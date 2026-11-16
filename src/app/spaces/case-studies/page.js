@@ -2,12 +2,14 @@ import PageHero from "@/components/pages/PageHero/PageHero";
 import CaseStudyList from "@/components/pages/CaseStudyList/CaseStudyList";
 import { caseStudyProjects } from "@/data/spacesProjects";
 import { unsplash } from "@/lib/images";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Case Studies",
+export const metadata = pageMeta({
+  title: "Interior Design Case Studies",
   description:
-    "The thinking behind the finish: how Atmosfere Spaces solved real briefs for homes, restaurants and workplaces.",
-};
+    "The thinking behind the finish: how Atmosfere Spaces solved real briefs for homes, offices and retail spaces across Delhi NCR.",
+  path: "/spaces/case-studies",
+});
 
 // Every project, told as a story: the brief, the problem and what changed.
 export default function SpacesCaseStudies() {

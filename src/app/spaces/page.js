@@ -9,6 +9,10 @@ import Split from "@/components/sections/Split/Split";
 import CaseStudies from "@/components/sections/CaseStudies/CaseStudies";
 import ClosingCta from "@/components/sections/ClosingCta/ClosingCta";
 import * as spaces from "@/data/spaces";
+import { pageMeta } from "@/lib/seo";
+
+// Canonical link and share image; title and description come from the layout.
+export const metadata = pageMeta({ path: "/spaces" });
 
 // atmosfere.in/spaces — portfolio-led, built to generate turnkey project leads.
 export default function SpacesHome() {

@@ -1,11 +1,14 @@
 import PageHero from "@/components/pages/PageHero/PageHero";
 import ConsultPage from "@/components/pages/ConsultPage/ConsultPage";
 import { unsplash } from "@/lib/images";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
-  title: "Get a Quote",
-  description: "Tell us about your home or workplace. Atmosfere Spaces will call within 24 hours to talk scope, budget and timeline.",
-};
+export const metadata = pageMeta({
+  title: "Get an Interior Design Quote",
+  description:
+    "Tell us about your home or workplace. Atmosfere Spaces will call within 24 hours to talk scope, budget and timeline.",
+  path: "/spaces/get-a-quote",
+});
 
 export default function SpacesQuote() {
   return (
