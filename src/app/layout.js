@@ -1,6 +1,7 @@
 import { Marcellus, Jost } from "next/font/google";
 import RevealObserver from "@/components/RevealObserver/RevealObserver";
 import JsonLd from "@/components/JsonLd/JsonLd";
+import MetaPixel from "@/components/MetaPixel/MetaPixel";
 import { SITE_URL } from "@/lib/site";
 import { businessLd } from "@/lib/seo";
 import "./globals.css";
@@ -44,6 +45,8 @@ export default function RootLayout({ children }) {
         {children}
         <RevealObserver />
         <JsonLd data={businessLd} />
+        {/* Live site only: local development sends no visits to the ad account. */}
+        {process.env.NODE_ENV === "production" && <MetaPixel />}
       </body>
     </html>
   );

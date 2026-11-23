@@ -16,10 +16,10 @@ export default function PrivacyPolicy() {
     <article className={styles.article}>
       <span className="eyebrow">Atmosfere</span>
       <h1 className={styles.title}>Privacy Policy</h1>
-      <p className={styles.updated}>Last updated: October 2026</p>
+      <p className={styles.updated}>Last updated: November 2026</p>
 
       <h2>What we collect</h2>
-      <p>We only collect the information you choose to share with us:</p>
+      <p>We collect the information you choose to share with us:</p>
       <ul>
         <li>Your name, phone number and project details when you fill in a consultation or quote form.</li>
         <li>
@@ -40,6 +40,14 @@ export default function PrivacyPolicy() {
         Our enquiry form opens WhatsApp with your details filled in, so the message is sent through WhatsApp
         under its own privacy policy. Meeting bookings are handled by Calendly. Images on this site are served
         by third-party image hosts.
+      </p>
+
+      <h2>Advertising and measurement</h2>
+      <p>
+        This site uses the Meta Pixel, a tool from Meta (Facebook and Instagram). It uses cookies to record
+        visits to our pages, so we can measure our advertising and show our ads to people who have visited
+        the site. Meta handles this information under its own privacy policy. You can change how ads are
+        shown to you in your Facebook or Instagram ad settings, or block cookies in your browser.
       </p>
 
       <h2>How long we keep it</h2>
